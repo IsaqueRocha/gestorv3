@@ -1,0 +1,278 @@
+.content{
+	overflow: hidden!important;
+}
+
+.logo > img{
+	width: 26px;
+	margin-top: -3px;	
+}
+
+.logo{
+	text-align: right!important;
+}
+
+li.user-header{
+	background-color: #3c474b!important;
+	height: auto!important;
+	padding: 30px 15px 15px 15px !important;
+}
+
+.sidebar-menu > li{
+	background-color: #3c474b!important;
+	margin-top: 1px!important;
+	line-height: 12px!important;
+
+}
+
+.sidebar-menu > li > a{
+	margin-left: -6px!important;
+}
+
+.main-sidebar{
+	padding-top: 60px; 
+}
+
+.skin-blue, .sidebar a{
+	color: #FFF!important;
+}
+
+.box-horario{
+	background-color: #3c474b!important;
+	border-radius: 0!important;
+	margin-top: 10px;
+	overflow: hidden!important;
+}
+
+.small-box{
+	margin-bottom: 10px!important;
+}
+
+.small-box-footer{
+	text-align: left!important;
+	padding-left: 10px!important;
+	background-color: rgba(0, 0, 0, 0.3)!important; 
+}
+
+.relogio-ico{
+	color: rgba(255,255,255,0.1)!important;
+	width: 120px;
+	height: 120px;
+	font-size: 120px;
+	line-height: 120px;
+	position: absolute;
+	right: 5px;
+	top: 5px;
+}
+
+.total-hora{
+	height: 60px!important;
+}
+
+.total-hora > p{
+	margin-bottom: 5px!important;
+	font-size: 13px!important;
+}
+
+.total-hora > h4 {
+	margin: 5px 0 0 0!important;
+	font-size: 20px!important;
+}
+
+.sidebar-menu > li > a:hover{
+	border-right: 6px solid #888!important;
+	background-color: #3c474b!important;
+}
+
+.botao-mostrar-mais{
+	margin: 0!important;
+	margin-right: 5px!important;
+	padding: 0!important;
+}
+
+.botao-mostrar-mais > i > img{
+	width: 25px!important;
+	height: 25px!important;
+}
+
+.usuario-header-box > span >h3{
+	width: 30%!important;
+}
+
+.box-usuario{
+	margin: 0px!important;
+	border-radius: 0px!important;
+}
+
+.botao-menu{
+	position: absolute!important;
+	right: 5px!important;
+}
+
+.titulos{
+	float: left!important;
+	margin: 0!important;
+	margin-right: 20px!important;
+}
+
+.sub-titulos{
+	float: left!important;
+	margin: 0!important;
+	margin-top: 5px!important;
+	color: #777!important;
+	font-size: 23px;
+}
+
+.botao-adicionar-usuario{
+	color: green!important;
+	position: absolute;
+	right: 13px;
+}
+
+.botao-salvar-usuario{
+	color: green!important;
+	float: right;
+	margin-right: 10px;
+}
+
+.botao-cancelar-adicionar-usuario{
+	color: #3c474b!important;
+	float: right;
+}
+
+.botao-salvar-usuario > button{
+	background-color: rgba(0,0,0,0);
+	border: none;
+	margin: 0!important;
+	padding: 0!important;
+}
+
+.icon-adicionar-usuario{
+	margin-right: 0px!important;
+	font-size: 40px!important;
+	margin-top: -2px!important;
+}
+
+#edicao-usuario{
+	display: none;
+}
+
+.box-botao-submit{
+	overflow: hidden!important;
+	width: 100%;
+	clear: both;
+	padding-right: 30px; 
+}
+
+.dados-usuario {
+	color: #444;
+	background-color: #ededed;
+	overflow: hidden!important;
+}
+
+.opcoes{
+	width: 50px;
+	float: right;
+	margin-top: 20px;
+	margin-right: 28px;
+	overflow: hidden;
+}
+
+.btn-editar > span > i, .btn-cancelar >span > i{
+	background-color: #3c474b;
+}
+
+
+.btn-salvar > button > span > i {
+	background-color: green;	
+}
+
+.btn-salvar > button{
+	background-color: rgba(0,0,0,0);
+	border: none;
+	height: 23px;
+	width: 23px;
+	margin: 0!important;
+	padding:0!important;
+}
+
+
+.btn-excluir > span > i, .btn-desativar > span > i{
+	background-color: red;
+	height: 19px!important;
+	width: 19px!important;
+	font-size: 13px!important;
+	padding: 2px!important;
+}
+
+.btn-editar, .btn-salvar, .btn-desativar, .btn-excluir, .btn-cancelar{
+	color: #FFF!important;
+	margin-bottom: 15px!important;
+	font-size: 15px!important;
+	line-height: 10px!important;
+	cursor: pointer;
+	float: right;
+	clear: both;
+}
+
+.btn-editar > span > i, .btn-salvar > button > span > i, .btn-desativar > span > i, .btn-excluir > span > i, .btn-cancelar > span > i{
+	padding: 4px;
+	height: 23px;
+	width: 23px;
+	border-radius: 100%;
+	text-align: center;
+}
+
+/*Estilos comuns*/
+
+.fim-bloco{
+	clear: both;
+	display: block;
+}
+
+label{
+	color: #777;
+}
+
+/*Responsivo*/
+
+@media all and (max-width: 767px){
+	.small-box {
+		text-align: left!important;
+	}
+
+	.logo{
+		text-align: left!important;	
+	}
+
+	.main-sidebar, .left-side {
+		padding-top: 110px!important;
+	}
+
+	.sidebar-toggle {
+		padding: 15px 15px 15px 20px!important;
+	}
+
+	.opcoes{
+		width: 100%;
+		clear: both;
+	}
+
+	.btn-editar, .btn-salvar, .btn-desativar, .btn-excluir, .btn-cancelar{
+		clear: none;
+		margin-left: 20px;
+	}		
+
+	footer{
+		text-align: center!important;
+	}
+
+}
+
+@media all and (max-width: 480px){
+
+	.usuario-header-box > span > h3 {
+		width: 100% !important;
+		display: block;
+	}
+
+}
