@@ -1,69 +1,16 @@
-//TROCA ICONE DE GERENCIAR USUÁRIOS
-function changeSrc(trocaIcone) {
-    var imagem=document.getElementById(trocaIcone);
-    if(imagem.alt == "Mais"){
-        imagem.src = "dist/img/up.png";
-        imagem.alt = "Menos";
-    }
-    else {
-        imagem.src = "dist/img/down.png";
-        imagem.alt = "Mais";
-    };
-};
-
-// HABILITA/DESABILITAR (INPUT)
-
-function habilitaDesabilitaInput( bool )
-{
-  var input = document.getElementsByTagName('input');
-
-  for( var i=0; i<=(input.length-1); i++ )
-  {
-    if( input[i].name!='btn' ){
-
-      if (input[i].disabled == false) {
-        input[i].disabled = true;
-      }else{
-        input[i].disabled = false;
-      };
-    };     
-  };
-};
-
-
-// MOSTRA OPÇÕES DE EDIÇÃO DE USUÁRIO
-
-function mostrarEnsonderBotoes() {
-
-  var classe = document.getElementsByClassName('botao-mostrar btn-editar');
-  var classe2 = document.getElementsByClassName('botao-voltar edicao-usuario');
-
-
-  for(i=0; i<classe.length; i++){
-      
-    if( classe[i].name='btn' ){
-
-      if (classe[i].style.display == "block") {
-        classe[i].style.display = "none";
-        classe2[i].style.display = "block";
-      }else{
-        classe[i].style.display = "block";
-        classe2[i].style.display = "none";
-      };
-
-    };
-
+//TROCA ICONE DE GERENCIAR USUÁRIOS            
+function clique(e){
+  
+  if(e.target.alt == "Mais"){
+      e.target.src = "assets/dist/img/up.png";
+      e.target.alt = "Menos";
+  }
+  else {
+      e.target.src = "assets/dist/img/down.png";
+      e.target.alt = "Mais";
   };
 
-};
-
-
-// PLUGIN CROPPIC
-var cropperHeader = new Croppic('yourId');
-
-
-
-
+};         
 
 //  FORMATAÇÃO DOS CAMPOS DE FORMULÁRIOS
 $(function () {

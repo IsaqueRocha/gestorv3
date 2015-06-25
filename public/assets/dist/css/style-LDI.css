@@ -1,5 +1,13 @@
+body{
+	font-family: "Helvetica Neue", Arial, sans-serif!important;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Helvetica Neue", Arial, sans-serif!important;
+}
+
 .content{
-	overflow: hidden!important;
+	overflow: hidden;
 }
 
 .logo > img{
@@ -32,11 +40,13 @@ li.user-header{
 	padding-top: 60px; 
 }
 
-.skin-blue, .sidebar a{
+.sidebar a{
 	color: #FFF!important;
 }
 
+
 .box-horario{
+	color: #FFF!important;
 	background-color: #3c474b!important;
 	border-radius: 0!important;
 	margin-top: 10px;
@@ -84,18 +94,38 @@ li.user-header{
 }
 
 .botao-mostrar-mais{
-	margin: 0!important;
-	margin-right: 5px!important;
-	padding: 0!important;
+	border: 0!important;
+	padding: 0!important;	
+}
+
+.img-expandir{
+
+}
+
+.box-header > .botao-editar-usuario{
+	right: 60px!important;
+	top: 8px!important;
+}
+
+.botao-editar-usuario > a{
+	color: #3c474b!important;
+	font-size: 22px;
+	top: 30px!important;
+}
+
+.box-botao-mostrar-mais{
+	position: absolute;
+	right: 6px;
+	top:9px;
+}
+
+.sub-box-title{
+	font-weight: bold;
 }
 
 .botao-mostrar-mais > i > img{
 	width: 25px!important;
 	height: 25px!important;
-}
-
-.usuario-header-box > span >h3{
-	width: 30%!important;
 }
 
 .box-usuario{
@@ -112,6 +142,7 @@ li.user-header{
 	float: left!important;
 	margin: 0!important;
 	margin-right: 20px!important;
+	font-weight:bolder!important;
 }
 
 .sub-titulos{
@@ -134,6 +165,19 @@ li.user-header{
 	margin-right: 10px;
 }
 
+.botao-excluir-usuario, .botao-desativar-usuario{
+	color: !important;
+	width: 34px;
+	height: 34px;
+	margin-top: 2px;
+	background-color: red;
+	float: right;
+	margin-right: 10px;
+	padding: 0px 0px 0px 0px;
+	border-radius: 100px;
+	text-align: center!important;
+}
+
 .botao-cancelar-adicionar-usuario{
 	color: #3c474b!important;
 	float: right;
@@ -146,11 +190,22 @@ li.user-header{
 	padding: 0!important;
 }
 
-.icon-adicionar-usuario{
+.icones-edicao-usuario{
 	margin-right: 0px!important;
 	font-size: 40px!important;
 	margin-top: -2px!important;
 }
+
+.icon-edicao-usuario-circles{
+	margin-right: 0px!important;
+	margin-top: 7px;
+	font-size: 20px!important;
+	line-height: 20px!important;
+	color: #FFFFFF!important;
+}
+
+
+
 
 #edicao-usuario{
 	display: none;
@@ -165,16 +220,8 @@ li.user-header{
 
 .dados-usuario {
 	color: #444;
-	background-color: #ededed;
+	background-color: #f7f7f7;
 	overflow: hidden!important;
-}
-
-.opcoes{
-	width: 50px;
-	float: right;
-	margin-top: 20px;
-	margin-right: 28px;
-	overflow: hidden;
 }
 
 .btn-editar > span > i, .btn-cancelar >span > i{
@@ -222,45 +269,416 @@ li.user-header{
 	text-align: center;
 }
 
+.box-curso{
+	width: 60px;
+	padding: 3px;
+	margin-right: 10px;
+}
+
+.box-tipo{
+	width: 60px;
+	padding: 3px;
+	margin-right: 10px;
+}
+
+.filtro-projetos{
+	float: right;
+	margin-right:20px;
+	width: 230px;
+	margin-bottom: 0px!important;
+}
+
+.filtro-projetos > .form-control{
+	width: 150px;
+}
+
+.titulo-filtro-projetos{
+	float: left;
+	margin: 8px 15px 0 0;
+	font-size:15px;
+	line-height:15px;
+	font-weight: bold;
+}
+.usuario-header-box > div > .progress{
+	margin-bottom: 0!important;
+	margin-top: 7px;
+}
+
+.box-valor-progresso{
+	color: #FFFFFF;
+	float: left;
+	padding: 4px;
+	font-size: 12px;
+}
+
+.box-valor-progresso > h6{
+	margin-top: 5px!important;
+	margin-bottom: 0!important;
+	vertical-align: middle!important;
+}
+
+.valor-progresso{
+	background-color: #00a65a;
+	padding: 2px 6px 2px 5px;
+	border-radius: 10px;	
+}
+
+.pesquisar-projeto{
+	width: 200px;
+	float: right;
+	margin-left: 20px;
+}
+
+.btn-info{
+	background-color: #3c474b!important;
+	border-color:#3c474b!important;
+}
+
+.sub-box-title {
+	font-size:15px!important;
+}
+
+
+.dados-usuario > div > span.label-form{
+	font-size: 14px!important;
+	font-weight: bold!important;
+	color: #444!important;
+	margin-right: 5!important;
+}
+
+.tasks-menu > ul > .header{
+	font-weight: bold;
+}
+
+.titulo-proj{
+	line-height: 20px!important;
+}
+
+.menu > li{
+	overflow: !important;
+}
+
+.ver-mais-proj{
+	font-weight: bold!important;
+}
+
+.dropdown-menu{
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3)!important;	
+}
+
 /*Estilos comuns*/
+.artes {
+	background-color: #c94259;
+	color:#FFF;
+	text-align: center;
+	width: 100%;
+	padding: 4px;
+}
+	
+.edfisica {
+	background-color: #d4d0b3;
+	color:#000;
+	text-align: center;
+	width: 100%;
+	padding: 4px;	
+}
+
+.contabeis {
+	background-color: #ff9966;
+	color:#000;
+	text-align: center;
+	width: 100%;
+	padding: 4px;
+}
+	
+.fisica {
+	background-color: #116554;
+	color:#fff;
+	text-align: center;
+	width: 100%;
+	padding: 4px;	text-align: center;
+	width: 100%;
+	padding: 4px;
+}
+
+.quimica {
+	background-color: #55ccdd;
+	color:#000;
+	text-align: center;
+	width: 100%;
+	padding: 4px;
+}
+
+.edcampo {
+	background-color: #060;
+	color:#FFF;
+	text-align: center;
+	width: 100%;
+	padding: 4px;
+}
+	
+.dirhumanos {
+	background-color: #663;
+	color:#FFF;
+	text-align: center;
+	width: 100%;
+	padding: 4px;
+}
+	
+.pedagogia {
+	background-color: #505e93;
+	color:#fff;
+	text-align: center;
+	width: 100%;
+	padding: 4px;
+}
+
+.historia {
+	background-color: #016075;
+	color:#fff;
+	text-align: center;
+	width: 100%;
+	padding: 4px;
+}
+
+.filosofia {
+	background-color: #9fd18b;
+	color:#000;
+	text-align: center;
+	width: 100%;
+	padding: 4px;
+}
+
+.biologia {
+	background-color: #eecc77;
+	color:#000;
+	text-align: center;
+	width: 100%;
+	padding: 4px;
+}
+
+.dimensoes {
+	background-color: #fabfb7;
+	color:#000;
+	text-align: center;
+	width: 100%;
+	padding: 4px;
+}
+
+.mais-educacao {
+	background-color: #147fad;
+	color:#FFF;
+	text-align: center;
+	width: 100%;
+	padding: 4px;
+}
+
+.matematica {
+	background-color: #009977;
+	color:#FFF;
+	text-align: center;
+	width: 100%;
+	padding: 4px;
+}	
+
+.outro {
+	background-color: #aaa;
+	color:#000;
+	text-align: center;
+	width: 100%;
+	padding: 4px;
+}
+
+.interno {
+	background-color: #555;
+	color:#FFF;
+	text-align: center;
+	width: 100%;
+	padding: 4px;	
+}
 
 .fim-bloco{
 	clear: both;
 	display: block;
 }
 
-label{
-	color: #777;
+.v-a-m{
+	vertical-align: middle;
+}
+
+.f-l{
+	float: left;
+}
+
+.p-r{
+	padding: relative!important;
+}
+
+.o_h{
+	overflow: hidden!important;
+}
+
+.progress-bar{
+	border-radius: 10px!important;
+}
+
+.width-5p{width: 5%!important; padding: 3px; }
+.width-10p{width: 10%!important; padding: 3px; }
+.width-15p{width: 15%!important; padding: 3px; }
+.width-20p{width: 20%!important; padding: 3px; }
+.width-25p{width: 25%!important; padding: 3px; }
+.width-30p{width: 30%!important; padding: 3px; }
+.width-35p{width: 35%!important; padding: 3px; }
+.width-40p{width: 40%!important; padding: 3px; }
+.width-45p{width: 45%!important; padding: 3px; }
+.width-50p{width: 50%!important; padding: 3px; }
+.width-55p{width: 55%!important; padding: 3px; }
+.width-60p{width: 60%!important; padding: 3px; }
+.width-60p{width: 65%!important; padding: 3px; }
+.width-70p{width: 70%!important; padding: 3px; }
+.width-75p{width: 75%!important; padding: 3px; }
+.width-80p{width: 80%!important; padding: 3px; }
+.width-85p{width: 85%!important; padding: 3px; }
+.width-90p{width: 90%!important; padding: 3px; }
+.width-95p{width: 95%!important; padding: 3px; }
+.width-100p{width: 100%!important; padding: 3px; }
+
+.branco{
+	color: #FFFFFF;
 }
 
 /*Responsivo*/
 
+@media all and (max-width:1300px){
+
+	.filtros-lista{
+		overflow: hidden;
+		clear: both;
+		margin-top: 50px;
+	}
+}
+
+@media all and (max-width:1050px){
+
+	.filtro-projetos{
+		float: none;
+		margin-top: 15px;
+		width: 100%!important;
+	}
+
+	.titulo-filtro-projetos{
+		float: none;
+		margin-bottom: 5px;
+	}
+
+	.filtro-projetos > .form-control{
+		width: 100%;
+	}	
+
+	.pesquisar-projeto{
+		float: none;
+		width: 100%;
+		margin-left: 0;
+		margin-top: 20px;
+	}
+
+
+}
+
 @media all and (max-width: 767px){
+	
+	.tasks-menu > ul > .header{
+		font-size: 17px!important;
+		font-weight: bold;
+	}
+
+	.titulo-proj{
+		font-size: 17px!important;
+	}
+
+	.menu > li{
+		overflow: auto!important;
+	}
+
 	.small-box {
 		text-align: left!important;
 	}
 
 	.logo{
-		text-align: left!important;	
+		text-align: left!important;
+		height: 70px!important;
 	}
+
+	.content-wrapper > .content{
+		margin-top: 40px!important;
+	}
+
+ 	.navbar-static-top{
+ 		height: 70px!important;
+ 	}
+
+ 	.main-header > a > img{
+ 		width: 35px!important;
+ 		margin-top: 10px!important;
+ 	}
 
 	.main-sidebar, .left-side {
-		padding-top: 110px!important;
+		padding-top: 155px!important;
 	}
 
-	.sidebar-toggle {
-		padding: 15px 15px 15px 20px!important;
+	ul.sidebar-menu{
+		font-size: 18px!important;
+		font-weight: bolder;
 	}
 
-	.opcoes{
-		width: 100%;
-		clear: both;
+	ul.sidebar-menu > li > a{
+		line-height: 50px!important;
 	}
 
-	.btn-editar, .btn-salvar, .btn-desativar, .btn-excluir, .btn-cancelar{
-		clear: none;
-		margin-left: 20px;
-	}		
+	.total-hora{
+		height: 80px!important;
+	}
+
+	.small-box-footer{
+		font-size: 20px!important;
+	}
+
+	.total-hora > p{
+		font-size: 18px!important;
+		font-weight: normal!important;
+	}
+
+	.total-hora > h4{
+		font-size: 27px!important;
+	}
+
+ 	.navbar-static-top > .sidebar-toggle {
+		padding: 15px!important;
+
+		font-size: 50px!important;
+		font-size: 39px!important;
+		line-height: 39px;
+	}
+
+ 	.navbar-static-top > .navbar-custom-menu{
+		height: 70px!important;
+		font-size: 37px!important;
+	}	
+
+	.user-menu > a > img{
+		width: 48px!important;
+		height: auto!important;
+		margin-top: -3px!important;
+		margin-bottom: -5px!important;
+	}
+
+	.user-header > p{
+		font-size: 20px!important;
+	}
+
+	.user-footer > div > a{
+		font-size: 18px;
+	}
 
 	footer{
 		text-align: center!important;

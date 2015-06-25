@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 
+use App\User;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -14,7 +15,9 @@ class UserController extends Controller {
 	 */
 	public function index()
 	{
-		return view('template.user.gerenciar_usuario');
+		$users = User::all();
+
+		return view('template.user.gerenciar_usuario', compact('users'));
 	}
 
 	/**
@@ -32,9 +35,20 @@ class UserController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(Request $request)
 	{
-		//
+		$input = [];
+		$input['name'] = $request->input('name');
+		$input['email'] = $request->input('email');
+		$input['password'] = $request->input('password');
+
+		User::create([
+			'name' => $input['name'],
+			'email'=> $input['email'],
+			'password' => $input['password']
+			]);
+
+			return redirect('/users');
 	}
 
 	/**
@@ -56,8 +70,9 @@ class UserController extends Controller {
 	 */
 	public function edit($id)
 	{
-		//
-	}
+        $user = User::FindOrFail($id);
+        return view('template.user.editar_usuario', compact('user'));
+    }
 
 	/**
 	 * Update the specified resource in storage.
@@ -65,9 +80,16 @@ class UserController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($id, Request $request)
 	{
-		//
+        $user = User::FindOrFail($id);
+
+        $user->name = $request->input('name');
+        $user->email = $request->input('email');
+        $user->save();
+
+        return redirect('/users');
+
 	}
 
 	/**

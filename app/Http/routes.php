@@ -19,6 +19,10 @@ Route::get('home', 'HomeController@index');
 
 Route::get('/users', 'UserController@index');
 Route::get('/users/create', 'UserController@create');
-Route::controllers([
-	'auth' => 'Auth\AuthController'
-]);
+Route::post('/users/create', 'UserController@store');
+Route::get('/users/{id}/edit', 'UserController@edit');
+Route::post('/users/{id}/edit', 'UserController@update');
+
+Route::get('auth/login', 'Auth\AuthController@getLogin');
+Route::post('auth/login', 'Auth\AuthController@postLogin');
+Route::get('auth/logout', 'Auth\AuthController@getLogout');

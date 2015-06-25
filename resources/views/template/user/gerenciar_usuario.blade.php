@@ -1,92 +1,71 @@
 @extends('app')
-  @section('content')
-  <!-- CABEÇALHO DO CONTEÚDO -->
-  <div class="col-md-12">
-    <div class="box box-default collapsed-box box-usuario">
-      <div class="box-header with-border usuario-header-box">
-        <a href="{!! url('/users/create') !!}" class="botao-adicionar-usuario" title="Novo Usuário">               
-          <i class="fa fa-plus-circle icon-adicionar-usuario"> </i>
-        </a>
-        <h2 class="titulos">Gerenciar Usuários</h2>
-      </div>
-    </div>
-  </div><!-- FIM CABEÇALHO DO CONTEÚDO -->
-  <!-- BOX DO USUÁRIO-->
-  <div class="col-md-12" style="color: #000;">
-    <div class="box box-default collapsed-box box-usuario">
-      <div class="box-header with-border usuario-header-box">
-        <span><h3 class="box-title">Giulliano Kenzo</h3></span>
-        <span><h3 class="box-title">Estagiário</h3></span>
-        <span><h3 class="box-title">Gerente</h3></span>
-        <div class="box-tools pull-right box-botao-mostrar-mais">
-          <button class="btn btn-box-tool botao-mostrar-mais" data-widget="collapse">
-            <i><img onclick="changeSrc('p-a1');" id="p-a1" alt="Mais" src="dist/img/down.png"/></i>
-          </button>
+@section('content')
+    <!-- CABEÇALHO DO CONTEÚDO -->
+    <div class="col-md-12">
+      <div class="box box-default collapsed-box box-usuario">
+        <div class="box-header with-border usuario-header-box">
+          <a href="{!! url('/users/create') !!}" class="botao-adicionar-usuario" title="Novo Usuário">
+            <i class="fa fa-plus-circle  icones-edicao-usuario"> </i>
+          </a>
+          <h2 class="titulos">Gerenciar Usuários</h2>
         </div>
       </div>
-      <!-- DADOS DO USUÁRIO -->
-      <div class="box-body dados-usuario">
-        <!-- FORM -->
-        <form role="form" action="" method="POST">
-          <!-- CAMPOS -->
-          <div class="col-md-10 col-unica">
-            <div class="form-group col-md-6">
-              <label>Nome</label>
-              <input type="text" class="form-control" placeholder="Nome ..." disabled="true" /> 
-            </div>
-            <div class="form-group col-md-6">
-              <label>E-mail</label>
-              <input type="text" class="form-control" placeholder="E-mail ..." disabled="true"/>
-            </div>
-            <div class="form-group col-md-3">
-              <label>CPF</label>
-              <input type="text" class="form-control" placeholder="CPF ..." disabled="true" />
-            </div>
-            <div class="form-group col-md-3">
-              <label>Telefone:</label>
-              <input type="text" class="form-control" placeholder="(__) _-____-____" data-inputmask='"mask": "(99) 9-9999-9999"' data-mask disabled="true"/>
-            </div>
-            <div class="form-group col-md-6">
-              <label>Endereço</label>
-              <input type="text" class="form-control" placeholder="Rua, Bairro, Cidade ..." disabled="true"/>
-            </div> 
-            <div class="form-group col-md-4">
-              <label>Área de atuação</label>
-              <input type="text" class="form-control" placeholder="Área da atuação ..." disabled="true" />
-            </div>
-            <div class="form-group col-md-4">
-              <label>Função</label>
-              <input type="text" class="form-control" placeholder="Função ..." disabled="true" />
-            </div>
-            <div class="form-group col-md-4">
-              <label>Entrada</label>
-              <input type="text" class="form-control" placeholder="dd/mm/yyyy" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask  disabled="true" /> 
-            </div>                                           
-          </div><!-- FIM CAMPOS --> 
-          <!-- OPÇÕES DE EDIÇÃO DOS CAMPOS DO USUÁRIO-->
-          <div class="opcoes">
-            <div class="botao-mostrar btn-editar" name="btn" style="display: block;" onclick="habilitaDesabilitaInput(false); mostrarEnsonderBotoes()" title="Editar">
-              <span><i class="fa fa-edit"></i></span>
-            </div> 
-            <div class="botao-voltar edicao-usuario" style="display:none">
-              <div class="btn-cancelar" name="btn" onclick="habilitaDesabilitaInput(false); mostrarEnsonderBotoes()" title="Cancelar">
-                <span><i class="fa fa-times "></i></span>
-              </div>                        
-              <div class="btn-salvar" title="Salvar">
-                <button type="submit" name="enviar">
-                  <span><i class="fa fa-check"></i></span>
-                </button>                            
-              </div>
-              <div class="btn-desativar" title="Desativar">
-                <span><i class="fa fa-ban"></i></span>
-              </div>
-              <div class="btn-excluir " title="Excluir">
-                <span><i class="fa fa-trash-o"></i></span>
-              </div>
-            </div>                                                                    
-          </div><!-- FIM OPÇÕES DE EDIÇÃO DO USUÁRIO-->
-        </form><!-- FIM FORM -->
-      </div><!-- FIM DADOS DO USUÁRIO -->
+    </div><!-- FIM CABEÇALHO DO CONTEÚDO -->
+
+    <!-- CABEÇALHO LISTA-->
+    <div class="col-md-12" style="color: #000;">
+      <div class="box box-default collapsed-box box-usuario">
+        <div class="box-header with-border usuario-header-box">
+          <span><h3 class="box-title width-20p v-a-m"><b>Estagiário</b></h3></span>
+          <span><h3 class="box-title width-20p v-a-m"><b>Função</b></h3></span>
+          <span><h3 class="box-title width-20p v-a-m"><b>Área</b></h3></span>
+        </div>
+      </div>
     </div>
-  </div><!-- FIM BOX DO USUÁRIO -->
+    @foreach($users as $user)
+    <!-- BOX DO USUÁRIO-->
+    <div class="col-md-12" style="color: #000;">
+      <div class="box box-default collapsed-box box-usuario">
+        <div class="box-header with-border usuario-header-box">
+          <span><h3 class="box-title sub-box-title width-20p v-a-m">{{ $user->name }}</h3></span>
+          <span><h3 class="box-title sub-box-title width-20p v-a-m">Estagiário</h3></span>
+          <span><h3 class="box-title sub-box-title width-20p v-a-m">Web</h3></span>
+
+          <div class="box-tools botao-editar-usuario">
+            <a href="{!! url('/users/'.$user->id.'/edit') !!}" title="Editar">
+              <samp class="fa fa-edit"></samp>
+            </a>
+          </div>
+
+          <div class="box-botao-mostrar-mais">
+            <div class="box-tools pull-right">
+              <button class="btn btn-box-tool botao-mostrar-mais" data-widget="collapse" title="Expandir">
+                <i><img onclick="clique(event)" alt="Mais" class="item img-expandir" src="assets/dist/img/down.png"/></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- DADOS DO USUÁRIO -->
+        <div class="box-body dados-usuario">
+
+        <div class="col-md-6">
+          <span class="label-form">Nome: </span> <span>Leandro Siqueira da Hora Gonzaga</span> <br />
+          <span class="label-form">E-mail: </span> <span>leandroshora@gmail.com</span> <br />
+          <span class="label-form">CPF: </span> <span>121.923.787-69</span> <br />
+          <span class="label-form">Telefone: </span> <span>(27) 99958-4570</span> <br />
+        </div>
+
+        <div class="col-md-6">
+          <span class="label-form">Endereço: </span> <span>Av. Sólon Borges, Sólon Borges</span> <br />
+          <span class="label-form">Função: </span> <span>Estagiário</span> <br />
+          <span class="label-form">Área de atuação: </span> <span>Web</span> <br />
+          <span class="label-form">Entrada: </span> <span>14/03/2014</span> <br />
+        </div>
+
+        </div><!-- FIM DADOS DO USUÁRIO -->
+      </div>
+    </div><!-- FIM BOX DO USUÁRIO -->
+    @endforeach
 @endsection

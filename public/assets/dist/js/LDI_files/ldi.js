@@ -26,7 +26,7 @@ function habilitaDesabilitaInput( bool )
       }else{
         input[i].disabled = false;
       };
-    };     
+    };
   };
 };
 
@@ -40,7 +40,7 @@ function mostrarEnsonderBotoes() {
 
 
   for(i=0; i<classe.length; i++){
-      
+
     if( classe[i].name='btn' ){
 
       if (classe[i].style.display == "block") {
