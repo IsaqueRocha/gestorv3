@@ -27,7 +27,8 @@ class UserController extends Controller {
 	 */
 	public function create()
 	{
-		return view('template.user.adicionar_usuario');
+        $user = new User();
+		return view('template.user.adicionar_usuario', compact('user'));
 	}
 
 	/**
@@ -48,7 +49,7 @@ class UserController extends Controller {
 			'password' => $input['password']
 			]);
 
-			return redirect('/users');
+		return redirect('/users');
 	}
 
 	/**
