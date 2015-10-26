@@ -19,10 +19,11 @@ class CreateUsersTable extends Migration
             $table->string('cpf')->unique();
             $table->string('phone')->unique();
             $table->string('address', 150);
-            $table->integer('role_id')->unsigned()->default(3);/* 0 - Admin; 1 - Coordenador; 2 - Técnico; 3 - Estagiário; */
-            $table->integer('area_id')->unsigned();/* 0 - Master; 1 - Digramação, 2 - Gerencia; 3 - Ilustração; 4 - Vídeo; 5 - Web; */
+            $table->enum('role', array('Admin', 'Coordenador', 'Técnico', 'Estagiário'))->default('Estagiário');/* 0 - Admin; 1 - Coordenador; 2 - Técnico; 3 - Estagiário; */
+            $table->enum('area', array('Master', 'Gerência', 'Diagramação', 'Ilustração', 'Vídeo', 'Web'));/* 0 - Master; 1 - Digramação, 2 - Gerencia; 3 - Ilustração; 4 - Vídeo; 5 - Web; */
             $table->date('entrance_date');
             $table->string('password', 60);
+            $table->boolean('active')->default('true');
             $table->rememberToken();
             $table->timestamps();
         });

@@ -11,82 +11,40 @@
     </div>
     <!-- BOX DO USUÁRIO-->
     <div class="col-md-12" style="color: #000;">
-      <div class="box-body dados-usuario">
-        <!-- FORMULÁRIO -->
-          <form role="form" method="POST">
-              {!! csrf_field() !!}
-              <div class="col-md-12 col-unica">
-                  <div class="form-group col-md-6">
-                      <label>Nome</label>
-                      <input type="text" name="name" class="form-control" placeholder="Nome ..." value="{{ $user->name }}" />
-                  </div>
-                  <div class="form-group col-md-6">
-                      <label>E-mail</label>
-                      <input type="email" name="email" class="form-control" placeholder="E-mail ..." value="{{ $user->email }}" />
-                  </div>
-                  <div class="form-group col-md-3">
-                      <label>CPF</label>
-                      <input type="text" name="cpf" class="form-control" placeholder="___.___.___-__" data-inputmask='"mask": "999.999.999-99"' data-mask/>
-                  </div>
-                  <div class="form-group col-md-3">
-                      <label>Telefone:</label>
-                      <input type="text" name="phone" class="form-control" placeholder="(__) _____-____" data-inputmask='"mask": "(99) 99999-9999"' data-mask/>
-                  </div>
-                  <div class="form-group col-md-6">
-                      <label>Endereço</label>
-                      <input type="text" name="address" class="form-control" placeholder="Rua, Bairro, Cidade ..."/>
-                  </div>
-                  <div class="form-group col-md-4">
-                      <label>Função</label>
-                      <select name="role" class="form-control">
-                          <option>Selecionar</option>
-                          <option>Coordenador</option>
-                          <option>Estagiário</option>
-                          <option>Gerente</option>
-                      </select>
-                  </div>
-                  <div class="form-group col-md-4">
-                      <label>Área de atuação</label>
-                      <select name="operation" class="form-control">
-                          <option>Selecionar</option>
-                          <option>Diagramação</option>
-                          <option>Gerência</option>
-                          <option>Ilustração</option>
-                          <option>Vídeo</option>
-                          <option>Web</option>
-                      </select>
-                  </div>
-                  <div class="form-group col-md-4">
-                      <label>Entrada</label>
-                      <input type="text" name="start_date" class="form-control" placeholder="dd/mm/yyyy" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
-                  </div>
-              </div>
-              <!--BOTÕES-->
-              <div class="me-col-12 box-botao-submit" >
+        @include('template.user._errors')23
+        <div class="box-body dados-usuario">
+            <!-- FORMULÁRIO -->
+            <form role="form" action="" method="POST">
+                {!! csrf_field() !!}
+                <div class="col-md-12 col-unica">
+                    @include('template.user._form')
+                    <!--BOTÕES-->
+                    <div class="me-col-12 box-botao-submit" >
+                        <!--CANCELAR-->
+                        <a href="{{ url('/users') }}" class="botao-cancelar-adicionar-usuario" data-toggle="tooltip" data-placement="top" title="Cancelar">
+                            <i class="fa fa-times-circle icones-edicao-usuario"> </i>
+                        </a>
 
-                  <!--CANCELAR-->
-                  <a href="{!! url('/users') !!}" class="botao-cancelar-adicionar-usuario" title="Cancelar">
-                      <i class="fa fa-times-circle icones-edicao-usuario"> </i>
-                  </a>
+                        <!--EXCLUIR-->
+                        <a href="{{ url('/users/'.$user->id.'/delete') }}" class="botao-excluir-usuario" data-toggle="tooltip" data-placement="top" title="Excluir">
+                            <i class="fa fa-trash icon-edicao-usuario-circles"> </i>
+                        </a>
 
-                  <!--EXCLUIR-->
-                  <a href="#" class="botao-excluir-usuario" title="Excluir">
-                      <i class="fa fa-trash icon-edicao-usuario-circles"> </i>
-                  </a>
+                        <!--DESATIVAR-->
+                        <a href="{{ url('/users/'.$user->id.'/deactivate') }}" class="botao-desativar-usuario" data-toggle="tooltip" data-placement="top" title="Desativar">
+                            <i class="fa fa-ban icon-edicao-usuario-circles"> </i>
+                        </a>
 
-                  <!--DESATIVAR-->
-                  <a href="#" class="botao-desativar-usuario" title="Desativar">
-                      <i class="fa fa-ban icon-edicao-usuario-circles"> </i>
-                  </a>
+                        <!--SALVAR-->
+                        <a href="{{ url('/users/'.$user->id.'/update') }}" class="botao-salvar-usuario" data-toggle="tooltip" data-placement="top" title="Salvar">
+                            <button >
+                                <i class="fa fa-check-circle  icones-edicao-usuario"> </i>
+                            </button>
+                        </a>
+                    </div><!--FIM BOTÕES-->
+                </div>
+            </form><!-- FORMULÁRIO -->
+        </div>
+    </div><!-- FIM BOX DO USUÁRIO-->
 
-                  <!--SALVAR-->
-                  <a href="#" class="botao-salvar-usuario" title="Adicionar">
-                      <button >
-                          <i class="fa fa-check-circle  icones-edicao-usuario"> </i>
-                      </button>
-                  </a>
-              </div>
-          </form>
-      </div>
-    </div>
 @endsection

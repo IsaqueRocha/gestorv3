@@ -25,12 +25,12 @@
     </div>
     @foreach($users as $user)
         <!-- BOX DO USUÁRIO-->
-        <div class="col-md-12" style="color: #000;">a
+        <div class="col-md-12" style="color: #000;">
             <div class="box box-default collapsed-box box-usuario">
                 <div class="box-header with-border usuario-header-box">
                     <span><h3 class="box-title sub-box-title width-20p v-a-m">{{ $user->name }}</h3></span>
-                    <span><h3 class="box-title sub-box-title width-20p v-a-m">Estagiário</h3></span>
-                    <span><h3 class="box-title sub-box-title width-20p v-a-m">Web</h3></span>
+                    <span><h3 class="box-title sub-box-title width-20p v-a-m">{{ $user->role }}</h3></span>
+                    <span><h3 class="box-title sub-box-title width-20p v-a-m">{{ $user->area }}</h3></span>
 
                     <div class="box-tools botao-editar-usuario">
                         <a href="{!! url('/users/'.$user->id.'/edit') !!}" title="Editar">
@@ -52,17 +52,17 @@
                 <div class="box-body dados-usuario">
 
                     <div class="col-md-6">
-                        <span class="label-form">Nome: </span> <span>Leandro Siqueira da Hora Gonzaga</span> <br/>
-                        <span class="label-form">E-mail: </span> <span>leandroshora@gmail.com</span> <br/>
-                        <span class="label-form">CPF: </span> <span>121.923.787-69</span> <br/>
-                        <span class="label-form">Telefone: </span> <span>(27) 99958-4570</span> <br/>
+                        <span class="label-form">Nome: </span> <span>{{ $user->name }}</span> <br/>
+                        <span class="label-form">E-mail: </span> <span>{{ $user->email }}</span> <br/>
+                        <span class="label-form">CPF: </span> <span>{{ $user->cpf }}</span> <br/>
+                        <span class="label-form">Telefone: </span> <span>{{ $user->phone }}</span> <br/>
                     </div>
 
                     <div class="col-md-6">
-                        <span class="label-form">Endereço: </span> <span>Av. Sólon Borges, Sólon Borges</span> <br/>
-                        <span class="label-form">Função: </span> <span>Estagiário</span> <br/>
-                        <span class="label-form">Área de atuação: </span> <span>Web</span> <br/>
-                        <span class="label-form">Entrada: </span> <span>14/03/2014</span> <br/>
+                        <span class="label-form">Endereço: </span> <span>{{ $user->address }}</span> <br/>
+                        <span class="label-form">Função: </span> <span>{{ $user->role }}</span> <br/>
+                        <span class="label-form">Área de atuação: </span> <span>{{ $user->area }}</span> <br/>
+                        <span class="label-form">Entrada: </span> <span>{{ $user->entrance_date->format('d/m/Y') }}</span> <br/>
                     </div>
 
                 </div>

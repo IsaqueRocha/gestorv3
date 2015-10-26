@@ -8,9 +8,13 @@ use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 
+use Carbon\Carbon;
+
 class User extends Model implements AuthenticatableContract, CanResetPasswordContract
 {
     use Authenticatable, CanResetPassword;
+
+    protected $dates = ['entrance_date'];
 
     /**
      * The database table used by the model.
@@ -24,7 +28,22 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
      *
      * @var array
      */
-    protected $fillable = ['name', 'email', 'password'];
+    protected $fillable = [
+        'name',
+        'email',
+        'password',
+        'cpf',
+        'phone',
+        'address',
+        'role',
+        'area',
+    ];
+
+    public function setEntranceDateAttribute($date){
+        $date = explode('/', $date);
+        $date = $date[2].'-'.$date[1].'-'.$date[0];
+        $this->attributes['entrance_date'] = Carbon::parse($date);
+    }
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -32,4 +51,8 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
      * @var array
      */
     protected $hidden = ['password', 'remember_token'];
+
+    public function work_schedule(){
+        return $this->hasOne('App\WorkSchedule', 'user_id');
+    }
 }
