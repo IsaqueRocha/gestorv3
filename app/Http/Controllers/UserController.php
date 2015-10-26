@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Carbon\Carbon;
 
 use Illuminate\Http\Request;
+use Laracasts\Flash\Flash;
 
 class UserController extends Controller {
 
@@ -84,6 +85,7 @@ class UserController extends Controller {
             'sex_pm' => $input['sex_pm'],
         ]);
 
+        Flash::success('Usuário criado com sucesso');
 
 		return redirect('/users');
 	}
@@ -144,6 +146,8 @@ class UserController extends Controller {
         ]);
 
         $user->save();
+
+        flash()->success('Usuário atualizado com sucesso');
 
         return redirect('/users');
 

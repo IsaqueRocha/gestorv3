@@ -4,7 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d86063e8a2cd93e29c8bda8f2b310066",
+    "hash": "5207a15f83c6754f8cb2831a4a66d778",
+    "content-hash": "3bdaf7212051fce99f4d4013c02ef8af",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -365,6 +366,49 @@
                 "tokenizer"
             ],
             "time": "2015-03-11 20:06:43"
+        },
+        {
+            "name": "laracasts/flash",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laracasts/flash.git",
+                "reference": "f8d339b569e4da3348ab9a20be8318f39aa3a623"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laracasts/flash/zipball/f8d339b569e4da3348ab9a20be8318f39aa3a623",
+                "reference": "f8d339b569e4da3348ab9a20be8318f39aa3a623",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Laracasts\\Flash": "src/"
+                },
+                "files": [
+                    "src/Laracasts/Flash/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeffrey Way",
+                    "email": "jeffrey@laracasts.com"
+                }
+            ],
+            "description": "Easy flash notifications",
+            "time": "2015-08-19 17:33:22"
         },
         {
             "name": "laravel/framework",
@@ -954,12 +998,12 @@
             "version": "v2.7.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/Console.git",
+                "url": "https://github.com/symfony/console.git",
                 "reference": "7f0bec04961c61c961df0cb8c2ae88dbfd83f399"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Console/zipball/7f0bec04961c61c961df0cb8c2ae88dbfd83f399",
+                "url": "https://api.github.com/repos/symfony/console/zipball/7f0bec04961c61c961df0cb8c2ae88dbfd83f399",
                 "reference": "7f0bec04961c61c961df0cb8c2ae88dbfd83f399",
                 "shasum": ""
             },
@@ -1011,12 +1055,12 @@
             "version": "v2.7.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/CssSelector.git",
+                "url": "https://github.com/symfony/css-selector.git",
                 "reference": "0b5c07b516226b7dd32afbbc82fe547a469c5092"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/CssSelector/zipball/0b5c07b516226b7dd32afbbc82fe547a469c5092",
+                "url": "https://api.github.com/repos/symfony/css-selector/zipball/0b5c07b516226b7dd32afbbc82fe547a469c5092",
                 "reference": "0b5c07b516226b7dd32afbbc82fe547a469c5092",
                 "shasum": ""
             },
@@ -1064,12 +1108,12 @@
             "version": "v2.7.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/Debug.git",
+                "url": "https://github.com/symfony/debug.git",
                 "reference": "1df2971b27a6ff73dae4ea622f42802000ec332d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Debug/zipball/1df2971b27a6ff73dae4ea622f42802000ec332d",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/1df2971b27a6ff73dae4ea622f42802000ec332d",
                 "reference": "1df2971b27a6ff73dae4ea622f42802000ec332d",
                 "shasum": ""
             },
@@ -1124,12 +1168,12 @@
             "version": "v2.7.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/DomCrawler.git",
+                "url": "https://github.com/symfony/dom-crawler.git",
                 "reference": "11d8eb8ccc1533f4c2d89a025f674894fda520b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/DomCrawler/zipball/11d8eb8ccc1533f4c2d89a025f674894fda520b3",
+                "url": "https://api.github.com/repos/symfony/dom-crawler/zipball/11d8eb8ccc1533f4c2d89a025f674894fda520b3",
                 "reference": "11d8eb8ccc1533f4c2d89a025f674894fda520b3",
                 "shasum": ""
             },
@@ -1177,12 +1221,12 @@
             "version": "v2.7.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/EventDispatcher.git",
+                "url": "https://github.com/symfony/event-dispatcher.git",
                 "reference": "687039686d0e923429ba6e958d0baa920cd5d458"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/687039686d0e923429ba6e958d0baa920cd5d458",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/687039686d0e923429ba6e958d0baa920cd5d458",
                 "reference": "687039686d0e923429ba6e958d0baa920cd5d458",
                 "shasum": ""
             },
@@ -1235,12 +1279,12 @@
             "version": "v2.7.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/Filesystem.git",
+                "url": "https://github.com/symfony/filesystem.git",
                 "reference": "ae4551fd6d4d4f51f2e7390fbc902fbd67f3b7ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Filesystem/zipball/ae4551fd6d4d4f51f2e7390fbc902fbd67f3b7ba",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/ae4551fd6d4d4f51f2e7390fbc902fbd67f3b7ba",
                 "reference": "ae4551fd6d4d4f51f2e7390fbc902fbd67f3b7ba",
                 "shasum": ""
             },
@@ -1333,12 +1377,12 @@
             "version": "v2.7.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/HttpFoundation.git",
+                "url": "https://github.com/symfony/http-foundation.git",
                 "reference": "729de183da037c125c5f6366bd4f0631ba1a1abb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/729de183da037c125c5f6366bd4f0631ba1a1abb",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/729de183da037c125c5f6366bd4f0631ba1a1abb",
                 "reference": "729de183da037c125c5f6366bd4f0631ba1a1abb",
                 "shasum": ""
             },
@@ -1386,12 +1430,12 @@
             "version": "v2.7.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/HttpKernel.git",
+                "url": "https://github.com/symfony/http-kernel.git",
                 "reference": "74acbb7ef9c4aae0620d3250b9b990d2fff28d16"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/HttpKernel/zipball/74acbb7ef9c4aae0620d3250b9b990d2fff28d16",
+                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/74acbb7ef9c4aae0620d3250b9b990d2fff28d16",
                 "reference": "74acbb7ef9c4aae0620d3250b9b990d2fff28d16",
                 "shasum": ""
             },
@@ -2982,7 +3026,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "laracasts/flash": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

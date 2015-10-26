@@ -8,6 +8,7 @@
     @include('template.sidebar')
     <div class="content-wrapper">
       <section class="content">
+        @include('flash::message')
         <!-- CHAMAR AQUI O CONTEÚDO DE CADA PÁGINA -->
         @yield('content')
       </section>
@@ -15,4 +16,7 @@
     @include('template.footer')
     @include('template.scripts_js')
   </body>
+  <script>
+    $('div.alert').not('alert-important').delay(5000).slideUp(300);
+  </script>
 </html>
