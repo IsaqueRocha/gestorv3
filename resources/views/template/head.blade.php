@@ -14,6 +14,10 @@
 <!-- CSS personalizado do LDI -->
 <link href="{{ asset('/assets/dist/css/style-LDI.css') }}" rel="stylesheet" type="text/css" />
 <link href="{{ asset('/assets/dist/css/skins/skin-blue.css') }}" rel="stylesheet" type="text/css" />
+
+<!--CSS do sweetAlert -->
+<link href="{{ asset('assets/plugins/sweetalert/sweetalert.css') }}" rel="stylesheet" type="text/css" >
+
 <!--[if lt IE 9]>
   <script src="dist/js/html5shiv.js"></script>
   <script src="dist/js/respond.min.js"></script>

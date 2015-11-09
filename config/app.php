@@ -148,6 +148,8 @@ return [
          * Custom Service Providers...
          */
         Laracasts\Flash\FlashServiceProvider::class,
+        Infinety\SweetAlert\AlertServiceProvider::class,
+
 
     ],
 

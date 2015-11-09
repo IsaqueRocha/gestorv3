@@ -11,7 +11,7 @@
     </div>
     <!-- BOX DO USUÁRIO-->
     <div class="col-md-12" style="color: #000;">
-        @include('template.user._errors')23
+        @include('template.user._errors')
         <div class="box-body dados-usuario">
             <!-- FORMULÁRIO -->
             <form role="form" action="" method="POST">
@@ -21,12 +21,12 @@
                     <!--BOTÕES-->
                     <div class="me-col-12 box-botao-submit" >
                         <!--CANCELAR-->
-                        <a href="{{ url('/users') }}" class="botao-cancelar-adicionar-usuario" data-toggle="tooltip" data-placement="top" title="Cancelar">
+                        <a href="{{ url('/users') }}" class="botao-cancelar-adicionar-usuario" data-toggle="tooltip" data-placement="top" title="Cancelar" onclick="cancelarCadastro()">
                             <i class="fa fa-times-circle icones-edicao-usuario"> </i>
                         </a>
 
                         <!--EXCLUIR-->
-                        <a href="{{ url('/users/'.$user->id.'/delete') }}" class="botao-excluir-usuario" data-toggle="tooltip" data-placement="top" title="Excluir">
+                        <a href="#" class="botao-excluir-usuario" data-toggle="tooltip" data-placement="top" title="Excluir" onclick="excluirUsuario()">
                             <i class="fa fa-trash icon-edicao-usuario-circles"> </i>
                         </a>
 

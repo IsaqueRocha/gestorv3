@@ -11,3 +11,5 @@
 <script src="{{ asset('assets/plugins/input-mask/jquery.inputmask.js') }}" type="text/javascript"></script>
 <script src="{{ asset('assets/plugins/input-mask/jquery.inputmask.date.extensions.js') }}" type="text/javascript"></script>
 <script src="{{ asset('assets/plugins/input-mask/jquery.inputmask.extensions.js') }}" type="text/javascript"></script>
+<!--Plugin do sweet alert -->
+<script src="{{ asset('assets/plugins/sweetalert/sweetalert.js')}}"></script>
