@@ -8,7 +8,8 @@
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*",
         "laracasts/flash": "dev-master",
-        "infinety/sweetalert": "dev-master"
+        "infinety/sweetalert": "dev-master",
+        "intervention/image": "^2.3@dev"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

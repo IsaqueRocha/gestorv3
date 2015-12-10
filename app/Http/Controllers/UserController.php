@@ -5,6 +5,7 @@ use App\WorkSchedule;
 use App\Http\Requests\UserRequest;
 use App\Http\Controllers\Controller;
 use Carbon\Carbon;
+use Intervention\Image;
 
 use Illuminate\Http\Request;
 use Laracasts\Flash\Flash;
