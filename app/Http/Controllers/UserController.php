@@ -13,6 +13,16 @@ use Laracasts\Flash\Flash;
 class UserController extends Controller {
 
 	/**
+     * Create a new authentication controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+	/**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
@@ -46,14 +56,14 @@ class UserController extends Controller {
          * Criação de um novo usuário para o sistema.
          **/
 		$input = [];
-		$input['name'] = $request->input('name');
-		$input['email'] = $request->input('email');
-		$input['password'] = bcrypt('password');
-        $input['cpf'] = $request->input('cpf');
-        $input['phone'] = $request->input('phone');
-        $input['address'] = $request->input('address');
-        $input['role'] = $request->input('role');
-        $input['area'] = $request->input('area');
+		$input['name'] 			= $request->input('name');
+		$input['email'] 		= $request->input('email');
+		$input['password'] 		= bcrypt('password'); //mudar quando for para homologação.
+        $input['cpf']			= $request->input('cpf');
+        $input['phone'] 		= $request->input('phone');
+        $input['address'] 		= $request->input('address');
+        $input['role'] 			= $request->input('role');
+        $input['area'] 			= $request->input('area');
         $input['entrance_date'] = $request->input('entrance_date');
 
 
@@ -124,14 +134,14 @@ class UserController extends Controller {
 	{
         $user = User::FindOrFail($id);
 
-        $user->name = $request->input('name');
-        $user->email = $request->input('email');
-        $user->cpf = $request->input('cpf');
-        $user->phone = $request->input('phone');
-        $user->address = $request->input('address');
-        $user->role = $request->input('role');
-        $user->area = $request->input('area');
-        $user->entrance_date = $request->input('entrance_date');
+        $user->name 			= $request->input('name');
+        $user->email 			= $request->input('email');
+        $user->cpf 				= $request->input('cpf');
+        $user->phone 			= $request->input('phone');
+        $user->address 			= $request->input('address');
+        $user->role 			= $request->input('role');
+        $user->area 		 	= $request->input('area');
+        $user->entrance_date	= $request->input('entrance_date');
 
         $user->work_schedule()->update([
             'seg_am' => $request['seg_am'],
