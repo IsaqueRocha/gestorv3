@@ -11,7 +11,6 @@ use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 
 use Carbon\Carbon;
-use App\WorkSchedule;
 
 class User extends Model implements AuthenticatableContract, CanResetPasswordContract, AuthorizableContract
 {
@@ -56,6 +55,6 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     protected $hidden = ['password', 'remember_token'];
 
     public function work_schedule(){
-        return $this->hasOne(WorkSchedule::class, 'user_id');
+        return $this->hasOne('App\WorkSchedule', 'user_id');
     }
 }

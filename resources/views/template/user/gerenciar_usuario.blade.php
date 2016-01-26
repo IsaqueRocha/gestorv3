@@ -17,7 +17,7 @@
     <div class="col-md-12" style="color: #000;">
         <div class="box box-default collapsed-box box-usuario">
             <div class="box-header with-border usuario-header-box">
-                <span><h3 class="box-title width-20p v-a-m"><b>Usuário</b></h3></span>
+                <span><h3 class="box-title width-20p v-a-m"><b>Estagiário</b></h3></span>
                 <span><h3 class="box-title width-20p v-a-m"><b>Função</b></h3></span>
                 <span><h3 class="box-title width-20p v-a-m"><b>Área</b></h3></span>
             </div>
