@@ -23,7 +23,7 @@ class CreateUsersTable extends Migration
             $table->enum('area', array('Master', 'Gerência', 'Diagramação', 'Ilustração', 'Vídeo', 'Web'));/* 0 - Master; 1 - Digramação, 2 - Gerencia; 3 - Ilustração; 4 - Vídeo; 5 - Web; */
             $table->date('entrance_date');
             $table->string('password', 60);
-            $table->boolean('active')->default('true');
+            $table->boolean('active')->default(true);
             $table->rememberToken();
             $table->timestamps();
         });
