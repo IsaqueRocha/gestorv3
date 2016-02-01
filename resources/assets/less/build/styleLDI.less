@@ -1,9 +1,11 @@
-body{
-    font-family: "Helvetica Neue", Arial, sans-serif!important;
+@import "../mixins.less";
+
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif !important;
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-    font-family: "Helvetica Neue", Arial, sans-serif!important;
+    font-family: "Helvetica Neue", Arial, sans-serif !important;
 }
 
 .content{
@@ -16,24 +18,23 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 .logo{
-    text-align: right!important;
+    text-align: right !important;
 }
 
 li.user-header{
-    background-color: #3c474b!important;
+    background-color: #3c474b !important;
     height: auto!important;
     padding: 30px 15px 15px 15px !important;
 }
 
 .sidebar-menu > li{
-    background-color: #3c474b!important;
-    margin-top: 1px!important;
-    line-height: 12px!important;
+    background-color: #3c474b !important;
+    margin-top: 1px !important;
+    line-height: 12px !important;
 
-}
-
-.sidebar-menu > li > a{
-    margin-left: -6px!important;
+    a {
+        margin-left: -6px !important;
+    }
 }
 
 .main-sidebar{
@@ -41,25 +42,25 @@ li.user-header{
 }
 
 .sidebar a{
-    color: #FFF!important;
+    color: #FFF !important;
 }
 
 
 .box-horario{
-    color: #FFF!important;
-    background-color: #3c474b!important;
-    border-radius: 0!important;
+    color: #FFF !important;
+    background-color: #3c474b !important;
+    border-radius: 0 !important;
     margin-top: 10px;
-    overflow: hidden!important;
+    overflow: hidden !important;
 }
 
 .small-box{
-    margin-bottom: 10px!important;
+    margin-bottom: 10px !important;
 }
 
 .small-box-footer{
-    text-align: left!important;
-    padding-left: 10px!important;
+    text-align: left !important;
+    padding-left: 10px !important;
     background-color: rgba(0, 0, 0, 0.3)!important;
 }
 
@@ -76,16 +77,16 @@ li.user-header{
 
 .total-hora{
     height: 60px!important;
-}
 
-.total-hora > p{
-    margin-bottom: 5px!important;
-    font-size: 13px!important;
-}
+    p {
+        margin-bottom: 5px!important;
+        font-size: 13px!important;
+    }
 
-.total-hora > h4 {
-    margin: 5px 0 0 0!important;
-    font-size: 20px!important;
+    h4 {
+        margin: 5px 0 0 0!important;
+        font-size: 20px!important;
+    }
 }
 
 .sidebar-menu > li > a:hover{
@@ -114,21 +115,20 @@ li.user-header{
 }
 
 .box-botoes-gerenciar-projeto{
-
     overflow: hidden;
-}
 
-.box-botoes-gerenciar-projeto > .botao{
-    float: right;
-}
+    .botao {
+        float: right;
 
-.box-botoes-gerenciar-projeto > .botao > a{
-    float: right;
-    padding-left: 7px;
-    padding-right: 7px;
-    color: #3c474b!important;
-    font-size: 22px;
-    top: 30px!important;
+        a {
+            float: right;
+            padding-left: 7px;
+            padding-right: 7px;
+            color: #3c474b!important;
+            font-size: 22px;
+            top: 30px!important;
+        }
+    }
 }
 
 .box-botao-mostrar-mais{
@@ -227,7 +227,7 @@ li.user-header{
 }
 
 .box-botao-submit{
-    overflow: hidden!important;
+    overflow: hidden !important;
     width: 100%;
     clear: both;
     padding-right: 30px;
@@ -236,7 +236,7 @@ li.user-header{
 .dados-usuario {
     color: #444;
     background-color: #f7f7f7;
-    overflow: hidden!important;
+    overflow: hidden !important;
 }
 
 .btn-editar > span > i, .btn-cancelar >span > i{
@@ -244,17 +244,17 @@ li.user-header{
 }
 
 
-.btn-salvar > button > span > i {
-    background-color: green;
-}
-
-.btn-salvar > button{
+.btn-salvar > button {
     background-color: rgba(0,0,0,0);
     border: none;
     height: 23px;
     width: 23px;
     margin: 0!important;
     padding:0!important;
+
+    span > i {
+        background-color: green;
+    }
 }
 
 
@@ -301,10 +301,10 @@ li.user-header{
     margin-right:20px;
     width: 230px;
     margin-bottom: 0px!important;
-}
 
-.filtro-projetos > .form-control{
-    width: 150px;
+    .form-control {
+        width: 150px;
+    }
 }
 
 .titulo-filtro-projetos{
@@ -324,12 +324,12 @@ li.user-header{
     float: left;
     padding: 4px;
     font-size: 12px;
-}
 
-.box-valor-progresso > h6{
-    margin-top: 5px!important;
-    margin-bottom: 0!important;
-    vertical-align: middle!important;
+    h6 {
+        margin-top: 5px!important;
+        margin-bottom: 0!important;
+        vertical-align: middle!important;
+    }
 }
 
 .valor-progresso{
@@ -399,139 +399,103 @@ li.user-header{
     background-color: orange;
 }
 
-
-
 /*Estilos comuns*/
 .artes {
     background-color: #c94259;
     color:#FFF;
-    text-align: center;
     font-size: 13px!important;
     font-weight:lighter;
-    width: 100%;
-    padding: 4px;
+    .cursoAlign;
 }
 
 .edfisica {
     background-color: #d4d0b3;
     color:#000;
-    text-align: center;
-    width: 100%;
-    padding: 4px;
+    .cursoAlign;
 }
 
 .contabeis {
     background-color: #ff9966;
     color:#000;
-    text-align: center;
-    width: 100%;
-    padding: 4px;
+    .cursoAlign;
 }
 
 .fisica {
     background-color: #116554;
     color:#fff;
-    text-align: center;
-    width: 100%;
-    padding: 4px;
-    text-align: center;
-    width: 100%;
+    .cursoAlign;
 }
 
 .quimica {
     background-color: #55ccdd;
     color:#000;
-    text-align: center;
-    width: 100%;
-    padding: 4px;
+    .cursoAlign;
 }
 
 .edcampo {
     background-color: #060;
     color:#FFF;
-    text-align: center;
-    width: 100%;
-    padding: 4px;
+    .cursoAlign;
 }
 
 .dirhumanos {
     background-color: #663;
     color:#FFF;
-    text-align: center;
-    width: 100%;
-    padding: 4px;
+    .cursoAlign;
 }
 
 .pedagogia {
     background-color: #505e93;
     color:#fff;
-    text-align: center;
-    width: 100%;
-    padding: 4px;
+    .cursoAlign;
 }
 
 .historia {
     background-color: #016075;
     color:#fff;
-    text-align: center;
-    width: 100%;
-    padding: 4px;
+    .cursoAlign;
 }
 
 .filosofia {
     background-color: #9fd18b;
     color:#000;
-    text-align: center;
-    width: 100%;
-    padding: 4px;
+    .cursoAlign;
 }
 
 .biologia {
     background-color: #eecc77;
     color:#000;
-    text-align: center;
-    width: 100%;
-    padding: 4px;
+    .cursoAlign;
 }
 
 .dimensoes {
     background-color: #fabfb7;
     color:#000;
-    text-align: center;
-    width: 100%;
-    padding: 4px;
+    .cursoAlign;
 }
 
 .mais-educacao {
     background-color: #147fad;
     color:#FFF;
-    text-align: center;
-    width: 100%;
-    padding: 4px;
+    .cursoAlign;
 }
 
 .matematica {
     background-color: #009977;
     color:#FFF;
-    text-align: center;
-    width: 100%;
-    padding: 4px;
+    .cursoAlign;
 }
 
 .outro {
     background-color: #aaa;
     color:#000;
-    text-align: center;
-    width: 100%;
-    padding: 4px;
+    .cursoAlign;
 }
 
 .interno {
     background-color: #555;
-    color:#FFF;
-    text-align: center;
-    width: 100%;
-    padding: 4px;
+    color: #FFF;
+    .cursoAlign;
 }
 
 .fim-bloco{
@@ -552,7 +516,7 @@ li.user-header{
 }
 
 .o_h{
-    overflow: hidden!important;
+    overflow: hidden !important;
 }
 
 .m-b10{
@@ -646,7 +610,7 @@ li.user-header{
     }
 
     .menu > li{
-        overflow: auto!important;
+        overflow: auto !important;
     }
 
     .small-box {
