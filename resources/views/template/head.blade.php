@@ -12,7 +12,6 @@
 <!-- Theme style -->
 <link href="{{ asset('/assets/dist/css/AdminLTE.css') }}" rel="stylesheet" type="text/css" />
 <!-- CSS personalizado do LDI -->
-<link href="{{ asset('/assets/dist/css/styleLDI.css') }}" rel="stylesheet" type="text/css" />
 <link href="{{ asset('/assets/dist/css/skins/skin-ldi.css') }}" rel="stylesheet" type="text/css" />
 
 <!--CSS do sweetAlert -->
