@@ -7,11 +7,9 @@
     @include('template.header')
     @include('template.sidebar')
     <div class="content-wrapper">
-      <section class="content">
         @include('flash::message')
         <!-- CHAMAR AQUI O CONTEÚDO DE CADA PÁGINA -->
         @yield('content')
-      </section>
     </div>
     @include('template.footer')
     @include('template.scripts_js')

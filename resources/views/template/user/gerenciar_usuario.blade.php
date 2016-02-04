@@ -1,90 +1,74 @@
 @extends('app')
 @section('content')
 
-<div class="col-md-3">
-    <div class="box box-ldi">
-        <div class="box-header with-border">
-            <h3 class="box-title">Gerenciar Usuários</h3>
-            <div class="box-tools pull-right">
-                <!--<a href="{!! url('/users/create') !!}" class="botao-adicionar-usuario" title="Novo Usuário">-->
-                    <button class="btn btn-sm btn-ldi">Novo</button>
-                <!--</a>-->
-            </div><!-- /.box-tools -->
-        </div><!-- /.box-header -->
-        <div class="box-body">
-            The body of the box
-        </div><!-- /.box-body -->
-    </div><!-- /.box -->
-</div><!-- /.col -->
+<section class="content-header">
+    <h1>
+        Gerenciar Usuários
+        <small>Painel de Gerente</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Início</a></li>
+        <li class="active">Gerenciar Usuários</li>
+    </ol>
+</section>
 
-<!-- CABEÇALHO DO CONTEÚDO -->
-<div class="col-md-12">
-    <div class="box box-default collapsed-box box-usuario">
-        <div class="box-header with-border usuario-header-box">
-            <a href="{!! url('/users/create') !!}" class="botao-adicionar-usuario" title="Novo Usuário">
-                <i class="fa fa-plus-circle  icones-edicao-usuario"> </i>
-            </a>
+<section class="content">
 
-            <h2 class="titulos">Gerenciar Usuários</h2>
-        </div>
+    <div class="row">
+        <section class="col-md-12 connectedSortable ui-sortable">
+            <div class="box box-ldi">
+                <div class="box-header with-border">
+                    <h3 class="box-title">
+                        <i class="fa fa-users"></i>
+                        Lista de usuários
+                    </h3>
+                    <div class="box-tools pull-right">
+                        <!--<a href="{!! url('/users/create') !!}" class="botao-adicionar-usuario" title="Novo Usuário">-->
+                        <button class="btn btn-sm btn-ldi">Novo</button>
+                        <!--</a>-->
+
+                        <button class="btn btn-success btn-sm" data-widget="collapse">
+                            <i class="fa fa-minus"></i>
+                        </button>
+                    </div><!-- /.box-tools -->
+                </div><!-- /.box-header -->
+                <div class="box-body">
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <th>Usuário</th>
+                                <th>Função</th>
+                                <th>Área</th>
+                                <th style="width:40px"><i class="fa fa-edit" title="Editar"></i></th>
+                                <th style="width:40px"><i class="fa fa-plus-circle" title="Expandir"></i></th>
+                            </tr>
+                            @foreach($users as $user)
+                            <tr>
+                                <td>{{ $user->name }}</td>
+                                <td>{{ $user->role }}</td>
+                                <td>{{ $user->area }}</td>
+                                <td>
+                                    <a href="{!! url('/users/'.$user->id.'/edit') !!}">
+                                        <i class="fa fa-edit" title="Editar"></i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#usuario">
+                                        <i class="fa fa-plus-circle" title="Expandir"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr id="usuario" class="panel-collapse collapse">
+                                <td colspan="5">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div><!-- /.box-body -->
+            </div><!-- /.box -->
+        </section>
     </div>
-</div><!-- FIM CABEÇALHO DO CONTEÚDO -->
-
-<!-- CABEÇALHO LISTA-->
-<div class="col-md-12" style="color: #000;">
-    <div class="box box-default collapsed-box box-usuario">
-        <div class="box-header with-border usuario-header-box">
-            <span><h3 class="box-title width-20p v-a-m"><b>Usuário</b></h3></span>
-            <span><h3 class="box-title width-20p v-a-m"><b>Função</b></h3></span>
-            <span><h3 class="box-title width-20p v-a-m"><b>Área</b></h3></span>
-        </div>
-    </div>
-</div>
-@foreach($users as $user)
-<!-- BOX DO USUÁRIO-->
-<div class="col-md-12" style="color: #000;">
-    <div class="box box-default collapsed-box box-usuario">
-        <div class="box-header with-border usuario-header-box">
-            <span><h3 class="box-title sub-box-title width-20p v-a-m">{{ $user->name }}</h3></span>
-            <span><h3 class="box-title sub-box-title width-20p v-a-m">{{ $user->role }}</h3></span>
-            <span><h3 class="box-title sub-box-title width-20p v-a-m">{{ $user->area }}</h3></span>
-
-            <div class="box-tools botao-editar-usuario">
-                <a href="{!! url('/users/'.$user->id.'/edit') !!}" title="Editar">
-                    <samp class="fa fa-edit"></samp>
-                </a>
-            </div>
-
-            <div class="box-botao-mostrar-mais">
-                <div class="box-tools pull-right">
-                    <button class="btn btn-box-tool botao-mostrar-mais" data-widget="collapse" title="Expandir">
-                        <i><img onclick="clique(event)" alt="Mais" class="item img-expandir"
-                                src="assets/dist/img/down.png"/></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- DADOS DO USUÁRIO -->
-        <div class="box-body dados-usuario">
-
-            <div class="col-md-6">
-                <span class="label-form">Nome: </span> <span>{{ $user->name }}</span> <br/>
-                <span class="label-form">E-mail: </span> <span>{{ $user->email }}</span> <br/>
-                <span class="label-form">CPF: </span> <span>{{ $user->cpf }}</span> <br/>
-                <span class="label-form">Telefone: </span> <span>{{ $user->phone }}</span> <br/>
-            </div>
-
-            <div class="col-md-6">
-                <span class="label-form">Endereço: </span> <span>{{ $user->address }}</span> <br/>
-                <span class="label-form">Função: </span> <span>{{ $user->role }}</span> <br/>
-                <span class="label-form">Área de atuação: </span> <span>{{ $user->area }}</span> <br/>
-                <span class="label-form">Entrada: </span> <span>{{ $user->entrance_date->format('d/m/Y') }}</span> <br/>
-            </div>
-
-        </div>
-        <!-- FIM DADOS DO USUÁRIO -->
-    </div>
-</div><!-- FIM BOX DO USUÁRIO -->
+</section>
 @endforeach
 @endsection
