@@ -4,9 +4,9 @@
 <!-- Bootstrap 3.3.2 JS -->
 <script src="{{ asset('assets/bootstrap/js/bootstrap.min.js') }}" type="text/javascript"></script>
 <!-- AdminLTE App -->
-<script src="{{ asset('assets/dist/js/app.min.js') }}" type="text/javascript"></script>
-<!-- java Script personalizado LDI -->
-<script src="{{ asset('assets/dist/js/ldi.js') }}" type="text/javascript"></script>
+<script src="{{ asset('assets/theme/js/app.min.js') }}" type="text/javascript"></script>
+<!-- JavaScript personalizado LDI -->
+<script src="{{ asset('assets/theme/js/ldi.js') }}" type="text/javascript"></script>
 <!--Plugin InputMask(plugin para o formulário)-->
 <script src="{{ asset('assets/plugins/input-mask/jquery.inputmask.js') }}" type="text/javascript"></script>
 <script src="{{ asset('assets/plugins/input-mask/jquery.inputmask.date.extensions.js') }}" type="text/javascript"></script>

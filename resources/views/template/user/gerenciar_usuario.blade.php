@@ -4,7 +4,7 @@
 <section class="content-header">
     <h1>
         Gerenciar Usuários
-        <small>Painel de Gerente</small>
+        <small>Painel de Gerência</small>
     </h1>
     <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Início</a></li>
@@ -13,25 +13,19 @@
 </section>
 
 <section class="content">
-
     <div class="row">
         <section class="col-md-12 connectedSortable ui-sortable">
             <div class="box box-ldi">
                 <div class="box-header with-border">
                     <h3 class="box-title">
-                        <i class="fa fa-users"></i>
-                        Lista de usuários
+                        <i class="fa fa-users"></i> Lista de usuários
                     </h3>
                     <div class="box-tools pull-right">
-                        <!--<a href="{!! url('/users/create') !!}" class="botao-adicionar-usuario" title="Novo Usuário">-->
+                        <a href="{!! url('/users/create') !!}" class="botao-adicionar-usuario" title="Novo Usuário">
                         <button class="btn btn-sm btn-ldi">Novo</button>
-                        <!--</a>-->
-
-                        <button class="btn btn-success btn-sm" data-widget="collapse">
-                            <i class="fa fa-minus"></i>
-                        </button>
-                    </div><!-- /.box-tools -->
-                </div><!-- /.box-header -->
+                        </a>
+                    </div>
+                </div>
                 <div class="box-body">
                     <table class="table table-striped">
                         <tbody>
@@ -65,8 +59,8 @@
                             </tr>
                         </tbody>
                     </table>
-                </div><!-- /.box-body -->
-            </div><!-- /.box -->
+                </div>
+            </div> 
         </section>
     </div>
 </section>

@@ -3,7 +3,7 @@
   <head>
     @include('template.head')
   </head>
-  <body class="skin-blue">
+  <body class="skin-ldi">
     @include('template.header')
     @include('template.sidebar')
     <div class="content-wrapper">

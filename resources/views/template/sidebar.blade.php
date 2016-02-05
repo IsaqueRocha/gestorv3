@@ -1,6 +1,5 @@
 <!-- Left side column. contains the logo and sidebar -->
 <aside class="main-sidebar">
-
   <section class="sidebar">
 
     <!-- Sidebar Menu -->
@@ -11,19 +10,18 @@
     </ul><!-- /.sidebar-menu -->
 
     <!-- Horarios -->
-    <div class="box-horario">
-
+    <div class="small-box bg-ldi" style="margin-top:30px;">
       <div class="small-box">
-
-        <i class="fa fa-clock-o relogio-ico"></i>
-
-        <div class="inner total-hora">
-          <p> <strong>Total de horas</strong> </p>
-          <h4>39h30min / 84h</h4>
+        <div class="inner">
+            <h3>12h30min</h3>
+            <p>Fev 2016: 84h</p>
         </div>
-
-        <div href="#" class="small-box-footer"><small>Total no LDI: 783h 30min</small></div>
-
+        <div class="icon">
+            <i class="ion ion-clock"></i>
+        </div>
+        <div class="small-box-footer">
+            Saldo total: +4h
+        </div>
       </div>
     </div>
 

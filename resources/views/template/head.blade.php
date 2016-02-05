@@ -1,6 +1,6 @@
 <meta charset="UTF-8">
 <title>LDI</title>
-<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="{{ asset('/assets/theme/img/favicon.ico') }}" />
 <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
 <!-- CSS DO AdminLTE E PLUGUINS -->
 <!-- Bootstrap 3.3.2 -->

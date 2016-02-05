@@ -1370,6 +1370,12 @@ a:focus {
   margin: 0;
   line-height: 1;
 }
+.box-header > .fa .fa,
+.box-header > .glyphicon .fa,
+.box-header > .ion .fa,
+.box-header .box-title .fa {
+  margin-right: 10px;
+}
 .box-header > .fa,
 .box-header > .glyphicon,
 .box-header > .ion {
@@ -3787,6 +3793,7 @@ fieldset[disabled] .btn-vk.focus {
   text-transform: uppercase;
 }
 /* Background colors */
+.bg-ldi,
 .bg-red,
 .bg-yellow,
 .bg-aqua,
@@ -3847,6 +3854,9 @@ fieldset[disabled] .btn-vk.focus {
 .modal-danger .modal-header,
 .modal-danger .modal-footer {
   color: #fff !important;
+}
+.bg-ldi {
+  background-color: #4a6c82 !important;
 }
 .bg-gray {
   color: #000;
