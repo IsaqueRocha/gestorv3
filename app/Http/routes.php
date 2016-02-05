@@ -25,6 +25,10 @@ Route::post('/users/{id}/edit', 'UserController@update')->where('id', '[0-9]+');
 Route::get('/users/{id}/delete', 'UserController@destroy')->where('id', '[0-9]+');
 Route::get('/users/{id}/deactivate', 'UserController@deactivate')->where('id', '[0-9]+');
 
+Route::get('/projects', function(){
+    return view('template.project.gerenciar_projeto');
+});
+
 
 
 Route::get('auth/login', 'Auth\AuthController@getLogin');

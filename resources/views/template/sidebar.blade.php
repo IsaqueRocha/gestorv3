@@ -6,8 +6,10 @@
     <!-- Sidebar Menu -->
     <ul class="sidebar-menu">
       <li><a href="#"><span>Área de Trabalho</span></a></li>
-      <li><a href="#"><span>Gerenciar Projetos</span></a></li>
+      <li><a href="#"><span>Meus Projetos</span></a></li>
       <li><a href="{!! url('/users') !!}"><span>Gerenciar Usuários</span></a></li>
+      <li><a href="{!! url('/projects') !!}"><span>Gerenciar Projetos</span></a></li>
+      <li><a href="#"><span>Relatórios</span></a></li> 
     </ul><!-- /.sidebar-menu -->
 
     <!-- Horarios -->
@@ -22,7 +24,9 @@
           <h4>39h30min / 84h</h4>
         </div>
 
-        <div href="#" class="small-box-footer"><small>Total no LDI: 783h 30min</small></div>
+        <div href="#" class="small-box-footer">
+            <small>Total no LDI: 783h 30min</small>
+        </div>
 
       </div>
     </div>
