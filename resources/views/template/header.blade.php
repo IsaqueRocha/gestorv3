@@ -3,7 +3,7 @@
   <!-- HEADER -->
   <header class="main-header">
     <!-- LOGO -->
-    <a href="{{ url('/home')}}" class="logo"><img src="{{ asset('assets/theme/img/logo-small.png') }}"></a>
+    <a href="{{ url('/home')}}" class="logo"><img src="{{ asset('assets/theme/img/logo-150px.png') }}"></a>
     <!-- NAVEGAÇÃO -->
     <nav class="navbar navbar-static-top" role="navigation">
       <!-- BOTÃO DE NAVEGAÇÃO (ESQUERDA)-->

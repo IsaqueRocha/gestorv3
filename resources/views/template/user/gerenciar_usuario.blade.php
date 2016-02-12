@@ -4,7 +4,7 @@
 <section class="content-header">
     <h1>
         Gerenciar Usuários
-        <small>Painel de Gerência</small>
+        <small>Painel Administrativo</small>
     </h1>
     <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Início</a></li>
