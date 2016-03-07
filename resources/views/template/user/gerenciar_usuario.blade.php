@@ -1,6 +1,7 @@
 @extends('app')
 @section('content')
 
+<!-- CABEÇALHO -->
 <section class="content-header">
     <h1>
         Gerenciar Usuários
@@ -11,7 +12,9 @@
         <li class="active">Gerenciar Usuários</li>
     </ol>
 </section>
+<!-- FIM CABEÇALHO -->
 
+<!-- TABELA - LISTA DE USUÁRIOS -->
 <section class="content">
     <div class="row">
         <section class="col-md-12 connectedSortable ui-sortable">
@@ -21,7 +24,7 @@
                         <i class="fa fa-users"></i> Lista de usuários
                     </h3>
                     <div class="box-tools pull-right">
-                        <a href="{!! url('/users/create') !!}" class="botao-adicionar-usuario" title="Novo Usuário">
+                        <a href="{!! url('/users/create') !!}" class="botao-adicionar-usuario" title="Novo usuário">
                         <button class="btn btn-sm btn-ldi">Novo</button>
                         </a>
                     </div>
@@ -64,5 +67,7 @@
         </section>
     </div>
 </section>
+<!-- FIM TABELA - LISTA DE USUÁRIOS -->
+
 @endforeach
 @endsection

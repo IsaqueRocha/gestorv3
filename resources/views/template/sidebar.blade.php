@@ -5,8 +5,9 @@
     <!-- Sidebar Menu -->
     <ul class="sidebar-menu">
       <li><a href="#"><i class="fa fa-dashboard"></i> Área de Trabalho</a></li>
-      <li><a href="#"><i class="fa fa-file-text-o"></i> Gerenciar Projetos</a></li>
+      <li><a href="#"><i class="fa fa-file-text-o"></i> Meus Projetos</a></li>
       <li><a href="{!! url('/users') !!}"><i class="fa fa-users"></i>Gerenciar Usuários</a></li>
+      <li><a href="{!! url('/projects') !!}"><i class="fa fa-users"></i>Gerenciar Projetos</a></li>
     </ul><!-- /.sidebar-menu -->
 
     <!-- Horarios -->
