@@ -13,7 +13,7 @@
 <link href="{{ asset('/assets/theme/css/AdminLTE.css') }}" rel="stylesheet" type="text/css" />
 <!-- CSS personalizado do LDI -->
 <link href="{{ asset('/assets/theme/css/skins/skin-ldi.css') }}" rel="stylesheet" type="text/css" />
-<link href="{{ asset('/assets/theme/style-ldi.css') }}" rel="stylesheet" type="text/css" />
+<link href="{{ asset('/assets/style-ldi.css') }}" rel="stylesheet" type="text/css" />
 
 <!--CSS do sweetAlert -->
 <link href="{{ asset('assets/plugins/sweetalert/sweetalert.css') }}" rel="stylesheet" type="text/css" >

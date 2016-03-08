@@ -1,6 +1,8 @@
 @extends('app')
 @section('content')
 
+<!--TO-DO: REVISAR SE AS CLASSES APLICADAS ESTÃO SENDO UTILIZADAS-->
+
 <!-- CABEÇALHO -->
 <section class="content-header">
     <h1>
@@ -21,12 +23,48 @@
             <div class="box box-ldi">
                 <div class="box-header with-border">
                     <h3 class="box-title">
-                        <i class="fa fa-users"></i> Lista de projetos
+                        <i class="fa fa-clipboard"></i> Lista de projetos
                     </h3>
                     <div class="box-tools pull-right">
-                        <a class="botao-adicionar-usuario" title="Novo projeto">
-                        <button class="btn btn-sm btn-ldi">Novo</button>
-                        </a>
+                        <div class="input-group pesquisar-projeto acoes">
+                            <input type="text" name="table_search" class="form-control input-sm" style="width: 150px;" placeholder="Buscar projeto">
+                            <span class="input-group-btn" style="width: auto;">
+                                <button class="btn btn-sm btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+
+                        <div class="form-group filtro-projetos acoes">
+                            <div style="display:inline-block;">
+                                Situação
+                            </div>
+                            <select class="form-control input-sm" style="width:200px;display:inline-block;">
+                                <option>Todos</option>
+                                <option>Entregues</option>
+                                <option>Em andamento</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group filtro-projetos acoes">
+                            <div style="display:inline-block;">
+                                Exibir
+                            </div>
+                            <select class="form-control input-sm" style="width:200px;display:inline-block;">
+                                <option>Todos</option>
+                                <option>Web</option>
+                                <option>Vídeo</option>
+                                <option>Diagramação</option>
+                                <option>Interno</option>
+                                <option>Outro</option>
+                            </select>
+                        </div>
+
+                        <div class="acoes">
+                            <a class="botao-adicionar-usuario" title="Novo projeto">
+                                <button class="btn btn-sm btn-ldi">Novo</button>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="box-body">
@@ -69,51 +107,6 @@
 <!-- FIM TABELA - LISTA DE USUÁRIOS -->
 
 <hr>
-
-<!-- CABEÇALHO DO CONTEÚDO -->
-<div class="col-md-12">
-    <div class="box box-default collapsed-box box-usuario">
-        <div class="box-header with-border usuario-header-box">
-
-            <div class="filtros-lista">
-
-                <div class="input-group pesquisar-projeto">
-                    <input type="text" class="form-control" placeholder="Buscar projeto">
-                    <span class="input-group-btn">
-                        <button class="btn btn-info btn-flat" type="button"><span class="fa fa-search"></span></button>
-                    </span>
-                </div>
-
-                <div class="form-group filtro-projetos">
-                    <div class="titulo-filtro-projetos">
-                        <span>Situação</span>
-                    </div>
-                    <select class="form-control" title="">
-                        <option>Todos</option>
-                        <option>Entregues</option>
-                        <option>Em andamento</option>
-                    </select>
-                </div>
-
-                <div class="form-group filtro-projetos">
-                    <div class="titulo-filtro-projetos">
-                        <span>Exibir</span>
-                    </div>
-                    <select class="form-control" title="">
-                        <option>Todos</option>
-                        <option>Web</option>
-                        <option>Vídeo</option>
-                        <option>Diagramação</option>
-                        <option>Interno</option>
-                        <option>Outro</option>
-                    </select>
-                </div>
-
-            </div>
-
-        </div>
-    </div>
-</div><!-- FIM CABEÇALHO DO CONTEÚDO -->
 
 <!-- CABEÇALHO DA LISTA-->
 <div class="col-md-12 responsivo-ativo" style="color: #000;">
