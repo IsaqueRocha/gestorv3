@@ -50,3 +50,91 @@
   width: 40px;
   text-align: center;
 }
+.box-curso {
+  width: 60px;
+  padding: 3px;
+  margin-right: 10px;
+  /*    font-size: 13px;
+    font-weight: lighter;*/
+  text-align: center;
+  padding: 4px;
+}
+.box-curso.artes {
+  background-color: #c94259;
+  color: #FFF;
+}
+.box-curso.artes:before {
+  content: "Art";
+}
+.box-curso.artes[title] {
+  content: "Oi";
+}
+.box-curso.edfisica {
+  background-color: #d4d0b3;
+  color: #000;
+}
+.box-curso.contabeis {
+  background-color: #ff9966;
+  color: #000;
+}
+.box-curso.fisica {
+  background-color: #116554;
+  color: #fff;
+}
+.box-curso.quimica {
+  background-color: #55ccdd;
+  color: #000;
+}
+.box-curso.quimica:before {
+  content: "Qui";
+}
+.box-curso.edcampo {
+  background-color: #060;
+  color: #FFF;
+}
+.box-curso.dirhumanos {
+  background-color: #663;
+  color: #FFF;
+}
+.box-curso.pedagogia {
+  background-color: #505e93;
+  color: #fff;
+}
+.box-curso.historia {
+  background-color: #016075;
+  color: #fff;
+}
+.box-curso.filosofia {
+  background-color: #9fd18b;
+  color: #000;
+}
+.box-curso.biologia {
+  background-color: #eecc77;
+  color: #000;
+}
+.box-curso.biologia:before {
+  content: "Bio";
+}
+.box-curso.dimensoes {
+  background-color: #fabfb7;
+  color: #000;
+}
+.box-curso.mais-educacao {
+  background-color: #147fad;
+  color: #FFF;
+}
+.box-curso.matematica {
+  background-color: #009977;
+  color: #FFF;
+}
+.box-curso.matematica:before {
+  content: "Mat";
+}
+.box-curso.outro {
+  background-color: #aaa;
+  color: #000;
+}
+.box-curso.interno {
+  background-color: #555;
+  color: #FFF;
+}

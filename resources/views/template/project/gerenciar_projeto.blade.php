@@ -83,7 +83,7 @@
                                 <th class="icone"><i class="fa fa-plus-circle" title="Expandir"></i></th>
                             </tr>
                             <tr>
-                                <td>Art</td>
+                                <td class="box-curso artes"></td>
                                 <td>Moodle - Seminário</td>
                                 <td><i class="fa fa-globe"></i></td>
                                 <td>Leandro Hora <i class="fa fa-users" title="Antonio Anselmo, Mariana Machado, Rayan Casagrande"></i></td>
@@ -122,7 +122,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>Art</td>
+                                <td class="box-curso quimica"></td>
                                 <td>Moodle - Seminário</td>
                                 <td><i class="fa fa-globe"></i></td>
                                 <td>Renato Delpupo <i class="fa fa-users" title="Antonio Anselmo, Mariana Machado, Rayan Casagrande"></i></td>
@@ -161,7 +161,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>Art</td>
+                                <td class="box-curso biologia"></td>
                                 <td>Moodle - Seminário</td>
                                 <td><i class="fa fa-globe"></i></td>
                                 <td>Leandro Hora <i class="fa fa-users" title="Antonio Anselmo, Mariana Machado, Rayan Casagrande"></i></td>
@@ -200,7 +200,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>Art</td>
+                                <td class="box-curso matematica"></td>
                                 <td>Moodle - Seminário</td>
                                 <td><i class="fa fa-globe"></i></td>
                                 <td>Renato Delpupo <i class="fa fa-users" title="Antonio Anselmo, Mariana Machado, Rayan Casagrande"></i></td>
