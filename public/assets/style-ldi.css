@@ -50,91 +50,83 @@
   width: 40px;
   text-align: center;
 }
-.box-curso {
-  width: 60px;
-  padding: 3px;
-  margin-right: 10px;
-  /*    font-size: 13px;
-    font-weight: lighter;*/
-  text-align: center;
-  padding: 4px;
-}
-.box-curso.artes {
+.listaProjetos td[title="Artes"] {
   background-color: #c94259;
   color: #FFF;
 }
-.box-curso.artes:before {
+.listaProjetos td[title="Artes"]:before {
   content: "Art";
 }
-.box-curso.artes[title] {
-  content: "Oi";
-}
-.box-curso.edfisica {
-  background-color: #d4d0b3;
-  color: #000;
-}
-.box-curso.contabeis {
-  background-color: #ff9966;
-  color: #000;
-}
-.box-curso.fisica {
-  background-color: #116554;
-  color: #fff;
-}
-.box-curso.quimica {
+.listaProjetos td[title="Química"] {
   background-color: #55ccdd;
   color: #000;
 }
-.box-curso.quimica:before {
+.listaProjetos td[title="Química"]:before {
   content: "Qui";
 }
-.box-curso.edcampo {
-  background-color: #060;
-  color: #FFF;
-}
-.box-curso.dirhumanos {
-  background-color: #663;
-  color: #FFF;
-}
-.box-curso.pedagogia {
-  background-color: #505e93;
-  color: #fff;
-}
-.box-curso.historia {
-  background-color: #016075;
-  color: #fff;
-}
-.box-curso.filosofia {
-  background-color: #9fd18b;
-  color: #000;
-}
-.box-curso.biologia {
+.listaProjetos td[title="Biologia"] {
   background-color: #eecc77;
   color: #000;
 }
-.box-curso.biologia:before {
+.listaProjetos td[title="Biologia"]:before {
   content: "Bio";
 }
-.box-curso.dimensoes {
-  background-color: #fabfb7;
-  color: #000;
-}
-.box-curso.mais-educacao {
-  background-color: #147fad;
-  color: #FFF;
-}
-.box-curso.matematica {
+.listaProjetos td[title="Matemática"] {
   background-color: #009977;
   color: #FFF;
 }
-.box-curso.matematica:before {
+.listaProjetos td[title="Matemática"]:before {
   content: "Mat";
 }
-.box-curso.outro {
+.listaProjetos .box-curso {
+  width: 60px;
+  text-align: center;
+}
+.listaProjetos .box-curso.edfisica {
+  background-color: #d4d0b3;
+  color: #000;
+}
+.listaProjetos .box-curso.contabeis {
+  background-color: #ff9966;
+  color: #000;
+}
+.listaProjetos .box-curso.fisica {
+  background-color: #116554;
+  color: #fff;
+}
+.listaProjetos .box-curso.edcampo {
+  background-color: #060;
+  color: #FFF;
+}
+.listaProjetos .box-curso.dirhumanos {
+  background-color: #663;
+  color: #FFF;
+}
+.listaProjetos .box-curso.pedagogia {
+  background-color: #505e93;
+  color: #fff;
+}
+.listaProjetos .box-curso.historia {
+  background-color: #016075;
+  color: #fff;
+}
+.listaProjetos .box-curso.filosofia {
+  background-color: #9fd18b;
+  color: #000;
+}
+.listaProjetos .box-curso.dimensoes {
+  background-color: #fabfb7;
+  color: #000;
+}
+.listaProjetos .box-curso.mais-educacao {
+  background-color: #147fad;
+  color: #FFF;
+}
+.listaProjetos .box-curso.outro {
   background-color: #aaa;
   color: #000;
 }
-.box-curso.interno {
+.listaProjetos .box-curso.interno {
   background-color: #555;
   color: #FFF;
 }

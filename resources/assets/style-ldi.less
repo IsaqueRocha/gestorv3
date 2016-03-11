@@ -67,114 +67,107 @@
     text-align: center;
 }
 
-.box-curso {
-    width: 60px;
-    padding: 3px;
-    margin-right: 10px;
-    
-/*    font-size: 13px;
-    font-weight: lighter;*/
+.listaProjetos {
 
-    text-align: center;
-    padding: 4px;
-
-    &.artes {
+    td[title="Artes"] {
         background-color: #c94259;
         color:#FFF;
-        
+
         &:before {
             content: "Art";
         }
     }
-    
-    &.artes[title] {
-        content: "Oi";
-    }
 
-    &.edfisica {
-        background-color: #d4d0b3;
-        color:#000;
-    }
-
-    &.contabeis {
-        background-color: #ff9966;
-        color:#000;
-    }
-
-    &.fisica {
-        background-color: #116554;
-        color:#fff;
-    }
-
-    &.quimica {
+    td[title="Química"] {
         background-color: #55ccdd;
         color:#000;
-        
+
         &:before {
             content: "Qui";
         }
     }
 
-    &.edcampo {
-        background-color: #060;
-        color:#FFF;
-    }
-
-    &.dirhumanos {
-        background-color: #663;
-        color:#FFF;
-    }
-
-    &.pedagogia {
-        background-color: #505e93;
-        color:#fff;
-    }
-
-    &.historia {
-        background-color: #016075;
-        color:#fff;  
-    }
-
-    &.filosofia {
-        background-color: #9fd18b;
-        color:#000;
-    }
-
-    &.biologia {
+    td[title="Biologia"] {
         background-color: #eecc77;
         color:#000;
-        
+
         &:before {
             content: "Bio";
         }
     }
 
-    &.dimensoes {
-        background-color: #fabfb7;
-        color:#000;
-    }
-
-    &.mais-educacao {
-        background-color: #147fad;
-        color:#FFF;   
-    }
-
-    &.matematica {
+    td[title="Matemática"] {
         background-color: #009977;
         color:#FFF;
-        
+
         &:before {
             content: "Mat";
         }
     }
 
-    &.outro {
-        background-color: #aaa;
-        color:#000;
-    }
+    .box-curso {
+        width: 60px;
+        text-align: center;
 
-    &.interno {
-        background-color: #555;
-        color:#FFF;
+        &.edfisica {
+            background-color: #d4d0b3;
+            color:#000;
+        }
+
+        &.contabeis {
+            background-color: #ff9966;
+            color:#000;
+        }
+
+        &.fisica {
+            background-color: #116554;
+            color:#fff;
+        }
+
+        &.edcampo {
+            background-color: #060;
+            color:#FFF;
+        }
+
+        &.dirhumanos {
+            background-color: #663;
+            color:#FFF;
+        }
+
+        &.pedagogia {
+            background-color: #505e93;
+            color:#fff;
+        }
+
+        &.historia {
+            background-color: #016075;
+            color:#fff;  
+        }
+
+        &.filosofia {
+            background-color: #9fd18b;
+            color:#000;
+        }
+
+        &.dimensoes {
+            background-color: #fabfb7;
+            color:#000;
+        }
+
+        &.mais-educacao {
+            background-color: #147fad;
+            color:#FFF;   
+        }
+
+        &.outro {
+            background-color: #aaa;
+            color:#000;
+        }
+
+        &.interno {
+            background-color: #555;
+            color:#FFF;
+        }
     }
 }
+

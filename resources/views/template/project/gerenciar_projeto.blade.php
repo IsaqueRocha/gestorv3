@@ -19,7 +19,7 @@
 <!-- TABELA - LISTA DE USUÁRIOS -->
 <section class="content">
     <div class="row">
-        <section class="col-md-12 connectedSortable ui-sortable">
+        <section class="listaProjetos col-md-12 connectedSortable ui-sortable">
             <div class="box box-ldi">
                 <div class="box-header with-border">
                     <h3 class="box-title">
@@ -83,7 +83,7 @@
                                 <th class="icone"><i class="fa fa-plus-circle" title="Expandir"></i></th>
                             </tr>
                             <tr>
-                                <td class="box-curso artes"></td>
+                                <td class="box-curso" title="Artes"></td>
                                 <td>Moodle - Seminário</td>
                                 <td><i class="fa fa-globe"></i></td>
                                 <td>Leandro Hora <i class="fa fa-users" title="Antonio Anselmo, Mariana Machado, Rayan Casagrande"></i></td>
@@ -117,12 +117,12 @@
                                 </td>
                             </tr>
                             <tr id="um" class="panel-collapse collapse">
-                                <td colspan="5">
+                                <td colspan="10">
                                     Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
                                 </td>
                             </tr>
                             <tr>
-                                <td class="box-curso quimica"></td>
+                                <td class="box-curso" title="Química"></td>
                                 <td>Moodle - Seminário</td>
                                 <td><i class="fa fa-globe"></i></td>
                                 <td>Renato Delpupo <i class="fa fa-users" title="Antonio Anselmo, Mariana Machado, Rayan Casagrande"></i></td>
@@ -156,12 +156,12 @@
                                 </td>
                             </tr>
                             <tr id="dois" class="panel-collapse collapse">
-                                <td colspan="5">
+                                <td colspan="10">
                                     Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
                                 </td>
                             </tr>
                             <tr>
-                                <td class="box-curso biologia"></td>
+                                <td class="box-curso" title="Biologia"></td>
                                 <td>Moodle - Seminário</td>
                                 <td><i class="fa fa-globe"></i></td>
                                 <td>Leandro Hora <i class="fa fa-users" title="Antonio Anselmo, Mariana Machado, Rayan Casagrande"></i></td>
@@ -195,12 +195,12 @@
                                 </td>
                             </tr>
                             <tr id="tres" class="panel-collapse collapse">
-                                <td colspan="5">
+                                <td colspan="10">
                                     Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
                                 </td>
                             </tr>
                             <tr>
-                                <td class="box-curso matematica"></td>
+                                <td class="box-curso" title="Matemática"></td>
                                 <td>Moodle - Seminário</td>
                                 <td><i class="fa fa-globe"></i></td>
                                 <td>Renato Delpupo <i class="fa fa-users" title="Antonio Anselmo, Mariana Machado, Rayan Casagrande"></i></td>
@@ -234,7 +234,7 @@
                                 </td>
                             </tr>
                             <tr id="quatro" class="panel-collapse collapse">
-                                <td colspan="5">
+                                <td colspan="10">
                                     Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
                                 </td>
                             </tr>
