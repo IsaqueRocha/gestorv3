@@ -150,7 +150,7 @@ return [
         Laracasts\Flash\FlashServiceProvider::class,
         Infinety\SweetAlert\AlertServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
-
+        Artesaos\Defender\Providers\DefenderServiceProvider::class,
 
     ],
 
@@ -206,6 +206,7 @@ return [
          */
         'Flash'     => Laracasts\Flash\Flash::class,
         'Images'    => Intervention\Image\Facades\Image::class,
+        'Defender'  => Artesaos\Defender\Facades\Defender::class,
 
     ],
 

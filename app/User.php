@@ -12,10 +12,11 @@ use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 
 use Carbon\Carbon;
 use App\WorkSchedule;
+use Artesaos\Defender\Traits\HasDefender;
 
 class User extends Model implements AuthenticatableContract, CanResetPasswordContract, AuthorizableContract
 {
-    use Authenticatable, Authorizable, CanResetPassword;
+    use Authenticatable, Authorizable, CanResetPassword, HasDefender;
 
     protected $dates = ['entrance_date'];
 
