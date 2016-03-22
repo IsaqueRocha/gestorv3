@@ -9,7 +9,10 @@
       <li><a href="#"><span>Meus Projetos</span></a></li>
       <li><a href="{!! url('/users') !!}"><span>Gerenciar Usuários</span></a></li>
       <li><a href="{!! url('/projects') !!}"><span>Gerenciar Projetos</span></a></li>
-      <li><a href="#"><span>Relatórios</span></a></li> 
+      <li><a href="#"><span>Relatórios</span></a></li>
+      @is('Admin')
+      <li><a href="{!! url('/admin') !!}"><span>Administrativo</span></a></li>
+      @endis
     </ul><!-- /.sidebar-menu -->
 
     <!-- Horarios -->

@@ -59,7 +59,7 @@
                 <!-- AVATAR NO BOTÃO -->
                 <img src="{!! asset('assets/dist/img/user2-160x160.jpg') !!}" class="user-image" alt="User Image"/>
                 <!-- NOME -->
-                <span class="hidden-xs">Giulliano Kenzo</span>
+                <span class="hidden-xs">{{Auth::User()->name }}</span>
               </a>
               <!-- DROPDOWN -->
               <ul class="dropdown-menu">
@@ -67,7 +67,7 @@
                 <li class="user-header">
                   <img src="{!! asset('assets/dist/img/user2-160x160.jpg') !!}" class="img-circle" alt="User Image" />
                   <p>
-                    Giulliano Kenzo - Gerencia
+                    {{ Auth::User()->name }} - {{ Auth::User()->roles }}
                   </p>
                 </li>
                 <!-- ALTERAR DADOS E SAIR -->

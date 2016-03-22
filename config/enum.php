@@ -1,14 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: isaque
- * Date: 12/08/15
- * Time: 18:19
- */
+
 
 return [
     'roles' => [
         'Admin' => "Admin",
+        //'Gerente' = 'Gerente'
         'Coordenador' => "Coordenador",
         'Técnico' => "Técnico",
         'Estagiário' => "Estagiário",
@@ -20,5 +16,5 @@ return [
         'Ilustração' => "Ilustração",
         'Vídeo' => "Vídeo",
         'Web' => "Web",
-    ]  ,
+    ],
 ];

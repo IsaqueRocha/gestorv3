@@ -25,6 +25,10 @@ class UserTableSeeder extends Seeder
             'password' => bcrypt('ldiufes'),
         ]);
 
+        $user = User::orderBy('id', 'desc')->first();
+
+        $user->attachRole(Defender::findRole($user->role));
+
        \App\WorkSchedule::create([
            'seg_am' => '08:00 às 12:00',
            'seg_pm' => '13:00 às 17:00',
@@ -46,8 +50,8 @@ class UserTableSeeder extends Seeder
 
        for ($i=0; $i < 10; $i++) {
            DB::table('users')->insert([
-               'name'           =>  $faker->name,
-               'email'          =>  $faker->email,
+               'name'           =>  "Usuário".$i,
+               'email'          =>  "usuario".$i."@ldiufes.org",
                'cpf'            =>  $faker->cpf,
                'phone'          =>  $faker->cellphoneNumber,
                'address'        =>  $faker->address,
@@ -58,6 +62,8 @@ class UserTableSeeder extends Seeder
            ]);
 
            $user = User::orderBy('id', 'desc')->first();
+
+           $user->attachRole(Defender::findRole($user->role));
 
            $user->work_schedule()->create([
                'seg_am' => '08:00 às 12:00',
