@@ -10,7 +10,7 @@
       <li><a href="{!! url('/users') !!}"><i class="fa fa-users"></i>Gerenciar Usuários</a></li>
       <li><a href="{!! url('/projects') !!}"><i class="fa fa-tasks"></i>Gerenciar Projetos</a></li>
       @is('Admin')
-      <li><a href="{!! url('/admin') !!}"><span>Administrativo</span></a></li>
+      <li><a href="{!! url('/admin') !!}"><i class="fa fa-shield"></i>Administrativo</a></li>
       @endis
     </ul><!-- /.sidebar-menu -->
 
