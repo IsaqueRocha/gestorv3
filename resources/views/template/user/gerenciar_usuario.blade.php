@@ -50,24 +50,41 @@
                                     </a>
                                 </td>
                                 <td>
-                                    <a data-toggle="collapse" data-parent="#accordion" href="#usuario">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#usuario{{$user->id}}">
                                         <i class="fa fa-plus-circle" title="Expandir"></i>
                                     </a>
                                 </td>
                             </tr>
-                            <tr id="usuario" class="panel-collapse collapse">
+                            <tr id="usuario{{$user->id}}" class="panel-collapse collapse">
                                 <td colspan="5">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                </td>
+                                    <!-- DADOS DO USUÁRIO -->
+                                    <div class="box-body dados-usuario">
+
+                                        <div class="col-md-6">
+                                            <label>Nome:</label> <span>{{ $user->name }}</span> <br/>
+                                            <label>E-mail: </label> <span>{{ $user->email }}</span> <br/>
+                                            <label>CPF: </label> <span>{{ $user->cpf }}</span> <br/>
+                                            <label>Telefone: </label> <span>{{ $user->phone }}</span> <br/>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <label>Endereço: </label> <span>{{ $user->address }}</span> <br/>
+                                            <label>Função: </label> <span>{{ $user->role }}</span> <br/>
+                                            <label>Área de atuação: </label> <span>{{ $user->area }}</span> <br/>
+                                            <label>Entrada: </label> <span>{{ $user->entrance_date->format('d/m/Y') }}</span> <br/>
+                                        </div>
+
+                                    </div>
+                                    <!-- FIM DADOS DO USUÁRIO -->                                </td>
                             </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
-            </div> 
+            </div>
         </section>
     </div>
 </section>
 <!-- FIM TABELA - LISTA DE USUÁRIOS -->
 
-@endforeach
 @endsection
