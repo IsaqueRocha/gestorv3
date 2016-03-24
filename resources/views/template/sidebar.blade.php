@@ -1,36 +1,32 @@
 <!-- Left side column. contains the logo and sidebar -->
 <aside class="main-sidebar">
-
   <section class="sidebar">
 
     <!-- Sidebar Menu -->
     <ul class="sidebar-menu">
-      <li><a href="#"><span>Área de Trabalho</span></a></li>
-      <li><a href="#"><span>Meus Projetos</span></a></li>
-      <li><a href="{!! url('/users') !!}"><span>Gerenciar Usuários</span></a></li>
-      <li><a href="{!! url('/projects') !!}"><span>Gerenciar Projetos</span></a></li>
-      <li><a href="#"><span>Relatórios</span></a></li>
+
+      <li><a href="#"><i class="fa fa-dashboard"></i> Área de Trabalho</a></li>
+      <li><a href="#"><i class="fa fa-clipboard"></i> Meus Projetos</a></li>
+      <li><a href="{!! url('/users') !!}"><i class="fa fa-users"></i>Gerenciar Usuários</a></li>
+      <li><a href="{!! url('/projects') !!}"><i class="fa fa-tasks"></i>Gerenciar Projetos</a></li>
       @is('Admin')
       <li><a href="{!! url('/admin') !!}"><span>Administrativo</span></a></li>
       @endis
     </ul><!-- /.sidebar-menu -->
 
     <!-- Horarios -->
-    <div class="box-horario">
-
+    <div class="small-box bg-ldi" style="margin-top:30px;">
       <div class="small-box">
-
-        <i class="fa fa-clock-o relogio-ico"></i>
-
-        <div class="inner total-hora">
-          <p> <strong>Total de horas</strong> </p>
-          <h4>39h30min / 84h</h4>
+        <div class="inner">
+            <h3>12h30min</h3>
+            <p>Fev 2016: 84h</p>
         </div>
-
-        <div href="#" class="small-box-footer">
-            <small>Total no LDI: 783h 30min</small>
+        <div class="icon">
+            <i class="ion ion-clock"></i>
         </div>
-
+        <div class="small-box-footer">
+            Saldo total: +4h
+        </div>
       </div>
     </div>
 

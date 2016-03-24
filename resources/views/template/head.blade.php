@@ -1,19 +1,19 @@
 <meta charset="UTF-8">
 <title>LDI</title>
-<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="{{ asset('/assets/theme/img/favicon.ico') }}" />
 <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
-<!-- CSS DO AdminLTE E PUGUINS -->
+<!-- CSS DO AdminLTE E PLUGUINS -->
 <!-- Bootstrap 3.3.2 -->
-<link href="{{ asset('/assets/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+<link href="{{ asset('/assets/bootstrap/css/bootstrap.css') }}" rel="stylesheet" type="text/css" />
 <!-- Font Awesome Icons -->
 <link href="{{ asset('/assets/font-awesome-4.3.0/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css" />
 <!-- Ionicons -->
 <link href="{{ asset('/assets/ionicons-2.0.1/css/ionicons.min.css') }}" rel="stylesheet" type="text/css" />
 <!-- Theme style -->
-<link href="{{ asset('/assets/dist/css/AdminLTE.css') }}" rel="stylesheet" type="text/css" />
+<link href="{{ asset('/assets/theme/css/AdminLTE.css') }}" rel="stylesheet" type="text/css" />
 <!-- CSS personalizado do LDI -->
-<link href="{{ asset('/assets/dist/css/style-LDI.css') }}" rel="stylesheet" type="text/css" />
-<link href="{{ asset('/assets/dist/css/skins/skin-blue.css') }}" rel="stylesheet" type="text/css" />
+<link href="{{ asset('/assets/theme/css/skins/skin-ldi.css') }}" rel="stylesheet" type="text/css" />
+<link href="{{ asset('/assets/style-ldi.css') }}" rel="stylesheet" type="text/css" />
 
 <!--CSS do sweetAlert -->
 <link href="{{ asset('assets/plugins/sweetalert/sweetalert.css') }}" rel="stylesheet" type="text/css" >
