@@ -8,7 +8,7 @@
     </h1>
     <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Início</a></li>
-        <li class="active">Gerenciar Projetos</li>
+        <li class="active"><i class="fa fa-tasks"></i> Gerenciar Projetos</li>
     </ol>
 </section>
 <!-- FIM CABEÇALHO -->
@@ -59,12 +59,12 @@
 
                         <div class="acoes">
                             <a title="Novo projeto">
-                                <button class="btn btn-sm btn-ldi">Novo</button>
+                                <button class="btn btn-sm btn-success">Novo</button>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="box-body">
+                <div class="box-body no-padding">
                     <table class="table table-striped table-bordered table-hover">
                         <tbody>
                             <tr>

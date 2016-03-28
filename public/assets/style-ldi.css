@@ -1,5 +1,18 @@
 /* Futuramente todo o código deve ir pro core do Admin LTE */
+/* GERAL */
+.box-body {
+  padding: 20px;
+}
+.box-body.no-padding {
+  margin: 10px auto;
+  float: left;
+  background-color: white;
+  width: 100%;
+}
 /* SIDEBAR */
+.sidebar-menu {
+  margin: 10px 0px;
+}
 .box-horario {
   color: #fff;
   background-color: #333;

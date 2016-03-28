@@ -9,7 +9,7 @@
     </h1>
     <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Início</a></li>
-        <li class="active">Gerenciar Usuários</li>
+        <li class="active"><i class="fa fa-group"></i> Gerenciar Usuários</li>
     </ol>
 </section>
 <!-- FIM CABEÇALHO -->
@@ -25,31 +25,31 @@
                     </h3>
                     <div class="box-tools pull-right">
                         <a href="{!! url('/users/create') !!}" class="botao-adicionar-usuario" title="Novo usuário">
-                        <button class="btn btn-sm btn-ldi">Novo</button>
+                        <button class="btn btn-sm btn-success">Novo</button>
                         </a>
                     </div>
                 </div>
-                <div class="box-body">
-                    <table class="table table-striped">
+                <div class="box-body no-padding">
+                    <table class="table table-striped table-bordered table-hover">
                         <tbody>
                             <tr>
                                 <th>Usuário</th>
                                 <th>Função</th>
                                 <th>Área</th>
-                                <th style="width:40px"><i class="fa fa-edit" title="Editar"></i></th>
-                                <th style="width:40px"><i class="fa fa-plus-circle" title="Expandir"></i></th>
+                                <th class="icone"><i class="fa fa-edit" title="Editar"></i></th>
+                                <th class="icone"><i class="fa fa-plus-circle" title="Expandir"></i></th>
                             </tr>
                             @foreach($users as $user)
                             <tr>
                                 <td>{{ $user->name }}</td>
                                 <td>{{ $user->role }}</td>
                                 <td>{{ $user->area }}</td>
-                                <td>
+                                <td class="icone">
                                     <a href="{!! url('/users/'.$user->id.'/edit') !!}">
                                         <i class="fa fa-edit" title="Editar"></i>
                                     </a>
                                 </td>
-                                <td>
+                                <td class="icone">
                                     <a data-toggle="collapse" data-parent="#accordion" href="#usuario{{$user->id}}">
                                         <i class="fa fa-plus-circle" title="Expandir"></i>
                                     </a>

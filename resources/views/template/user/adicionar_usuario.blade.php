@@ -1,36 +1,44 @@
 @extends('app')
 @section('content')
-    <!-- CABEÇALHO  -->
-    <div class="col-md-12">
-        <div class="box box-default collapsed-box box-usuario">
-            <div class="box-header with-border usuario-header-box">
-                <h2 class="titulos">Gerenciar Usuários</h2>
-                <h3 class="sub-titulos">Adicionar Novo</h3>
-            </div>
-        </div>
-    </div>
-    <!-- BOX DO USUÁRIO-->
-    <div class="col-md-12" style="color: #000;">
-        @include('template.user._errors')
-        <div class="box-body dados-usuario">
-            <!-- FORMULÁRIO -->
-            <form role="form" action="" method="POST">
-                {!! csrf_field() !!}
-                <div class="col-md-12 col-unica">
-                    @include('template.user._form')
-                    <!--BOTÕES-->
-                    <div class="me-col-12 box-botao-submit" >
-                        <a href="{{ url('/users') }}" class="botao-cancelar-adicionar-usuario" data-toggle="tooltip" data-placement="top"  title="Cancelar">
-                            <i class="fa fa-times-circle icones-edicao-usuario"> </i>
-                        </a>
-                        <a href="#" class="botao-salvar-usuario" data-toggle="tooltip" data-placement="top" title="Adicionar">
-                            <button >
-                                <i class="fa fa-check-circle  icones-edicao-usuario"> </i>
-                            </button>
-                        </a>
-                    </div><!--FIM BOTÕES-->
+<!-- CABEÇALHO  -->
+<section class="content-header">
+    <h1>
+        Gerenciar Usuários
+        <small>Adicionar novo</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Início</a></li>
+        <li><a href="#"><i class="fa fa-group"></i> Gerenciar Usuários</a></li>
+        <li class="active"><i class="fa fa-plus-circle"></i> Adicionar Usuário</li>
+    </ol>
+</section>
+<!-- FIM CABEÇALHO -->
+
+<!-- ADICIONAR USUÁRIO -->
+<section class="content">
+    <div class="row">
+        <section class="col-md-12">
+            <div class="box box-ldi">
+                <div class="box-body">
+                    <div class="row">
+                        @include('template.user._errors')
+
+                        <!-- FORMULÁRIO -->
+                        <form role="form" action="{{ url('/users') }}" method="POST" id="adicionarUsuario">
+                            {!! csrf_field() !!}
+                            @include('template.user._form')
+                        </form>
+
+                        <div class="col-md-12" style="margin-top:15px;text-align:right;">
+                            <!--BOTÕES-->
+                            <button class="btn btn-success" type="submit" form="adicionarUsuario" value="Enviar">Enviar</button>
+                            <button class="btn btn-default" type="submit" form="adicionarUsuario" value="Enviar">Cancelar</button>
+                        </div>
+
+                    </div>
                 </div>
-            </form><!-- FORMULÁRIO -->
-        </div>
-    </div><!-- FIM BOX DO USUÁRIO-->
+            </div>
+        </section>
+    </div>
+</section>
 @endsection

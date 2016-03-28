@@ -15,7 +15,7 @@
     </ul><!-- /.sidebar-menu -->
 
     <!-- Horarios -->
-    <div class="small-box bg-ldi" style="margin-top:30px;">
+    <div class="small-box bg-ldi">
       <div class="small-box">
         <div class="inner">
             <h3>12h30min</h3>
