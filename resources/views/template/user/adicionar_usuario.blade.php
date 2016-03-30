@@ -1,5 +1,6 @@
 @extends('app')
 @section('content')
+
 <!-- CABEÇALHO  -->
 <section class="content-header">
     <h1>
@@ -32,9 +33,8 @@
                         <div class="col-md-12" style="margin-top:15px;text-align:right;">
                             <!--BOTÕES-->
                             <button class="btn btn-success" type="submit" form="adicionarUsuario" value="Enviar">Enviar</button>
-                            <button class="btn btn-default" type="submit" form="adicionarUsuario" value="Enviar">Cancelar</button>
+                            <button class="btn btn-default" type="submit" form="adicionarUsuario" value="Cancelar">Cancelar</button>
                         </div>
-
                     </div>
                 </div>
             </div>

@@ -2,57 +2,45 @@
 @section('content')
 
 <!-- CABEÇALHO -->
-<div class="col-md-12">
-    <div class="box box-default collapsed-box box-usuario">
-        <div class="box-header with-border usuario-header-box">
-            <h2 class="titulos">Gerenciar Usuários</h2>
-            <h3 class="sub-titulos">Editar</h3>
-        </div>
-    </div>
-</div>
+<section class="content-header">
+    <h1>
+        Gerenciar Usuários
+        <small>Editar</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Início</a></li>
+        <li><a href="#"><i class="fa fa-group"></i> Gerenciar Usuários</a></li>
+        <li class="active"><i class="fa fa-plus-circle"></i> Editar</li>
+    </ol>
+</section>
 <!-- FIM CABEÇALHO -->
 
 <!-- BOX DO USUÁRIO -->
-<div class="col-md-12" style="color: #000;">
-    @include('template.user._errors')
-    <div class="box-body dados-usuario">
-        <!-- FORMULÁRIO SALVAR -->
-        <form role="form" action="" method="POST">
-            {!! csrf_field() !!}
-            <div class="col-md-12 col-unica">
-                @include('template.user._form')
+<section class="content">
+    <div class="row">
+        <section class="col-md-12">
+            <div class="box box-ldi">
+                <div class="box-body">
+                    <div class="row">
+                        @include('template.user._errors')
+
+                        <!-- FORMULÁRIO -->
+                        <form role="form" action="" method="POST" id="adicionarUsuario">
+                            {!! csrf_field() !!}
+                            @include('template.user._form')
+                        </form>
+
+                        <div class="col-md-12" style="margin-top:15px;text-align:right;">
+                            <!--BOTÕES-->
+                            <button class="btn btn-success" type="submit" form="adicionarUsuario" value="Enviar">Salvar</button>
+                            <button class="btn btn-danger" type="submit" form="adicionarUsuario" value="Excluir">Excluir</button>
+                            <button class="btn btn-warning" type="submit" form="adicionarUsuario" value="Desativar">Desativar</button>
+                            <button class="btn btn-default" type="submit" form="adicionarUsuario" value="Cancelar">Cancelar</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </form>
-        <!-- FORMULÁRIO EXCLUIR -->
-        <form></form>
-        <!-- FORMULÁRIO DESATIVAR -->
-        <form></form>
-
-        <!--BOTÕES-->
-        <div class="me-col-12 box-botao-submit" >
-            <!-- CANCELAR -->
-            <a href="{{ url('/users') }}" class="botao-cancelar-adicionar-usuario" data-toggle="tooltip" data-placement="top" title="Cancelar" onclick="cancelarCadastro()">
-                <i class="fa fa-times-circle icones-edicao-usuario"> </i>
-            </a>
-
-            <!-- EXCLUIR -->
-            <a href="#" class="botao-excluir-usuario" data-toggle="tooltip" data-placement="top" title="Excluir" onclick="excluirUsuario()">
-                <i class="fa fa-trash icon-edicao-usuario-circles"> </i>
-            </a>
-
-            <!-- DESATIVAR -->
-            <a href="{{ url('/users/'.$user->id.'/deactivate') }}" class="botao-desativar-usuario" data-toggle="tooltip" data-placement="top" title="Desativar">
-                <i class="fa fa-ban icon-edicao-usuario-circles"> </i>
-            </a>
-
-            <!--SALVAR-->
-            <a href="{{ url('/users/'.$user->id.'/update') }}" class="botao-salvar-usuario" data-toggle="tooltip" data-placement="top" title="Salvar">
-                <button >
-                    <i class="fa fa-check-circle  icones-edicao-usuario"> </i>
-                </button>
-            </a>
-        </div><!-- FIM BOTÕES -->
+        </section>
     </div>
-</div><!-- FIM BOX DO USUÁRIO -->
-
+</section>
 @endsection
