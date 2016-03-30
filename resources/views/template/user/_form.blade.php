@@ -62,80 +62,79 @@
 </div><!-- FIM ENTRADA-->
 
 <!--HORÁRIO-->
-<div class="form-group col-md-3">
-    <label>Horário</label>
-    <label>A.M.</label>
-    <div class="input-group m-b10">
-        <div class="input-group-addon dia-semana">
-            <i class="">Seg</i>
+<div class="form-group col-md-3 horarioUsuario">
+    <label>Horário Matutino <small>(Manhã)</small></label>
+    <div class="input-group">
+        <div class="input-group-addon">
+            Seg
         </div>
         <input type="text" value="{{$user->work_schedule['seg_am']}}" class="form-control" name="seg_am" placeholder="__:__ à __:__" data-inputmask='"mask": "99:99 à 99:99"' data-mask/>
     </div>
 
-    <div class="input-group m-b10">
-        <div class="input-group-addon dia-semana">
-            <i class="">Ter</i>
+    <div class="input-group">
+        <div class="input-group-addon">
+            Ter
         </div>
         <input type="text" value="{{$user->work_schedule['ter_am']}}" class="form-control" name="ter_am" placeholder="__:__ à __:__" data-inputmask='"mask": "99:99 à 99:99"' data-mask/>
     </div>
 
-    <div class="input-group m-b10">
-        <div class="input-group-addon dia-semana">
-            <i class="">Qua</i>
+    <div class="input-group">
+        <div class="input-group-addon">
+            Qua
         </div>
         <input type="text" value="{{$user->work_schedule['qua_am']}}" class="form-control" name="qua_am" placeholder="__:__ à __:__" data-inputmask='"mask": "99:99 à 99:99"' data-mask/>
     </div>
 
-    <div class="input-group m-b10">
-        <div class="input-group-addon dia-semana">
-            <i class="">Qui</i>
+    <div class="input-group">
+        <div class="input-group-addon">
+            Qui
         </div>
         <input type="text" value="{{$user->work_schedule['qui_am']}}" class="form-control" name="qui_am" placeholder="__:__ à __:__" data-inputmask='"mask": "99:99 à 99:99"' data-mask/>
     </div>
 
-    <div class="input-group m-b10">
-        <div class="input-group-addon dia-semana">
-            <i class="">Sex</i>
+    <div class="input-group">
+        <div class="input-group-addon">
+            Sex
         </div>
         <input type="text" value="{{$user->work_schedule['sex_am']}}" class="form-control" name="sex_am" placeholder="__:__ à __:__" data-inputmask='"mask": "99:99 à 99:99"' data-mask/>
     </div>
 </div><!-- FIM HORÁRIO-->
 
 <!--HORÁRIO-->
-<div class="form-group col-md-3">
-    <label>Horário</label>
-    <label>P.M.</label>
-    <div class="input-group m-b10">
-        <div class="input-group-addon dia-semana">
-            <i class="">Seg</i>
+<div class="form-group col-md-3 horarioUsuario">
+    <label>Horário Vespertino <small>(Tarde)</small></label>
+    
+    <div class="input-group">
+        <div class="input-group-addon">
+            Seg
         </div>
         <input type="text" value="{{$user->work_schedule['seg_pm']}}" class="form-control" name="seg_pm" placeholder="__:__ à __:__" data-inputmask='"mask": "99:99 à 99:99"' data-mask/>
     </div>
 
-    <div class="input-group m-b10">
-        <div class="input-group-addon dia-semana">
-            <i class="">Ter</i>
+    <div class="input-group">
+        <div class="input-group-addon">
+            Ter
         </div>
         <input type="text" value="{{$user->work_schedule['ter_pm']}}" class="form-control" name="ter_pm"  placeholder="__:__ à __:__" data-inputmask='"mask": "99:99 à 99:99"' data-mask/>
     </div>
 
-    <div class="input-group m-b10">
-        <div class="input-group-addon dia-semana">
-            <i class="">Qua</i>
+    <div class="input-group">
+        <div class="input-group-addon">
+            Qua
         </div>
         <input type="text" value="{{$user->work_schedule['qua_pm']}}" class="form-control" name="qua_pm" placeholder="__:__ à __:__" data-inputmask='"mask": "99:99 à 99:99"' data-mask/>
     </div>
 
-    <div class="input-group m-b10">
-        <div class="input-group-addon dia-semana">
-            <i class="">Qui</i>
+    <div class="input-group">
+        <div class="input-group-addon">
+            Qui
         </div>
         <input type="text" value="{{$user->work_schedule['qui_pm']}}" class="form-control" name="qui_pm" placeholder="__:__ à __:__" data-inputmask='"mask": "99:99 à 99:99"' data-mask/>
     </div>
 
-    <div class="input-group m-b10">
-        <div class="input-group-addon dia-semana">
-            <i class="">Sex</i>
+    <div class="input-group">
+        <div class="input-group-addon">
+            Sex
         </div>
         <input type="text" value="{{$user->work_schedule['sex_pm']}}" class="form-control" name="sex_pm" placeholder="__:__ à __:__" data-inputmask='"mask": "99:99 à 99:99"' data-mask/>
     </div>
@@ -145,8 +144,9 @@
 <div class="form-group col-md-6">
     <label>Avatar</label>
     <div>
-        <img src="{!! asset('assets/dist/img/avatar.png') !!}" id="blah" />
-        <br>
+        <a href="#">
+            <img src="{!! asset('/assets/theme/img/avatar.png') !!}" id="blah" style="max-height:200px;margin-bottom:10px;" />
+        </a>
         <input type="file" id="realupload" name="realupload" class="realupload" accept="image/*" onChange="readURL(this);" />
     </div>
 </div><!--FIM AVATAR-->
