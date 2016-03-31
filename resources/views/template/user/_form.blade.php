@@ -7,7 +7,7 @@
 <!--EMAIL-->
 <div class="form-group col-md-6">
     <label>E-mail</label>
-    <input name="email" type="email" value="{!! ($user->email)?($user->email):(old('email')) !!}"class="form-control" placeholder="E-mail ..."/>
+    <input name="email" type="email" value="{!! ($user->email)?($user->email):(old('email')) !!}" class="form-control" placeholder="E-mail ..."/>
 </div><!--FIM EMAIL-->
 
 <!--CPF-->
@@ -103,7 +103,7 @@
 <!--HORÁRIO-->
 <div class="form-group col-md-3 horarioUsuario">
     <label>Horário Vespertino <small>(Tarde)</small></label>
-    
+
     <div class="input-group">
         <div class="input-group-addon">
             Seg
@@ -141,7 +141,7 @@
 </div><!-- FIM HORÁRIO-->
 
 <!--AVATAR-->
-<div class="form-group col-md-6">
+<!-- <div class="form-group col-md-6">
     <label>Avatar</label>
     <div>
         <a href="#">
@@ -149,4 +149,29 @@
         </a>
         <input type="file" id="realupload" name="realupload" class="realupload" accept="image/*" onChange="readURL(this);" />
     </div>
-</div><!--FIM AVATAR-->
+</div> -->
+<!--FIM AVATAR-->
+
+<div class="row margin-bottom-40">
+    <div class=" form-group col-md-3">
+        <label>Avatar</label>
+        <br>
+        <div id="cropContainerEyecandy"></div>
+    </div>
+</div>
+
+@section('script')
+<script src="{{ asset('assets/plugins/croppic/croppic.min.js')}}"></script>
+<script>
+    var eyeCandy = $('#cropContainerEyecandy');
+    var croppedOptions = {
+        uploadUrl: 'upload',
+        cropUrl: 'crop',
+        cropData:{
+            'width' : eyeCandy.width(),
+            'height': eyeCandy.height()
+        }
+    };
+    var cropperBox = new Croppic('cropContainerEyecandy', croppedOptions);
+</script>
+@endsection

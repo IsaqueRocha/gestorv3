@@ -1,4 +1,12 @@
 @extends('app')
+
+@section('head')
+<!-- Custom styles for this template -->
+<link href="{{ asset('/assets/plugins/croppic/assets/css/main.css') }}" rel="stylesheet">
+<link href="{{ asset('/assets/plugins/croppic/assets/css/croppic.css') }}" rel="stylesheet">
+
+@endsection
+
 @section('content')
 
 <!-- CABEÇALHO  -->
@@ -33,7 +41,9 @@
                         <div class="col-md-12" style="margin-top:15px;text-align:right;">
                             <!--BOTÕES-->
                             <button class="btn btn-success" type="submit" form="adicionarUsuario" value="Enviar">Enviar</button>
-                            <button class="btn btn-default" type="submit" form="adicionarUsuario" value="Cancelar">Cancelar</button>
+                            <a href="{{ url('/users') }}">
+                                <button class="btn btn-default" value="Cancelar" >Cancelar</button>
+                            </a>
                         </div>
                     </div>
                 </div>
