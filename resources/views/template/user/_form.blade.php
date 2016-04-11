@@ -1,3 +1,11 @@
+@section('head')
+@parent
+<!-- Custom styles for this template -->
+<link href="{{ asset('/assets/plugins/croppic/assets/css/main.css') }}" rel="stylesheet">
+<link href="{{ asset('/assets/plugins/croppic/assets/css/croppic.css') }}" rel="stylesheet">
+
+@endsection
+
 <!--NOME-->
 <div class="form-group col-md-6">
     <label>Nome</label>
@@ -161,7 +169,7 @@
 </div>
 
 @section('script')
-<script src="{{ asset('assets/plugins/croppic/croppic.min.js')}}"></script>
+@parent<script src="{{ asset('assets/plugins/croppic/croppic.min.js')}}"></script>
 <script>
     var eyeCandy = $('#cropContainerEyecandy');
     var croppedOptions = {

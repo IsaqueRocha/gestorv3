@@ -1,12 +1,4 @@
 @extends('app')
-
-@section('head')
-<!-- Custom styles for this template -->
-<link href="{{ asset('/assets/plugins/croppic/assets/css/main.css') }}" rel="stylesheet">
-<link href="{{ asset('/assets/plugins/croppic/assets/css/croppic.css') }}" rel="stylesheet">
-
-@endsection
-
 @section('content')
 
 <!-- CABEÇALHO  -->

@@ -27,6 +27,8 @@ Route::get('/users/{id}/deactivate', 'UserController@deactivate')->where('id', '
 
 Route::post('/users/upload', 'CropController@postUpload');
 Route::post('/users/crop', 'CropController@postCrop');
+Route::post('/users/{id}/upload', 'CropController@postUpload')->where('id', '[0-9]+');
+Route::post('/users/{id}/crop', 'CropController@postCrop')->where('id', '[0-9]+');
 
 Route::get('/projects', function(){
     return view('template.project.gerenciar_projeto');

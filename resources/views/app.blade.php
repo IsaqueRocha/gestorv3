@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-      @yield('head')
       @include('template.head')
+      @yield('head')
   </head>
   <body class="skin-ldi">
     @include('template.header')
