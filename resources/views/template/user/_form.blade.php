@@ -169,7 +169,8 @@
 </div>
 
 @section('script')
-@parent<script src="{{ asset('assets/plugins/croppic/croppic.min.js')}}"></script>
+@parent
+<script src="{{ asset('assets/plugins/croppic/croppic.min.js')}}"></script>
 <script>
     var eyeCandy = $('#cropContainerEyecandy');
     var croppedOptions = {
