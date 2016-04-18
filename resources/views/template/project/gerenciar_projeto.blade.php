@@ -19,48 +19,53 @@
         <section class="listaProjetos col-md-12 connectedSortable ui-sortable">
             <div class="box box-ldi">
                 <div class="box-header with-border">
-                    <h3 class="box-title">
-                        <i class="fa fa-clipboard"></i> Lista de projetos
-                    </h3>
-                    <div class="box-tools pull-right">
-                        <div class="form-group acoes">
-                            <div class="rotulo">
-                                Exibir
+                    <div class="">
+                        <h3 class="box-title">
+                            <i class="fa fa-clipboard"></i> Lista de projetos
+                        </h3>
+                    </div>
+                    <hr>
+                    <div class="">
+                        <div class="box-tools pull-right">
+                            <div class="form-group acoes">
+                                <div class="rotulo">
+                                    Exibir
+                                </div>
+                                <select class="form-control input-sm">
+                                    <option>Todos</option>
+                                    <option>Web</option>
+                                    <option>Vídeo</option>
+                                    <option>Diagramação</option>
+                                    <option>Interno</option>
+                                    <option>Outro</option>
+                                </select>
                             </div>
-                            <select class="form-control input-sm">
-                                <option>Todos</option>
-                                <option>Web</option>
-                                <option>Vídeo</option>
-                                <option>Diagramação</option>
-                                <option>Interno</option>
-                                <option>Outro</option>
-                            </select>
-                        </div>
 
-                        <div class="form-group acoes">
-                            <div class="rotulo">
-                                Situação
+                            <div class="form-group acoes">
+                                <div class="rotulo">
+                                    Situação
+                                </div>
+                                <select class="form-control input-sm">
+                                    <option>Todos</option>
+                                    <option>Entregues</option>
+                                    <option>Em andamento</option>
+                                </select>
                             </div>
-                            <select class="form-control input-sm">
-                                <option>Todos</option>
-                                <option>Entregues</option>
-                                <option>Em andamento</option>
-                            </select>
-                        </div>
 
-                        <div class="input-group pesquisar-projeto acoes">
-                            <input type="text" name="table_search" class="form-control input-sm" style="width: 150px;" placeholder="Buscar projeto">
-                            <span class="input-group-btn" style="width: auto;">
-                                <button class="btn btn-sm btn-default" type="button">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </span>
-                        </div>
+                            <div class="input-group pesquisar-projeto acoes">
+                                <input type="text" name="table_search" class="form-control input-sm" style="width: 150px;position:initial;" placeholder="Buscar projeto">
+                                <span class="input-group-btn" style="width: auto;position:absolute;right:0;">
+                                    <button class="btn btn-sm btn-default" type="button">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </span>
+                            </div>
 
-                        <div class="acoes">
-                            <a title="Novo projeto">
-                                <button class="btn btn-sm btn-success">Novo</button>
-                            </a>
+                            <div class="acoes">
+                                <a title="Novo projeto">
+                                    <button class="btn btn-sm btn-success">Novo</button>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
