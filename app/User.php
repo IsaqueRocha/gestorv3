@@ -13,12 +13,13 @@ use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 use Carbon\Carbon;
 use App\WorkSchedule;
 use Artesaos\Defender\Traits\HasDefender;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class User extends Model implements AuthenticatableContract, CanResetPasswordContract, AuthorizableContract
 {
-    use Authenticatable, Authorizable, CanResetPassword, HasDefender;
+    use Authenticatable, Authorizable, CanResetPassword, HasDefender, SoftDeletes;
 
-    protected $dates = ['entrance_date'];
+    protected $dates = ['entrance_date', 'deleted_at'];
 
     /**
      * The database table used by the model.

@@ -172,10 +172,12 @@ class UserController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		$msg = 'Teste de usuário deletado';
-        dd($msg);
+		$user = User::FindOrFail($id);
+		$user->delete();
 
-        return redirect('/users');
+		flash()->success('Usuário apagado!');
+
+		return redirect('/users');
 	}
 
     public function deactivate()

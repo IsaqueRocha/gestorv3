@@ -14,15 +14,15 @@
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get('/', 'WelcomeController@index');
+Route::get('/', 'HomeController@index');
 Route::get('home', 'HomeController@index');
 
 Route::get('/users', 'UserController@index');
 Route::get('/users/create', 'UserController@create');
 Route::post('/users/create', 'UserController@store');
 Route::get('/users/{id}/edit', 'UserController@edit')->where('id', '[0-9]+');
-Route::post('/users/{id}/edit', 'UserController@update')->where('id', '[0-9]+');
-Route::get('/users/{id}/delete', 'UserController@destroy')->where('id', '[0-9]+');
+Route::put('/users/{id}', 'UserController@update')->where('id', '[0-9]+');
+Route::delete('/users/{id}', 'UserController@destroy')->where('id', '[0-9]+');
 Route::get('/users/{id}/deactivate', 'UserController@deactivate')->where('id', '[0-9]+');
 
 Route::post('/users/upload', 'CropController@postUpload');

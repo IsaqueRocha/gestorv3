@@ -30,7 +30,7 @@
                         <div class="box-tools pull-right">
                             <div class="form-group acoes">
                                 <div class="rotulo">
-                                    Exibir
+                                    Área:
                                 </div>
                                 <select class="form-control input-sm">
                                     <option>Todos</option>
@@ -44,17 +44,17 @@
 
                             <div class="form-group acoes">
                                 <div class="rotulo">
-                                    Situação
+                                    Função:
                                 </div>
                                 <select class="form-control input-sm">
                                     <option>Todos</option>
-                                    <option>Entregues</option>
-                                    <option>Em andamento</option>
+                                    <option>Estagiário</option>
+                                    <option>Coordenador</option>
                                 </select>
                             </div>
 
                             <div class="input-group pesquisar-projeto acoes">
-                                <input type="text" name="table_search" class="form-control input-sm" style="width: 150px;position:initial;" placeholder="Buscar projeto">
+                                <input type="text" name="table_search" class="form-control input-sm" style="width: 150px;position:initial;" placeholder="Buscar usuário">
                                 <span class="input-group-btn" style="width: auto;position:absolute;right:0;">
                                     <button class="btn btn-sm btn-default" type="button">
                                         <i class="fa fa-search"></i>

@@ -183,4 +183,6 @@
     };
     var cropperBox = new Croppic('cropContainerEyecandy', croppedOptions);
 </script>
+<script src="{{ asset('assets/dist/js/ajax-user.js') }}"></script>
+
 @endsection

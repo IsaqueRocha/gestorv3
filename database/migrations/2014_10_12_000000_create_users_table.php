@@ -24,6 +24,7 @@ class CreateUsersTable extends Migration
             $table->date('entrance_date');
             $table->string('password', 60);
             $table->boolean('active')->default(true);
+            $table->softDeletes();
             $table->rememberToken();
             $table->timestamps();
         });
