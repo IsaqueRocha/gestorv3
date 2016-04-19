@@ -19,13 +19,13 @@
         <section class="listaProjetos col-md-12 connectedSortable ui-sortable">
             <div class="box box-ldi">
                 <div class="box-header with-border">
-                    <div class="">
+                    <div>
                         <h3 class="box-title">
                             <i class="fa fa-clipboard"></i> Lista de projetos
                         </h3>
                     </div>
                     <hr>
-                    <div class="">
+                    <div>
                         <div class="box-tools pull-right">
                             <div class="form-group acoes">
                                 <div class="rotulo">
