@@ -1,6 +1,7 @@
 <html>
     <head>
-        <title>Be right back.</title>
+        <meta name="name" content="content" charset="utf-8">
+        <title>Em manutenção.</title>
 
         <link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
 
@@ -12,8 +13,9 @@
                 height: 100%;
                 color: #B0BEC5;
                 display: table;
-                font-weight: 100;
+                font-weight: bolder;
                 font-family: 'Lato';
+                background-color: #4a6c82;
             }
 
             .container {
@@ -36,7 +38,10 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Be right back.</div>
+                <div class="title">
+                    <img src="{{ asset('assets/theme/img/logo-300px.png') }}" alt="" /><br>
+                    Estamos em manutenção,<br>voltaremos em breve.
+                </div>
             </div>
         </div>
     </body>

@@ -15,11 +15,10 @@
 //     return view('welcome');
 // });
 Route::get('/', 'HomeController@index');
-Route::get('home', 'HomeController@index');
 
 Route::get('/users', 'UserController@index');
 Route::get('/users/create', 'UserController@create');
-Route::post('/users/create', 'UserController@store');
+Route::post('/users', 'UserController@store');
 Route::get('/users/{id}/edit', 'UserController@edit')->where('id', '[0-9]+');
 Route::put('/users/{id}', 'UserController@update')->where('id', '[0-9]+');
 Route::delete('/users/{id}', 'UserController@destroy')->where('id', '[0-9]+');
