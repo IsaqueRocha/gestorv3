@@ -180,12 +180,9 @@ class UserController extends Controller {
 		return redirect('/users');
 	}
 
-    public function deactivate()
+    public function disable($id)
     {
-        $msg = 'Teste de usuário desativado';
-        dd($msg);
-
-        return redirect('/users');
+		$user = User::FindOrFail($id);
     }
 
 }

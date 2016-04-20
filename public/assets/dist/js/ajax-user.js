@@ -3,8 +3,8 @@ function deleteUser(event){
     event.preventDefault();
 
     swal({
-        title: "Tem certeza que deseja apagar este Usuário?",
-        text: "Não será possível recuperar este usuário.",
+        title: "APAGAR USUARIO?",
+        text: "Tem certeza que deseja apaga este usuário,não será possível recuperá-lo.",
         type: "warning",
         showCancelButton: true,
         confirmButtonColor: "#DD6B55",
@@ -24,12 +24,12 @@ function deleteUser(event){
 
 
 function cancelEdit(){
-    swal("Here's a message!", "It's pretty, isn't it?");
+    window.history.back();
 }
 
-function deactivateUser(){
+function disableUser(user_id){
     swal({
-        title: "Tem certeza que deseja desativar este usuário?",
+        title: "DESATIVAR USUÁRIO?",
         type: "warning",
         showCancelButton: true,
         confirmButtonColor: "#DD6B55",
@@ -40,5 +40,13 @@ function deactivateUser(){
         showLoaderOnConfirm: true,
         animation: 'slide-from-bottom',
     }
+    // function(isConfirm){
+    //     if (isConfirm) {
+    //         $.ajax({
+    //             type    :   'PATCH',
+    //             url     :   '/users/' + user_id + 'disable';
+    //         });
+    //     }
+    // }
     );
 }

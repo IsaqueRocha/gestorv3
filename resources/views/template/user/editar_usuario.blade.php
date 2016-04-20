@@ -44,7 +44,7 @@
                             <!--BOTÕES-->
                             <button class="btn btn-success" type="submit" form="adicionarUsuario" value="Enviar">Salvar</button>
                             <button class="btn btn-danger" value="Excluir" onclick="deleteUser(event);">Excluir</button>
-                            <button class="btn btn-warning" type="submit" form="" value="Desativar" onclick="deactivateUser();" >Desativar</button>
+                            <button class="btn btn-warning" type="submit" form="" value="Desativar" onclick="disableUser({{ $user->id }});" >Desativar</button>
                             <button class="btn btn-default" value="Cancelar" onclick="cancelEdit();">Cancelar</button>
                         </div>
                     </div>

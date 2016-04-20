@@ -22,7 +22,7 @@ Route::post('/users', 'UserController@store');
 Route::get('/users/{id}/edit', 'UserController@edit')->where('id', '[0-9]+');
 Route::put('/users/{id}', 'UserController@update')->where('id', '[0-9]+');
 Route::delete('/users/{id}', 'UserController@destroy')->where('id', '[0-9]+');
-Route::get('/users/{id}/deactivate', 'UserController@deactivate')->where('id', '[0-9]+');
+Route::put('/users/{id}/deactivate', 'UserController@deactivate')->where('id', '[0-9]+');
 
 Route::post('/users/upload', 'CropController@postUpload');
 Route::post('/users/crop', 'CropController@postCrop');
