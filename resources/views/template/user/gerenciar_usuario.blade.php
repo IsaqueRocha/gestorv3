@@ -69,6 +69,8 @@
                             </div>
                         </div>
                     </div>
+
+                    </div>
                     <div class="box-body no-padding">
                         <table class="table table-striped table-bordered table-hover">
                             <tbody>
@@ -121,7 +123,6 @@
                                 </tbody>
                             </table>
                         </div>
-                    </div>
                 </section>
             </div>
         </section>
