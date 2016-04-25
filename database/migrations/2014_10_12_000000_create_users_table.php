@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration
             $table->enum('role', array('Admin', 'Coordenador', 'Técnico', 'Estagiário'))->default('Estagiário');/* 0 - Admin; 1 - Coordenador; 2 - Técnico; 3 - Estagiário; */
             $table->enum('area', array('Master', 'Gerência', 'Diagramação', 'Ilustração', 'Vídeo', 'Web'));/* 0 - Master; 1 - Digramação, 2 - Gerencia; 3 - Ilustração; 4 - Vídeo; 5 - Web; */
             $table->date('entrance_date');
+            $table->string('photo');
             $table->string('password', 60);
             $table->boolean('active')->default(true);
             $table->softDeletes();

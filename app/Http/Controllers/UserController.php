@@ -142,6 +142,7 @@ class UserController extends Controller {
         $user->role 			= $request->input('role');
         $user->area 		 	= $request->input('area');
         $user->entrance_date	= $request->input('entrance_date');
+		$user->photo			= $request->input('photo');
 
         $user->work_schedule()->update([
             'seg_am' => $request['seg_am'],
