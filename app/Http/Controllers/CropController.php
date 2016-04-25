@@ -88,7 +88,7 @@ class CropController extends Controller{
         $image->resize($imgW, $imgH)
             ->rotate(-$angle)
             ->crop($cropW, $cropH, $imgX1, $imgY1)
-            ->save(env('UPLOAD_PATH') . 'cropped-' . $filename);
+            ->save(env('UPLOAD_PATH') . 'photos/cropped-' . $filename);
 
         if( !$image) {
 
@@ -101,7 +101,7 @@ class CropController extends Controller{
 
         return Response::json([
             'status' => 'success',
-            'url' => env('URL') . 'uploads/cropped-' . $filename
+            'url' => env('URL') . 'uploads/photos/cropped-' . $filename
         ], 200);
 
     }

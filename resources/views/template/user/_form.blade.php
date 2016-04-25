@@ -164,7 +164,10 @@
     <div class=" form-group col-md-3">
         <label>Avatar</label>
         <br>
-        <div id="cropContainerEyecandy"></div>
+        <div id="cropContainerEyecandy">
+            <img src="{{ $user->photo }}" alt="" />
+        </div>
+        <input type="hidden" name="photo" id="croppedImgUrl">
     </div>
 </div>
 
@@ -179,7 +182,8 @@
         cropData:{
             'width' : eyeCandy.width(),
             'height': eyeCandy.height()
-        }
+        },
+        outputUrlId:'croppedImgUrl'
     };
     var cropperBox = new Croppic('cropContainerEyecandy', croppedOptions);
 </script>

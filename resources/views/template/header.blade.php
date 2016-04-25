@@ -57,7 +57,7 @@
               <!-- BOTÃO -->
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <!-- AVATAR NO BOTÃO -->
-                <img src="{!! asset('assets/theme/img/user2-160x160.jpg') !!}" class="user-image" alt="User Image"/>
+                <img src="{!! Auth::User()->photo !!}" class="user-image" alt="User Image"/>
                 <!-- NOME -->
                 <span class="hidden-xs">{{Auth::User()->name }}</span>
               </a>
@@ -65,7 +65,7 @@
               <ul class="dropdown-menu">
                 <!-- AVATAR, NOME E ATUAÇÃO -->
                 <li class="user-header">
-                  <img src="{!! asset('assets/theme/img/user2-160x160.jpg') !!}" class="img-circle" alt="User Image" />
+                  <img src="{!! Auth::User()->photo !!}" class="img-circle" alt="User Image" />
                   <p>
                     {{ Auth::User()->name }} - {{ Auth::User()->roles }}
                   </p>

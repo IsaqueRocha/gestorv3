@@ -142,6 +142,7 @@ class UserController extends Controller {
         $user->role 			= $request->input('role');
         $user->area 		 	= $request->input('area');
         $user->entrance_date	= $request->input('entrance_date');
+		$user->photo			= $request->input('photo');
 
         $user->work_schedule()->update([
             'seg_am' => $request['seg_am'],
@@ -180,12 +181,9 @@ class UserController extends Controller {
 		return redirect('/users');
 	}
 
-    public function deactivate()
+    public function disable($id)
     {
-        $msg = 'Teste de usuário desativado';
-        dd($msg);
-
-        return redirect('/users');
+		$user = User::FindOrFail($id);
     }
 
 }
