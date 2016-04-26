@@ -4,13 +4,13 @@
 <!-- CABEÇALHO -->
 <section class="content-header">
     <h1>
-        Gerenciar Usuários
-        <small>Editar</small>
+        Editar Usuários
+        <!-- <small>Editar</small> -->
     </h1>
     <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Início</a></li>
         <li><a href="#"><i class="fa fa-group"></i> Gerenciar Usuários</a></li>
-        <li class="active"><i class="fa fa-plus-circle"></i> Editar</li>
+        <li class="active"><i class="fa fa-edit"></i> Editar</li>
     </ol>
 </section>
 <!-- FIM CABEÇALHO -->
