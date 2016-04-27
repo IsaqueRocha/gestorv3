@@ -27,9 +27,29 @@ class UserController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function index($param = null, $value = null)
 	{
-		$users = User::all();
+		switch ($param) {
+			case null:
+				$users = User::all();
+				break;
+
+			case 'active':
+				$users = User::where('active', '1')->get();
+				break;
+
+			case 'area':
+				$users = User::where('area', $value)->get();
+				break;
+
+			case 'role':
+				$users = User::where('role', $value)->get();
+				break;
+			default:
+				# code...
+				break;
+		}
+
 
 		return view('template.user.gerenciar_usuario', compact('users'));
 	}
@@ -82,6 +102,11 @@ class UserController extends Controller {
         $input['sex_pm'] = $request->input('sex_pm');
 
 		$user = User::create($input);
+
+		/*
+		 *
+		*/
+		$user->attachRole(Defender::findRole($user->role));
 
         $user->work_schedule()->create([
             'seg_am' => $input['seg_am'],

@@ -67,7 +67,7 @@
                 <li class="user-header">
                   <img src="{!! Auth::User()->photo !!}" class="img-circle" alt="User Image" />
                   <p>
-                    {{ Auth::User()->name }} - {{ Auth::User()->roles }}
+                    {{ Auth::User()->name }} - {{ Auth::User()->role }}
                   </p>
                 </li>
                 <!-- ALTERAR DADOS E SAIR -->

@@ -50,3 +50,6 @@ function disableUser(user_id){
     // }
     );
 }
+
+function filterRoles(role_name){
+window.location.assign('/role/' + role_name);

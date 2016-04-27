@@ -16,6 +16,7 @@
 // });
 Route::get('/', 'HomeController@index');
 
+/* Rotas que tratam do usuário */
 Route::get('/users', 'UserController@index');
 Route::get('/users/create', 'UserController@create');
 Route::post('/users', 'UserController@store');
@@ -23,7 +24,9 @@ Route::get('/users/{id}/edit', 'UserController@edit')->where('id', '[0-9]+');
 Route::put('/users/{id}', 'UserController@update')->where('id', '[0-9]+');
 Route::delete('/users/{id}', 'UserController@destroy')->where('id', '[0-9]+');
 Route::put('/users/{id}/deactivate', 'UserController@deactivate')->where('id', '[0-9]+');
+Route::get('/users/{param}/{value}', 'UserController@index')->where(['param' => '[A-Za-z]+', 'value' => '[A-Za-z]+']);
 
+/* Rotas que tratam dos uploads de imagem */
 Route::post('/users/upload', 'CropController@postUpload');
 Route::post('/users/crop', 'CropController@postCrop');
 Route::post('/users/{id}/upload', 'CropController@postUpload')->where('id', '[0-9]+');
@@ -33,6 +36,7 @@ Route::get('/projects', function(){
     return view('template.project.gerenciar_projeto');
 });
 
+/*Rotas que tratam de Login*/
 Route::get('auth/login', 'Auth\AuthController@getLogin');
 Route::post('auth/login', 'Auth\AuthController@postLogin');
 Route::get('auth/logout', 'Auth\AuthController@getLogout');

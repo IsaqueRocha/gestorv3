@@ -34,7 +34,7 @@
                                 </div>
                                 <select class="form-control input-sm">
                                     <option>Todos</option>
-                                    <option>Web</option>
+                                    <option onSelect="alert('demorou');" >Web</option>
                                     <option>Vídeo</option>
                                     <option>Diagramação</option>
                                     <option>Interno</option>
@@ -70,62 +70,68 @@
                         </div>
                     </div>
 
-                    </div>
-                    <div class="box-body no-padding">
-                        <table class="table table-striped table-bordered table-hover">
-                            <tbody>
-                                <tr>
-                                    <th>Usuário</th>
-                                    <th>Função</th>
-                                    <th>Área</th>
-                                    <th class="icone"><i class="fa fa-edit" title="Editar"></i></th>
-                                    <th class="icone"><i class="fa fa-plus-circle" title="Expandir"></i></th>
-                                </tr>
-                                @foreach($users as $user)
-                                <tr>
-                                    <td>{{ $user->name }}</td>
-                                    <td>{{ $user->role }}</td>
-                                    <td>{{ $user->area }}</td>
-                                    <td class="icone">
-                                        <a href="{!! url('/users/'.$user->id.'/edit') !!}">
-                                            <i class="fa fa-edit" title="Editar"></i>
-                                        </a>
-                                    </td>
-                                    <td class="icone">
-                                        <a data-toggle="collapse" data-parent="#accordion" href="#usuario{{$user->id}}">
-                                            <i class="fa fa-plus-circle" title="Expandir"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr id="usuario{{$user->id}}" class="panel-collapse collapse">
-                                    <td colspan="5">
-                                        <!-- DADOS DO USUÁRIO -->
-                                        <div class="box-body dados-usuario">
+                </div>
+                <div class="box-body no-padding">
+                    <table class="table table-striped table-bordered table-hover">
+                        <tbody>
+                            <tr>
+                                <th>Usuário</th>
+                                <th>Função</th>
+                                <th>Área</th>
+                                <th class="icone"><i class="fa fa-edit" title="Editar"></i></th>
+                                <th class="icone"><i class="fa fa-plus-circle" title="Expandir"></i></th>
+                            </tr>
+                            @foreach($users as $user)
+                            <tr>
+                                <td>{{ $user->name }}</td>
+                                <td>{{ $user->role }}</td>
+                                <td>{{ $user->area }}</td>
+                                <td class="icone">
+                                    <a href="{!! url('/users/'.$user->id.'/edit') !!}">
+                                        <i class="fa fa-edit" title="Editar"></i>
+                                    </a>
+                                </td>
+                                <td class="icone">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#usuario{{$user->id}}">
+                                        <i class="fa fa-plus-circle" title="Expandir"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr id="usuario{{$user->id}}" class="panel-collapse collapse">
+                                <td colspan="5">
+                                    <!-- DADOS DO USUÁRIO -->
+                                    <div class="box-body dados-usuario">
 
-                                            <div class="col-md-6">
-                                                <label>Nome:</label> <span>{{ $user->name }}</span> <br/>
-                                                <label>E-mail: </label> <span>{{ $user->email }}</span> <br/>
-                                                <label>CPF: </label> <span>{{ $user->cpf }}</span> <br/>
-                                                <label>Telefone: </label> <span>{{ $user->phone }}</span> <br/>
-                                            </div>
-
-                                            <div class="col-md-6">
-                                                <label>Endereço: </label> <span>{{ $user->address }}</span> <br/>
-                                                <label>Função: </label> <span>{{ $user->role }}</span> <br/>
-                                                <label>Área de atuação: </label> <span>{{ $user->area }}</span> <br/>
-                                                <label>Entrada: </label> <span>{{ $user->entrance_date->format('d/m/Y') }}</span> <br/>
-                                            </div>
-
+                                        <div class="col-md-6">
+                                            <label>Nome:</label> <span>{{ $user->name }}</span> <br/>
+                                            <label>E-mail: </label> <span>{{ $user->email }}</span> <br/>
+                                            <label>CPF: </label> <span>{{ $user->cpf }}</span> <br/>
+                                            <label>Telefone: </label> <span>{{ $user->phone }}</span> <br/>
                                         </div>
-                                        <!-- FIM DADOS DO USUÁRIO -->                                </td>
-                                    </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
-                        </div>
+
+                                        <div class="col-md-6">
+                                            <label>Endereço: </label> <span>{{ $user->address }}</span> <br/>
+                                            <label>Função: </label> <span>{{ $user->role }}</span> <br/>
+                                            <label>Área de atuação: </label> <span>{{ $user->area }}</span> <br/>
+                                            <label>Entrada: </label> <span>{{ $user->entrance_date->format('d/m/Y') }}</span> <br/>
+                                        </div>
+
+                                    </div>
+                                    <!-- FIM DADOS DO USUÁRIO -->                                </td>
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
                 </section>
             </div>
         </section>
         <!-- FIM TABELA - LISTA DE USUÁRIOS -->
 
-        @endsection
+@endsection
+
+@section('script')
+    <script type="text/javascript" src="{{ asset('assets/public/dist/js/ajax-user.js')}}">
+
+    </script>
+@endsection
