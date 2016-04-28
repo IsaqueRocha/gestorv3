@@ -29,31 +29,35 @@
                     <div>
                         <div class="box-tools pull-right">
                             <div class="form-group acoes">
-                                <div class="rotulo">
-                                    Área:
-                                </div>
-                                <select class="form-control input-sm">
-                                    <option>Todos</option>
-                                    <option onSelect="alert('demorou');" >Web</option>
-                                    <option>Vídeo</option>
-                                    <option>Diagramação</option>
-                                    <option>Interno</option>
-                                    <option>Outro</option>
-                                </select>
+                                <form id="areas">
+                                    <div class="rotulo">
+                                        Área:
+                                    </div>
+                                    <select class="form-control input-sm">
+                                        <option onclick="filterArea('todos')">Todos</option>
+                                        <option onclick="filterArea('web')">Web</option>
+                                        <option onclick="filterArea('video')">Vídeo</option>
+                                        <option onclick="filterArea('diagramacao')">Diagramação</option>
+                                    </select>
+                                </form>
+
                             </div>
 
                             <div class="form-group acoes">
-                                <div class="rotulo">
-                                    Função:
-                                </div>
-                                <select class="form-control input-sm">
-                                    <option>Todos</option>
-                                    <option>Estagiário</option>
-                                    <option>Coordenador</option>
-                                </select>
+                                <form id="roles" method="get">
+                                    <div class="rotulo">
+                                        Função:
+                                    </div>
+                                    <select class="form-control input-sm">
+                                        <option onclick="filterRole('todos')">Todos</option>
+                                        <option onclick="filterRole('estagiario')">Estagiário</option>
+                                        <option onclick="filterRole('tecnico')">Técnico</option>
+                                        <option onclick="filterRole('coordenador')">Coordenador</option>
+                                    </select>
+                                </form>
                             </div>
 
-                            <div class="input-group pesquisar-projeto acoes">
+                            <div style="display:none;" class="input-group pesquisar-projeto acoes">
                                 <input type="text" name="table_search" class="form-control input-sm" style="width: 150px;position:initial;" placeholder="Buscar usuário">
                                 <span class="input-group-btn" style="width: auto;position:absolute;right:0;">
                                     <button class="btn btn-sm btn-default" type="button">
@@ -131,7 +135,5 @@
 @endsection
 
 @section('script')
-    <script type="text/javascript" src="{{ asset('assets/public/dist/js/ajax-user.js')}}">
-
-    </script>
+<script type="text/javascript" src="{{ asset('assets/dist/js/ajax-user.js')}}"></script>
 @endsection

@@ -51,5 +51,18 @@ function disableUser(user_id){
     );
 }
 
-function filterRoles(role_name){
-window.location.assign('/role/' + role_name);
+function filterArea(area_name){
+    if (area_name === 'todos') {
+        $('#areas').attr('action', '/users').submit();
+    }else{
+        $('#areas').attr('action', '/users/area/' + area_name).submit();
+    }
+}
+
+function filterRole(role_name) {
+    if (role_name === 'todos') {
+        $('#roles').attr('action', '/users').submit();
+    }else{
+        $('#roles').attr('action', '/users/role/' + role_name).submit();
+    }
+}
