@@ -16,7 +16,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 .logo > img{
 	width: 26px;
-	margin-top: -3px;	
+	margin-top: -3px;
 }
 
 .logo{
@@ -41,7 +41,7 @@ li.user-header{
 }
 
 .main-sidebar{
-	padding-top: 60px; 
+	padding-top: 60px;
 }
 
 .sidebar a{
@@ -64,7 +64,7 @@ li.user-header{
 .small-box-footer{
 	text-align: left!important;
 	padding-left: 10px!important;
-	background-color: rgba(0, 0, 0, 0.3)!important; 
+	background-color: rgba(0, 0, 0, 0.3)!important;
 }
 
 .relogio-ico{
@@ -99,7 +99,7 @@ li.user-header{
 
 .botao-mostrar-mais{
 	border: 0!important;
-	padding: 0!important;	
+	padding: 0!important;
 }
 
 .img-expandir{
@@ -229,7 +229,7 @@ li.user-header{
 	overflow: hidden!important;
 	width: 100%;
 	clear: both;
-	padding-right: 30px; 
+	padding-right: 30px;
 }
 
 .dados-usuario, .dados-projeto {
@@ -244,7 +244,7 @@ li.user-header{
 
 
 .btn-salvar > button > span > i {
-	background-color: green;	
+	background-color: green;
 }
 
 .btn-salvar > button{
@@ -334,13 +334,13 @@ li.user-header{
 .valor-progresso-green{
 	background-color: #00a65a;
 	padding: 2px 6px 2px 5px;
-	border-radius: 10px;	
+	border-radius: 10px;
 }
 
 .valor-progresso-red{
 	background-color: #DD4B39;
 	padding: 2px 6px 2px 5px;
-	border-radius: 10px;	
+	border-radius: 10px;
 }
 
 .pesquisar-projeto{
@@ -379,7 +379,7 @@ li.user-header{
 }
 
 .dropdown-menu{
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3)!important;	
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3)!important;
 }
 
 .dia-semana{
@@ -439,7 +439,7 @@ li.user-header{
 
 .confirm:hover{
 	background-color: #3c474b!important;
-	
+
 }
 
 .cancel{
@@ -463,13 +463,13 @@ li.user-header{
 	width: 100%;
 	padding: 4px;
 }
-	
+
 .edfisica {
 	background-color: #d4d0b3;
 	color:#000;
 	text-align: center;
 	width: 100%;
-	padding: 4px;	
+	padding: 4px;
 }
 
 .contabeis {
@@ -479,7 +479,7 @@ li.user-header{
 	width: 100%;
 	padding: 4px;
 }
-	
+
 .fisica {
 	background-color: #116554;
 	color:#FFF;
@@ -505,7 +505,7 @@ li.user-header{
 	width: 100%;
 	padding: 4px;
 }
-	
+
 .dirhumanos {
 	background-color: #663;
 	color:#FFF;
@@ -513,7 +513,7 @@ li.user-header{
 	width: 100%;
 	padding: 4px;
 }
-	
+
 .pedagogia {
 	background-color: #505e93;
 	color:#fff;
@@ -568,7 +568,7 @@ li.user-header{
 	text-align: center;
 	width: 100%;
 	padding: 4px;
-}	
+}
 
 .outro {
 	background-color: #aaa;
@@ -583,7 +583,7 @@ li.user-header{
 	color:#FFF;
 	text-align: center;
 	width: 100%;
-	padding: 4px;	
+	padding: 4px;
 }
 
 .fim-bloco{
@@ -610,7 +610,7 @@ li.user-header{
 .o_h{
 	overflow: hidden!important;
 }
- 
+
 .m-b10{
 	margin-bottom:15px!important;
 }
@@ -671,7 +671,7 @@ li.user-header{
 
 .upload:hover {
 	background-color: #3c474b;
-	    cursor: pointer!important; 
+	    cursor: pointer!important;
 }
 
 .upload:active {
@@ -690,7 +690,7 @@ li.user-header{
     height: 40px;
     opacity: 0 !important;
     overflow: hidden !important;
-    cursor: pointer!important; 
+    cursor: pointer!important;
 }
 
 .filtros-lista{
@@ -753,7 +753,7 @@ textarea {
 
 	.filtros-lista{
 		margin-right:0;
-	}	
+	}
 }
 
 @media all and (max-width:1300px){
@@ -780,7 +780,7 @@ textarea {
 
 	.filtro-projetos > .form-control{
 		width: 100%;
-	}	
+	}
 
 	.pesquisar-projeto{
 		float: none;
@@ -826,7 +826,7 @@ textarea {
 
 
 @media all and (max-width: 767px){
-	
+
 	.tasks-menu > ul > .header{
 		font-size: 17px!important;
 		font-weight: bold;
@@ -901,7 +901,7 @@ textarea {
  	.navbar-static-top > .navbar-custom-menu{
 		height: 70px!important;
 		font-size: 37px!important;
-	}	
+	}
 
 	.user-menu > a > img{
 		width: 48px!important;

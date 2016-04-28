@@ -10,6 +10,7 @@ use Intervention\Image;
 use Illuminate\Http\Request;
 use Laracasts\Flash\Flash;
 
+
 class UserController extends Controller {
 
 	/**
@@ -84,7 +85,7 @@ class UserController extends Controller {
         $input['address'] 		= $request->input('address');
         $input['role'] 			= $request->input('role');
         $input['area'] 			= $request->input('area');
-        $input['entrance_date'] = $request->input('entrance_date');
+        $input['ent$user->save();rance_date'] = $request->input('entrance_date');
 
 
         /**
@@ -209,6 +210,16 @@ class UserController extends Controller {
     public function disable($id)
     {
 		$user = User::FindOrFail($id);
+
+		if($user->active == false){
+			$user->active = true;
+		} else {
+			$user->active = false;
+		}
+
+		$user->save();
+
+		return response()->json($user);
     }
 
 }

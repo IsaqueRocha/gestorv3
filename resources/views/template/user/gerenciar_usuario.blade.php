@@ -34,10 +34,10 @@
                                         Área:
                                     </div>
                                     <select class="form-control input-sm">
-                                        <option onclick="filterArea('todos')">Todos</option>
-                                        <option onclick="filterArea('web')">Web</option>
-                                        <option onclick="filterArea('video')">Vídeo</option>
-                                        <option onclick="filterArea('diagramacao')">Diagramação</option>
+                                        <option onclick="filterArea('{!! env('URL') !!}', 'todos')">Todos</option>
+                                        <option onclick="filterArea('{!! env('URL') !!}', 'web')">Web</option>
+                                        <option onclick="filterArea('{!! env('URL') !!}', 'video')">Vídeo</option>
+                                        <option onclick="filterArea('{!! env('URL') !!}', 'diagramacao')">Diagramação</option>
                                     </select>
                                 </form>
 
@@ -49,10 +49,10 @@
                                         Função:
                                     </div>
                                     <select class="form-control input-sm">
-                                        <option onclick="filterRole('todos')">Todos</option>
-                                        <option onclick="filterRole('estagiario')">Estagiário</option>
-                                        <option onclick="filterRole('tecnico')">Técnico</option>
-                                        <option onclick="filterRole('coordenador')">Coordenador</option>
+                                        <option onclick="filterRole('{!! env('URL') !!}', 'todos')">Todos</option>
+                                        <option onclick="filterRole('{!! env('URL') !!}', 'estagiario')">Estagiário</option>
+                                        <option onclick="filterRole('{!! env('URL') !!}', 'tecnico')">Técnico</option>
+                                        <option onclick="filterRole('{!! env('URL') !!}', 'coordenador')">Coordenador</option>
                                     </select>
                                 </form>
                             </div>
@@ -73,7 +73,6 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
                 <div class="box-body no-padding">
                     <table class="table table-striped table-bordered table-hover">

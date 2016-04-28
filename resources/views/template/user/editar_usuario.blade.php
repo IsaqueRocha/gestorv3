@@ -36,15 +36,16 @@
                             {{ method_field('DELETE') }}
                         </form>
 
-                        <form class="" action="index.html" method="post">
-
+                        <form name="desativarUsuario" role="form" id="desativarUsuario" >
+                            {!! csrf_field() !!}
+                            {{ method_field('PUT') }}
                         </form>
 
                         <div class="col-md-12" style="margin-top:15px;text-align:right;">
                             <!--BOTÕES-->
                             <button class="btn btn-success" type="submit" form="adicionarUsuario" value="Enviar">Salvar</button>
                             <button class="btn btn-danger" value="Excluir" onclick="deleteUser(event);">Excluir</button>
-                            <button class="btn btn-warning" type="submit" form="" value="Desativar" onclick="disableUser({{ $user->id }});" >Desativar</button>
+                            <button class="btn btn-warning" form="desativarUsuario" value="{{ $user->active }}" onclick="disableUser(event, {{ $user->id }});" id="desativar"></button>
                             <button class="btn btn-default" value="Cancelar" onclick="cancelEdit();">Cancelar</button>
                         </div>
                     </div>
@@ -53,4 +54,8 @@
         </section>
     </div>
 </section>
+@endsection
+
+@section('script')
+ <meta name="_token" content="{!! csrf_token() !!}" />
 @endsection
