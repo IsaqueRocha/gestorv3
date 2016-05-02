@@ -101,9 +101,9 @@ function filterRole(url, role_name) {
 
 function alteraDesativa(){
     var mode = $('#desativar').val();
-    if (mode === 0){
+    if (mode == '0'){
         $('#desativar').removeClass("btn-warning").addClass("btn-primary");
-    } else if(mode == 1){
+    } else if(mode == '1'){
         $('#desativar').removeClass("btn-primary").addClass("btn-warning");
     }
 }

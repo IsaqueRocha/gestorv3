@@ -120,19 +120,20 @@
                                         </div>
 
                                     </div>
-                                    <!-- FIM DADOS DO USUÁRIO -->                                </td>
-                                </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
-                    </div>
-                </section>
-            </div>
-        </section>
-        <!-- FIM TABELA - LISTA DE USUÁRIOS -->
+                                    <!-- FIM DADOS DO USUÁRIO -->
+                                </td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </section>
+    <!-- FIM TABELA - LISTA DE USUÁRIOS -->
 
-@endsection
+    @endsection
 
-@section('script')
-<script type="text/javascript" src="{{ asset('assets/dist/js/ajax-user.js')}}"></script>
-@endsection
+    @section('script')
+    <script type="text/javascript" src="{{ asset('assets/dist/js/ajax-user.js')}}"></script>
+    @endsection
