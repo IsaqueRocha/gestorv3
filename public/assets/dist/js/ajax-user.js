@@ -29,10 +29,19 @@ function cancelEdit(){
     window.history.back();
 }
 
-function disableUser(event, user_id){
+function disableUser(event){
     event.preventDefault();
+    var url = $('#desativarUsuario').attr('action');
+    var status = $('#desativar').val();
+    var title;
+    if (status == 1) {
+        title = 'DESATIVAR USUÁRIO?';
+    } else {
+        title = 'ATIVAR USUÁRIO?';
+    }
+
     swal({
-        title: "DESATIVAR USUÁRIO?",
+        title: title,
         type: "warning",
         showCancelButton: true,
         confirmButtonColor: "#DD6B55",
@@ -52,7 +61,7 @@ function disableUser(event, user_id){
             });
             $.ajax({
                 type    :   'PUT',
-                url     :   '/users/' + user_id + '/disable',
+                url     :   url,
                 dataType:   'JSON',
                 error   :   function( data ) {
                     swal("Erro!", "Houve um erro na tentativa de desativar este usuário. " + user_id, "error");
@@ -60,10 +69,11 @@ function disableUser(event, user_id){
                 },
                 success :   function( data) {
                     console.log(data);
-                    swal("Desativado!", "Este usuário foi desativado." + data.active, "success");
-                    if (data.active == true ) {
+                    if (data.active === true ) {
+                        swal("Ativado!", "Este usuário foi desativado." + data.active, "success");
                         $('#desativar').val('1');
                     } else {
+                        swal("Desativado!", "Este usuário foi desativado." + data.active, "success");
                         $('#desativar').val('0');
                     }
                     alteraDesativa();
@@ -91,7 +101,7 @@ function filterRole(url, role_name) {
 
 function alteraDesativa(){
     var mode = $('#desativar').val();
-    if (mode == 0){
+    if (mode === 0){
         $('#desativar').removeClass("btn-warning").addClass("btn-primary");
     } else if(mode == 1){
         $('#desativar').removeClass("btn-primary").addClass("btn-warning");
