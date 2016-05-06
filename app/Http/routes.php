@@ -41,3 +41,7 @@ Route::get('/projects', function(){
 Route::get('auth/login', 'Auth\AuthController@getLogin');
 Route::post('auth/login', 'Auth\AuthController@postLogin');
 Route::get('auth/logout', 'Auth\AuthController@getLogout');
+
+Route::get('/profile', function(){
+    return view('template.profile.index');
+});
