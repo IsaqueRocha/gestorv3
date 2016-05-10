@@ -73,55 +73,23 @@
     <div class="form-group col-md-6">
         <div class="row">
             <!--ÁREA DE ATUAÇÃO-->
-
-
-            <!-- <select name="area" class="form-control">
-            <option>Selecionar</option>
-            @foreach(config('enum.areas') as $area)
-            <option value="{{$area}}" {{($user->area == $area)?('selected'):('')}}>
-            {{$area}}
-        </option>
-        @endforeach
-    </select> -->
-            <div class="col-md-12" style="margin-bottom:-10px;">
+            <div class="col-md-12">
                 <label>Área de atuação</label>
             </div>
-            <div class="col-md-4">
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" checked> Master
-                    </label>
+            <div class="checkbox" style="margin-top:-4px;">
+                <div class="col-md-4">
+                    <label><input type="checkbox" name="areaAtuacao" value="master" checked> Master</label>
+                    <label><input type="checkbox" name="areaAtuacao" value="diagramacao"> Diagramação</label>
                 </div>
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox"> Diagramação
-                    </label>
+                <div class="col-md-4">
+                    <label><input type="checkbox" name="areaAtuacao" value="gerencia"> Gerência</label>
+                    <label><input type="checkbox" name="areaAtuacao" value="ilustracao"> Ilustração</label>
                 </div>
+                <div class="col-md-4">
+                    <label><input type="checkbox" name="areaAtuacao" value="video"> Vídeo</label>
+                    <label><input type="checkbox" name="areaAtuacao" value="web"> Web</label>
+                </div><!--FIM ÁREA DE ATUAÇÃO-->
             </div>
-            <div class="col-md-4">
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox"> Gerência
-                    </label>
-                </div>
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox"> Ilustração
-                    </label>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox"> Vídeo
-                    </label>
-                </div>
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox"> Web
-                    </label>
-                </div>
-            </div><!--FIM ÁREA DE ATUAÇÃO-->
         </div>
     </div>
 </div>
@@ -235,13 +203,13 @@
 <script>
 var eyeCandy = $('#cropContainerEyecandy');
 var croppedOptions = {
-    uploadUrl: 'upload',
-    cropUrl: 'crop',
-    cropData: {
-        'width': eyeCandy.width(),
-        'height': eyeCandy.height()
-    },
-    outputUrlId: 'croppedImgUrl'
+uploadUrl: 'upload',
+cropUrl: 'crop',
+cropData: {
+    'width': eyeCandy.width(),
+    'height': eyeCandy.height()
+},
+outputUrlId: 'croppedImgUrl'
 };
 var cropperBox = new Croppic('cropContainerEyecandy', croppedOptions);
 </script>

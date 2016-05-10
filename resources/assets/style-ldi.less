@@ -27,11 +27,27 @@
         background-color: white;
         width: 100%;
     }
+
+    form {
+
+        .checkbox {
+
+            float: left;
+            width: 100%;
+            margin-top: 0;
+
+            label {
+                float: left;
+                width: 100%;
+                display: block;
+            }
+        }
+    }
 }
 
 .user-header a {
     color: white;
-    
+
     &:hover {
         text-decoration: underline;
     } 
@@ -132,6 +148,10 @@
 .icone {
     width: 40px;
     text-align: center;
+
+    a:active, a:focus {
+        color: #3c8dbc;
+    }
 }
 
 .listaProjetos {

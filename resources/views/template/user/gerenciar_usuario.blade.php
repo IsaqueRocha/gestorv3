@@ -96,7 +96,7 @@
                                 </td>
                                 <td class="icone">
                                     <a data-toggle="collapse" data-parent="#accordion" href="#usuario{{$user->id}}">
-                                        <i class="fa fa-plus-circle" title="Expandir"></i>
+                                        <i id="demo{{$user->id}}" class="fa fa-plus-circle" title="Expandir" onclick="trocaPlusMinus({{$user->id}})"></i>
                                     </a>
                                 </td>
                             </tr>

@@ -13,7 +13,10 @@
 <script src="{{ asset('assets/plugins/input-mask/jquery.inputmask.extensions.js') }}" type="text/javascript"></script>
 <!--Plugin do sweet alert -->
 <script src="{{ asset('assets/plugins/sweetalert/sweetalert.js')}}"></script>
+<!-- Personalizado -->
+<script src="{{ asset('assets/dist/js/ldi.js')}}"></script>
 
+<!--FEATURES DO FRAMEWORK-->
 <!-- DATA TABES SCRIPT -->
 <script src="{{ asset('assets/plugins/datatables/jquery.dataTables.js') }}" type="text/javascript"></script>
 <script src="{{ asset('assets/plugins/datatables/dataTables.bootstrap.js') }}" type="text/javascript"></script>
@@ -21,6 +24,5 @@
 <script src="{{ asset('assets/plugins/slimScroll/jquery.slimscroll.min.js') }}" type="text/javascript"></script>
 <!-- FastClick -->
 <script src="{{ asset('assets/plugins/fastclick/fastclick.min.js') }}"></script>
-
 <!-- Multiple Select -->
 <script src="{{ asset('assets/plugins/multipleselect/multiple-select.js') }}" type="text/javascript"></script>
