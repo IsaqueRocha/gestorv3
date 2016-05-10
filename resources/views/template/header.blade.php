@@ -67,7 +67,7 @@
                 <li class="user-header">
                   <img src="{!! Auth::User()->photo !!}" class="img-circle" alt="Foto do Usuário" />
                   <p>
-                      <a href="{{url('/profile')}}">{{ Auth::User()->name }} - {{ Auth::User()->role }}</a> <!-- TO-DO RENATO INCLUIR LINK -->
+                      <a href="{{url('/profile')}}">{{ Auth::User()->name }}</a> <br> {{ Auth::User()->role }}
                   </p>
                 </li>
                 <!-- ALTERAR DADOS E SAIR -->

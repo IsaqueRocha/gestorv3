@@ -18,7 +18,7 @@
     <div class="row">
         <section class="listaProjetos col-md-12 connectedSortable ui-sortable">
             <div class="box box-ldi">
-                <div class="box-header with-border">
+                <div class="box-header">
                     <div>
                         <h3 class="box-title">
                             <i class="fa fa-clipboard"></i> Lista de projetos
@@ -26,7 +26,7 @@
                     </div>
                     <hr>
                     <div>
-                        <div class="box-tools pull-right">
+                        <div class="box-tools">
                             <div class="form-group acoes">
                                 <div class="rotulo">
                                     Exibir
@@ -62,14 +62,14 @@
                             </div>
 
                             <div class="acoes">
-                                <a title="Novo projeto">
+                                <a href="{{ url('/projects/create') }}" title="Novo projeto">
                                     <button class="btn btn-sm btn-success">Novo</button>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="box-body no-padding">
+                <div class="box-body">
                     <table class="table table-striped table-bordered table-hover">
                         <tbody>
                             <tr>

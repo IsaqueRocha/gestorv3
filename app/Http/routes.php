@@ -36,6 +36,9 @@ Route::post('/users/{id}/crop', 'CropController@postCrop')->where('id', '[0-9]+'
 Route::get('/projects', function(){
     return view('template.project.gerenciar_projeto');
 });
+Route::get('/projects/create', function(){
+    return view('template.project.adicionar_projeto');
+});
 
 /*Rotas que tratam de Login*/
 Route::get('auth/login', 'Auth\AuthController@getLogin');

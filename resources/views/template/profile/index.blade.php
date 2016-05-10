@@ -63,7 +63,7 @@
                     </div>
                     <hr>
                     <div>
-                        <div class="box-tools" style="margin-left:-10px;">
+                        <div class="box-tools">
                             <div class="form-group acoes">
                                 <div class="rotulo">
                                     Exibir
@@ -106,9 +106,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="box-body" style="padding:10px;">
-                    <table class="table table-striped table-bordered table-hover">
-                        <tbody>
+                <div class="box-body">
+                    <table id="example1" class="table table-striped table-bordered table-hover">
+                        <thead>
                             <tr>
                                 <th>Curso</th>
                                 <th>Projeto</th>
@@ -121,6 +121,8 @@
                                 <th class="icone"><i class="fa fa-edit" title="Editar"></i></th>
                                 <th class="icone"><i class="fa fa-plus-circle" title="Expandir"></i></th>
                             </tr>
+                        </thead>
+                        <tbody>
                             <tr id="um" class="panel-collapse collapse">
                                 <td colspan="10">
                                     Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
@@ -211,5 +213,19 @@
         </section>
     </div>
 </section>
+
+<!--<script type="text/javascript">
+    $(document).ready(function () {
+        $('#example1').DataTable();
+        $('#example2').DataTable({
+            "bPaginate": true,
+            "bLengthChange": false,
+            "bFilter": false,
+            "bSort": true,
+            "bInfo": true,
+            "bAutoWidth": false
+        });
+    });
+</script>-->
 
 @endsection

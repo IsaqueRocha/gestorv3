@@ -19,7 +19,7 @@
     <div class="row">
         <section class="col-md-12 connectedSortable ui-sortable">
             <div class="box box-ldi">
-                <div class="box-header with-border">
+                <div class="box-header">
                     <div>
                         <h3 class="box-title">
                             <i class="fa fa-users"></i> Lista de usuários
@@ -27,7 +27,7 @@
                     </div>
                     <hr>
                     <div>
-                        <div class="box-tools pull-right">
+                        <div class="box-tools">
                             <div class="form-group acoes">
                                 <form id="areas">
                                     <div class="rotulo">
@@ -74,7 +74,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="box-body no-padding">
+                <div class="box-body">
                     <table class="table table-striped table-bordered table-hover">
                         <tbody>
                             <tr>

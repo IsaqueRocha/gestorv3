@@ -10,13 +10,13 @@
     <!--NOME-->
     <div class="form-group col-md-6">
         <label>Nome</label>
-        <input name="name" type="text" value="{!! ($user->name)?($user->name):(old('name')) !!}" class="form-control" placeholder="Nome ..." required />
+        <input name="name" type="text" value="{!! ($user->name)?($user->name):(old('name')) !!}" class="form-control" placeholder="Nome" required />
     </div><!-- NOME-->
 
     <!--EMAIL-->
     <div class="form-group col-md-6">
         <label>E-mail</label>
-        <input name="email" type="email" value="{!! ($user->email)?($user->email):(old('email')) !!}" class="form-control" placeholder="E-mail ..."/>
+        <input name="email" type="email" value="{!! ($user->email)?($user->email):(old('email')) !!}" class="form-control" placeholder="E-mail"/>
     </div><!--FIM EMAIL-->
 </div>
 
@@ -38,13 +38,13 @@
             <!--ENTRADA-->
             <div class="form-group col-md-3">
                 <label>Entrada</label>
-                <input name="entrance_date" type="text" value="{!! ($user->entrance_date)?($user->entrance_date->format('d/m/Y')):(old('entrance_date')) !!}" class="form-control" placeholder="dd/mm/yyyy" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
+                <input name="entrance_date" type="text" value="{!! ($user->entrance_date)?($user->entrance_date->format('d/m/Y')):(old('entrance_date')) !!}" class="form-control" placeholder="dd/mm/aaaa" data-inputmask="'alias': 'dd/mm/aaaa'" data-mask/>
             </div><!-- FIM ENTRADA-->
 
             <!--ENTRADA-->
             <div class="form-group col-md-3">
                 <label>Saída</label>
-                <input name="entrance_date" type="text" value="" class="form-control" placeholder="dd/mm/yyyy" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
+                <input name="entrance_date" type="text" value="" class="form-control" placeholder="dd/mm/aaaa" data-inputmask="'alias': 'dd/mm/aaaa'" data-mask/>
             </div><!-- FIM ENTRADA-->
         </div>
     </div>
@@ -52,7 +52,7 @@
     <!--ENDEREÇO-->
     <div class="form-group col-md-6">
         <label>Endereço</label>
-        <input name="address" type="text" value="{!! ($user->address)?($user->address):(old('address')) !!}" class="form-control" placeholder="Rua, Bairro, Cidade ..."/>
+        <input name="address" type="text" value="{!! ($user->address)?($user->address):(old('address')) !!}" class="form-control" placeholder="Endereço"/>
     </div><!--FIM ENDEREÇO-->
 </div>
 
@@ -61,7 +61,7 @@
     <div class="form-group col-md-6">
         <label>Função</label>
         <select name="role" class="form-control">
-            <option>Selecionar</option>
+            <option>(Selecionar)</option>
             @foreach(config('enum.roles') as $role)
             <option value="{{$role}}" {{($user->role == $role)?('selected'):('')}}>
                 {{$role}}
