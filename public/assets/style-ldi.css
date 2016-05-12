@@ -25,17 +25,43 @@
   float: left;
   width: 100%;
   margin-top: 0;
+  padding: 6px 12px;
+  border: 1px solid #d2d6de;
+}
+.box-body form .checkbox div {
+  padding: 0;
 }
 .box-body form .checkbox label {
   float: left;
   width: 100%;
   display: block;
 }
-.user-header a {
+.box-body table thead {
+  background-color: #efefef;
+  border-top: 1px solid #d4d4d4;
+}
+.box-body table thead th {
+  border-color: #d4d4d4;
+}
+.box-body table i[title="Diagramação"],
+.box-body table i[title="Ilustração"],
+.box-body table i[title="Vídeo"],
+.box-body table i[title="Web"] {
+  margin: 0 2px;
+}
+.user-menu .user-header a {
   color: white;
 }
-.user-header a:hover {
+.user-menu .user-header a:hover {
   text-decoration: underline;
+}
+.user-menu .user-footer {
+  background-color: #383838 !important;
+  background-image: url("../assets/theme/img/grid-pattern.png");
+  background-repeat: repeat;
+}
+.user-menu .user-footer .btn {
+  border-radius: 4px;
 }
 /* 1.1) LOGIN */
 .login-box-body .col-md-12 {
@@ -74,6 +100,12 @@
   font-size: 20px!important;
 }
 /* 2) GERENCIAR USUARIOS */
+button[form="desativarUsuario"].btn-warning:before {
+  content: 'Desativar';
+}
+button[form="desativarUsuario"].btn-primary:before {
+  content: 'Ativar';
+}
 /* 2.1) CRIAR USUARIO */
 .form-group.horarioUsuario .input-group {
   margin-bottom: 10px;

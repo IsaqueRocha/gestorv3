@@ -33,11 +33,18 @@ Route::post('/users/crop', 'CropController@postCrop');
 Route::post('/users/{id}/upload', 'CropController@postUpload')->where('id', '[0-9]+');
 Route::post('/users/{id}/crop', 'CropController@postCrop')->where('id', '[0-9]+');
 
+/* Rotas que tratam de projetos */
 Route::get('/projects', function(){
     return view('template.project.gerenciar_projeto');
 });
 Route::get('/projects/create', function(){
     return view('template.project.adicionar_projeto');
+});
+Route::get('/projects/andamentos', function(){
+    return view('template.project.gerenciar_andamentos');
+});
+Route::get('/projects/marcos', function(){
+    return view('template.project.gerenciar_marcos');
 });
 
 /*Rotas que tratam de Login*/

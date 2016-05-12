@@ -1,18 +1,3 @@
-//TROCA ICONE DE GERENCIAR USUÁRIOS            
-function clique(e) {
-
-    if (e.target.alt == "Mais") {
-        e.target.src = "assets/dist/img/up.png";
-        e.target.alt = "Menos";
-    }
-    else {
-        e.target.src = "assets/dist/img/down.png";
-        e.target.alt = "Mais";
-    }
-    ;
-
-};
-
 //  FORMATAÇÃO DOS CAMPOS DE FORMULÁRIOS
 $(function () {
     //Datemask dd/mm/yyyy

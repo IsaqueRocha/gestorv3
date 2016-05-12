@@ -73,10 +73,10 @@
                 <!-- ALTERAR DADOS E SAIR -->
                 <li class="user-footer">
                   <div class="pull-left">
-                    <a href="#" class="btn btn-default btn-flat"> <i class="fa fa-fw fa-gear"></i> Alterar dados</a>
+                    <a href="#" class="btn btn-success btn-flat"> <i class="fa fa-fw fa-gear"></i> Alterar dados</a>
                   </div>
                   <div class="pull-right">
-                    <a href="{!! url('/auth/logout/') !!}" class="btn btn-default btn-flat"> <i class="fa fa-fw fa-sign-out"></i> Sair</a>
+                    <a href="{!! url('/auth/logout/') !!}" class="btn btn-danger btn-flat"> <i class="fa fa-fw fa-sign-out"></i> Sair</a>
                   </div>
                 </li><!-- FIM ALTERAR DADOS E SAIR -->
               </ul><!-- FIM DROPDOWN -->

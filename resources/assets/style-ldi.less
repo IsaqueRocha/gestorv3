@@ -29,12 +29,16 @@
     }
 
     form {
-
         .checkbox {
-
             float: left;
             width: 100%;
             margin-top: 0;
+            padding: 6px 12px;
+            border: 1px solid #d2d6de;
+
+            div {
+                padding: 0;
+            }
 
             label {
                 float: left;
@@ -43,14 +47,42 @@
             }
         }
     }
+
+    table {
+
+        thead {
+            background-color: #efefef;
+            border-top: 1px solid #d4d4d4;
+
+            th {
+                border-color: #d4d4d4;
+            }            
+        }
+
+        i[title="Diagramação"], i[title="Ilustração"], i[title="Vídeo"], i[title="Web"] {
+            margin: 0 2px;
+        }
+    }
 }
 
-.user-header a {
-    color: white;
+.user-menu {
+    .user-header a {
+        color: white;
 
-    &:hover {
-        text-decoration: underline;
-    } 
+        &:hover {
+            text-decoration: underline;
+        } 
+    }
+
+    .user-footer {
+        background-color: #383838 !important;
+        background-image: url("../assets/theme/img/grid-pattern.png");
+        background-repeat: repeat;
+
+        .btn {
+            border-radius: 4px;
+        }
+    }
 }
 
 
@@ -105,6 +137,15 @@
 
 
 /* 2) GERENCIAR USUARIOS */
+
+button[form="desativarUsuario"] {
+    &.btn-warning:before {
+        content: 'Desativar';
+    }
+    &.btn-primary:before {
+        content: 'Ativar'
+    }
+}
 
 /* 2.1) CRIAR USUARIO */
 

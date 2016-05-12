@@ -42,7 +42,7 @@
                             </div>
                             <div class="form-group col-md-1">
                                 <label>Adc. prof.</label>
-                                <button class="btn btn-block btn-primary" title="Adicionar professor"><i class="fa fa-plus-circle"></i></button>
+                                <button type="button" class="btn btn-block btn-primary" data-toggle="modal" data-target="#adcProf" title="Adicionar professor"><i class="fa fa-plus-circle"></i></button>
                             </div>
 
                             <!-- CURSO -->
@@ -71,32 +71,32 @@
                             </div>
 
                             <!-- APOIO -->
-                            <div class="col-md-12">
+                            <div class="form-group col-md-12">
                                 <label>Apoio</label>
-                            </div>
-                            <div class="checkbox">
-                                <div class="col-md-3">
-                                    <label><input type="checkbox" name="apoio" value="" checked> Ana Clara</label>
-                                    <label><input type="checkbox" name="apoio" value="" checked> Andre</label>
-                                    <label><input type="checkbox" name="apoio" value=""> Antônio</label>
-                                    <label><input type="checkbox" name="apoio" value=""> Elisa</label>
-                                </div>
-                                <div class="col-md-3">
-                                    <label><input type="checkbox" name="apoio" value=""> GK</label>
-                                    <label><input type="checkbox" name="apoio" value=""> Hugo</label>
-                                    <label><input type="checkbox" name="apoio" value=""> Mariana</label>
-                                    <label><input type="checkbox" name="apoio" value=""> Thaís</label>
-                                </div>
-                                <div class="col-md-3">
-                                    <label><input type="checkbox" name="apoio" value=""> Nina</label>
-                                    <label><input type="checkbox" name="apoio" value=""> Paulo</label>
-                                    <label><input type="checkbox" name="apoio" value=""> Pedro</label>
-                                    <label><input type="checkbox" name="apoio" value=""> Gabriel</label>
-                                </div>
-                                <div class="col-md-3">
-                                    <label><input type="checkbox" name="apoio" value=""> Rayan</label>
-                                    <label><input type="checkbox" name="apoio" value=""> Renato</label>
-                                    <label><input type="checkbox" name="apoio" value=""> Vinicius</label>
+                                <div class="checkbox">
+                                    <div class="col-md-3">
+                                        <label><input type="checkbox" name="apoio" value="" checked> Ana Clara</label>
+                                        <label><input type="checkbox" name="apoio" value=""> Andre</label>
+                                        <label><input type="checkbox" name="apoio" value=""> Antônio</label>
+                                        <label><input type="checkbox" name="apoio" value=""> Elisa</label>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label><input type="checkbox" name="apoio" value=""> GK</label>
+                                        <label><input type="checkbox" name="apoio" value=""> Hugo</label>
+                                        <label><input type="checkbox" name="apoio" value=""> Mariana</label>
+                                        <label><input type="checkbox" name="apoio" value=""> Thaís</label>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label><input type="checkbox" name="apoio" value=""> Nina</label>
+                                        <label><input type="checkbox" name="apoio" value="" checked> Paulo</label>
+                                        <label><input type="checkbox" name="apoio" value=""> Pedro</label>
+                                        <label><input type="checkbox" name="apoio" value=""> Gabriel</label>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label><input type="checkbox" name="apoio" value=""> Rayan</label>
+                                        <label><input type="checkbox" name="apoio" value=""> Renato</label>
+                                        <label><input type="checkbox" name="apoio" value=""> Vinicius</label>
+                                    </div>
                                 </div>
                             </div>
 
@@ -136,6 +136,51 @@
                 </div>
             </div>
         </section>
+
+        <div id="adcProf" class="modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Adicionar professor</h4>
+                    </div>
+                    <div class="modal-body">
+                        <!--NOME-->
+                        <div class="form-group">
+                            <label>Nome</label>
+                            <input name="name" type="text" value="" class="form-control" placeholder="Nome" required />
+                        </div><!-- FIM NOME-->
+
+                        <!--EMAIL-->
+                        <div class="form-group">
+                            <label>E-mail</label>
+                            <input name="email" type="email" value="" class="form-control" placeholder="E-mail"/>
+                        </div><!--FIM EMAIL-->
+
+                        <!--FUNÇÃO-->
+                        <div class="form-group">
+                            <label>Curso</label>
+                            <select name="role" class="form-control">
+                                <option>(Selecionar)</option>
+                                <option>Artes Visuais</option>
+                                <option>Filosofia</option>
+                                <option>História</option>
+                            </select>
+                        </div>
+
+                        <!--TELEFONE-->
+                        <div class="form-group">
+                            <label>Telefone:</label>
+                            <input name="phone" type="text" value="" class="form-control" placeholder="(__) _____-____" data-inputmask='"mask": "(99) 99999-9999"' data-mask/>
+                        </div><!--FIM TELEFONE-->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-success">Salvar</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
     </div>
 </section> <!-- FIM ADICIONAR USUÁRIO -->
 @endsection

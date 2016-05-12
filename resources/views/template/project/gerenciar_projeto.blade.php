@@ -70,8 +70,8 @@
                     </div>
                 </div>
                 <div class="box-body">
-                    <table class="table table-striped table-bordered table-hover">
-                        <tbody>
+                    <table class="table table-bordered table-hover">
+                        <thead>
                             <tr>
                                 <th>Curso</th>
                                 <th>Projeto</th>
@@ -79,16 +79,18 @@
                                 <th>Apoio</th>
                                 <th>Situação</th>
                                 <th>Progresso</th>
-                                <th class="icone"><i class="fa fa-pencil" title="Editar"></i></th>
-                                <th class="icone"><i class="fa fa-flag" title="Expandir"></i></th>
-                                <th class="icone"><i class="fa fa-edit" title="Editar"></i></th>
-                                <th class="icone"><i class="fa fa-plus-circle" title="Expandir"></i></th>
+                                <th class="icone"></th>
+                                <th class="icone"></th>
+                                <th class="icone"></th>
+                                <th class="icone"></th>
                             </tr>
+                        </thead>
+                        <tbody>
                             <tr>
                                 <td class="box-curso" title="Artes"></td>
                                 <td>Moodle - Seminário</td>
-                                <td><i class="fa fa-globe"></i></td>
-                                <td>Leandro Hora <i class="fa fa-users" title="Antonio Anselmo, Mariana Machado, Rayan Casagrande"></i></td>
+                                <td><i class="fa fa-file-text-o" title="Diagramação"></i> <i class="fa fa-paint-brush" title="Ilustração"></i> <i class="fa fa-video-camera" title="Vídeo"></i></td>
+                                <td>Antonio, Mariana, Rayan</td>
                                 <td>Entregue</td>
                                 <td>
                                     <div class="progress progress-sm">
@@ -98,18 +100,18 @@
                                     </div>
                                 </td>
                                 <td class="icone">
-                                    <a>
-                                        <i class="fa fa-pencil" title="Editar"></i>
+                                    <a href="{{ url('/projects/andamentos') }}">
+                                        <i class="fa fa-bookmark" title="Andamentos"></i>
+                                    </a>
+                                </td>
+                                <td class="icone">
+                                    <a href="{{ url('/projects/marcos') }}">
+                                        <i class="fa fa-flag" title="Marcos"></i>
                                     </a>
                                 </td>
                                 <td class="icone">
                                     <a>
-                                        <i class="fa fa-flag" title="Editar"></i>
-                                    </a>
-                                </td>
-                                <td class="icone">
-                                    <a>
-                                        <i class="fa fa-edit" title="Editar"></i>
+                                        <i class="fa fa-edit" title="Editar config. do projeto"></i>
                                     </a>
                                 </td>
                                 <td class="icone">
@@ -126,8 +128,8 @@
                             <tr>
                                 <td class="box-curso" title="Química"></td>
                                 <td>Moodle - Seminário</td>
-                                <td><i class="fa fa-globe"></i></td>
-                                <td>Renato Delpupo <i class="fa fa-users" title="Antonio Anselmo, Mariana Machado, Rayan Casagrande"></i></td>
+                                <td><i class="fa fa-file-text-o" title="Diagramação"></i> <i class="fa fa-paint-brush" title="Ilustração"></i> <i class="fa fa-globe" title="Web"></i></td>
+                                <td>Ana Clara, Pedro, Renato</td>
                                 <td>Parado</td>
                                 <td>
                                     <div class="progress progress-sm">
@@ -138,17 +140,17 @@
                                 </td>
                                 <td class="icone">
                                     <a>
-                                        <i class="fa fa-pencil" title="Editar"></i>
+                                        <i class="fa fa-bookmark" title="Andamentos"></i>
                                     </a>
                                 </td>
                                 <td class="icone">
                                     <a>
-                                        <i class="fa fa-flag" title="Editar"></i>
+                                        <i class="fa fa-flag" title="Marcos"></i>
                                     </a>
                                 </td>
                                 <td class="icone">
                                     <a>
-                                        <i class="fa fa-edit" title="Editar"></i>
+                                        <i class="fa fa-edit" title="Editar config. do projeto"></i>
                                     </a>
                                 </td>
                                 <td class="icone">
@@ -165,8 +167,8 @@
                             <tr>
                                 <td class="box-curso" title="Biologia"></td>
                                 <td>Moodle - Seminário</td>
-                                <td><i class="fa fa-globe"></i></td>
-                                <td>Leandro Hora <i class="fa fa-users" title="Antonio Anselmo, Mariana Machado, Rayan Casagrande"></i></td>
+                                <td><i class="fa fa-paint-brush" title="Ilustração"></i> <i class="fa fa-globe" title="Web"></i></td>
+                                <td>Hugo, Gabriel</td>
                                 <td>Atrasado</td>
                                 <td>
                                     <div class="progress progress-sm active">
@@ -177,17 +179,17 @@
                                 </td>
                                 <td class="icone">
                                     <a>
-                                        <i class="fa fa-pencil" title="Editar"></i>
+                                        <i class="fa fa-bookmark" title="Andamentos"></i>
                                     </a>
                                 </td>
                                 <td class="icone">
                                     <a>
-                                        <i class="fa fa-flag" title="Editar"></i>
+                                        <i class="fa fa-flag" title="Marcos"></i>
                                     </a>
                                 </td>
                                 <td class="icone">
                                     <a>
-                                        <i class="fa fa-edit" title="Editar"></i>
+                                        <i class="fa fa-edit" title="Editar config. do projeto"></i>
                                     </a>
                                 </td>
                                 <td class="icone">
@@ -204,8 +206,8 @@
                             <tr>
                                 <td class="box-curso" title="Matemática"></td>
                                 <td>Moodle - Seminário</td>
-                                <td><i class="fa fa-globe"></i></td>
-                                <td>Renato Delpupo <i class="fa fa-users" title="Antonio Anselmo, Mariana Machado, Rayan Casagrande"></i></td>
+                                <td><i class="fa fa-file-text-o" title="Diagramação"></i> <i class="fa fa-video-camera" title="Vídeo"></i></td>
+                                <td>André, Elisa, Vinicius</td>
                                 <td>Desenvolvendo</td>
                                 <td>
                                     <div class="progress progress-sm active">
@@ -216,17 +218,17 @@
                                 </td>
                                 <td class="icone">
                                     <a>
-                                        <i class="fa fa-pencil" title="Editar"></i>
+                                        <i class="fa fa-bookmark" title="Andamentos"></i>
                                     </a>
                                 </td>
                                 <td class="icone">
                                     <a>
-                                        <i class="fa fa-flag" title="Editar"></i>
+                                        <i class="fa fa-flag" title="Marcos"></i>
                                     </a>
                                 </td>
                                 <td class="icone">
                                     <a>
-                                        <i class="fa fa-edit" title="Editar"></i>
+                                        <i class="fa fa-edit" title="Editar config. do projeto"></i>
                                     </a>
                                 </td>
                                 <td class="icone">

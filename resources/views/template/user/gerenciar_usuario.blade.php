@@ -67,7 +67,7 @@
                             </div>
 
                             <div class="acoes">
-                                <a href="{{ url('/users/create')}}" title="Novo projeto">
+                                <a href="{{ url('/users/create')}}" title="Novo usuário">
                                     <button class="btn btn-sm btn-success">Novo</button>
                                 </a>
                             </div>
@@ -75,15 +75,17 @@
                     </div>
                 </div>
                 <div class="box-body">
-                    <table class="table table-striped table-bordered table-hover">
-                        <tbody>
+                    <table class="table table-bordered table-hover">
+                        <thead>
                             <tr>
                                 <th>Usuário</th>
                                 <th>Função</th>
                                 <th>Área</th>
-                                <th class="icone"><i class="fa fa-edit" title="Editar"></i></th>
-                                <th class="icone"><i class="fa fa-plus-circle" title="Expandir"></i></th>
+                                <th class="icone"></th>
+                                <th class="icone"></th>
                             </tr>
+                        </thead>
+                        <tbody>
                             @foreach($users as $user)
                             <tr>
                                 <td>{{ $user->name }}</td>
@@ -100,10 +102,10 @@
                                     </a>
                                 </td>
                             </tr>
-                            <tr id="usuario{{$user->id}}" class="panel-collapse collapse">
+                            <tr id="usuario{{$user->id}}" class="panel-collapse collapse" style="background-color:#efefef;">
                                 <td colspan="5">
                                     <!-- DADOS DO USUÁRIO -->
-                                    <div class="box-body dados-usuario">
+                                    <div class="dados-usuario">
 
                                         <div class="col-md-6">
                                             <label>Nome:</label> <span>{{ $user->name }}</span> <br/>
@@ -127,13 +129,13 @@
                         </tbody>
                     </table>
                 </div>
-            </section>
-        </div>
-    </section>
-    <!-- FIM TABELA - LISTA DE USUÁRIOS -->
+        </section>
+    </div>
+</section>
+<!-- FIM TABELA - LISTA DE USUÁRIOS -->
 
-    @endsection
+@endsection
 
-    @section('script')
-    <script type="text/javascript" src="{{ asset('assets/dist/js/ajax-user.js')}}"></script>
-    @endsection
+@section('script')
+<script type="text/javascript" src="{{ asset('assets/dist/js/ajax-user.js')}}"></script>
+@endsection
