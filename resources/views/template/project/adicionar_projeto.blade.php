@@ -7,8 +7,8 @@
         <small>Adicionar novo</small>
     </h1>
     <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Início</a></li>
-        <li><a href="#"><i class="fa fa-tasks"></i> Gerenciar Projetos</a></li>
+        <li><a href="{!! url('/') !!}"><i class="fa fa-dashboard"></i> Início</a></li>
+        <li><a href="{!! url('/projects') !!}"><i class="fa fa-tasks"></i> Gerenciar Projetos</a></li>
         <li class="active"><i class="fa fa-plus-circle"></i> Adicionar Projeto</li>
     </ol>
 </section>
@@ -137,7 +137,7 @@
             </div>
         </section>
 
-        <div id="adcProf" class="modal">
+        <div id="adcProf" class="modal fade">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -145,19 +145,16 @@
                         <h4 class="modal-title">Adicionar professor</h4>
                     </div>
                     <div class="modal-body">
-                        <!--NOME-->
                         <div class="form-group">
                             <label>Nome</label>
                             <input name="name" type="text" value="" class="form-control" placeholder="Nome" required />
-                        </div><!-- FIM NOME-->
+                        </div>
 
-                        <!--EMAIL-->
                         <div class="form-group">
                             <label>E-mail</label>
                             <input name="email" type="email" value="" class="form-control" placeholder="E-mail"/>
-                        </div><!--FIM EMAIL-->
+                        </div>
 
-                        <!--FUNÇÃO-->
                         <div class="form-group">
                             <label>Curso</label>
                             <select name="role" class="form-control">
@@ -168,11 +165,10 @@
                             </select>
                         </div>
 
-                        <!--TELEFONE-->
                         <div class="form-group">
                             <label>Telefone:</label>
                             <input name="phone" type="text" value="" class="form-control" placeholder="(__) _____-____" data-inputmask='"mask": "(99) 99999-9999"' data-mask/>
-                        </div><!--FIM TELEFONE-->
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancelar</button>

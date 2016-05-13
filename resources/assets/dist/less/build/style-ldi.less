@@ -1,6 +1,4 @@
-// out: ../../public/assets/style-ldi.css, sourcemap: false, compress: true
-
-/* Futuramente todo o código deve ir pro core do Admin LTE */
+@import "../mixins.less";
 
 /*
 
@@ -162,8 +160,20 @@ button[form="desativarUsuario"] {
 
 /* 3) GERENCIAR PROJETOS */
 
-.box-header {
+section.content {
 
+    &.artes {
+        .box-ldi {
+            border-top-color: @corArtes;
+            .box-header {
+                .tagArtes;
+                padding: 10px 20px;
+            }
+        }
+    }
+}
+
+.box-header {
     .acoes {
         position: relative;
         display: inline-block;
@@ -198,8 +208,7 @@ button[form="desativarUsuario"] {
 .listaProjetos {
 
     td[title="Artes"] {
-        background-color: #c94259;
-        color:#FFF;
+        .tagArtes;
 
         &:before {
             content: "Art";
@@ -207,8 +216,7 @@ button[form="desativarUsuario"] {
     }
 
     td[title="Química"] {
-        background-color: #55ccdd;
-        color:#000;
+        .tagQuimica;
 
         &:before {
             content: "Qui";
@@ -216,8 +224,7 @@ button[form="desativarUsuario"] {
     }
 
     td[title="Biologia"] {
-        background-color: #eecc77;
-        color:#000;
+        .tagBiologia;
 
         &:before {
             content: "Bio";
@@ -225,8 +232,7 @@ button[form="desativarUsuario"] {
     }
 
     td[title="Matemática"] {
-        background-color: #009977;
-        color:#FFF;
+        .tagMatematica;
 
         &:before {
             content: "Mat";

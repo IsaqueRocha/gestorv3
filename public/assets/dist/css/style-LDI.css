@@ -1,934 +1,247 @@
-body{
-	font-family: "Helvetica Neue", Arial, sans-serif!important;
+/* IDENTIDADE DO LDI */
+/* CORES DOS CURSOS */
+/* COMPORTAMENTO DE TAGS DOS CURSOS */
+.tagArtes {
+  background-color: #c94259;
+  color: #FFF;
+}
+.tagQuimica {
+  background-color: #55ccdd;
+  color: #000;
+}
+.tagBiologia {
+  background-color: #eecc77;
+  color: #000;
+}
+.tagMatematica {
+  background-color: #009977;
+  color: #FFF;
+}
+/*
+
+1) GERAL
+1.1) LOGIN
+1.2) SIDEBAR
+
+2) GERENCIAR USUARIOS
+2.1) CRIAR USUARIO
+
+3) GERENCIAR PROJETOS
+
+*/
+/* 1) GERAL */
+.box-body {
+  padding: 20px;
+}
+.box-body.no-padding {
+  margin: 10px auto;
+  float: left;
+  background-color: white;
+  width: 100%;
+}
+.box-body form .checkbox {
+  float: left;
+  width: 100%;
+  margin-top: 0;
+  padding: 6px 12px;
+  border: 1px solid #d2d6de;
+}
+.box-body form .checkbox div {
+  padding: 0;
+}
+.box-body form .checkbox label {
+  float: left;
+  width: 100%;
+  display: block;
+}
+.box-body table thead {
+  background-color: #efefef;
+  border-top: 1px solid #d4d4d4;
+}
+.box-body table thead th {
+  border-color: #d4d4d4;
+}
+.box-body table i[title="Diagramação"],
+.box-body table i[title="Ilustração"],
+.box-body table i[title="Vídeo"],
+.box-body table i[title="Web"] {
+  margin: 0 2px;
+}
+.user-menu .user-header a {
+  color: white;
+}
+.user-menu .user-header a:hover {
+  text-decoration: underline;
+}
+.user-menu .user-footer {
+  background-color: #383838 !important;
+  background-image: url("../assets/theme/img/grid-pattern.png");
+  background-repeat: repeat;
+}
+.user-menu .user-footer .btn {
+  border-radius: 4px;
+}
+/* 1.1) LOGIN */
+.login-box-body .col-md-12 {
+  margin: 5px 0;
+}
+/* 1.2) SIDEBAR */
+.sidebar-menu {
+  margin: 10px 0px;
+}
+.box-horario {
+  color: #fff;
+  background-color: #333;
+  border-radius: 0;
+  border-top: 5px solid #333;
+  overflow: hidden;
+}
+.relogio-ico {
+  color: rgba(255, 255, 255, 0.1);
+  width: 120px;
+  height: 120px;
+  font-size: 120px;
+  line-height: 120px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
 }
-
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: "Helvetica Neue", Arial, sans-serif!important;
-}
-
-.content{
-	overflow: hidden;
-}
-
-.logo{
-
-}
-
-.logo > img{
-	width: 26px;
-	margin-top: -3px;
-}
-
-.logo{
-	text-align: right!important;
-}
-
-li.user-header{
-	background-color: #3c474b!important;
-	height: auto!important;
-	padding: 30px 15px 15px 15px !important;
-}
-
-.sidebar-menu > li{
-	background-color: #3c474b!important;
-	margin-top: 1px!important;
-	line-height: 12px!important;
-
-}
-
-.sidebar-menu > li > a{
-	margin-left: -6px!important;
-}
-
-.main-sidebar{
-	padding-top: 60px;
-}
-
-.sidebar a{
-	color: #FFF!important;
-}
-
-
-.box-horario{
-	color: #FFF!important;
-	background-color: #3c474b!important;
-	border-radius: 0!important;
-	margin-top: 10px;
-	overflow: hidden!important;
-}
-
-.small-box{
-	margin-bottom: 10px!important;
-}
-
-.small-box-footer{
-	text-align: left!important;
-	padding-left: 10px!important;
-	background-color: rgba(0, 0, 0, 0.3)!important;
-}
-
-.relogio-ico{
-	color: rgba(255,255,255,0.1)!important;
-	width: 120px;
-	height: 120px;
-	font-size: 120px;
-	line-height: 120px;
-	position: absolute;
-	right: 5px;
-	top: 5px;
-}
-
-.total-hora{
-	height: 60px!important;
-}
-
-.total-hora > p{
-	margin-bottom: 5px!important;
-	font-size: 13px!important;
-}
-
-.total-hora > h4 {
-	margin: 5px 0 0 0!important;
-	font-size: 20px!important;
-}
-
-.sidebar-menu > li > a:hover{
-	border-right: 6px solid #888!important;
-	background-color: #3c474b!important;
-}
-
-.botao-mostrar-mais{
-	border: 0!important;
-	padding: 0!important;
-}
-
-.img-expandir{
-
-}
-
-.box-header > .botao-editar-usuario{
-	right: 60px!important;
-	top: 8px!important;
-}
-
-.botao-editar-usuario > a{
-	color: #3c474b!important;
-	font-size: 22px;
-	top: 30px!important;
-}
-
-.box-botoes-gerenciar-projeto{
-
-	overflow: hidden;
-}
-
-.box-botoes-gerenciar-projeto > .botao{
-	float: right;
-}
-
-.box-botoes-gerenciar-projeto > .botao > a{
-	float: right;
-	padding-left: 7px;
-	padding-right: 7px;
-	color: #3c474b!important;
-	font-size: 22px;
-	top: 30px!important;
-}
-
-.box-botao-mostrar-mais{
-	position: absolute;
-	right: 6px;
-	top:9px;
-}
-
-.botao-mostrar-mais > i > img{
-	width: 25px!important;
-	height: 25px!important;
-}
-
-.box-usuario, .box-projeto{
-	margin: 0!important;
-	border-radius: 0!important;
-}
-
-.botao-menu{
-	position: absolute!important;
-	right: 5px!important;
-}
-
-.titulos{
-	float: left!important;
-	margin: 0!important;
-	margin-right: 20px!important;
-	font-weight:bolder!important;
-}
-
-.sub-titulos{
-	float: left!important;
-	margin: 0!important;
-	margin-top: 5px!important;
-	color: #777!important;
-	font-size: 23px;
-}
-
-.botao-adicionar-usuario{
-	color: green!important;
-	position: absolute;
-	right: 13px;
-}
-
-.botao-salvar-usuario{
-	color: green!important;
-	float: right;
-	margin-right: 10px;
-}
-
-.botao-excluir-usuario, .botao-desativar-usuario{
-	width: 34px;
-	height: 34px;
-	margin-top: 2px;
-	background-color: red;
-	float: right;
-	margin-right: 10px;
-	padding: 0 0 0 0;
-	border-radius: 100px;
-	text-align: center!important;
-}
-
-.botao-cancelar-adicionar-usuario{
-	color: #3c474b!important;
-	float: right;
-}
-
-.botao-salvar-usuario > button{
-	background-color: rgba(0,0,0,0);
-	border: none;
-	margin: 0!important;
-	padding: 0!important;
-}
-
-.icones-edicao-usuario{
-	margin-right: 0!important;
-	font-size: 40px!important;
-	margin-top: -2px!important;
-}
-
-.icon-edicao-usuario-circles{
-	margin-right: 0!important;
-	margin-top: 7px;
-	font-size: 20px!important;
-	line-height: 20px!important;
-	color: #FFFFFF!important;
-}
-
-#edicao-usuario{
-	display: none;
-}
-
-.box-botao-submit{
-	overflow: hidden!important;
-	width: 100%;
-	clear: both;
-	padding-right: 30px;
-}
-
-.dados-usuario, .dados-projeto {
-	color: #444;
-	background-color: #f7f7f7;
-	overflow: hidden!important;
-}
-
-.btn-editar > span > i, .btn-cancelar >span > i{
-	background-color: #3c474b;
-}
-
-
-.btn-salvar > button > span > i {
-	background-color: green;
-}
-
-.btn-salvar > button{
-	background-color: rgba(0,0,0,0);
-	border: none;
-	height: 23px;
-	width: 23px;
-	margin: 0!important;
-	padding:0!important;
-}
-
-
-.btn-excluir > span > i, .btn-desativar > span > i{
-	background-color: red;
-	height: 19px!important;
-	width: 19px!important;
-	font-size: 13px!important;
-	padding: 2px!important;
-}
-
-.btn-editar, .btn-salvar, .btn-desativar, .btn-excluir, .btn-cancelar{
-	color: #FFF!important;
-	margin-bottom: 15px!important;
-	font-size: 15px!important;
-	line-height: 10px!important;
-	cursor: pointer;
-	float: right;
-	clear: both;
-}
-
-.btn-editar > span > i, .btn-salvar > button > span > i, .btn-desativar > span > i, .btn-excluir > span > i, .btn-cancelar > span > i{
-	padding: 4px;
-	height: 23px;
-	width: 23px;
-	border-radius: 100%;
-	text-align: center;
-}
-
-.box-curso{
-	width: 60px;
-	padding: 3px;
-	margin-right: 10px;
-}
-
-.box-tipo{
-	width: 60px;
-	padding: 3px;
-	margin-right: 10px;
-}
-
-.filtro-projetos{
-	float: right;
-	margin-right:20px;
-	width: 230px;
-	margin-bottom: 0!important;
-}
-
-.filtro-projetos > .form-control{
-	width: 150px;
-}
-
-.titulo-filtro-projetos{
-	float: left;
-	margin: 8px 15px 0 0;
-	font-size:15px;
-	line-height:15px;
-	font-weight: bold;
-}
-.usuario-header-box > div > .progress{
-	margin-bottom: 0!important;
-	margin-top: 7px;
-}
-
-.box-valor-progresso{
-	color: #FFFFFF;
-	float: left;
-	padding: 4px;
-	font-size: 12px;
-}
-
-.box-valor-progresso > h6{
-	margin-top: 5px!important;
-	margin-bottom: 0!important;
-	vertical-align: middle!important;
-}
-
-.valor-progresso-green{
-	background-color: #00a65a;
-	padding: 2px 6px 2px 5px;
-	border-radius: 10px;
-}
-
-.valor-progresso-red{
-	background-color: #DD4B39;
-	padding: 2px 6px 2px 5px;
-	border-radius: 10px;
-}
-
-.pesquisar-projeto{
-	width: 200px;
-	float: right;
-	margin-left: 20px;
-}
-
-.btn-info{
-	background-color: #3c474b!important;
-	border-color:#3c474b!important;
-}
-
-.sub-box-title {
-	font-size:15px!important;
-}
-
-
-.dados-usuario > div > span.label-form{
-	font-size: 14px!important;
-	font-weight: bold!important;
-	color: #444!important;
-	margin-right: 5px!important;
-}
-
-.tasks-menu > ul > .header{
-	font-weight: bold;
-}
-
-.titulo-proj{
-	line-height: 20px!important;
-}
-
-.ver-mais-proj{
-	font-weight: bold!important;
-}
-
-.dropdown-menu{
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3)!important;
-}
-
-.dia-semana{
-	width:70px!important;
-}
-
-.box-apio{
-	background-color: red;
-	box-sizing: border-box;
-	padding:10px;
-	left: 20px;
-	top: -5px;
-}
-
-.box-apio >  h3{
-	clear: both!important;
-	display: block!important;
-	background-color: orange;
-}
-
-
-.bt-composicao, .bt-complementares{
-	width:24%;
-}
-
-
-.box > .box-header > .box-title{
-	font-size: 25px;
-	margin-left: 15px;
-}
-
-
-
-/*Estilos comuns*/
-
-.disable{
-	pointer-events: none;
-}
-
-.disable ul.box-option-selected{
-	background-color: #EEEEEE;
-}
-
-.disable ul.box-option-selected span{
-	background-color: #EEEEEE;
-}
-
-.disable ul.box-option-selected span input{
-	background-color: #EEEEEE;
-}
-
-
-/*Botões alert*/
-.confirm{
-	background-color: #3c474b!important ;
-}
-
-.confirm:hover{
-	background-color: #3c474b!important;
-
-}
-
-.cancel{
-	background-color: #888888!important ;
-}
-
-.cancel:hover{
-	background-color: #888888!important ;
-}
-
-.o-r{
-	overflow: hidden;
-}
-
-.artes {
-	background-color: #c94259;
-	color:#FFF;
-	text-align: center;
-	font-size: 13px!important;
-	font-weight:lighter;
-	width: 100%;
-	padding: 4px;
-}
-
-.edfisica {
-	background-color: #d4d0b3;
-	color:#000;
-	text-align: center;
-	width: 100%;
-	padding: 4px;
-}
-
-.contabeis {
-	background-color: #ff9966;
-	color:#000;
-	text-align: center;
-	width: 100%;
-	padding: 4px;
-}
-
-.fisica {
-	background-color: #116554;
-	color:#FFF;
-	text-align: center;
-	font-size: 13px!important;
-	font-weight:lighter;
-	width: 100%;
-	padding: 4px;
-}
-
-.quimica {
-	background-color: #55ccdd;
-	color:#000;
-	text-align: center;
-	width: 100%;
-	padding: 4px;
-}
-
-.edcampo {
-	background-color: #060;
-	color:#FFF;
-	text-align: center;
-	width: 100%;
-	padding: 4px;
-}
-
-.dirhumanos {
-	background-color: #663;
-	color:#FFF;
-	text-align: center;
-	width: 100%;
-	padding: 4px;
-}
-
-.pedagogia {
-	background-color: #505e93;
-	color:#fff;
-	text-align: center;
-	width: 100%;
-	padding: 4px;
-}
-
-.historia {
-	background-color: #016075;
-	color:#fff;
-	text-align: center;
-	width: 100%;
-	padding: 4px;
-}
-
-.filosofia {
-	background-color: #9fd18b;
-	color:#000;
-	text-align: center;
-	width: 100%;
-	padding: 4px;
-}
-
-.biologia {
-	background-color: #eecc77;
-	color:#000;
-	text-align: center;
-	width: 100%;
-	padding: 4px;
-}
-
-.dimensoes {
-	background-color: #fabfb7;
-	color:#000;
-	text-align: center;
-	width: 100%;
-	padding: 4px;
-}
-
-.mais-educacao {
-	background-color: #147fad;
-	color:#FFF;
-	text-align: center;
-	width: 100%;
-	padding: 4px;
-}
-
-.matematica {
-	background-color: #009977;
-	color:#FFF;
-	text-align: center;
-	width: 100%;
-	padding: 4px;
-}
-
-.outro {
-	background-color: #aaa;
-	color:#000;
-	text-align: center;
-	width: 100%;
-	padding: 4px;
-}
-
-.interno {
-	background-color: #555;
-	color:#FFF;
-	text-align: center;
-	width: 100%;
-	padding: 4px;
-}
-
-.fim-bloco{
-	clear: both;
-	display: block;
-}
-
-.v-a-m{
-	vertical-align: middle;
-}
-
-.f-l{
-	float: left;
-}
-
-.f-r{
-	float: right;
-}
-
-.p-r{
-	padding: relative;
-}
-
-.o_h{
-	overflow: hidden!important;
-}
-
-.m-b10{
-	margin-bottom:15px!important;
-}
-
-.progress-bar{
-	border-radius: 10px!important;
-}
-
-.item-tabela > div > .progress{
-	margin-bottom:0!important;
-	margin-top:8px;
-}
-
-.responsivo-inativo{
-	display: none;
-}
-
-.responsivo-ativo{
-	display: block;
-}
-
-
-.width-5p{width: 5%!important; padding: 3px; }
-.width-10p{width: 10%!important; padding: 3px; }
-.width-15p{width: 15%!important; padding: 3px; }
-.width-20p{width: 20%!important; padding: 3px; }
-.width-25p{width: 25%!important; padding: 3px; }
-.width-30p{width: 30%!important; padding: 3px; }
-.width-35p{width: 35%!important; padding: 3px; }
-.width-40p{width: 40%!important; padding: 3px; }
-.width-45p{width: 45%!important; padding: 3px; }
-.width-50p{width: 50%!important; padding: 3px; }
-.width-55p{width: 55%!important; padding: 3px; }
-.width-60p{width: 60%!important; padding: 3px; }
-.width-60p{width: 65%!important; padding: 3px; }
-.width-70p{width: 70%!important; padding: 3px; }
-.width-75p{width: 75%!important; padding: 3px; }
-.width-80p{width: 80%!important; padding: 3px; }
-.width-85p{width: 85%!important; padding: 3px; }
-.width-90p{width: 90%!important; padding: 3px; }
-.width-95p{width: 95%!important; padding: 3px; }
-.width-100p{width: 100%!important; padding: 3px; }
-
-
-.upload {
-	position: absolute;
-	margin-left: -40px;
-	bottom: 0;
-    width: 40px;
-    height: 40px;
-    overflow: hidden;
-    padding: 0!important;
-    background-image: url(../img/bgUploadSeta.png);
-    background-repeat: no-repeat;
-    background-color: #3c474b;
-    border: none;
-}
-
-.upload:hover {
-	background-color: #3c474b;
-	    cursor: pointer!important;
-}
-
-.upload:active {
-	background-image: url(../img/bgUploadSeta.png);
-	background-repeat: no-repeat;
-	background-color: #3c474b;
-}
-
-#realupload:hover{
-    cursor: pointer!important;
+.total-hora {
+  height: 60px!important;
+}
+.total-hora p {
+  margin-bottom: 5px!important;
+  font-size: 13px!important;
+}
+.total-hora h4 {
+  margin: 5px 0 0 0!important;
+  font-size: 20px!important;
+}
+/* 2) GERENCIAR USUARIOS */
+button[form="desativarUsuario"].btn-warning:before {
+  content: 'Desativar';
+}
+button[form="desativarUsuario"].btn-primary:before {
+  content: 'Ativar';
+}
+/* 2.1) CRIAR USUARIO */
+.form-group.horarioUsuario .input-group {
+  margin-bottom: 10px;
+}
+.form-group.horarioUsuario .input-group .input-group-addon {
+  width: 50px;
 }
-
-.upload input {
-   	display: block !important;
-    width: 40px;
-    height: 40px;
-    opacity: 0 !important;
-    overflow: hidden !important;
-    cursor: pointer!important;
-}
-
-.filtros-lista{
-	margin-right:60px;
-}
-
-.box-apoio{
-	background-color: #3C474B;
-	margin: 20px 0 15px 0;
-}
-
-.apoio{
-	color: #FFFFFF;
-}
-
-.box-composicao{
-	background-color: #3C474B;
-	margin: 20px 0 15px 0;
-}
-
-.box-complementares{
-	background-color: #3C474B;
-	margin: 20px 0 15px 0;
-}
-
-.noLabel::after{
-	opacity: 0;
-	content: ".";
-}
-
-.tituloBox{
-	color: #FFFFFF;
-	font-size: 20px;
-}
-
-.box-body-composicao, .box-body-complementares{
-	padding: 0 10px 0 10px;
-}
-
-
-.box-overflow-hidden{
-	overflow: hidden!important;
-}
-
-
-textarea {
-    resize: none;
-    overflow-y: hidden!important;
-}
-
-/*Responsivo*/
-
-@media all and (max-width:1300px){
-
-	.filtros-lista{
-		overflow: hidden;
-		clear: both;
-		margin-top: 50px;
-	}
-
-	.filtros-lista{
-		margin-right:0;
-	}
-}
-
-@media all and (max-width:1300px){
-
-	.bt-composicao, .bt-complementares{
-		width:100%;
-		margin-bottom: 10px;
-	}
-
-}
-
-@media all and (max-width:1050px){
-
-	.filtro-projetos{
-		float: none;
-		margin-top: 15px;
-		width: 100%!important;
-	}
-
-	.titulo-filtro-projetos{
-		float: none;
-		margin-bottom: 5px;
-	}
-
-	.filtro-projetos > .form-control{
-		width: 100%;
-	}
-
-	.pesquisar-projeto{
-		float: none;
-		width: 100%;
-		margin-left: 0;
-		margin-top: 20px;
-	}
-
-
-}
-
-
-@media all and (max-width:1150px){
-
-
-	.usuario-header-box > span > h3 {
-		width: 100% !important;
-		display: block;
-	}
-
-	.usuario-header-box > div > h3 {
-		width: 100% !important;
-		display: block;
-	}
-
-	.item-tabela{
-		overflow: hidden;
-	}
-
-	.responsivo-inativo{
-		display: block;
-	}
-
-	.responsivo-ativo{
-		display: none;
-	}
-
-	.width-100-1150{
-		width: 100%!important;
-	}
-
-}
-
-
-@media all and (max-width: 767px){
-
-	.tasks-menu > ul > .header{
-		font-size: 17px!important;
-		font-weight: bold;
-	}
-
-	.titulo-proj{
-		font-size: 17px!important;
-	}
-
-	.menu > li{
-		overflow: auto!important;
-	}
-
-	.small-box {
-		text-align: left!important;
-	}
-
-	.logo{
-		text-align: left!important;
-		height: 70px!important;
-	}
-
-	.content-wrapper > .content{
-		margin-top: 40px!important;
-	}
-
- 	.navbar-static-top{
- 		height: 70px!important;
- 	}
-
- 	.main-header > a > img{
- 		width: 35px!important;
- 		margin-top: 10px!important;
- 	}
-
-	.main-sidebar, .left-side {
-		padding-top: 155px!important;
-	}
-
-	ul.sidebar-menu{
-		font-size: 18px!important;
-		font-weight: bolder;
-	}
-
-	ul.sidebar-menu > li > a{
-		line-height: 50px!important;
-	}
-
-	.total-hora{
-		height: 80px!important;
-	}
-
-	.small-box-footer{
-		font-size: 20px!important;
-	}
-
-	.total-hora > p{
-		font-size: 18px!important;
-		font-weight: normal!important;
-	}
-
-	.total-hora > h4{
-		font-size: 27px!important;
-	}
-
- 	.navbar-static-top > .sidebar-toggle {
-		padding: 15px!important;
-		font-size: 39px!important;
-		line-height: 39px;
-	}
-
- 	.navbar-static-top > .navbar-custom-menu{
-		height: 70px!important;
-		font-size: 37px!important;
-	}
-
-	.user-menu > a > img{
-		width: 48px!important;
-		height: auto!important;
-		margin-top: -3px!important;
-		margin-bottom: -5px!important;
-	}
-
-	.user-header > p{
-		font-size: 20px!important;
-	}
-
-	.user-footer > div > a{
-		font-size: 18px;
-	}
-
-	footer{
-		text-align: center!important;
-	}
-
+/* 3) GERENCIAR PROJETOS */
+section.content.artes .box-ldi {
+  border-top-color: #c94259;
 }
-
-@media all and (max-width: 480px){
-
-	.usuario-header-box > span > h3 {
-		width: 100% !important;
-		display: block;
-	}
-
+section.content.artes .box-ldi .box-header {
+  background-color: #c94259;
+  color: #FFF;
+  padding: 10px 20px;
+}
+.box-header .acoes {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 15px;
+}
+.box-header .acoes.form-group {
+  margin-bottom: 0px;
+}
+.box-header .acoes .rotulo {
+  display: inline-block;
+  margin-right: 5px;
+}
+.box-header .acoes select {
+  display: inline-block;
+  width: auto;
+}
+.icone {
+  width: 40px;
+  text-align: center;
+}
+.icone a:active,
+.icone a:focus {
+  color: #3c8dbc;
+}
+.listaProjetos td[title="Artes"] {
+  background-color: #c94259;
+  color: #FFF;
+}
+.listaProjetos td[title="Artes"]:before {
+  content: "Art";
+}
+.listaProjetos td[title="Química"] {
+  background-color: #55ccdd;
+  color: #000;
+}
+.listaProjetos td[title="Química"]:before {
+  content: "Qui";
+}
+.listaProjetos td[title="Biologia"] {
+  background-color: #eecc77;
+  color: #000;
+}
+.listaProjetos td[title="Biologia"]:before {
+  content: "Bio";
+}
+.listaProjetos td[title="Matemática"] {
+  background-color: #009977;
+  color: #FFF;
+}
+.listaProjetos td[title="Matemática"]:before {
+  content: "Mat";
+}
+.listaProjetos .box-curso {
+  width: 60px;
+  text-align: center;
+}
+.listaProjetos .box-curso.edfisica {
+  background-color: #d4d0b3;
+  color: #000;
+}
+.listaProjetos .box-curso.contabeis {
+  background-color: #ff9966;
+  color: #000;
+}
+.listaProjetos .box-curso.fisica {
+  background-color: #116554;
+  color: #fff;
+}
+.listaProjetos .box-curso.edcampo {
+  background-color: #060;
+  color: #FFF;
+}
+.listaProjetos .box-curso.dirhumanos {
+  background-color: #663;
+  color: #FFF;
+}
+.listaProjetos .box-curso.pedagogia {
+  background-color: #505e93;
+  color: #fff;
+}
+.listaProjetos .box-curso.historia {
+  background-color: #016075;
+  color: #fff;
+}
+.listaProjetos .box-curso.filosofia {
+  background-color: #9fd18b;
+  color: #000;
+}
+.listaProjetos .box-curso.dimensoes {
+  background-color: #fabfb7;
+  color: #000;
+}
+.listaProjetos .box-curso.mais-educacao {
+  background-color: #147fad;
+  color: #FFF;
+}
+.listaProjetos .box-curso.outro {
+  background-color: #aaa;
+  color: #000;
+}
+.listaProjetos .box-curso.interno {
+  background-color: #555;
+  color: #FFF;
 }

@@ -8,7 +8,7 @@
         <small>Painel Administrativo</small>
     </h1>
     <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Início</a></li>
+        <li><a href="{!! url('/') !!}"><i class="fa fa-dashboard"></i> Início</a></li>
         <li class="active"><i class="fa fa-group"></i> Gerenciar Usuários</li>
     </ol>
 </section>

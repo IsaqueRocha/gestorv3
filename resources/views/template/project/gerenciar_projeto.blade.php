@@ -7,7 +7,7 @@
         <small>Painel Administrativo</small>
     </h1>
     <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Início</a></li>
+        <li><a href="{!! url('/') !!}"><i class="fa fa-dashboard"></i> Início</a></li>
         <li class="active"><i class="fa fa-tasks"></i> Gerenciar Projetos</li>
     </ol>
 </section>
@@ -88,7 +88,7 @@
                         <tbody>
                             <tr>
                                 <td class="box-curso" title="Artes"></td>
-                                <td>Moodle - Seminário</td>
+                                <td>Evento de Artes Visuais</td>
                                 <td><i class="fa fa-file-text-o" title="Diagramação"></i> <i class="fa fa-paint-brush" title="Ilustração"></i> <i class="fa fa-video-camera" title="Vídeo"></i></td>
                                 <td>Antonio, Mariana, Rayan</td>
                                 <td>Entregue</td>

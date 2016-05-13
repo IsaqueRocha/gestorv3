@@ -2,24 +2,26 @@
  * Skin: LDI
  * ----------
  */
-@import "../../bootstrap/less/mixins.less";
-@import "../../bootstrap/less/variables.less";
+@import "../bootstrap-less/mixins.less";
+@import "../bootstrap-less/variables.less";
+@import "../../../theme/variables.less";
+@import "../../../theme/mixins.less";
 @import "../variables.less";
 @import "../mixins.less";
 
 body.login-page {
-    background-color: @cor-ldi;
+    background-color: @corInst;
 }
 
 .skin-ldi {
   //Navbar
   .main-header {
     .navbar {
-      .navbar-variant(@cor-ldi; #fff);
+      .navbar-variant(@corInst; #fff);
       .sidebar-toggle {
         color: #fff;
         &:hover {
-          background-color: darken(@cor-ldi, 5%);
+          background-color: darken(@corInst, 5%);
         }
       }
       @media (max-width: @screen-header-collapse) {
@@ -31,7 +33,7 @@ body.login-page {
             a {
               color: #fff;
               &:hover {
-                background: darken(@cor-ldi, 5%);
+                background: darken(@corInst, 5%);
               }
             }
           }
@@ -40,11 +42,11 @@ body.login-page {
     }
     //Logo
     .logo {
-      .logo-variant(darken(@cor-ldi, 5%));
+      .logo-variant(darken(@corInst, 5%));
     }
 
     li.user-header {
-      background-color: @cor-ldi;
+      background-color: @corInst;
     }
   }
 
@@ -76,7 +78,7 @@ body.login-page {
     > a:hover, &.active > a {
       color: @sidebar-dark-hover-color;
       background: @sidebar-dark-hover-bg;
-      border-left-color: @cor-ldi;
+      border-left-color: @corInst;
     }
 
     > .treeview-menu {
@@ -142,5 +144,9 @@ body.login-page {
 }
 
 .skin-ldi.layout-top-nav .main-header > .logo {
-  .logo-variant(@cor-ldi);
+  .logo-variant(@corInst);
+}
+
+.bg-ldi {
+    background-color: @corInst !important;
 }
