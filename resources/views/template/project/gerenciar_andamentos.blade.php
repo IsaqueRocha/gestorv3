@@ -15,8 +15,8 @@
 <!-- FIM CABEÇALHO -->
 
 <!--  -->
-<section class="content artes">
-    <div class="row">
+<section class="content">
+    <div class="row artes">
         <div class="col-md-12">
             <div class="box box-ldi">
                 <div class="box-header">

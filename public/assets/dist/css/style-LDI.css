@@ -132,10 +132,10 @@ button[form="desativarUsuario"].btn-primary:before {
   width: 50px;
 }
 /* 3) GERENCIAR PROJETOS */
-section.content.artes .box-ldi {
+section .row.artes .box-ldi {
   border-top-color: #c94259;
 }
-section.content.artes .box-ldi .box-header {
+section .row.artes .box-ldi .box-header {
   background-color: #c94259;
   color: #FFF;
   padding: 10px 20px;
