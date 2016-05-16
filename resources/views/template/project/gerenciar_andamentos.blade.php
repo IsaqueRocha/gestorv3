@@ -4,12 +4,12 @@
 <section class="content-header">
     <h1>
         Gerenciar Projetos
-        <small>Andamentos</small>
+        <small>Visualizar</small>
     </h1>
     <ol class="breadcrumb">
         <li><a href="{!! url('/') !!}"><i class="fa fa-dashboard"></i> Início</a></li>
         <li><a href="{!! url('/projects') !!}"><i class="fa fa-tasks"></i> Gerenciar Projetos</a></li>
-        <li class="active"><i class="fa fa-bookmark"></i> Andamentos</li>
+        <li class="active"><i class="fa fa-eye"></i> Visualizar</li>
     </ol>
 </section>
 <!-- FIM CABEÇALHO -->
@@ -41,36 +41,55 @@
                             </div>
                         </ul>
                     </div>
-                    <div class="row">
-                        <div class="col-md-2" style="margin-top:10px;">
-                            <b>Situação:</b> Entregue
-                        </div>
-                        <div class="col-md-10" style="margin-top:10px;">
-                            <div style="float:left;">
-                                <b>Progresso:</b>
-                            </div>
-                            <div style="float:left;">
-                                <div class="progress progress-sm">
-                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-                                        <span class="sr-only">100% Complete</span>
-                                    </div>
+                    <div class="row" style="margin-top:10px;">
+                        <div class="col-md-4">
+                            <b>Progresso:</b>
+                            <div class="progress progress-sm" style="margin-top:5px;margin-bottom:0;">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                                    <span class="sr-only">100% Complete</span>
                                 </div>
                             </div>
                         </div>
+                        <div class="col-md-4">
+                            <div><b>Situação:</b></div>
+                            <div>Entregue</div>
+                        </div>
+                        <div class="col-md-4"></div>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#adcAnd" title="Adicionar andamento">
-                        <i class="fa fa-bookmark" style="margin-right:2px;"></i> Adicionar andamento
-                    </button>
-                    <button type="button" class="btn btn-ldi" data-toggle="modal" data-target="#marcoVideo" title="Adicionar marco">
-                        <i class="fa fa-flag" style="margin-right:2px;"></i> Vídeo
-                    </button>
-                    <button type="button" class="btn btn-ldi" data-toggle="modal" data-target="#marcoImpresso" title="Adicionar marco">
-                        <i class="fa fa-flag" style="margin-right:2px;"></i> Impresso
-                    </button>
+                    <div style="float:left;">
+                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#adcAnd" title="Adicionar andamento">
+                            <i class="fa fa-bookmark" style="margin-right:2px;"></i> Adicionar andamento
+                        </button>
+                        <a href="{{ url('/projects/marcos') }}" target="_blank">
+                            <button type="button" class="btn btn-primary" title="Ver/editar marcos em nova aba">
+                                <i class="fa fa-flag" style="margin-right:2px;"></i> Ver/editar marcos
+                            </button>
+                        </a>
+                    </div>
+                    <div style="float:right;margin-left:10px;margin-right:10px;">
+                        <div class="form-inline">
+                            <div class="form-group" style="margin-left:10px;">
+                                <label>Usuário</label>
+                                <select class="form-control">
+                                    <option>Todos</option>
+                                    <option>Antonio</option>
+                                    <option>Rayan</option>
+                                </select>
+                            </div>
+                            <div class="form-group" style="margin-left:10px;">
+                                <label>Tipo</label>
+                                <select class="form-control">
+                                    <option>Tudo</option>
+                                    <option>Andamentos</option>
+                                    <option>Marcos</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -182,72 +201,6 @@
                     <div class="form-group">
                         <label>Detalhes</label> <br>
                         <textarea style="width:100%;min-height:80px;"></textarea>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-success">Salvar</button>
-            </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
-<div id="marcoVideo" class="modal fade">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Adicionar marco em Vídeo</h4>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <div class="checkbox">
-                        <label><input type="checkbox"> Roteiro feito</label>
-                        <label><input type="checkbox"> Gravação</label>
-                        <label><input type="checkbox"> Decupagem</label>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Narrações solicitadas</label>
-                        <input name="name" type="text" value="" class="form-control" placeholder="Quantidade necessária" required />
-                    </div>
-
-                    <div class="form-group">
-                        <label>Narrações concluídas</label>
-                        <input name="name" type="text" value="" class="form-control" placeholder="Quantidade concluída" required />
-                    </div>
-                    
-                     <div class="checkbox">
-                        <label><input type="checkbox"> Montagem</label>
-                        <label><input type="checkbox"> Animação</label>
-                        <label><input type="checkbox"> Edição</label>
-                        <label><input type="checkbox"> Edição sonora</label>
-                        <label><input type="checkbox"> Transcrição</label>
-                        <label><input type="checkbox"> Legenda</label>
-                        <label><input type="checkbox"> Render</label>
-                        <label><input type="checkbox"> Revisão</label>
-                        <label><input type="checkbox"> Upload</label>
-                        <label><input type="checkbox"> DVD</label>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Data de disponibilidade</label>
-                        <input name="" type="text" value="" class="form-control" placeholder="hh:mm" data-inputmask="'alias': 'hh:mm'" data-mask/>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Início da Gravação</label>
-                        <input name="" type="text" value="" class="form-control" placeholder="hh:mm" data-inputmask="'alias': 'hh:mm'" data-mask/>
-                    </div>
-                    
-                    <div class="checkbox">
-                        <label><input type="checkbox"> Revisado pelo autor</label>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Conclusão da Gravação</label>
-                        <input name="" type="text" value="" class="form-control" placeholder="hh:mm" data-inputmask="'alias': 'hh:mm'" data-mask/>
                     </div>
                 </form>
             </div>

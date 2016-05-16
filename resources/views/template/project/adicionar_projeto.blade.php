@@ -42,7 +42,9 @@
                             </div>
                             <div class="form-group col-md-1">
                                 <label>Adc. prof.</label>
-                                <button type="button" class="btn btn-block btn-primary" data-toggle="modal" data-target="#adcProf" title="Adicionar professor"><i class="fa fa-plus-circle"></i></button>
+                                <button type="button" class="btn btn-block btn-primary" data-toggle="modal" data-target="#adcProf" title="Adicionar professor">
+                                    <i class="fa fa-plus-circle"></i>
+                                </button>
                             </div>
 
                             <!-- CURSO -->

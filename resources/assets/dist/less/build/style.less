@@ -16,6 +16,36 @@
 
 /* 1) GERAL */
 
+.box-ldi {
+    
+    a h3, .box-header:after {
+        color: @corInst !important;
+    }
+}
+
+.box-header {
+
+    &.panel-heading {
+        background-color: #fff;
+
+        a, a:hover, a:active, a:focus {
+            color: @corInst;
+        }
+
+/*        &:after {
+            content: "\f078";
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: inherit;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            transform: translate(0, 0);
+            float: right;
+        }*/
+    }
+}
+
 .box-body {
     padding: 20px;
 
@@ -59,6 +89,10 @@
 
         i[title="Diagramação"], i[title="Ilustração"], i[title="Vídeo"], i[title="Web"] {
             margin: 0 2px;
+        }
+
+        tr.panel-collapse {
+            background-color: #efefef !important;
         }
     }
 }
