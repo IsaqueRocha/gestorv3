@@ -52,6 +52,6 @@ Route::get('auth/login', 'Auth\AuthController@getLogin');
 Route::post('auth/login', 'Auth\AuthController@postLogin');
 Route::get('auth/logout', 'Auth\AuthController@getLogout');
 
-Route::get('/profile', function(){
-    return view('template.profile.index');
-});
+Route::get('/profile','ProfileController@index');
+Route::get('/profile/{id}','ProfileController@show')->where('id', '[0-9]+');;
+Route::get('/profile/edit','ProfileController@edit');
