@@ -102,7 +102,7 @@
                                     </a>
                                 </td>
                             </tr>
-                            <tr id="usuario{{$user->id}}" class="panel-collapse collapse" style="background-color:#efefef;">
+                            <tr id="usuario{{$user->id}}" class="panel-collapse collapse">
                                 <td colspan="5">
                                     <!-- DADOS DO USUÁRIO -->
                                     <div class="dados-usuario">

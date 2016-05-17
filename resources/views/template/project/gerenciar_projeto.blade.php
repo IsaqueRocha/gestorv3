@@ -101,7 +101,7 @@
                                 </td>
                                 <td class="icone">
                                     <a href="{{ url('/projects/andamentos') }}">
-                                        <i class="fa fa-bookmark" title="Andamentos"></i>
+                                        <i class="fa fa-eye" title="Visualizar projeto"></i>
                                     </a>
                                 </td>
                                 <td class="icone">
@@ -122,7 +122,24 @@
                             </tr>
                             <tr id="um" class="panel-collapse collapse">
                                 <td colspan="10">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                    <div class="row">
+                                        <ul style="list-style:none;padding:0;">
+                                            <div class="col-md-4">
+                                                <li><b>Nome do projeto:</b> Evento de Artes Visuais</li>
+                                                <li><b>Professor:</b> Fabiana Carvalho</li>
+                                                <li><b>Curso:</b> Artes Visuais</li>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <li><b>Início</b> 12/05/2016</li>
+                                                <li><b>Prazo:</b> 22/06/2016</li>
+                                                <li><b>Apoio:</b> Antonio, Mariana, Rayan</li>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <li><b>Composição do Projeto:</b> Vídeo, Impresso</li>
+                                                <li><b>Complementares:</b> Ilustração</li>
+                                            </div>
+                                        </ul>
+                                    </div>
                                 </td>
                             </tr>
                             <tr>
@@ -140,7 +157,7 @@
                                 </td>
                                 <td class="icone">
                                     <a>
-                                        <i class="fa fa-bookmark" title="Andamentos"></i>
+                                        <i class="fa fa-eye" title="Visualizar projeto"></i>
                                     </a>
                                 </td>
                                 <td class="icone">
@@ -179,7 +196,7 @@
                                 </td>
                                 <td class="icone">
                                     <a>
-                                        <i class="fa fa-bookmark" title="Andamentos"></i>
+                                        <i class="fa fa-eye" title="Visualizar projeto"></i>
                                     </a>
                                 </td>
                                 <td class="icone">
@@ -218,7 +235,7 @@
                                 </td>
                                 <td class="icone">
                                     <a>
-                                        <i class="fa fa-bookmark" title="Andamentos"></i>
+                                        <i class="fa fa-eye" title="Visualizar projeto"></i>
                                     </a>
                                 </td>
                                 <td class="icone">
