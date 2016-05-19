@@ -24,5 +24,3 @@
 <script src="{{ asset('assets/plugins/slimScroll/jquery.slimscroll.min.js') }}" type="text/javascript"></script>
 <!-- FastClick -->
 <script src="{{ asset('assets/plugins/fastclick/fastclick.min.js') }}"></script>
-<!-- Multiple Select -->
-<script src="{{ asset('assets/plugins/multipleselect/multiple-select.js') }}" type="text/javascript"></script>

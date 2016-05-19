@@ -75,7 +75,7 @@
                     </div>
                 </div>
                 <div class="box-body">
-                    <table class="table table-bordered table-hover">
+                    <table id="usertable" class="table table-bordered table-hover">
                         <thead>
                             <tr>
                                 <th>Usuário</th>
@@ -87,7 +87,7 @@
                         </thead>
                         <tbody>
                             @foreach($users as $user)
-                            <tr>
+                            <tr role="row">
                                 <td>{{ $user->name }}</td>
                                 <td>{{ $user->role }}</td>
                                 <td>{{ $user->area }}</td>
@@ -98,7 +98,7 @@
                                 </td>
                                 <td class="icone">
                                     <a data-toggle="collapse" data-parent="#accordion" href="#usuario{{$user->id}}">
-                                        <i id="demo{{$user->id}}" class="fa fa-plus-circle" title="Expandir" onclick="trocaPlusMinus({{$user->id}})"></i>
+                                        <i id="demo{{$user->id}}" class="fa fa-plus-circle" title="Ver detalhes" onclick="trocaPlusMinus({{$user->id}})"></i>
                                     </a>
                                 </td>
                             </tr>
@@ -106,21 +106,18 @@
                                 <td colspan="5">
                                     <!-- DADOS DO USUÁRIO -->
                                     <div class="dados-usuario">
-
                                         <div class="col-md-6">
                                             <label>Nome:</label> <span>{{ $user->name }}</span> <br/>
                                             <label>E-mail: </label> <span>{{ $user->email }}</span> <br/>
                                             <label>CPF: </label> <span>{{ $user->cpf }}</span> <br/>
-                                            <label>Telefone: </label> <span>{{ $user->phone }}</span> <br/>
+                                            <label>Telefone: </label> <span>{{ $user->phone }}</span>
                                         </div>
-
                                         <div class="col-md-6">
                                             <label>Endereço: </label> <span>{{ $user->address }}</span> <br/>
                                             <label>Função: </label> <span>{{ $user->role }}</span> <br/>
                                             <label>Área de atuação: </label> <span>{{ $user->area }}</span> <br/>
-                                            <label>Entrada: </label> <span>{{ $user->entrance_date->format('d/m/Y') }}</span> <br/>
+                                            <label>Entrada: </label> <span>{{ $user->entrance_date->format('d/m/Y') }}</span>
                                         </div>
-
                                     </div>
                                     <!-- FIM DADOS DO USUÁRIO -->
                                 </td>
@@ -138,4 +135,7 @@
 
 @section('script')
 <script type="text/javascript" src="{{ asset('assets/dist/js/ajax-user.js')}}"></script>
+<script type="text/javascript" >
+    $('#usertable').DataTable();
+</script>
 @endsection

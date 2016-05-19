@@ -21,9 +21,6 @@
 <!-- DATA TABLES -->
 <link href="{{ asset('assets/plugins/datatables/dataTables.bootstrap.css') }}" rel="stylesheet" type="text/css" />
 
-<!-- MULTIPLESELECT -->
-<link rel="stylesheet" type="text/css" href="{{ asset('assets/plugins/multipleselect/multiple-select-styles.css') }}">
-
 <!--[if lt IE 9]>
   <script src="dist/js/html5shiv.js"></script>
   <script src="dist/js/respond.min.js"></script>
