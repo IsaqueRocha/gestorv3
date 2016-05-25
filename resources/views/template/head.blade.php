@@ -2,7 +2,7 @@
 <title>LDI</title>
 <link rel="icon" href="{{ asset('/assets/theme/img/favicon.ico') }}" />
 <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
-<!-- CSS DO AdminLTE E PLUGUINS -->
+<!-- CSS DO AdminLTE E PLUGINS -->
 <!-- Bootstrap 3.3.2 -->
 <link href="{{ asset('/assets/bootstrap/css/bootstrap.css') }}" rel="stylesheet" type="text/css" />
 <!-- Font Awesome Icons -->

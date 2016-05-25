@@ -33,11 +33,11 @@
                                     <div class="rotulo">
                                         Área:
                                     </div>
-                                    <select class="form-control input-sm">
-                                        <option onclick="filterArea('{!! env('URL') !!}', 'todos')">Todos</option>
-                                        <option onclick="filterArea('{!! env('URL') !!}', 'web')">Web</option>
-                                        <option onclick="filterArea('{!! env('URL') !!}', 'video')">Vídeo</option>
-                                        <option onclick="filterArea('{!! env('URL') !!}', 'diagramacao')">Diagramação</option>
+                                    <select class="form-control input-sm" onchange="filterArea('{{ env('URL') }}', this.value );">
+                                        <option value="todos">Todos</option>
+                                        <option value="web">Web</option>
+                                        <option value="video">Vídeo</option>
+                                        <option value="diagramacao">Diagramação</option>
                                     </select>
                                 </form>
 
@@ -49,10 +49,10 @@
                                         Função:
                                     </div>
                                     <select class="form-control input-sm">
-                                        <option onclick="filterRole('{!! env('URL') !!}', 'todos')">Todos</option>
-                                        <option onclick="filterRole('{!! env('URL') !!}', 'estagiario')">Estagiário</option>
-                                        <option onclick="filterRole('{!! env('URL') !!}', 'tecnico')">Técnico</option>
-                                        <option onclick="filterRole('{!! env('URL') !!}', 'coordenador')">Coordenador</option>
+                                        <option onclick="filterRole('{!! env('URL') !!}', 'todos');">Todos</option>
+                                        <option onclick="filterRole('{!! env('URL') !!}', 'estagiario');">Estagiário</option>
+                                        <option onclick="filterRole('{!! env('URL') !!}', 'tecnico');">Técnico</option>
+                                        <option onclick="filterRole('{!! env('URL') !!}', 'coordenador');">Coordenador</option>
                                     </select>
                                 </form>
                             </div>

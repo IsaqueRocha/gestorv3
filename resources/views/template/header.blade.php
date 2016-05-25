@@ -57,7 +57,7 @@
               <!-- BOTÃO -->
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <!-- AVATAR NO BOTÃO -->
-                <img src="{!! Auth::User()->photo !!}" class="user-image" alt="Foto do Usuário"/>
+                <img src="{{ (Auth::User()->photo == null ) ? ('/assets/theme/img/avatar.png'):( Auth::User()->photo) }}" class="user-image" alt="Foto do Usuário"/>
                 <!-- NOME -->
                 <span class="hidden-xs">{{Auth::User()->name }}</span>
               </a>
@@ -65,7 +65,7 @@
               <ul class="dropdown-menu">
                 <!-- AVATAR, NOME E ATUAÇÃO -->
                 <li class="user-header">
-                  <img src="{!! Auth::User()->photo !!}" class="img-circle" alt="Foto do Usuário" />
+                  <img src="{!! ( Auth::User()->photo == null ) ? ('/assets/theme/img/avatar.png'):( Auth::User()->photo )!!}" class="img-circle" alt="Foto do Usuário" />
                   <p>
                       <a href="{{url('/profile')}}">{{ Auth::User()->name }}</a> <br> {{ Auth::User()->role }}
                   </p>
@@ -73,7 +73,7 @@
                 <!-- ALTERAR DADOS E SAIR -->
                 <li class="user-footer">
                   <div class="pull-left">
-                    <a href="#" class="btn btn-success btn-flat"> <i class="fa fa-fw fa-gear"></i> Alterar dados</a>
+                    <a href="{{ url('/profile/edit') }}" class="btn btn-success btn-flat"> <i class="fa fa-fw fa-gear"></i> Alterar dados</a>
                   </div>
                   <div class="pull-right">
                     <a href="{!! url('/auth/logout/') !!}" class="btn btn-danger btn-flat"> <i class="fa fa-fw fa-sign-out"></i> Sair</a>

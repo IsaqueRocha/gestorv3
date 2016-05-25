@@ -3,19 +3,19 @@
 <!-- CABEÇALHO -->
 <section class="content-header">
     <h1>
-        Renato Delpupo
+        {{ $user->name }}
         <small>Perfil</small>
     </h1>
     <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Início</a></li>
-        <li class="active"><i class="fa fa-user"></i> Perfil de Renato Delpupo</li>
+        <li class="active"><i class="fa fa-user"></i> Perfil de {{ $user->name }}</li>
     </ol>
 </section>
 <!-- FIM CABEÇALHO -->
 
 <section class="content">
     <div class="row">
-        <div class="col-md-12">        
+        <div class="col-md-12">
             <div class="box box-ldi">
                 <div class="box-header with-border">
                     <div>
@@ -26,23 +26,23 @@
                     <hr>
                     <div>
                         <div class="col-md-2">
-                            <img src="{!! Auth::User()->photo !!}" class="img-circle" alt="Foto do Usuário" />
+                            <img src="{{ ( $user->photo == null ) ? ('/assets/theme/img/avatar.png'):($user->photo) }}" class="img-circle" alt="Foto do Usuário" />
                         </div>
                         <div class="col-md-10">
                             <ul style="list-style:none;padding-left:0;float:left;width:100%;">
                                 <div class="col-md-4">
-                                    <li><b>Nome:</b> Renato Delpupo</li>
-                                    <li><b>E-mail:</b> renatodelpupo@designinstrucional.org</li>
-                                    <li><b>Função:</b> Estagiário</li>
-                                    <li><b>Área de atuação:</b> Web</li>
+                                    <li><b>Nome:</b> {{ $user->name }}</li>
+                                    <li><b>E-mail:</b> {{ $user->email }}</li>
+                                    <li><b>Função:</b> {{ $user->role }}</li>
+                                    <li><b>Área de atuação:</b> {{ $user->area }}</li>
                                 </div>
                                 <div class="col-md-4">
-                                    <li><b>CPF:</b> 111.111.111-11 </li>
-                                    <li><b>Endereço:</b> Av. Fernando Ferrari, 514, Goiabeiras, Vitória - ES - CEP 29075-910 </li>
-                                    <li><b>Telefone:</b> 27 99999-8888</li>
+                                    <li><b>CPF:</b> {{ $user->cpf }} </li>
+                                    <li><b>Endereço:</b> {{ $user->address }} </li>
+                                    <li><b>Telefone:</b> {{ $user->phone }}</li>
                                 </div>
                                 <div class="col-md-4">
-                                    <li><b>Data de entrada:</b> 01/02/2015</li>
+                                    <li><b>Data de entrada:</b> {{ $user->entrance_date }}</li>
                                     <li><b>Data de saída:</b> --/--/---</li>
                                 </div>
                             </ul>

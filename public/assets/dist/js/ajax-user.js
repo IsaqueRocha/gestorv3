@@ -1,4 +1,4 @@
-alteraDesativa();
+alteraDesativa();//chamada da função declarada a porterior.
 
 function deleteUser(event){
 
@@ -84,10 +84,10 @@ function disableUser(event){
 }
 
 function filterArea(url, area_name){
-    if (area_name === 'todos') {
-        $('#areas').attr('action', url + '/users').submit();
+    if (area_name == 'todos') {
+        $('#areas').attr('action', url + 'users').submit();
     }else{
-        $('#areas').attr('action', url + '/users/area/' + area_name).submit();
+        $('#areas').attr('action', url + 'users/area/' + area_name).submit();
     }
 }
 
