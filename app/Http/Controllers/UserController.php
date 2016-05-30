@@ -28,29 +28,9 @@ class UserController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index($param = null, $value = null)
+	public function index()
 	{
-		switch ($param) {
-			case null:
-				$users = User::all();
-				break;
-
-			case 'active':
-				$users = User::where('active', '1')->get();
-				break;
-
-			case 'area':
-				$users = User::where('area', $value)->get();
-				break;
-
-			case 'role':
-				$users = User::where('role', $value)->get();
-				break;
-			default:
-				# code...
-				break;
-		}
-
+		$users = User::all();
 
 		return view('template.user.gerenciar_usuario', compact('users'));
 	}
@@ -221,5 +201,12 @@ class UserController extends Controller {
 
 		return response()->json($user);
     }
+
+	public function filter($param, $value)
+	{
+		$users = User::where('area', $param)->get();
+
+		return response()->json($users);
+	}
 
 }

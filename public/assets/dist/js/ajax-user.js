@@ -83,6 +83,7 @@ function disableUser(event){
     });
 }
 
+
 function filterArea(url, area_name){
     if (area_name == 'todos') {
         $('#areas').attr('action', url + 'users').submit();

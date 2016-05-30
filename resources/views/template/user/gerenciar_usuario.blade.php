@@ -33,7 +33,8 @@
                                     <div class="rotulo">
                                         Área:
                                     </div>
-                                    <select class="form-control input-sm" onchange="filterArea('{{ env('URL') }}', this.value );">
+                                    <!-- <select class="form-control input-sm" onchange="filterArea('{{ env('URL') }}', this.value );"> -->
+                                    <select id="selectarea" class="form-control input-sm"65>
                                         <option value="todos">Todos</option>
                                         <option value="web">Web</option>
                                         <option value="video">Vídeo</option>
@@ -48,11 +49,11 @@
                                     <div class="rotulo">
                                         Função:
                                     </div>
-                                    <select class="form-control input-sm">
-                                        <option onclick="filterRole('{!! env('URL') !!}', 'todos');">Todos</option>
-                                        <option onclick="filterRole('{!! env('URL') !!}', 'estagiario');">Estagiário</option>
-                                        <option onclick="filterRole('{!! env('URL') !!}', 'tecnico');">Técnico</option>
-                                        <option onclick="filterRole('{!! env('URL') !!}', 'coordenador');">Coordenador</option>
+                                    <select id="selectrole" class="form-control input-sm">
+                                        <option value="todos">Todos</option>
+                                        <option value="estagiario">Estagiário</option>
+                                        <option value="tecnico">Técnico</option>
+                                        <option value="coordenador">Coordenador</option>
                                     </select>
                                 </form>
                             </div>
@@ -75,7 +76,7 @@
                     </div>
                 </div>
                 <div class="box-body">
-                    <table class="table table-bordered table-hover">
+                    <table id="usertable" class="table table-bordered table-hover">
                         <thead>
                             <tr>
                                 <th>Usuário</th>
@@ -102,29 +103,7 @@
                                     </a>
                                 </td>
                             </tr>
-                            <tr id="usuario{{$user->id}}" class="panel-collapse collapse">
-                                <td colspan="5">
-                                    <!-- DADOS DO USUÁRIO -->
-                                    <div class="dados-usuario">
-
-                                        <div class="col-md-6">
-                                            <label>Nome:</label> <span>{{ $user->name }}</span> <br/>
-                                            <label>E-mail: </label> <span>{{ $user->email }}</span> <br/>
-                                            <label>CPF: </label> <span>{{ $user->cpf }}</span> <br/>
-                                            <label>Telefone: </label> <span>{{ $user->phone }}</span> <br/>
-                                        </div>
-
-                                        <div class="col-md-6">
-                                            <label>Endereço: </label> <span>{{ $user->address }}</span> <br/>
-                                            <label>Função: </label> <span>{{ $user->role }}</span> <br/>
-                                            <label>Área de atuação: </label> <span>{{ $user->area }}</span> <br/>
-                                            <label>Entrada: </label> <span>{{ $user->entrance_date->format('d/m/Y') }}</span> <br/>
-                                        </div>
-
-                                    </div>
-                                    <!-- FIM DADOS DO USUÁRIO -->
-                                </td>
-                            </tr>
+                            
                             @endforeach
                         </tbody>
                     </table>
@@ -138,4 +117,8 @@
 
 @section('script')
 <script type="text/javascript" src="{{ asset('assets/dist/js/ajax-user.js')}}"></script>
+<meta name="_token" content="{!! csrf_token() !!}" />
+<script type="text/javascript">
+    $('#usertable').DataTable();
+</script>
 @endsection

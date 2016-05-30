@@ -1,4 +1,6 @@
 <?php
+use App\User;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,8 +26,15 @@ Route::get('/users/{id}/edit', 'UserController@edit')->where('id', '[0-9]+');
 Route::put('/users/{id}', 'UserController@update')->where('id', '[0-9]+');
 Route::delete('/users/{id}', 'UserController@destroy')->where('id', '[0-9]+');
 Route::put('/users/{id}/disable', 'UserController@disable')->where('id', '[0-9]+');
-Route::get('/users/{param}/{value}', 'UserController@index')->where(['param' => '[A-Za-z]+', 'value' => '[A-Za-z]+']);
+Route::get('/users/area/{param}/role/{value}', 'UserController@filter')->where(['param' => '[A-Za-z]+', 'value' => '[A-Za-z]+']);
+Route::get('/api/users', function(){
+    $users = User::all();
 
+    return Response::json(['data' => $users]);
+});
+Route::get('/teste', function(){
+    return view('teste');
+});
 
 /* Rotas que tratam dos uploads de imagem */
 Route::post('/users/upload', 'CropController@postUpload');
