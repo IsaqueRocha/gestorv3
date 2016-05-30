@@ -22,6 +22,7 @@
 1) GERAL
 1.1) LOGIN
 1.2) SIDEBAR
+1.3) FORMULARIOS
 
 2) GERENCIAR USUARIOS
 2.1) CRIAR USUARIO
@@ -37,16 +38,16 @@
 .box-header.panel-heading {
   background-color: #fff;
   /*        &:after {
-            content: "\f078";
-            display: inline-block;
-            font: normal normal normal 14px/1 FontAwesome;
-            font-size: inherit;
-            text-rendering: auto;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            transform: translate(0, 0);
-            float: right;
-        }*/
+                    content: "\f078";
+                    display: inline-block;
+                    font: normal normal normal 14px/1 FontAwesome;
+                    font-size: inherit;
+                    text-rendering: auto;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                    transform: translate(0, 0);
+                    float: right;
+                }*/
 }
 .box-header.panel-heading a,
 .box-header.panel-heading a:hover,
@@ -62,21 +63,6 @@
   float: left;
   background-color: white;
   width: 100%;
-}
-.box-body form .checkbox {
-  float: left;
-  width: 100%;
-  margin-top: 0;
-  padding: 6px 12px;
-  border: 1px solid #d2d6de;
-}
-.box-body form .checkbox div {
-  padding: 0;
-}
-.box-body form .checkbox label {
-  float: left;
-  width: 100%;
-  display: block;
 }
 .box-body table thead {
   background-color: #efefef;
@@ -102,7 +88,7 @@
 }
 .user-menu .user-footer {
   background-color: #383838 !important;
-  background-image: url("../assets/theme/img/grid-pattern.png");
+  background-image: url("../../theme/img/grid-pattern.png");
   background-repeat: repeat;
 }
 .user-menu .user-footer .btn {
@@ -143,6 +129,22 @@
 .total-hora h4 {
   margin: 5px 0 0 0!important;
   font-size: 20px!important;
+}
+/* 1.3) FORMULARIOS */
+form .checkbox {
+  float: left;
+  width: 100%;
+  margin-top: 0;
+  padding: 6px 12px;
+  border: 1px solid #d2d6de;
+}
+form .checkbox div {
+  padding: 0;
+}
+form .checkbox label {
+  float: left;
+  width: 100%;
+  display: block;
 }
 /* 2) GERENCIAR USUARIOS */
 button[form="desativarUsuario"].btn-warning:before {
@@ -271,4 +273,9 @@ section .row.artes .box-ldi .box-header {
 .listaProjetos .box-curso.interno {
   background-color: #555;
   color: #FFF;
+}
+form h5 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 0;
 }

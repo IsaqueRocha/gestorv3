@@ -15,9 +15,8 @@
 <script src="{{ asset('assets/plugins/sweetalert/sweetalert.js')}}"></script>
 <!-- Personalizado -->
 <script src="{{ asset('assets/dist/js/ldi.js')}}"></script>
-
-<!--FEATURES DO FRAMEWORK-->
-<!-- DATA TABES SCRIPT -->
+<!-- Funcionalidades do framework -->
+<!-- Data Tables Script -->
 <script src="{{ asset('assets/plugins/datatables/jquery.dataTables.js') }}" type="text/javascript"></script>
 <script src="{{ asset('assets/plugins/datatables/dataTables.bootstrap.js') }}" type="text/javascript"></script>
 <!-- SlimScroll -->

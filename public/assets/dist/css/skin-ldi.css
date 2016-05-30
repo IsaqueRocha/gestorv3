@@ -109,7 +109,7 @@ body.login-page {
 .skin-ldi .main-sidebar,
 .skin-ldi .left-side {
   background-color: #383838;
-  background-image: url("../../img/grid-pattern.png");
+  background-image: url("../../theme/img/grid-pattern.png");
   background-repeat: repeat;
 }
 .skin-ldi .sidebar a {
