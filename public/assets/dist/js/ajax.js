@@ -18,8 +18,9 @@ function format ( d ) {
 }
 
 $(document).ready(function(){
+    var url = "http://localhost:8000/api/users";
     var table = $('#example').DataTable({
-        "ajax"      :   "http://localhost:8000/api/users",
+        "ajax"      :   url,
         "columns"   :   [
             {
                 "className"         :    'details-control',

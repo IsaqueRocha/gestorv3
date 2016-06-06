@@ -17,8 +17,10 @@
 <script src="{{ asset('assets/dist/js/ldi.js')}}"></script>
 <!-- Funcionalidades do framework -->
 <!-- Data Tables Script -->
-<script src="{{ asset('assets/plugins/datatables/jquery.dataTables.js') }}" type="text/javascript"></script>
-<script src="{{ asset('assets/plugins/datatables/dataTables.bootstrap.js') }}" type="text/javascript"></script>
+<!-- <script src="{{ asset('assets/plugins/datatables/jquery.dataTables.js') }}" type="text/javascript"></script>
+<script src="{{ asset('assets/plugins/datatables/dataTables.bootstrap.js') }}" type="text/javascript"></script> -->
+<script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js" type="text/javascript" ></script>
+<script src="https://cdn.datatables.net/1.10.11/js/dataTables.bootstrap.min.js" type="text/javascript" ></script>
 <!-- SlimScroll -->
 <script src="{{ asset('assets/plugins/slimScroll/jquery.slimscroll.min.js') }}" type="text/javascript"></script>
 <!-- FastClick -->

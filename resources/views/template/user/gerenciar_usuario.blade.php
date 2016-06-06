@@ -1,4 +1,11 @@
 @extends('app')
+@section('head')
+<style media="screen">
+    #usertable_filter{
+        display: none;
+    }
+</style>
+@endsection
 @section('content')
 
 <!-- CABEÇALHO -->
@@ -34,11 +41,11 @@
                                         Área:
                                     </div>
                                     <!-- <select class="form-control input-sm" onchange="filterArea('{{ env('URL') }}', this.value );"> -->
-                                    <select id="selectarea" class="form-control input-sm"65>
-                                        <option value="todos">Todos</option>
-                                        <option value="web">Web</option>
-                                        <option value="video">Vídeo</option>
-                                        <option value="diagramacao">Diagramação</option>
+                                    <select id="selectarea" class="form-control input-sm">
+                                        <option value="" >Todos</option>
+                                        <option value="Web">Web</option>
+                                        <option value="Vídeo">Vídeo</option>
+                                        <option value="Diagramação">Diagramação</option>
                                     </select>
                                 </form>
 
@@ -50,16 +57,16 @@
                                         Função:
                                     </div>
                                     <select id="selectrole" class="form-control input-sm">
-                                        <option value="todos">Todos</option>
-                                        <option value="estagiario">Estagiário</option>
-                                        <option value="tecnico">Técnico</option>
-                                        <option value="coordenador">Coordenador</option>
+                                        <option value="">Todos</option>
+                                        <option value="Estagiário">Estagiário</option>
+                                        <option value="Técnico">Técnico</option>
+                                        <option value="Coordenador">Coordenador</option>
                                     </select>
                                 </form>
                             </div>
 
-                            <div style="display:none;" class="input-group pesquisar-projeto acoes">
-                                <input type="text" name="table_search" class="form-control input-sm" style="width: 150px;position:initial;" placeholder="Buscar usuário">
+                            <div class="input-group pesquisar-projeto acoes">
+                                <input id="filter_global" type="text" name="table_search" class="form-control input-sm" style="width: 150px;position:initial;" placeholder="Buscar usuário">
                                 <span class="input-group-btn" style="width: auto;position:absolute;right:0;">
                                     <button class="btn btn-sm btn-default" type="button">
                                         <i class="fa fa-search"></i>
@@ -76,55 +83,15 @@
                     </div>
                 </div>
                 <div class="box-body">
-                    <table id="usertable" class="table table-bordered table-hover">
+                    <table id="usertable" class="table table-bordered table-responsive table-hover">
                         <thead>
                             <tr>
-                                <th>Usuário</th>
-                                <th>Função</th>
-                                <th>Área</th>
-                                <th class="icone"></th>
-                                <th class="icone"></th>
+                                <th>Name</th>
+                                <th>email</th>
+                                <th>Role</th>
+                                <th>Area</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            @foreach($users as $user)
-                            <tr role="row">
-                                <td>{{ $user->name }}</td>
-                                <td>{{ $user->role }}</td>
-                                <td>{{ $user->area }}</td>
-                                <td class="icone">
-                                    <a href="{!! url('/users/'.$user->id.'/edit') !!}">
-                                        <i class="fa fa-edit" title="Editar"></i>
-                                    </a>
-                                </td>
-                                <td class="icone">
-                                    <a data-toggle="collapse" data-parent="#accordion" href="#usuario{{$user->id}}">
-                                        <i id="demo{{$user->id}}" class="fa fa-plus-circle" title="Ver detalhes" onclick="trocaPlusMinus({{$user->id}})"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr id="usuario{{$user->id}}" class="panel-collapse collapse">
-                                <td colspan="5">
-                                    <!-- DADOS DO USUÁRIO -->
-                                    <div class="dados-usuario">
-                                        <div class="col-md-6">
-                                            <label>Nome:</label> <span>{{ $user->name }}</span> <br/>
-                                            <label>E-mail: </label> <span>{{ $user->email }}</span> <br/>
-                                            <label>CPF: </label> <span>{{ $user->cpf }}</span> <br/>
-                                            <label>Telefone: </label> <span>{{ $user->phone }}</span>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label>Endereço: </label> <span>{{ $user->address }}</span> <br/>
-                                            <label>Função: </label> <span>{{ $user->role }}</span> <br/>
-                                            <label>Área de atuação: </label> <span>{{ $user->area }}</span> <br/>
-                                            <label>Entrada: </label> <span>{{ $user->entrance_date->format('d/m/Y') }}</span>
-                                        </div>
-                                    </div>
-                                    <!-- FIM DADOS DO USUÁRIO -->
-                                </td>
-                            </tr>
-                            @endforeach
-                        </tbody>
                     </table>
                 </div>
         </section>
@@ -133,11 +100,7 @@
 <!-- FIM TABELA - LISTA DE USUÁRIOS -->
 
 @endsection
-
 @section('script')
 <script type="text/javascript" src="{{ asset('assets/dist/js/ajax-user.js')}}"></script>
 <meta name="_token" content="{!! csrf_token() !!}" />
-<script type="text/javascript" >
-    $('#usertable').DataTable();
-</script>
 @endsection

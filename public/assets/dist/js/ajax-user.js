@@ -84,21 +84,21 @@ function disableUser(event){
 }
 
 
-function filterArea(url, area_name){
-    if (area_name == 'todos') {
-        $('#areas').attr('action', url + 'users').submit();
-    }else{
-        $('#areas').attr('action', url + 'users/area/' + area_name).submit();
-    }
-}
-
-function filterRole(url, role_name) {
-    if (role_name === 'todos') {
-        $('#roles').attr('action', url + '/users').submit();
-    }else{
-        $('#roles').attr('action', url + '/users/role/' + role_name).submit();
-    }
-}
+// function filterArea(url, area_name){
+//     if (area_name == 'todos') {
+//         $('#areas').attr('action', url + 'users').submit();
+//     }else{
+//         $('#areas').attr('action', url + 'users/area/' + area_name).submit();
+//     }
+// }
+//
+// function filterRole(url, role_name) {
+//     if (role_name === 'todos') {
+//         $('#roles').attr('action', url + '/users').submit();
+//     }else{
+//         $('#roles').attr('action', url + '/users/role/' + role_name).submit();
+//     }
+// }
 
 function alteraDesativa(){
     var mode = $('#desativar').val();
@@ -108,3 +108,32 @@ function alteraDesativa(){
         $('#desativar').removeClass("btn-primary").addClass("btn-warning");
     }
 }
+
+var table = $('#usertable').DataTable({
+    "responsive": true,
+    "ajax"      :   "http://localhost:8000/api/users",
+    "columns"   :   [
+        {"data": "name"},
+        {"data": "email"},
+        {"data": "role"},
+        {"data": "area"},
+    ],
+    "paging"    : false,
+    "language"  : {
+        "url" : "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Portuguese.json"
+    },
+});
+
+$('#filter_global').on( 'keyup click', function () {
+    table.search( this.value ).draw();
+} );
+
+$('#selectarea').on('keyup click', function () {
+    table.search( this.value )
+        .draw();
+} );
+
+$('#selectrole').on('keyup click', function () {
+    table.search( this.value )
+        .draw();
+} );
