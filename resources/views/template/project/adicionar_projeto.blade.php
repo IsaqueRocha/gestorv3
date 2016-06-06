@@ -48,9 +48,9 @@
                             </div>
 
                             <!-- CURSO -->
-                            <div class="form-group col-md-6">
+                            <div class="form-group col-md-4">
                                 <label>Curso</label>
-                                <select class="form-control">
+                                <select class="form-control" required>
                                     <option>(Selecionar)</option>
                                     <option>Artes</option>
                                     <option>Filosofia</option>
@@ -60,16 +60,21 @@
                                 </select>
                             </div>
 
+                            <div class="form-group col-md-2">
+                                <label>Início da Disciplina</label>
+                                <input name="entrance_date" type="text" value="" class="form-control" placeholder="dd/mm/aaaa" data-inputmask="'alias': 'dd/mm/aaaa'" data-mask/>
+                            </div>
+
                             <!-- INÍCIO -->
                             <div class="form-group col-md-3">
-                                <label>Início</label>
-                                <input name="entrance_date" type="text" value="" class="form-control" placeholder="dd/mm/aaaa" data-inputmask="'alias': 'dd/mm/aaaa'" data-mask/>
+                                <label>Início do Projeto</label>
+                                <input name="entrance_date" type="text" value="" class="form-control" placeholder="dd/mm/aaaa" data-inputmask="'alias': 'dd/mm/aaaa'" data-mask required/>
                             </div>
 
                             <!-- PRAZO -->
                             <div class="form-group col-md-3">
-                                <label>Prazo</label>
-                                <input name="entrance_date" type="text" value="" class="form-control" placeholder="dd/mm/aaaa" data-inputmask="'alias': 'dd/mm/aaaa'" data-mask/>
+                                <label>Prazo do Projeto</label>
+                                <input name="entrance_date" type="text" value="" class="form-control" placeholder="dd/mm/aaaa" data-inputmask="'alias': 'dd/mm/aaaa'" data-mask required/>
                             </div>
 
                             <!-- APOIO -->
@@ -124,6 +129,14 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!-- ADICIONAR NO CASO DE EDITAR PROJETO -->
+                        <div class="callout callout-info" style="border-width:1px 1px 1px 5px;border-style:solid;border-color:#4a6c82;color:#333 !important;background-color:white !important;">
+                            <div class="checkbox" style="border:none;padding:0;margin-bottom:0;float:none;">
+                                    <label style="float:none;"><input type="checkbox" name="" value=""> Este projeto ainda não foi concluído. Clique aqui para sinalizá-lo como Parado.</label>
+                            </div>
+                        </div>
+                        
                     </form>
 
                     <div class="row">

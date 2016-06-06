@@ -68,7 +68,7 @@
     </div>
 
     <div class="row">
-        <div class="col-md-12" style="margin-bottom:15px;"><h4>Composição do projeto</h4></div>
+        <div class="col-md-12" style="margin-bottom:15px;"><h4>Tipo do projeto</h4></div>
 
         <div class="col-md-3">
             <div class="box box-ldi">
@@ -333,7 +333,6 @@
                                                 <label>Formato</label>
                                                 <select class="form-control" required>
                                                     <option>---</option>
-                                                    <option>Em avaliação</option>
                                                     <option>Carta</option>
                                                     <option>Quadrado</option>
                                                     <option>Cartinha</option>
@@ -347,6 +346,7 @@
                                             <div class="form-group">
                                                 <label>Papel</label>
                                                 <select class="form-control" required>
+                                                    <option>---</option>
                                                     <option>Não definido</option>
                                                     <option>Offset</option>
                                                     <option>Couchê fosco</option>
@@ -357,26 +357,17 @@
 
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label>Número de páginas</label>
-                                                <input name="name" type="text" value="" class="form-control" placeholder="Número de páginas" required />
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" required> Reunião com autor</label>
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <div class="checkbox">
-                                                <label><input type="checkbox" required> Reunião com autor</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label><input type="checkbox" required> Aprovação do Layout</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label><input type="checkbox" required> Revisão pelo Coordenador LDI</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label><input type="checkbox" required> Finalização da Capa</label>
+                                            <div class="form-group">
+                                                <label>Briefing</label>
+                                                <textarea class="form-control" rows="3" required></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -387,7 +378,7 @@
                                                 <label>Texto de orelha</label>
                                                 <select class="form-control" required>
                                                     <option>---</option>
-                                                    <option>Em desenvolvimento</option>
+                                                    <option>Aguardando</option>
                                                     <option>Inserido</option>
                                                 </select>
                                             </div>
@@ -397,21 +388,7 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label>Ficha catalográfica</label>
-                                                <select class="form-control" required>
-                                                    <option></option>
-                                                    <option></option>
-                                                    <option></option>
-                                                    <option></option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label>Produção de capítulos</label>
+                                                <label>Diagramação de capítulos</label>
                                                 <div class="row">
                                                     <div class="col-md-6 col-sm-6">
                                                         <input name="name" type="text" value="" class="form-control" placeholder="Realizada" required />
@@ -445,34 +422,33 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label>Aprovação de Créditos</label>
+                                                <label>Número de páginas</label>
+                                                <input name="name" type="text" value="" class="form-control" placeholder="Número de páginas" required />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" required> Finalização da Capa</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" required> Aprovação do Layout</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Boneca</label>
                                                 <select class="form-control" required>
                                                     <option>---</option>
-                                                    <option>Enviado para o coordenador</option>
-                                                    <option>Devolvido com alterações</option>
-                                                    <option>Aprovado</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="checkbox" required>
-                                                <label><input type="checkbox"> Visualização do arquivo</label>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label>Prova de Impressão</label>
-                                                <select class="form-control" required>
-                                                    <option></option>
-                                                    <option></option>
-                                                    <option></option>
-                                                    <option></option>
+                                                    <option>Impressa</option>
+                                                    <option>Com o autor</option>
+                                                    <option>Devolvida com alterações</option>
+                                                    <option>Aprovada</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -481,12 +457,12 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label>Burocracia</label>
+                                                <label>Ficha catalográfica</label>
                                                 <select class="form-control" required>
-                                                    <option></option>
-                                                    <option></option>
-                                                    <option></option>
-                                                    <option></option>
+                                                    <option>---</option>
+                                                    <option>Não solicitada</option>
+                                                    <option>Aguardando</option>
+                                                    <option>Inserida</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -494,13 +470,20 @@
 
                                     <div class="row">
                                         <div class="col-md-12">
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" required> Aprovação de folha de créditos</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
                                             <div class="form-group">
-                                                <label>Fase da Boneca</label>
+                                                <label>Solicitação do ISBN</label>
                                                 <select class="form-control" required>
-                                                    <option></option>
-                                                    <option></option>
-                                                    <option></option>
-                                                    <option></option>
+                                                    <option>---</option>
+                                                    <option>Solicitado</option>
+                                                    <option>Inserido</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -517,14 +500,11 @@
 
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label>Situação do ISBN</label>
-                                                <select class="form-control" required>
-                                                    <option></option>
-                                                    <option></option>
-                                                    <option></option>
-                                                    <option></option>
-                                                </select>
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" required> PDF de visualização</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" required> Revisão pelo Coordenador LDI</label>
                                             </div>
                                         </div>
                                     </div>
@@ -532,8 +512,23 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label>Memo</label>
-                                                <input name="name" type="text" value="" class="form-control" placeholder="Memo" required />
+                                                <label>Memorando</label>
+                                                <input name="name" type="text" value="" class="form-control" placeholder="Memorando" required />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Prova de impressão</label>
+                                                <select class="form-control" required>
+                                                    <option>---</option>
+                                                    <option>Recebida</option>
+                                                    <option>Pedido de nova prova</option>
+                                                    <option>Aprovada com correções</option>
+                                                    <option>Aprovada</option>
+                                                </select>
                                             </div>
                                         </div>
                                     </div>
@@ -546,7 +541,6 @@
                                             </div>
                                         </div>
                                     </div>
-
                                 </form>
                             </div>
                         </div>
@@ -637,7 +631,7 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label>Aprovação de Créditos</label>
+                                                <label>Aprovação de créditos</label>
                                                 <select class="form-control" required>
                                                     <option>---</option>
                                                     <option>Enviado para o coordenador</option>
@@ -651,10 +645,24 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
+                                                <label>Revisão do autor</label>
+                                                <select class="form-control" required>
+                                                    <option>---</option>
+                                                    <option>Enviado para o autor</option>
+                                                    <option>Devolvido com alterações</option>
+                                                    <option>Aprovado</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
                                                 <label>ISBN</label>
                                                 <select class="form-control" required>
                                                     <option>---</option>
-                                                    <option>Solicitado à Biblioteca Nacional</option>
+                                                    <option>Solicitado a Biblioteca Nacional</option>
                                                     <option>Inserido</option>
                                                 </select>
                                             </div>
