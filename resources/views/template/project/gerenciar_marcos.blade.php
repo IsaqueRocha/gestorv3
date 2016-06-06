@@ -36,7 +36,7 @@
                                 <li><b>Apoio:</b> Antonio, Mariana, Rayan</li>
                             </div>
                             <div class="col-md-4">
-                                <li><b>Composição do Projeto:</b> Vídeo, Impresso</li>
+                                <li><b>Tipo do Projeto:</b> Vídeo, Impresso</li>
                                 <li><b>Complementares:</b> Ilustração</li>
                             </div>
                         </ul>
