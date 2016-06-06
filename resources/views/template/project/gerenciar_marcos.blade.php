@@ -128,10 +128,7 @@
                                                     <div class="col-md-6 col-sm-6">
                                                         <input name="name" type="text" value="" class="form-control" placeholder="Realizada" required />
                                                     </div>
-                                                    <div class="col-md-1 col-sm-1" style="line-height:35px;">de</div>
-                                                    <div class="col-md-5 col-sm-5">
-                                                        <input name="name" type="text" value="" class="form-control" placeholder="Solicitada" required />
-                                                    </div>
+                                                    de 30
                                                 </div>
                                             </div>
                                         </div>
@@ -145,10 +142,7 @@
                                                     <div class="col-md-6 col-sm-6">
                                                         <input name="name" type="text" value="" class="form-control" placeholder="Realizada" required />
                                                     </div>
-                                                    <div class="col-md-1 col-sm-1" style="line-height:35px;">de</div>
-                                                    <div class="col-md-5 col-sm-5">
-                                                        <input name="name" type="text" value="" class="form-control" placeholder="Solicitada" required />
-                                                    </div>
+                                                    de 20
                                                 </div>
                                             </div>
                                         </div>
@@ -162,10 +156,7 @@
                                                     <div class="col-md-6 col-sm-6">
                                                         <input name="name" type="text" value="" class="form-control" placeholder="Realizada" required />
                                                     </div>
-                                                    <div class="col-md-1 col-sm-1" style="line-height:35px;">de</div>
-                                                    <div class="col-md-5 col-sm-5">
-                                                        <input name="name" type="text" value="" class="form-control" placeholder="Solicitada" required />
-                                                    </div>
+                                                    de 15
                                                 </div>
                                             </div>
                                         </div>
@@ -179,10 +170,7 @@
                                                     <div class="col-md-6 col-sm-6">
                                                         <input name="name" type="text" value="" class="form-control" placeholder="Realizada" required />
                                                     </div>
-                                                    <div class="col-md-1 col-sm-1" style="line-height:35px;">de</div>
-                                                    <div class="col-md-5 col-sm-5">
-                                                        <input name="name" type="text" value="" class="form-control" placeholder="Solicitada" required />
-                                                    </div>
+                                                    de 20
                                                 </div>
                                             </div>
                                         </div>
@@ -307,6 +295,14 @@
                                         </div>
                                     </div>
                                 </form>
+                                <hr>
+                                <div style="text-align:right;">
+                                    <button type="button" class="btn btn-default pull-left" data-toggle="modal" data-target="#editVideo" title="Editar atividade">
+                                        Editar atividade
+                                    </button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-success">Salvar</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -393,10 +389,7 @@
                                                     <div class="col-md-6 col-sm-6">
                                                         <input name="name" type="text" value="" class="form-control" placeholder="Realizada" required />
                                                     </div>
-                                                    <div class="col-md-1 col-sm-1" style="line-height:35px;">de</div>
-                                                    <div class="col-md-5 col-sm-5">
-                                                        <input name="name" type="text" value="" class="form-control" placeholder="Solicitada" required />
-                                                    </div>
+                                                    de 20
                                                 </div>
                                             </div>
                                         </div>
@@ -410,10 +403,7 @@
                                                     <div class="col-md-6 col-sm-6">
                                                         <input name="name" type="text" value="" class="form-control" placeholder="Realizada" required />
                                                     </div>
-                                                    <div class="col-md-1 col-sm-1" style="line-height:35px;">de</div>
-                                                    <div class="col-md-5 col-sm-5">
-                                                        <input name="name" type="text" value="" class="form-control" placeholder="Solicitada" required />
-                                                    </div>
+                                                    de 15
                                                 </div>
                                             </div>
                                         </div>
@@ -542,6 +532,14 @@
                                         </div>
                                     </div>
                                 </form>
+                                <hr>
+                                <div style="text-align:right;">
+                                    <button type="button" class="btn btn-default pull-left" data-toggle="modal" data-target="#editLivroImpresso" title="Editar atividade">
+                                        Editar atividade
+                                    </button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-success">Salvar</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -581,10 +579,7 @@
                                                     <div class="col-md-6 col-sm-6">
                                                         <input name="name" type="text" value="" class="form-control" placeholder="Realizada" required />
                                                     </div>
-                                                    <div class="col-md-1 col-sm-1" style="line-height:35px;">de</div>
-                                                    <div class="col-md-5 col-sm-5">
-                                                        <input name="name" type="text" value="" class="form-control" placeholder="Solicitada" required />
-                                                    </div>
+                                                    de 30
                                                 </div>
                                             </div>
                                         </div>
@@ -619,10 +614,7 @@
                                                     <div class="col-md-6 col-sm-6">
                                                         <input name="name" type="text" value="" class="form-control" placeholder="Realizada" required />
                                                     </div>
-                                                    <div class="col-md-1 col-sm-1" style="line-height:35px;">de</div>
-                                                    <div class="col-md-5 col-sm-5">
-                                                        <input name="name" type="text" value="" class="form-control" placeholder="Solicitada" required />
-                                                    </div>
+                                                    de 15
                                                 </div>
                                             </div>
                                         </div>
@@ -684,8 +676,15 @@
                                             </div>
                                         </div>
                                     </div>
-
                                 </form>
+                                <hr>
+                                <div style="text-align:right;">
+                                    <button type="button" class="btn btn-default pull-left" data-toggle="modal" data-target="#editLivroDigital" title="Editar atividade">
+                                        Editar atividade
+                                    </button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-success">Salvar</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -773,10 +772,7 @@
                                                     <div class="col-md-6">
                                                         <input name="name" type="text" value="" class="form-control" placeholder="Realizados" required />
                                                     </div>
-                                                    <div class="col-md-1" style="line-height:35px;">de</div>
-                                                    <div class="col-md-5">
-                                                        <input name="name" type="text" value="" class="form-control" placeholder="Necessários" required />
-                                                    </div>
+                                                    de 20
                                                 </div>
                                             </div>
                                         </div>
@@ -906,6 +902,14 @@
                                         </div>
                                     </div>
                                 </form>
+                                <hr>
+                                <div style="text-align:right;">
+                                    <button type="button" class="btn btn-default pull-left" data-toggle="modal" data-target="#editMoodle" title="Editar atividade">
+                                        Editar atividade
+                                    </button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-success">Salvar</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -933,7 +937,7 @@
                                 <div style="float:right;color:green;">70% <i class="fa fa-square" ></i></div>
                             </div>
                         </a>
-                        <div id="ilustracao" class="panel-collapse collapse in">
+                        <div id="ilustracao" class="panel-collapse collapse">
                             <div class="box-body panel-body">
                                 <form>
                                     <div class="row">
@@ -971,10 +975,7 @@
                                                     <div class="col-md-6">
                                                         <input name="name" type="text" value="" class="form-control" placeholder="Realizada" required />
                                                     </div>
-                                                    <div class="col-md-1" style="line-height:35px;">de</div>
-                                                    <div class="col-md-5">
-                                                        <input name="name" type="text" value="" class="form-control" placeholder="Solicitada" required />
-                                                    </div>
+                                                    de 10
                                                 </div>
                                             </div>
                                         </div>
@@ -1006,6 +1007,14 @@
                                         </div>
                                     </div>
                                 </form>
+                                <hr>
+                                <div style="text-align:right;">
+                                    <button type="button" class="btn btn-default pull-left" data-toggle="modal" data-target="#editIlustracao" title="Editar atividade">
+                                        Editar atividade
+                                    </button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-success">Salvar</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1023,7 +1032,7 @@
                                 <div style="float:right;color:gray;">0% <i class="fa fa-square" ></i></div>
                             </div>
                         </a>
-                        <div id="tabelas" class="panel-collapse collapse in">
+                        <div id="tabelas" class="panel-collapse collapse">
                             <div class="box-body panel-body">
                                 <form>
                                     <div class="row">
@@ -1056,6 +1065,14 @@
                                         </div>
                                     </div>
                                 </form>
+                                <hr>
+                                <div style="text-align:right;">
+                                    <button type="button" class="btn btn-default pull-left" data-toggle="modal" data-target="#editTabela" title="Editar atividade">
+                                        Editar atividade
+                                    </button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-success">Salvar</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1073,7 +1090,7 @@
                                 <div style="float:right;color:gray;">0% <i class="fa fa-square" ></i></div>
                             </div>
                         </a>
-                        <div id="fotografia" class="panel-collapse collapse in">
+                        <div id="fotografia" class="panel-collapse collapse">
                             <div class="box-body panel-body">
                                 <form>
                                     <div class="row">
@@ -1106,6 +1123,14 @@
                                         </div>
                                     </div>
                                 </form>
+                                <hr>
+                                <div style="text-align:right;">
+                                    <button type="button" class="btn btn-default pull-left" data-toggle="modal" data-target="#editFotografia" title="Editar atividade">
+                                        Editar atividade
+                                    </button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-success">Salvar</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1123,7 +1148,7 @@
                                 <div style="float:right;color:#4a6c82;">5% <i class="fa fa-square" ></i></div>
                             </div>
                         </a>
-                        <div id="formulas" class="panel-collapse collapse in">
+                        <div id="formulas" class="panel-collapse collapse">
                             <div class="box-body panel-body">
                                 <form>
                                     <div class="row">
@@ -1156,6 +1181,14 @@
                                         </div>
                                     </div>
                                 </form>
+                                <hr>
+                                <div style="text-align:right;">
+                                    <button type="button" class="btn btn-default pull-left" data-toggle="modal" data-target="#editFormula" title="Editar atividade">
+                                        Editar atividade
+                                    </button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-success">Salvar</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1177,31 +1210,30 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="checkbox">
-                                <label><input type="checkbox"> Reunião com professor</label>
+                                <label><input type="checkbox" checked> Reunião com professor</label>
                             </div>
                             <div class="checkbox">
-                                <label><input type="checkbox" disabled title="Não é possível gerenciar este marco"> Escopo</label>
+                                <label><input type="checkbox" checked> Escopo</label>
                             </div>
                             <div class="checkbox">
-                                <label><input type="checkbox"> Requisitos funcionais</label>
+                                <label><input type="checkbox" checked> Requisitos funcionais</label>
                             </div>
                             <div class="checkbox">
-                                <label><input type="checkbox"> Requisitos de conteúdo</label>
+                                <label><input type="checkbox" checked> Requisitos de conteúdo</label>
                             </div>
                             <div class="checkbox">
-                                <label><input type="checkbox"> Aprovação do briefing</label>
+                                <label><input type="checkbox" checked> Aprovação do briefing</label>
                             </div>
                             <div class="checkbox">
-                                <label><input type="checkbox"> Arquitetura da informação</label>
+                                <label><input type="checkbox" checked> Arquitetura da informação</label>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <!--<label>Layout </label>-->
                             <div class="input-group" style="margin-top:-5px;margin-bottom:5px;">
                                 <span class="input-group-addon">
-                                    <input type="checkbox"> Layout
+                                    <input type="checkbox" checked> Layout
                                 </span>
                                 <input type="text" class="form-control" placeholder="Quantidade solicitada">
                             </div>
@@ -1210,16 +1242,508 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="checkbox">
-                                <label><input type="checkbox"> Implementação </label>
+                                <label><input type="checkbox" checked> Implementação </label>
                             </div>
                             <div class="checkbox">
-                                <label><input type="checkbox"> Teste</label>
+                                <label><input type="checkbox" checked> Teste</label>
                             </div>
                             <div class="checkbox">
-                                <label><input type="checkbox"> Aprovação</label>
+                                <label><input type="checkbox" checked> Aprovação</label>
                             </div>
                             <div class="checkbox">
-                                <label><input type="checkbox"> Upload</label>
+                                <label><input type="checkbox" checked> Upload</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success">Salvar</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div id="editVideo" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Editar Vídeo</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Roteiro</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Decupagem</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Storyboard</label>
+                            </div>
+                            <div class="checkbox" style="margin-bottom:5px;">
+                                <label><input type="checkbox" checked> Captura de áudio</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom:5px;">
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <input type="checkbox" checked> Gravação
+                                </span>
+                                <input type="text" class="form-control" placeholder="Quantidade solicitada">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top:5px;margin-bottom:5px;">
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <input type="checkbox" checked> Ilustração concluída
+                                </span>
+                                <input type="text" class="form-control" placeholder="Quantidade solicitada">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top:5px;margin-bottom:5px;">
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <input type="checkbox" checked> Animação
+                                </span>
+                                <input type="text" class="form-control" placeholder="Quantidade solicitada">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top:5px;margin-bottom:5px;">
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <input type="checkbox" checked> Edição de vídeo
+                                </span>
+                                <input type="text" class="form-control" placeholder="Quantidade solicitada">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Edição sonora</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Animatic</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Legenda</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Créditos</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Render</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Revisão</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Upload</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> DVD</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Data de disponibilidade</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Início da gravação</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Revisado pelo autor</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Conclusão</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success">Salvar</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div id="editLivroImpresso" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Editar Livro Impresso</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Formato</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Papel</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Reunião com autor</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Briefing</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Texto de orelha</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="input-group" style="margin-top:-5px;">
+                                <span class="input-group-addon">
+                                    <input type="checkbox" checked> Diagramação de capítulos
+                                </span>
+                                <input type="text" class="form-control" placeholder="Quantidade solicitada">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="input-group" style="margin-top:5px;margin-bottom:5px;">
+                                <span class="input-group-addon">
+                                    <input type="checkbox" checked> Aberturas de capítulos
+                                </span>
+                                <input type="text" class="form-control" placeholder="Quantidade solicitada">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Número de páginas </label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Finalização da capa</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Aprovação do layout</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Boneca</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Ficha catalográfica</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Aprovaçao de folha de créditos</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Solicitação de ISBN</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> ISBN</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> PDF de visualização</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Revisão pelo Coordenador LDI</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Memorando</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Prova de impressão</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Gráfica</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success">Salvar</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div id="editLivroDigital" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Editar Livro Digital</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Reunião com autor</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Capa finalizada</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="input-group" style="margin-top:-5px;margin-bottom:5px;">
+                                <span class="input-group-addon">
+                                    <input type="checkbox" checked> Número de capítulos
+                                </span>
+                                <input type="text" class="form-control" placeholder="Quantidade solicitada">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Currículo do autor</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Ficha catalográfica</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="input-group" style="margin-top:-5px;margin-bottom:5px;">
+                                <span class="input-group-addon">
+                                    <input type="checkbox" checked> Aberturas de capítulos
+                                </span>
+                                <input type="text" class="form-control" placeholder="Quantidade solicitada">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Aprovação de créditos </label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Revisão do autor</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> ISBN</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Revisado pelo supervisor</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Upload</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success">Salvar</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div id="editMoodle" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Editar Moodle</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Reunião com professor</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Adaptação do tema/CSS</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Cabeçalho</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Apresentação</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Envio para o Suporte</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Checagem online</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Organização da pasta</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success">Salvar</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div id="editIlustracao" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Editar Ilustração</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Tipo</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="input-group" style="margin-top:-5px;margin-bottom:5px;">
+                                <span class="input-group-addon">
+                                    <input type="checkbox" checked> Quantidade
+                                </span>
+                                <input type="text" class="form-control" placeholder="Quantidade solicitada">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Complexidade</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Dimensão</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success">Salvar</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div id="editTabela" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Editar Tabela</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="input-group" style="margin-top:-5px;margin-bottom:5px;">
+                                <span class="input-group-addon">
+                                    <input type="checkbox" checked> Quantidade
+                                </span>
+                                <input type="text" class="form-control" placeholder="Quantidade solicitada">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Complexidade</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success">Salvar</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div id="editFotografia" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Editar Fotografia</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="input-group" style="margin-top:-5px;margin-bottom:5px;">
+                                <span class="input-group-addon">
+                                    <input type="checkbox" checked> Quantidade
+                                </span>
+                                <input type="text" class="form-control" placeholder="Quantidade solicitada">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Complexidade</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success">Salvar</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div id="editFormula" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Editar Fórmula</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="input-group" style="margin-top:-5px;margin-bottom:5px;">
+                                <span class="input-group-addon">
+                                    <input type="checkbox" checked> Quantidade
+                                </span>
+                                <input type="text" class="form-control" placeholder="Quantidade solicitada">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Complexidade</label>
                             </div>
                         </div>
                     </div>
