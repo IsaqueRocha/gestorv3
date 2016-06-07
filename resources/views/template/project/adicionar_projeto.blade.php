@@ -109,7 +109,7 @@
 
                             <!-- COMPOSIÇÃO DO PROJETO -->
                             <div class="form-group col-md-6">
-                                <label>Composição do Projeto</label>
+                                <label>Tipo do Projeto</label>
                                 <div class="checkbox">
                                     <label><input type="checkbox" name="composicao" value="moodle"> Moodle</label>
                                     <label><input type="checkbox" name="composicao" value="web"> Web</label>
