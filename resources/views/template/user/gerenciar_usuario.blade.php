@@ -4,6 +4,12 @@
     #usertable_filter{
         display: none;
     }
+
+    td.details-control {
+        cursor: pointer;
+    }
+    tr.shown td.details-control {
+    }
 </style>
 @endsection
 @section('content')
@@ -46,6 +52,7 @@
                                         <option value="Web">Web</option>
                                         <option value="Vídeo">Vídeo</option>
                                         <option value="Diagramação">Diagramação</option>
+                                        <option value="Ilustração">Ilustração</option>
                                     </select>
                                 </form>
 
@@ -86,10 +93,12 @@
                     <table id="usertable" class="table table-bordered table-responsive table-hover">
                         <thead>
                             <tr>
-                                <th>Name</th>
-                                <th>email</th>
-                                <th>Role</th>
-                                <th>Area</th>
+                                <th>Nome</th>
+                                <th>E-mail</th>
+                                <th>Função</th>
+                                <th>Área</th>
+                                <th></th>
+                                <th></th>
                             </tr>
                         </thead>
                     </table>

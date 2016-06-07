@@ -11,6 +11,7 @@ class RoleTableSeeder extends Seeder
      */
     public function run()
     {
+        //Funções de usuário
         $roleAdmin          = Defender::createRole('Admin');
         $roleCoordenador    = Defender::createRole('Coordenador');
         $roleTecnico        = Defender::createRole('Técnico');
@@ -24,6 +25,15 @@ class RoleTableSeeder extends Seeder
 
         $permission = Defender::createPermission('user.destroy', 'Apagar Usuário');
         $roleAdmin->attachPermission($permission);
+
+        //Áreas de Usuáregistros
+        $roleMaster         =   Defender::createRole('Master');
+        $roleGerencia       =   Defender::createRole('Gerência');
+        $roleVideo          =   Defender::createRole('Vídeo');
+        $roleDiagramacao    =   Defender::createRole('Diagramação');
+        $roleIlustracao     =   Defender::createRole('Ilustração');
+        $roleWeb            =   Defender::createRole('Web');
+
 
     }
 }

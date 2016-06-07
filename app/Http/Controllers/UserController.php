@@ -9,6 +9,7 @@ use Intervention\Image;
 
 use Illuminate\Http\Request;
 use Laracasts\Flash\Flash;
+use Defender;
 
 
 class UserController extends Controller {
@@ -53,11 +54,13 @@ class UserController extends Controller {
 	 */
 	public function store(UserRequest $request)
 	{
+
         /**
          * Criação de um novo usuário para o sistema.
          **/
 		$input = [];
 		$input['name'] 			= $request->input('name');
+		$input['surname'] 		= $request->input('surname');
 		$input['email'] 		= $request->input('email');
 		$input['password'] 		= bcrypt('password'); //mudar quando for para homologação.
         $input['cpf']			= $request->input('cpf');
@@ -65,7 +68,8 @@ class UserController extends Controller {
         $input['address'] 		= $request->input('address');
         $input['role'] 			= $request->input('role');
         $input['area'] 			= $request->input('area');
-        $input['ent$user->save();rance_date'] = $request->input('entrance_date');
+        $input['entrance_date'] = $request->input('entrance_date');
+
 
 
         /**
@@ -141,12 +145,12 @@ class UserController extends Controller {
         $user = User::FindOrFail($id);
 
         $user->name 			= $request->input('name');
+        $user->surname 			= $request->input('surname');
         $user->email 			= $request->input('email');
         $user->cpf 				= $request->input('cpf');
         $user->phone 			= $request->input('phone');
         $user->address 			= $request->input('address');
         $user->role 			= $request->input('role');
-        $user->area 		 	= $request->input('area');
         $user->entrance_date	= $request->input('entrance_date');
 		$user->photo			= $request->input('photo');
 
@@ -162,6 +166,15 @@ class UserController extends Controller {
             'qui_pm' => $request['qui_pm'],
             'sex_pm' => $request['sex_pm'],
         ]);
+
+
+		$user->syncRoles($request->input('area'));
+
+		// dd($request->input('role'));
+
+		$role = Defender::findRoleById($request->input('role'));
+
+		$user->attachRole($role);
 
         $user->save();
 
@@ -201,12 +214,4 @@ class UserController extends Controller {
 
 		return response()->json($user);
     }
-
-	public function filter($param, $value)
-	{
-		$users = User::where('area', $param)->get();
-
-		return response()->json($users);
-	}
-
 }

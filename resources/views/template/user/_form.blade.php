@@ -12,11 +12,11 @@
         <label>Nome</label>
         <input name="name" type="text" value="{!! ($user->name)?($user->name):(old('name')) !!}" class="form-control" placeholder="Nome" required />
     </div>
-    
+
     <!-- SOBRENOME -->
     <div class="form-group col-md-3">
         <label>Sobrenome</label>
-        <input name="name" type="text" value="" class="form-control" placeholder="Sobrenome" required />
+        <input name="surname" type="text" value="{!! ($user->surname)?($user->surname):(old('surname')) !!}" class="form-control" placeholder="Sobrenome" required />
     </div>
 
     <!--EMAIL-->
@@ -50,7 +50,7 @@
             <!--ENTRADA-->
             <div class="form-group col-md-3">
                 <label>Saída</label>
-                <input name="entrance_date" type="text" value="" class="form-control" placeholder="dd/mm/aaaa" data-inputmask="'alias': 'dd/mm/aaaa'" data-mask/>
+                <input name="exit_date" type="text" value="" class="form-control" placeholder="dd/mm/aaaa" data-inputmask="'alias': 'dd/mm/aaaa'" data-mask/>
             </div>
         </div>
     </div>
@@ -68,11 +68,24 @@
         <label>Função</label>
         <select name="role" class="form-control">
             <option>(Selecionar)</option>
-            @foreach(config('enum.roles') as $role)
-            <option value="{{$role}}" {{($user->role == $role)?('selected'):('')}}>
-                {{$role}}
+            @is('Admin')
+            <option value="{{ Defender::findRole('Admin')->id }}"
+                {{ ($user->hasRole('Admin'))?('selected'):('') }}>
+                Admin
             </option>
-            @endforeach
+            @endis
+            <option value="{{ Defender::findRole('Coordenador')->id }}"
+                {{ ($user->hasRole('Coordenador'))?('selected'):('') }} >
+                Coordenador
+            </option>
+            <option value="{{ Defender::findRole('Estagiário')->id }}"
+                {{ ($user->hasRole('Estagiário'))?('selected'):('') }} >
+                Estagiário
+            </option>
+            <option value="{{ Defender::findRole('Técnico')->id }}"
+                {{ ($user->hasRole('Técnico'))?('selected'):('') }} >
+                Técnico
+            </option>
         </select>
     </div>
 
@@ -83,16 +96,32 @@
                 <label>Área de atuação</label>
                 <div class="checkbox">
                     <div class="col-md-4">
-                        <label><input type="checkbox" name="areaAtuacao" value="master" checked> Master</label>
-                        <label><input type="checkbox" name="areaAtuacao" value="diagramacao"> Diagramação</label>
+                        @is('Admin')
+                        <label><input type="checkbox" name="area[]"
+                            value="{{ Defender::findRole('Master')->id }}"
+                            {{ ($user->hasRole('Master'))?('checked'):('') }} >Master
+                        </label>
+                        @endis
+                        <label><input type="checkbox" name="area[]"
+                            value="{{ Defender::findRole('Diagramação')->id }}"
+                            {{ ($user->hasRole('Diagramação'))?('checked'):('') }} >Diagramação
+                        </label>
                     </div>
                     <div class="col-md-4">
-                        <label><input type="checkbox" name="areaAtuacao" value="gerencia"> Gerência</label>
-                        <label><input type="checkbox" name="areaAtuacao" value="ilustracao"> Ilustração</label>
+                        <label><input type="checkbox" name="area[]"
+                            value="{{ Defender::findRole('Gerência')->id }}"
+                            {{ ($user->hasRole('Gerência'))?('checked'):('') }}> Gerência</label>
+                        <label><input type="checkbox" name="area[]"
+                            value="{{ Defender::findRole('Ilustração')->id }}"
+                            {{ ($user->hasRole('Ilustração'))?('checked'):('') }}> Ilustração</label>
                     </div>
                     <div class="col-md-4">
-                        <label><input type="checkbox" name="areaAtuacao" value="video"> Vídeo</label>
-                        <label><input type="checkbox" name="areaAtuacao" value="web"> Web</label>
+                        <label><input type="checkbox" name="area[]"
+                            value="{{ Defender::findRole('Vídeo')->id }}"
+                            {{ ($user->hasRole('Vídeo'))?('checked'):('') }} > Vídeo</label>
+                        <label><input type="checkbox" name="area[]"
+                            value="{{ Defender::findRole('Web')->id }}"
+                            {{ ($user->hasRole('Web'))?('checked'):('') }} > Web</label>
                     </div>
                 </div>
             </div>

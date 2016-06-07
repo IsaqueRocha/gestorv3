@@ -83,23 +83,6 @@ function disableUser(event){
     });
 }
 
-
-// function filterArea(url, area_name){
-//     if (area_name == 'todos') {
-//         $('#areas').attr('action', url + 'users').submit();
-//     }else{
-//         $('#areas').attr('action', url + 'users/area/' + area_name).submit();
-//     }
-// }
-//
-// function filterRole(url, role_name) {
-//     if (role_name === 'todos') {
-//         $('#roles').attr('action', url + '/users').submit();
-//     }else{
-//         $('#roles').attr('action', url + '/users/role/' + role_name).submit();
-//     }
-// }
-
 function alteraDesativa(){
     var mode = $('#desativar').val();
     if (mode == '0'){
@@ -111,29 +94,108 @@ function alteraDesativa(){
 
 var table = $('#usertable').DataTable({
     "responsive": true,
-    "ajax"      :   "http://localhost:8000/api/users",
+    "ajax"      :   "/api/users",
     "columns"   :   [
-        {"data": "name"},
+        {
+            "data": null,
+            "render": function(data){
+                return "" + data.name + " " + data.surname + "";
+            }
+        },
         {"data": "email"},
         {"data": "role"},
         {"data": "area"},
+        {
+            "data": null,
+            "render": function(data){
+                return '<a href="users/' + data.id + '/edit">' +
+                            '<i class="fa fa-edit" title="Editar"></i>' +
+                        '</a>';
+            }
+        },
+        {
+            "className":      'details-control',
+            "orderable":      false,
+            "data":           null,
+            "defaultContent":   '<a href="#" >' +
+                                    '<i class="fa fa-plus" title="Mais"></i>' +
+                                '</a>',
+        }
     ],
     "paging"    : false,
     "language"  : {
-        "url" : "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Portuguese.json"
+        "sProcessing": "Processando...",
+        "sLengthMenu": "Mostrar _MENU_ registros",
+        "sZeroRecords": "Não foram encontrados resultados",
+        "sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ registros",
+        "sInfoEmpty": "Mostrando de 0 até 0 de 0 registros",
+        "sInfoFiltered": "(filtrado de _MAX_ registros no total)",
+        "sInfoPostFix": "",
+        "sSearch": "Procurar:",
+        "sUrl": "",
+        "oPaginate": {
+            "sFirst": "Primeiro",
+            "sPrevious": "Anterior",
+            "sNext": "Seguinte",
+            "sLast": "Último"
+        }
     },
+    "order": [[0, 'asc']],
 });
+
+function format ( d ) {
+    var str = d.entrance_date;
+    str = str.split(" ");
+    var date = str[0].split("-");
+    date = date[2]+'/'+date[1]+'/'+date[0];
+    return  '<tr>' +
+                '<td colspan="6">' +
+                    '<div class"">' +
+                        '<div class="col-md-4">' +
+                            '<label>Nome:</label> <span>'+ d.name + ' ' + d.surname + '</span><br/>'+
+                            '<label>E-mail: </label> <span>'+ d.email +'</span><br/>' +
+                            '<label>CPF: </label> <span>' + d.cpf +'</span> <br/>' +
+                            '<label>Telefone: </label> <span>' + d.phone +'</span> <br/>' +
+                        '</div>'+
+                        '<div class="col-md-8">' +
+                            '<label>Endereço: </label> <span>' + d.address +'</span> <br/>' +
+                            '<label>Função: </label> <span>' + d.role +'</span> <br/>' +
+                            '<label>Área de atuação: </label> <span>' + d.area + '</span> <br/>' +
+                            '<label>Entrada: </label> <span>'+ date +'</span> <br/>' +
+                        '</div>' +
+                    '</div>'+
+                '</td>' +
+            '</tr>';
+}
+
+$('#usertable tbody').on('click', 'td.details-control', function () {
+    var tr = $(this).closest('tr');
+    var row = table.row( tr );
+
+    if ( row.child.isShown() ) {
+        // This row is already open - close it
+        row.child.hide();
+        tr.removeClass('shown');
+    }
+    else {
+        // Open this row
+        row.child( format(row.data()) ).show();
+        tr.addClass('shown');
+    }
+} );
 
 $('#filter_global').on( 'keyup click', function () {
     table.search( this.value ).draw();
 } );
 
-$('#selectarea').on('keyup click', function () {
-    table.search( this.value )
+$('#selectarea').on('change', function () {
+    table.column( 3 )
+        .search( this.value )
         .draw();
 } );
 
-$('#selectrole').on('keyup click', function () {
-    table.search( this.value )
+$('#selectrole').on('change', function () {
+    table.column( 2 )
+        .search( this.value )
         .draw();
 } );
