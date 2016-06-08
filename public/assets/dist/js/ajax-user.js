@@ -107,6 +107,8 @@ var table = $('#usertable').DataTable({
         {"data": "area"},
         {
             "data": null,
+            "className": "icone",
+            "orderable":  false,
             "render": function(data){
                 return '<a href="users/' + data.id + '/edit">' +
                             '<i class="fa fa-edit" title="Editar"></i>' +
@@ -114,7 +116,7 @@ var table = $('#usertable').DataTable({
             }
         },
         {
-            "className":      'details-control',
+            "className":      'details-control icone',
             "orderable":      false,
             "data":           null,
             "defaultContent":   '<a href="#" >' +
