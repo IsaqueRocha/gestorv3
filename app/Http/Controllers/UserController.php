@@ -33,7 +33,7 @@ class UserController extends Controller {
 	{
 		$users = User::all();
 
-		return view('template.user.gerenciar_usuario', compact('users'));
+		return view('template.user.index', compact('users'));
 	}
 
 	/**
@@ -44,7 +44,7 @@ class UserController extends Controller {
 	public function create()
 	{
         $user = new User();
-		return view('template.user.adicionar_usuario', compact('user'));
+		return view('template.user.add', compact('user'));
 	}
 
 	/**
@@ -131,7 +131,7 @@ class UserController extends Controller {
 	public function edit($id)
 	{
         $user = User::FindOrFail($id);
-        return view('template.user.editar_usuario', compact('user'));
+        return view('template.user.edit', compact('user'));
     }
 
 	/**
