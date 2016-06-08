@@ -1,3 +1,5 @@
+// JAVASCRIPT IMPLEMENTADO POR LEANDRO
+
 //  FORMATAÇÃO DOS CAMPOS DE FORMULÁRIOS
 $(function () {
     //Datemask dd/mm/yyyy

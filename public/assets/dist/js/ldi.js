@@ -2,9 +2,8 @@
  * JavaScript desenvolvido pela equipe
  */
 
-//TROCA ICONE PLUS/MINUS
+// Troca icone plus/minus
 function trocaPlusMinus(id){
-  
   var x = document.getElementById("demo"+id).className;
 
     if(x === "fa fa-plus-circle"){
@@ -13,4 +12,3 @@ function trocaPlusMinus(id){
         document.getElementById("demo"+id).className = "fa fa-plus-circle";
     };
 };
-

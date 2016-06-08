@@ -62,19 +62,19 @@
 
                             <div class="form-group col-md-2">
                                 <label>Início da Disciplina</label>
-                                <input name="entrance_date" type="text" value="" class="form-control" placeholder="dd/mm/aaaa" data-inputmask="'alias': 'dd/mm/aaaa'" data-mask/>
+                                <input name="entrance_date" type="text" value="" class="form-control" placeholder="dd/mm/aaaa" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
                             </div>
 
                             <!-- INÍCIO -->
                             <div class="form-group col-md-3">
                                 <label>Início do Projeto</label>
-                                <input name="entrance_date" type="text" value="" class="form-control" placeholder="dd/mm/aaaa" data-inputmask="'alias': 'dd/mm/aaaa'" data-mask required/>
+                                <input name="entrance_date" type="text" value="" class="form-control" placeholder="dd/mm/aaaa" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask required/>
                             </div>
 
                             <!-- PRAZO -->
                             <div class="form-group col-md-3">
                                 <label>Prazo do Projeto</label>
-                                <input name="entrance_date" type="text" value="" class="form-control" placeholder="dd/mm/aaaa" data-inputmask="'alias': 'dd/mm/aaaa'" data-mask required/>
+                                <input name="entrance_date" type="text" value="" class="form-control" placeholder="dd/mm/aaaa" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask required/>
                             </div>
 
                             <!-- APOIO -->
