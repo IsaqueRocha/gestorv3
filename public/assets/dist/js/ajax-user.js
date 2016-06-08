@@ -148,24 +148,21 @@ function format ( d ) {
     str = str.split(" ");
     var date = str[0].split("-");
     date = date[2]+'/'+date[1]+'/'+date[0];
-    return  '<tr>' +
-                '<td colspan="6">' +
-                    '<div class"">' +
-                        '<div class="col-md-4">' +
-                            '<label>Nome:</label> <span>'+ d.name + ' ' + d.surname + '</span><br/>'+
-                            '<label>E-mail: </label> <span>'+ d.email +'</span><br/>' +
-                            '<label>CPF: </label> <span>' + d.cpf +'</span> <br/>' +
-                            '<label>Telefone: </label> <span>' + d.phone +'</span> <br/>' +
-                        '</div>'+
-                        '<div class="col-md-8">' +
-                            '<label>Endereço: </label> <span>' + d.address +'</span> <br/>' +
-                            '<label>Função: </label> <span>' + d.role +'</span> <br/>' +
-                            '<label>Área de atuação: </label> <span>' + d.area + '</span> <br/>' +
-                            '<label>Entrada: </label> <span>'+ date +'</span> <br/>' +
-                        '</div>' +
-                    '</div>'+
-                '</td>' +
-            '</tr>';
+
+    return  '<div class"row">' +
+                '<div class="col-md-6">' +
+                    '<label>Nome:</label> <span>'+ d.name + ' ' + d.surname + '</span><br/>'+
+                    '<label>E-mail: </label> <span>'+ d.email +'</span><br/>' +
+                    '<label>CPF: </label> <span>' + d.cpf +'</span> <br/>' +
+                    '<label>Telefone: </label> <span>' + d.phone +'</span> <br/>' +
+                '</div>'+
+                '<div class="col-md-6">' +
+                    '<label>Endereço: </label> <span>' + d.address +'</span> <br/>' +
+                    '<label>Função: </label> <span>' + d.role +'</span> <br/>' +
+                    '<label>Área de atuação: </label> <span>' + d.area + '</span> <br/>' +
+                    '<label>Entrada: </label> <span>'+ date +'</span> <br/>' +
+                '</div>' +
+            '</div>';
 }
 
 $('#usertable tbody').on('click', 'td.details-control', function () {

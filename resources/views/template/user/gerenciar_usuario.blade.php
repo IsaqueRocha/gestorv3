@@ -90,15 +90,15 @@
                     </div>
                 </div>
                 <div class="box-body">
-                    <table id="usertable" class="table table-bordered table-responsive table-hover">
+                    <table id="usertable" class="table table-bordered table-responsive table-hover" width="100%">
                         <thead>
                             <tr>
                                 <th>Nome</th>
                                 <th>E-mail</th>
                                 <th>Função</th>
                                 <th>Área</th>
-                                <th></th>
-                                <th></th>
+                                <th class="icone"></th>
+                                <th class="icone"></th>
                             </tr>
                         </thead>
                     </table>
