@@ -119,9 +119,12 @@ var table = $('#usertable').DataTable({
             "className":      'details-control icone',
             "orderable":      false,
             "data":           null,
-            "defaultContent":   '<a href="#" >' +
-                                    '<i id="demo{{$user->id}}" class="fa fa-plus-circle" title="Mais" onclick="trocaPlusMinus({{$user->id}})"></i>' +
-                                '</a>',
+            "render":   function(data){
+                    
+                return '<a href="#" >' +
+                            '<i id="pm' + data.id + '" class="fa fa-plus-circle" title="Mais" onclick="trocaPlusMinus(' + data.id + ')"></i>' +
+                        '</a>';
+            }
         }
     ],
     "paging"    : false,
