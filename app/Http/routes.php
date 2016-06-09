@@ -17,6 +17,7 @@ use Illuminate\Http\Request;
 //     return view('welcome');
 // });
 Route::get('/', 'HomeController@index');
+Route::get('/home', 'HomeController@index');
 
 /* Rotas que tratam do usuário */
 Route::get('/users', 'UserController@index');
@@ -32,9 +33,9 @@ Route::get('/api/users', function(){
 
     return Response::json(['data' => $users]);
 });
-Route::get('/teste', function(){
-    return view('teste');
-});
+// Route::get('/teste', function(){
+//     return view('teste');
+// });
 
 /* Rotas que tratam dos uploads de imagem */
 Route::post('/users/upload', 'CropController@postUpload');
