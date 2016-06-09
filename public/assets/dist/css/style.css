@@ -80,6 +80,9 @@
 .box-body table tr.panel-collapse {
   background-color: #efefef !important;
 }
+.box-body table tr.shown {
+  background-color: #efefef;
+}
 .user-menu .user-header a {
   color: white;
 }

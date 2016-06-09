@@ -119,9 +119,12 @@ var table = $('#usertable').DataTable({
             "className":      'details-control icone',
             "orderable":      false,
             "data":           null,
-            "defaultContent":   '<a href="#" >' +
-                                    '<i class="fa fa-plus" title="Mais"></i>' +
-                                '</a>',
+            "render":   function(data){
+                    
+                return '<a href="#" >' +
+                            '<i id="pm' + data.id + '" class="fa fa-plus-circle" title="Mais" onclick="trocaPlusMinus(' + data.id + ')"></i>' +
+                        '</a>';
+            }
         }
     ],
     "paging"    : false,
@@ -152,17 +155,19 @@ function format ( d ) {
     date = date[2]+'/'+date[1]+'/'+date[0];
 
     return  '<div class"row">' +
-                '<div class="col-md-6">' +
+                '<div class="col-md-3">' +
                     '<label>Nome:</label> <span>'+ d.name + ' ' + d.surname + '</span><br/>'+
                     '<label>E-mail: </label> <span>'+ d.email +'</span><br/>' +
-                    '<label>CPF: </label> <span>' + d.cpf +'</span> <br/>' +
                     '<label>Telefone: </label> <span>' + d.phone +'</span> <br/>' +
                 '</div>'+
-                '<div class="col-md-6">' +
-                    '<label>Endereço: </label> <span>' + d.address +'</span> <br/>' +
+                '<div class="col-md-3">' +   
+                    '<label>Entrada: </label> <span>'+ date +'</span> <br/>' +
                     '<label>Função: </label> <span>' + d.role +'</span> <br/>' +
                     '<label>Área de atuação: </label> <span>' + d.area + '</span> <br/>' +
-                    '<label>Entrada: </label> <span>'+ date +'</span> <br/>' +
+                '</div>'+
+                '<div class="col-md-6">' +
+                    '<label>CPF: </label> <span>' + d.cpf +'</span> <br/>' +
+                    '<label>Endereço: </label> <span>' + d.address +'</span> <br/>' +
                 '</div>' +
             '</div>';
 }

@@ -9,7 +9,7 @@
 <script src="{{ asset('assets/theme/js/app.min.js') }}" type="text/javascript"></script>
 
 <!-- Personalizado -->
-<script src="{{ asset('assets/dist/js/ldi.js')}}"></script> <!-- NOVO -->
+<script src="{{ asset('assets/dist/js/ldi.js')}}" type="text/javascript"></script> <!-- NOVO -->
 <script src="{{ asset('assets/theme/js/ldi.js') }}" type="text/javascript"></script> <!-- ANTIGO, MAS FUNCIONAL -->
 
 <!--Plugin InputMask(plugin para o formulário)-->

@@ -87,7 +87,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Roteiro</label>
-                                                <select class="form-control" required>
+                                                <select class="form-control">
                                                     <option>---</option>
                                                     <option>Em revisão</option>
                                                     <option>Finalizado</option>
@@ -99,7 +99,7 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="checkbox">
-                                                <label><input type="checkbox" required> Decupagem</label>
+                                                <label><input type="checkbox"> Decupagem</label>
                                             </div>
                                         </div>
                                     </div>
@@ -107,7 +107,7 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="checkbox">
-                                                <label><input type="checkbox" required> Storyboard</label>
+                                                <label><input type="checkbox"> Storyboard</label>
                                             </div>
                                         </div>
                                     </div>
@@ -115,7 +115,7 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="checkbox">
-                                                <label><input type="checkbox" required> Captura de áudio</label>
+                                                <label><input type="checkbox"> Captura de áudio</label>
                                             </div>
                                         </div>
                                     </div>
@@ -126,7 +126,7 @@
                                                 <label>Gravação</label>
                                                 <div class="row">
                                                     <div class="col-md-6 col-sm-6">
-                                                        <input name="name" type="text" value="" class="form-control" placeholder="Realizada" required />
+                                                        <input name="name" type="text" value="" class="form-control" placeholder="Realizada" />
                                                     </div>
                                                     de 30
                                                 </div>
@@ -140,7 +140,7 @@
                                                 <label>Ilustração concluída</label>
                                                 <div class="row">
                                                     <div class="col-md-6 col-sm-6">
-                                                        <input name="name" type="text" value="" class="form-control" placeholder="Realizada" required />
+                                                        <input name="name" type="text" value="" class="form-control" placeholder="Realizada" />
                                                     </div>
                                                     de 20
                                                 </div>
@@ -154,7 +154,7 @@
                                                 <label>Animação</label>
                                                 <div class="row">
                                                     <div class="col-md-6 col-sm-6">
-                                                        <input name="name" type="text" value="" class="form-control" placeholder="Realizada" required />
+                                                        <input name="name" type="text" value="" class="form-control" placeholder="Realizada" />
                                                     </div>
                                                     de 15
                                                 </div>
@@ -168,7 +168,7 @@
                                                 <label>Edição de vídeo</label>
                                                 <div class="row">
                                                     <div class="col-md-6 col-sm-6">
-                                                        <input name="name" type="text" value="" class="form-control" placeholder="Realizada" required />
+                                                        <input name="name" type="text" value="" class="form-control" placeholder="Realizada" />
                                                     </div>
                                                     de 20
                                                 </div>
@@ -180,7 +180,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Edição sonora</label>
-                                                <select class="form-control" required>
+                                                <select class="form-control">
                                                     <option>---</option>
                                                     <option>Em revisão</option>
                                                     <option>Finalizado</option>
@@ -192,7 +192,7 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="checkbox">
-                                                <label><input type="checkbox" required> Animatic</label>
+                                                <label><input type="checkbox"> Animatic</label>
                                             </div>
                                         </div>
                                     </div>
@@ -200,7 +200,7 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="checkbox">
-                                                <label><input type="checkbox" required> Legenda</label>
+                                                <label><input type="checkbox"> Legenda</label>
                                             </div>
                                         </div>
                                     </div>
@@ -208,7 +208,7 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="checkbox">
-                                                <label><input type="checkbox" required> Créditos</label>
+                                                <label><input type="checkbox"> Créditos</label>
                                             </div>
                                         </div>
                                     </div>
@@ -216,7 +216,7 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="checkbox">
-                                                <label><input type="checkbox" required> Render</label>
+                                                <label><input type="checkbox"> Render</label>
                                             </div>
                                         </div>
                                     </div>
@@ -224,7 +224,7 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="checkbox">
-                                                <label><input type="checkbox" required> Revisão</label>
+                                                <label><input type="checkbox"> Revisão</label>
                                             </div>
                                         </div>
                                     </div>
@@ -232,7 +232,7 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="checkbox">
-                                                <label><input type="checkbox" required> Upload</label>
+                                                <label><input type="checkbox"> Upload</label>
                                             </div>
                                         </div>
                                     </div>
@@ -240,7 +240,7 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="checkbox">
-                                                <label><input type="checkbox" required> DVD</label>
+                                                <label><input type="checkbox"> DVD</label>
                                             </div>
                                         </div>
                                     </div>
@@ -276,7 +276,7 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="checkbox">
-                                                <label><input type="checkbox" required> Revisado pelo autor</label>
+                                                <label><input type="checkbox"> Revisado pelo autor</label>
                                             </div>
                                         </div>
                                     </div>
@@ -327,7 +327,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Formato</label>
-                                                <select class="form-control" required>
+                                                <select class="form-control">
                                                     <option>---</option>
                                                     <option>Carta</option>
                                                     <option>Quadrado</option>
@@ -341,7 +341,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Papel</label>
-                                                <select class="form-control" required>
+                                                <select class="form-control">
                                                     <option>---</option>
                                                     <option>Não definido</option>
                                                     <option>Offset</option>
@@ -354,7 +354,7 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="checkbox">
-                                                <label><input type="checkbox" required> Reunião com autor</label>
+                                                <label><input type="checkbox"> Reunião com autor</label>
                                             </div>
                                         </div>
                                     </div>
@@ -363,7 +363,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Briefing</label>
-                                                <textarea class="form-control" rows="3" required></textarea>
+                                                <textarea class="form-control" rows="3"></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -372,7 +372,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Texto de orelha</label>
-                                                <select class="form-control" required>
+                                                <select class="form-control">
                                                     <option>---</option>
                                                     <option>Aguardando</option>
                                                     <option>Inserido</option>
@@ -387,7 +387,7 @@
                                                 <label>Diagramação de capítulos</label>
                                                 <div class="row">
                                                     <div class="col-md-6 col-sm-6">
-                                                        <input name="name" type="text" value="" class="form-control" placeholder="Realizada" required />
+                                                        <input name="name" type="text" value="" class="form-control" placeholder="Realizada" />
                                                     </div>
                                                     de 20
                                                 </div>
@@ -401,7 +401,7 @@
                                                 <label>Aberturas de capítulo</label>
                                                 <div class="row">
                                                     <div class="col-md-6 col-sm-6">
-                                                        <input name="name" type="text" value="" class="form-control" placeholder="Realizada" required />
+                                                        <input name="name" type="text" value="" class="form-control" placeholder="Realizada" />
                                                     </div>
                                                     de 15
                                                 </div>
@@ -413,7 +413,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Número de páginas</label>
-                                                <input name="name" type="text" value="" class="form-control" placeholder="Número de páginas" required />
+                                                <input name="name" type="text" value="" class="form-control" placeholder="Número de páginas" />
                                             </div>
                                         </div>
                                     </div>
@@ -421,10 +421,10 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="checkbox">
-                                                <label><input type="checkbox" required> Finalização da Capa</label>
+                                                <label><input type="checkbox"> Finalização da Capa</label>
                                             </div>
                                             <div class="checkbox">
-                                                <label><input type="checkbox" required> Aprovação do Layout</label>
+                                                <label><input type="checkbox"> Aprovação do Layout</label>
                                             </div>
                                         </div>
                                     </div>
@@ -433,7 +433,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Boneca</label>
-                                                <select class="form-control" required>
+                                                <select class="form-control">
                                                     <option>---</option>
                                                     <option>Impressa</option>
                                                     <option>Com o autor</option>
@@ -448,7 +448,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Ficha catalográfica</label>
-                                                <select class="form-control" required>
+                                                <select class="form-control">
                                                     <option>---</option>
                                                     <option>Não solicitada</option>
                                                     <option>Aguardando</option>
@@ -461,7 +461,7 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="checkbox">
-                                                <label><input type="checkbox" required> Aprovação de folha de créditos</label>
+                                                <label><input type="checkbox"> Aprovação de folha de créditos</label>
                                             </div>
                                         </div>
                                     </div>
@@ -470,7 +470,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Solicitação do ISBN</label>
-                                                <select class="form-control" required>
+                                                <select class="form-control">
                                                     <option>---</option>
                                                     <option>Solicitado</option>
                                                     <option>Inserido</option>
@@ -483,7 +483,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>ISBN</label>
-                                                <input name="name" type="text" value="" class="form-control" placeholder="ISBN" required />
+                                                <input name="name" type="text" value="" class="form-control" placeholder="ISBN" />
                                             </div>
                                         </div>
                                     </div>
@@ -491,10 +491,10 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="checkbox">
-                                                <label><input type="checkbox" required> PDF de visualização</label>
+                                                <label><input type="checkbox"> PDF de visualização</label>
                                             </div>
                                             <div class="checkbox">
-                                                <label><input type="checkbox" required> Revisão pelo Coordenador LDI</label>
+                                                <label><input type="checkbox"> Revisão pelo Coordenador LDI</label>
                                             </div>
                                         </div>
                                     </div>
@@ -503,7 +503,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Memorando</label>
-                                                <input name="name" type="text" value="" class="form-control" placeholder="Memorando" required />
+                                                <input name="name" type="text" value="" class="form-control" placeholder="Memorando" />
                                             </div>
                                         </div>
                                     </div>
@@ -512,7 +512,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Prova de impressão</label>
-                                                <select class="form-control" required>
+                                                <select class="form-control">
                                                     <option>---</option>
                                                     <option>Recebida</option>
                                                     <option>Pedido de nova prova</option>
@@ -527,7 +527,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Gráfica</label>
-                                                <input name="name" type="text" value="" class="form-control" placeholder="Gráfica" required />
+                                                <input name="name" type="text" value="" class="form-control" placeholder="Gráfica" />
                                             </div>
                                         </div>
                                     </div>
@@ -563,10 +563,10 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="checkbox">
-                                                <label><input type="checkbox" required> Reunião com autor</label>
+                                                <label><input type="checkbox"> Reunião com autor</label>
                                             </div>
                                             <div class="checkbox">
-                                                <label><input type="checkbox" required> Capa finalizada</label>
+                                                <label><input type="checkbox"> Capa finalizada</label>
                                             </div>
                                         </div>
                                     </div>
@@ -577,7 +577,7 @@
                                                 <label>Número de capítulos</label>
                                                 <div class="row">
                                                     <div class="col-md-6 col-sm-6">
-                                                        <input name="name" type="text" value="" class="form-control" placeholder="Realizada" required />
+                                                        <input name="name" type="text" value="" class="form-control" placeholder="Realizada" />
                                                     </div>
                                                     de 30
                                                 </div>
@@ -588,7 +588,7 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="checkbox">
-                                                <label><input type="checkbox" required> Currículo do autor</label>
+                                                <label><input type="checkbox"> Currículo do autor</label>
                                             </div>
                                         </div>
                                     </div>
@@ -597,7 +597,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Ficha catalográfica</label>
-                                                <select class="form-control" required>
+                                                <select class="form-control">
                                                     <option>---</option>
                                                     <option>Pedida</option>
                                                     <option>Inserida</option>
@@ -612,7 +612,7 @@
                                                 <label>Aberturas de capítulo</label>
                                                 <div class="row">
                                                     <div class="col-md-6 col-sm-6">
-                                                        <input name="name" type="text" value="" class="form-control" placeholder="Realizada" required />
+                                                        <input name="name" type="text" value="" class="form-control" placeholder="Realizada" />
                                                     </div>
                                                     de 15
                                                 </div>
@@ -624,7 +624,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Aprovação de créditos</label>
-                                                <select class="form-control" required>
+                                                <select class="form-control">
                                                     <option>---</option>
                                                     <option>Enviado para o coordenador</option>
                                                     <option>Devolvido com alterações</option>
@@ -638,7 +638,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Revisão do autor</label>
-                                                <select class="form-control" required>
+                                                <select class="form-control">
                                                     <option>---</option>
                                                     <option>Enviado para o autor</option>
                                                     <option>Devolvido com alterações</option>
@@ -652,7 +652,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>ISBN</label>
-                                                <select class="form-control" required>
+                                                <select class="form-control">
                                                     <option>---</option>
                                                     <option>Solicitado a Biblioteca Nacional</option>
                                                     <option>Inserido</option>
@@ -664,7 +664,7 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="checkbox">
-                                                <label><input type="checkbox" required> Revisado pelo supervisor</label>
+                                                <label><input type="checkbox"> Revisado pelo supervisor</label>
                                             </div>
                                         </div>
                                     </div>
@@ -672,7 +672,7 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="checkbox">
-                                                <label><input type="checkbox" required> Upload</label>
+                                                <label><input type="checkbox"> Upload</label>
                                             </div>
                                         </div>
                                     </div>
@@ -709,7 +709,7 @@
                                         <div class="col-md-12">
                                             <h5>Reunião com professor</h5>
                                             <div class="checkbox">
-                                                <label><input type="checkbox" required> Realizada</label>
+                                                <label><input type="checkbox"> Realizada</label>
                                             </div>
                                         </div>
                                     </div>
@@ -718,7 +718,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Escopo</label>
-                                                <textarea class="form-control" rows="3" required></textarea>
+                                                <textarea class="form-control" rows="3"></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -727,7 +727,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Requisitos funcionais</label>
-                                                <textarea class="form-control" rows="3" required></textarea>
+                                                <textarea class="form-control" rows="3"></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -736,7 +736,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Requisitos de conteúdo</label>
-                                                <textarea class="form-control" rows="3" required></textarea>
+                                                <textarea class="form-control" rows="3"></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -770,7 +770,7 @@
                                                 <label>Quantidade de layouts</label>
                                                 <div class="row">
                                                     <div class="col-md-6">
-                                                        <input name="name" type="text" value="" class="form-control" placeholder="Realizados" required />
+                                                        <input name="name" type="text" value="" class="form-control" placeholder="Realizados" />
                                                     </div>
                                                     de 20
                                                 </div>
@@ -782,7 +782,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Implementação</label>
-                                                <select class="form-control" required>
+                                                <select class="form-control">
                                                     <option>---</option>
                                                     <option>10%</option>
                                                     <option>20%</option>
@@ -812,7 +812,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Aprovação</label>
-                                                <select class="form-control" required>
+                                                <select class="form-control">
                                                     <option>---</option>
                                                     <option>Aprovado</option>
                                                     <option>Aprovado com correções</option>
@@ -825,7 +825,7 @@
                                         <div class="col-md-12">
                                             <h5>Upload</h5>
                                             <div class="checkbox">
-                                                <label><input type="checkbox" required> Realizado</label>
+                                                <label><input type="checkbox"> Realizado</label>
                                             </div>
                                         </div>
                                     </div>
@@ -877,7 +877,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Apresentação</label>
-                                                <select class="form-control" required>
+                                                <select class="form-control">
                                                     <option>---</option>
                                                     <option>Enviado por e-mail</option>
                                                     <option>Aprovado</option>
@@ -891,13 +891,13 @@
                                         <div class="col-md-12">
                                             <h5>Finalização</h5>
                                             <div class="checkbox">
-                                                <label><input type="checkbox" required> Envio para o Suporte</label>
+                                                <label><input type="checkbox"> Envio para o Suporte</label>
                                             </div>
                                             <div class="checkbox">
-                                                <label><input type="checkbox" required> Checagem online</label>
+                                                <label><input type="checkbox"> Checagem online</label>
                                             </div>
                                             <div class="checkbox">
-                                                <label><input type="checkbox" required> Organização da pasta</label>
+                                                <label><input type="checkbox"> Organização da pasta</label>
                                             </div>
                                         </div>
                                     </div>
@@ -944,7 +944,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Tipo</label>
-                                                <select class="form-control" required>
+                                                <select class="form-control">
                                                     <option>---</option>
                                                     <option>Capa</option>
                                                     <option>Interna</option>
@@ -962,7 +962,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Especifique o tipo</label>
-                                                <input name="name" type="text" value="" class="form-control" placeholder="Tipo de ilustração" required />
+                                                <input name="name" type="text" value="" class="form-control" placeholder="Tipo de ilustração"/>
                                             </div>
                                         </div>
                                     </div>
@@ -973,7 +973,7 @@
                                                 <label>Quantidade</label>
                                                 <div class="row">
                                                     <div class="col-md-6">
-                                                        <input name="name" type="text" value="" class="form-control" placeholder="Realizada" required />
+                                                        <input name="name" type="text" value="" class="form-control" placeholder="Realizada"/>
                                                     </div>
                                                     de 10
                                                 </div>
@@ -985,7 +985,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Complexidade</label>
-                                                <select class="form-control" required>
+                                                <select class="form-control">
                                                     <option>Simples</option>
                                                     <option>Intermediário</option>
                                                     <option>Complexo</option>
@@ -998,7 +998,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Dimensão</label>
-                                                <select class="form-control" required>
+                                                <select class="form-control">
                                                     <option>---</option>
                                                     <option>2D</option>
                                                     <option>3D</option>
@@ -1041,11 +1041,11 @@
                                                 <label>Quantidade</label>
                                                 <div class="row">
                                                     <div class="col-md-6">
-                                                        <input name="name" type="text" value="" class="form-control" placeholder="Realizada" required />
+                                                        <input name="name" type="text" value="" class="form-control" placeholder="Realizada"/>
                                                     </div>
                                                     <div class="col-md-1" style="line-height:35px;">de</div>
                                                     <div class="col-md-5">
-                                                        <input name="name" type="text" value="" class="form-control" placeholder="Solicitada" required />
+                                                        <input name="name" type="text" value="" class="form-control" placeholder="Solicitada"/>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1056,7 +1056,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Complexidade</label>
-                                                <select class="form-control" required>
+                                                <select class="form-control">
                                                     <option>Simples</option>
                                                     <option>Intermediário</option>
                                                     <option>Complexo</option>
@@ -1099,11 +1099,11 @@
                                                 <label>Quantidade</label>
                                                 <div class="row">
                                                     <div class="col-md-6">
-                                                        <input name="name" type="text" value="" class="form-control" placeholder="Realizada" required />
+                                                        <input name="name" type="text" value="" class="form-control" placeholder="Realizada"/>
                                                     </div>
                                                     <div class="col-md-1" style="line-height:35px;">de</div>
                                                     <div class="col-md-5">
-                                                        <input name="name" type="text" value="" class="form-control" placeholder="Solicitada" required />
+                                                        <input name="name" type="text" value="" class="form-control" placeholder="Solicitada"/>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1114,7 +1114,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Complexidade</label>
-                                                <select class="form-control" required>
+                                                <select class="form-control">
                                                     <option>Simples</option>
                                                     <option>Intermediário</option>
                                                     <option>Complexo</option>
@@ -1157,11 +1157,11 @@
                                                 <label>Quantidade</label>
                                                 <div class="row">
                                                     <div class="col-md-6">
-                                                        <input name="name" type="text" value="" class="form-control" placeholder="Realizada" required />
+                                                        <input name="name" type="text" value="" class="form-control" placeholder="Realizada"/>
                                                     </div>
                                                     <div class="col-md-1" style="line-height:35px;">de</div>
                                                     <div class="col-md-5">
-                                                        <input name="name" type="text" value="" class="form-control" placeholder="Solicitada" required />
+                                                        <input name="name" type="text" value="" class="form-control" placeholder="Solicitada"/>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1172,7 +1172,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Complexidade</label>
-                                                <select class="form-control" required>
+                                                <select class="form-control">
                                                     <option>Simples</option>
                                                     <option>Intermediário</option>
                                                     <option>Complexo</option>
