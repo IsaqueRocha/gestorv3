@@ -896,18 +896,129 @@
                     <div class="panel panel-default">
                         <a data-toggle="collapse" href="#noname">
                             <div class="box-header panel-heading">
-                                <h3 class="box-title"><i class="fa fa-flag"></i>Interativo/Multiformato</h3>
+                                <h3 class="box-title"><i class="fa fa-flag"></i>Interativo</h3>
                                 <div style="float:right;color:#4a6c82;">80% <i class="fa fa-square" ></i></div>
                             </div>
                         </a>
                         <div id="noname" class="panel-collapse collapse">
                             <div class="box-body panel-body">
                                 <form>
-                                    <input type="number" min="5" max="18" step="1" value="9" name="shoe-size">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Briefing</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </div>
+                                                    <input type="text" class="form-control" placeholder="dd/mm/aaaa" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Reunião com professor</label>
+                                                <textarea class="form-control" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="checkbox">
+                                                <label><input type="checkbox"> Fluxograma</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="checkbox">
+                                                <label><input type="checkbox"> Definição de layout</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Assinatura</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </div>
+                                                    <input type="text" class="form-control" placeholder="dd/mm/aaaa" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Ilustração</label>
+                                                <br clear="all">
+                                                <input type="number" min="1" max="10" step="1" value="0" class="form-control">
+                                                de 10
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Animação</label>
+                                                <br clear="all">
+                                                <input type="number" min="1" max="10" step="1" value="0" class="form-control">
+                                                de 10
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Programação</label>
+                                                <br clear="all">
+                                                <input type="number" min="1" max="10" step="1" value="0" class="form-control">
+                                                de 10
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Diagramação</label>
+                                                <br clear="all">
+                                                <input type="number" min="1" max="10" step="1" value="0" class="form-control">
+                                                de 10
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="checkbox">
+                                                <label><input type="checkbox"> Testes</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="checkbox">
+                                                <label><input type="checkbox"> Upload</label>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </form>
                                 <hr>
                                 <div style="text-align:right;">
-                                    <button type="button" class="btn btn-default pull-left" data-toggle="modal" data-target="" title="Editar atividade">
+                                    <button type="button" class="btn btn-default pull-left" data-toggle="modal" data-target="editInterativo" title="Editar atividade">
                                         Editar atividade
                                     </button>
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
@@ -1234,6 +1345,121 @@
                             </div>
                             <div class="checkbox">
                                 <label><input type="checkbox" checked> Upload</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success">Salvar</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div id="editInterativo" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Editar Vídeo</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Roteiro</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Decupagem</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Storyboard</label>
+                            </div>
+                            <div class="checkbox" style="margin-bottom:5px;">
+                                <label><input type="checkbox" checked> Captura de áudio</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom:5px;">
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <input type="checkbox" checked> Gravação
+                                </span>
+                                <input type="text" class="form-control" placeholder="Quantidade solicitada">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top:5px;margin-bottom:5px;">
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <input type="checkbox" checked> Ilustração concluída
+                                </span>
+                                <input type="text" class="form-control" placeholder="Quantidade solicitada">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top:5px;margin-bottom:5px;">
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <input type="checkbox" checked> Animação
+                                </span>
+                                <input type="text" class="form-control" placeholder="Quantidade solicitada">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top:5px;margin-bottom:5px;">
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <input type="checkbox" checked> Edição de vídeo
+                                </span>
+                                <input type="text" class="form-control" placeholder="Quantidade solicitada">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Edição sonora</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Animatic</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Legenda</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Créditos</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Render</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Revisão</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Upload</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> DVD</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Data de disponibilidade</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Início da gravação</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Revisado pelo autor</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Conclusão</label>
                             </div>
                         </div>
                     </div>
