@@ -10,7 +10,8 @@
         "laracasts/flash": "dev-master",
         "infinety/sweetalert": "dev-master",
         "intervention/image": "^2.3@dev",
-        "artesaos/defender": "^0.4.6"
+        "artesaos/defender": "^0.4.6",
+        "doctrine/dbal": "^2.5"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
