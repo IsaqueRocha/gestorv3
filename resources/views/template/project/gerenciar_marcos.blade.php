@@ -74,23 +74,105 @@
             <div class="box box-ldi">
                 <div class="panel-group">
                     <div class="panel panel-default">
-                        <a data-toggle="collapse" href="#video">
+                        <a data-toggle="collapse" href="#livroDigital">
                             <div class="box-header panel-heading">
-                                <h3 class="box-title panel-title"><i class="fa fa-flag"></i>Vídeo</h3>
-                                <div style="float:right;color:green;">100% <i class="fa fa-square" ></i></div>
+                                <h3 class="box-title panel-title"><i class="fa fa-flag"></i>Livro Digital</h3>
+                                <div style="float:right;color:#4a6c82;">50% <i class="fa fa-square" ></i></div>
                             </div>
                         </a>
-                        <div id="video" class="panel-collapse collapse">
+                        <div id="livroDigital" class="panel-collapse collapse">
                             <div class="box-body panel-body">
                                 <form>
                                     <div class="row">
                                         <div class="col-md-12">
+                                            <div class="checkbox">
+                                                <label><input type="checkbox"> Reunião com autor</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label><input type="checkbox"> Capa finalizada</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
                                             <div class="form-group">
-                                                <label>Roteiro</label>
+                                                <label>Número de capítulos</label>
+                                                <br clear="all">
+                                                <input type="number" min="1" max="30" step="1" value="0" class="form-control">
+                                                de 30
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="checkbox">
+                                                <label><input type="checkbox"> Currículo do autor</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Ficha catalográfica</label>
                                                 <select class="form-control">
                                                     <option>---</option>
-                                                    <option>Em revisão</option>
-                                                    <option>Finalizado</option>
+                                                    <option>Pedida</option>
+                                                    <option>Inserida</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Aberturas de capítulo</label>
+                                                <br clear="all">
+                                                <input type="number" min="1" max="15" step="1" value="0" class="form-control">
+                                                de 15
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Aprovação de créditos</label>
+                                                <select class="form-control">
+                                                    <option>---</option>
+                                                    <option>Enviado para o coordenador</option>
+                                                    <option>Devolvido com alterações</option>
+                                                    <option>Aprovado</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Revisão do autor</label>
+                                                <select class="form-control">
+                                                    <option>---</option>
+                                                    <option>Enviado para o autor</option>
+                                                    <option>Devolvido com alterações</option>
+                                                    <option>Aprovado</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>ISBN</label>
+                                                <select class="form-control">
+                                                    <option>---</option>
+                                                    <option>Solicitado a Biblioteca Nacional</option>
+                                                    <option>Inserido</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -99,132 +181,7 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="checkbox">
-                                                <label><input type="checkbox"> Decupagem</label>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="checkbox">
-                                                <label><input type="checkbox"> Storyboard</label>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="checkbox">
-                                                <label><input type="checkbox"> Captura de áudio</label>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label>Gravação</label>
-                                                <div class="row">
-                                                    <div class="col-md-6 col-sm-6">
-                                                        <input name="name" type="text" value="" class="form-control" placeholder="Realizada" />
-                                                    </div>
-                                                    de 30
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label>Ilustração concluída</label>
-                                                <div class="row">
-                                                    <div class="col-md-6 col-sm-6">
-                                                        <input name="name" type="text" value="" class="form-control" placeholder="Realizada" />
-                                                    </div>
-                                                    de 20
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label>Animação</label>
-                                                <div class="row">
-                                                    <div class="col-md-6 col-sm-6">
-                                                        <input name="name" type="text" value="" class="form-control" placeholder="Realizada" />
-                                                    </div>
-                                                    de 15
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label>Edição de vídeo</label>
-                                                <div class="row">
-                                                    <div class="col-md-6 col-sm-6">
-                                                        <input name="name" type="text" value="" class="form-control" placeholder="Realizada" />
-                                                    </div>
-                                                    de 20
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label>Edição sonora</label>
-                                                <select class="form-control">
-                                                    <option>---</option>
-                                                    <option>Em revisão</option>
-                                                    <option>Finalizado</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="checkbox">
-                                                <label><input type="checkbox"> Animatic</label>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="checkbox">
-                                                <label><input type="checkbox"> Legenda</label>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="checkbox">
-                                                <label><input type="checkbox"> Créditos</label>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="checkbox">
-                                                <label><input type="checkbox"> Render</label>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="checkbox">
-                                                <label><input type="checkbox"> Revisão</label>
+                                                <label><input type="checkbox"> Revisado pelo supervisor</label>
                                             </div>
                                         </div>
                                     </div>
@@ -236,68 +193,10 @@
                                             </div>
                                         </div>
                                     </div>
-
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="checkbox">
-                                                <label><input type="checkbox"> DVD</label>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label>Data de disponibilidade</label>
-                                                <div class="input-group">
-                                                    <div class="input-group-addon">
-                                                        <i class="fa fa-calendar"></i>
-                                                    </div>
-                                                    <input type="text" class="form-control" placeholder="dd/mm/aaaa" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label>Início da gravação</label>
-                                                <div class="input-group">
-                                                    <div class="input-group-addon">
-                                                        <i class="fa fa-calendar"></i>
-                                                    </div>
-                                                    <input type="text" class="form-control" placeholder="dd/mm/aaaa" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="checkbox">
-                                                <label><input type="checkbox"> Revisado pelo autor</label>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label>Conclusão</label>
-                                                <div class="input-group">
-                                                    <div class="input-group-addon">
-                                                        <i class="fa fa-calendar"></i>
-                                                    </div>
-                                                    <input type="text" class="form-control" placeholder="dd/mm/aaaa" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </form>
                                 <hr>
                                 <div style="text-align:right;">
-                                    <button type="button" class="btn btn-default pull-left" data-toggle="modal" data-target="#editVideo" title="Editar atividade">
+                                    <button type="button" class="btn btn-default pull-left" data-toggle="modal" data-target="#editLivroDigital" title="Editar atividade">
                                         Editar atividade
                                     </button>
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
@@ -385,12 +284,9 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Diagramação de capítulos</label>
-                                                <div class="row">
-                                                    <div class="col-md-6 col-sm-6">
-                                                        <input name="name" type="text" value="" class="form-control" placeholder="Realizada" />
-                                                    </div>
-                                                    de 20
-                                                </div>
+                                                <br clear="all">
+                                                <input type="number" min="1" max="20" step="1" value="0" class="form-control">
+                                                de 20
                                             </div>
                                         </div>
                                     </div>
@@ -399,12 +295,9 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Aberturas de capítulo</label>
-                                                <div class="row">
-                                                    <div class="col-md-6 col-sm-6">
-                                                        <input name="name" type="text" value="" class="form-control" placeholder="Realizada" />
-                                                    </div>
-                                                    de 15
-                                                </div>
+                                                <br clear="all">
+                                                <input type="number" min="1" max="15" step="1" value="0" class="form-control">
+                                                de 15
                                             </div>
                                         </div>
                                     </div>
@@ -551,22 +444,26 @@
             <div class="box box-ldi">
                 <div class="panel-group">
                     <div class="panel panel-default">
-                        <a data-toggle="collapse" href="#livroDigital">
+                        <a data-toggle="collapse" href="#moodle">
                             <div class="box-header panel-heading">
-                                <h3 class="box-title panel-title"><i class="fa fa-flag"></i>Livro Digital</h3>
-                                <div style="float:right;color:#4a6c82;">50% <i class="fa fa-square" ></i></div>
+                                <h3 class="box-title"><i class="fa fa-flag"></i>Moodle</h3>
+                                <div style="float:right;color:#4a6c82;">30% <i class="fa fa-square" ></i></div>
                             </div>
                         </a>
-                        <div id="livroDigital" class="panel-collapse collapse">
+                        <div id="moodle" class="panel-collapse collapse">
                             <div class="box-body panel-body">
                                 <form>
                                     <div class="row">
                                         <div class="col-md-12">
+                                            <h5>Produção</h5>
                                             <div class="checkbox">
-                                                <label><input type="checkbox"> Reunião com autor</label>
+                                                <label><input type="checkbox"> Reunião com professor</label>
                                             </div>
                                             <div class="checkbox">
-                                                <label><input type="checkbox"> Capa finalizada</label>
+                                                <label><input type="checkbox"> Adaptação do tema/CSS</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label><input type="checkbox"> Cabeçalho</label>
                                             </div>
                                         </div>
                                     </div>
@@ -574,61 +471,12 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label>Número de capítulos</label>
-                                                <div class="row">
-                                                    <div class="col-md-6 col-sm-6">
-                                                        <input name="name" type="text" value="" class="form-control" placeholder="Realizada" />
-                                                    </div>
-                                                    de 30
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="checkbox">
-                                                <label><input type="checkbox"> Currículo do autor</label>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label>Ficha catalográfica</label>
+                                                <label>Apresentação</label>
                                                 <select class="form-control">
                                                     <option>---</option>
-                                                    <option>Pedida</option>
-                                                    <option>Inserida</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label>Aberturas de capítulo</label>
-                                                <div class="row">
-                                                    <div class="col-md-6 col-sm-6">
-                                                        <input name="name" type="text" value="" class="form-control" placeholder="Realizada" />
-                                                    </div>
-                                                    de 15
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label>Aprovação de créditos</label>
-                                                <select class="form-control">
-                                                    <option>---</option>
-                                                    <option>Enviado para o coordenador</option>
-                                                    <option>Devolvido com alterações</option>
+                                                    <option>Enviado por e-mail</option>
                                                     <option>Aprovado</option>
+                                                    <option>Aprovado com correções</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -636,26 +484,55 @@
 
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label>Revisão do autor</label>
-                                                <select class="form-control">
-                                                    <option>---</option>
-                                                    <option>Enviado para o autor</option>
-                                                    <option>Devolvido com alterações</option>
-                                                    <option>Aprovado</option>
-                                                </select>
+                                            <h5>Finalização</h5>
+                                            <div class="checkbox">
+                                                <label><input type="checkbox"> Envio para o Suporte</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label><input type="checkbox"> Checagem online</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label><input type="checkbox"> Organização da pasta</label>
                                             </div>
                                         </div>
                                     </div>
+                                </form>
+                                <hr>
+                                <div style="text-align:right;">
+                                    <button type="button" class="btn btn-default pull-left" data-toggle="modal" data-target="#editMoodle" title="Editar atividade">
+                                        Editar atividade
+                                    </button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-success">Salvar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <div class="col-md-3">
+            <div class="box box-ldi">
+                <div class="panel-group">
+                    <div class="panel panel-default">
+                        <a data-toggle="collapse" href="#video">
+                            <div class="box-header panel-heading">
+                                <h3 class="box-title panel-title"><i class="fa fa-flag"></i>Vídeo</h3>
+                                <div style="float:right;color:green;">100% <i class="fa fa-square" ></i></div>
+                            </div>
+                        </a>
+                        <div id="video" class="panel-collapse collapse">
+                            <div class="box-body panel-body">
+                                <form>
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label>ISBN</label>
+                                                <label>Roteiro</label>
                                                 <select class="form-control">
                                                     <option>---</option>
-                                                    <option>Solicitado a Biblioteca Nacional</option>
-                                                    <option>Inserido</option>
+                                                    <option>Em revisão</option>
+                                                    <option>Finalizado</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -664,7 +541,120 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="checkbox">
-                                                <label><input type="checkbox"> Revisado pelo supervisor</label>
+                                                <label><input type="checkbox"> Decupagem</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="checkbox">
+                                                <label><input type="checkbox"> Storyboard</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="checkbox">
+                                                <label><input type="checkbox"> Captura de áudio</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Gravação</label>
+                                                <br clear="all">
+                                                <input type="number" min="1" max="30" step="1" value="0" class="form-control">
+                                                de 30
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Ilustração concluída</label>
+                                                <br clear="all">
+                                                <input type="number" min="1" max="20" step="1" value="0" class="form-control">
+                                                de 20
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Animação</label>
+                                                <br clear="all">
+                                                <input type="number" min="1" max="15" step="1" value="0" class="form-control">
+                                                de 15
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Edição de vídeo</label>
+                                                <br clear="all">
+                                                <input type="number" min="1" max="20" step="1" value="0" class="form-control">
+                                                de 20
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Edição sonora</label>
+                                                <select class="form-control">
+                                                    <option>---</option>
+                                                    <option>Em revisão</option>
+                                                    <option>Finalizado</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="checkbox">
+                                                <label><input type="checkbox"> Animatic</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="checkbox">
+                                                <label><input type="checkbox"> Legenda</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="checkbox">
+                                                <label><input type="checkbox"> Créditos</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="checkbox">
+                                                <label><input type="checkbox"> Render</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="checkbox">
+                                                <label><input type="checkbox"> Revisão</label>
                                             </div>
                                         </div>
                                     </div>
@@ -676,10 +666,68 @@
                                             </div>
                                         </div>
                                     </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="checkbox">
+                                                <label><input type="checkbox"> DVD</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Data de disponibilidade</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </div>
+                                                    <input type="text" class="form-control" placeholder="dd/mm/aaaa" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Início da gravação</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </div>
+                                                    <input type="text" class="form-control" placeholder="dd/mm/aaaa" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="checkbox">
+                                                <label><input type="checkbox"> Revisado pelo autor</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Conclusão</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </div>
+                                                    <input type="text" class="form-control" placeholder="dd/mm/aaaa" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </form>
                                 <hr>
                                 <div style="text-align:right;">
-                                    <button type="button" class="btn btn-default pull-left" data-toggle="modal" data-target="#editLivroDigital" title="Editar atividade">
+                                    <button type="button" class="btn btn-default pull-left" data-toggle="modal" data-target="#editVideo" title="Editar atividade">
                                         Editar atividade
                                     </button>
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
@@ -768,12 +816,9 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Quantidade de layouts</label>
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <input name="name" type="text" value="" class="form-control" placeholder="Realizados" />
-                                                    </div>
-                                                    de 20
-                                                </div>
+                                                <br clear="all">
+                                                <input type="number" min="1" max="20" step="1" value="0" class="form-control">
+                                                de 20
                                             </div>
                                         </div>
                                     </div>
@@ -849,62 +894,131 @@
             <div class="box box-ldi">
                 <div class="panel-group">
                     <div class="panel panel-default">
-                        <a data-toggle="collapse" href="#moodle">
+                        <a data-toggle="collapse" href="#noname">
                             <div class="box-header panel-heading">
-                                <h3 class="box-title"><i class="fa fa-flag"></i>Moodle</h3>
-                                <div style="float:right;color:#4a6c82;">30% <i class="fa fa-square" ></i></div>
+                                <h3 class="box-title"><i class="fa fa-flag"></i>Interativo</h3>
+                                <div style="float:right;color:#4a6c82;">80% <i class="fa fa-square" ></i></div>
                             </div>
                         </a>
-                        <div id="moodle" class="panel-collapse collapse">
+                        <div id="noname" class="panel-collapse collapse">
                             <div class="box-body panel-body">
                                 <form>
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <h5>Produção</h5>
-                                            <div class="checkbox">
-                                                <label><input type="checkbox"> Reunião com professor</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label><input type="checkbox"> Adaptação do tema/CSS</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label><input type="checkbox"> Cabeçalho</label>
+                                            <div class="form-group">
+                                                <label>Briefing</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </div>
+                                                    <input type="text" class="form-control" placeholder="dd/mm/aaaa" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-
+                                    
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label>Apresentação</label>
-                                                <select class="form-control">
-                                                    <option>---</option>
-                                                    <option>Enviado por e-mail</option>
-                                                    <option>Aprovado</option>
-                                                    <option>Aprovado com correções</option>
-                                                </select>
+                                                <label>Reunião com professor</label>
+                                                <textarea class="form-control" rows="3"></textarea>
                                             </div>
                                         </div>
                                     </div>
-
+                                    
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <h5>Finalização</h5>
                                             <div class="checkbox">
-                                                <label><input type="checkbox"> Envio para o Suporte</label>
+                                                <label><input type="checkbox"> Fluxograma</label>
                                             </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-12">
                                             <div class="checkbox">
-                                                <label><input type="checkbox"> Checagem online</label>
+                                                <label><input type="checkbox"> Definição de layout</label>
                                             </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Assinatura</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </div>
+                                                    <input type="text" class="form-control" placeholder="dd/mm/aaaa" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Ilustração</label>
+                                                <br clear="all">
+                                                <input type="number" min="1" max="10" step="1" value="0" class="form-control">
+                                                de 10
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Animação</label>
+                                                <br clear="all">
+                                                <input type="number" min="1" max="10" step="1" value="0" class="form-control">
+                                                de 10
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Programação</label>
+                                                <br clear="all">
+                                                <input type="number" min="1" max="10" step="1" value="0" class="form-control">
+                                                de 10
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Diagramação</label>
+                                                <br clear="all">
+                                                <input type="number" min="1" max="10" step="1" value="0" class="form-control">
+                                                de 10
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-12">
                                             <div class="checkbox">
-                                                <label><input type="checkbox"> Organização da pasta</label>
+                                                <label><input type="checkbox"> Testes</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="checkbox">
+                                                <label><input type="checkbox"> Upload</label>
                                             </div>
                                         </div>
                                     </div>
                                 </form>
                                 <hr>
                                 <div style="text-align:right;">
-                                    <button type="button" class="btn btn-default pull-left" data-toggle="modal" data-target="#editMoodle" title="Editar atividade">
+                                    <button type="button" class="btn btn-default pull-left" data-toggle="modal" data-target="editInterativo" title="Editar atividade">
                                         Editar atividade
                                     </button>
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
@@ -925,7 +1039,111 @@
     </div>
 
     <div class="row">
-        <div class="col-md-12" style="margin-bottom:15px;"><h4>Complementares</h4></div>
+        <div class="col-md-12" style="margin-bottom:15px;"><h4>Complementar</h4></div>
+
+        <div class="col-md-3">
+            <div class="box box-ldi">
+                <div class="panel-group">
+                    <div class="panel panel-default">
+                        <a data-toggle="collapse" href="#formulas">
+                            <div class="box-header panel-heading">
+                                <h3 class="box-title"><i class="fa fa-flag"></i>Fórmula</h3>
+                                <div style="float:right;color:#4a6c82;">5% <i class="fa fa-square" ></i></div>
+                            </div>
+                        </a>
+                        <div id="formulas" class="panel-collapse collapse">
+                            <div class="box-body panel-body">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Quantidade</label>
+                                                <br clear="all">
+                                                <input type="number" min="1" max="10" step="1" value="0" class="form-control">
+                                                de 10
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Complexidade</label>
+                                                <select class="form-control">
+                                                    <option>Simples</option>
+                                                    <option>Intermediário</option>
+                                                    <option>Complexo</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                                <hr>
+                                <div style="text-align:right;">
+                                    <button type="button" class="btn btn-default pull-left" data-toggle="modal" data-target="#editFormula" title="Editar atividade">
+                                        Editar atividade
+                                    </button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-success">Salvar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="box box-ldi">
+                <div class="panel-group">
+                    <div class="panel panel-default">
+                        <a data-toggle="collapse" href="#fotografia">
+                            <div class="box-header panel-heading">
+                                <h3 class="box-title"><i class="fa fa-flag"></i>Fotografia</h3>
+                                <div style="float:right;color:gray;">0% <i class="fa fa-square" ></i></div>
+                            </div>
+                        </a>
+                        <div id="fotografia" class="panel-collapse collapse">
+                            <div class="box-body panel-body">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Quantidade</label>
+                                                <br clear="all">
+                                                <input type="number" min="1" max="10" step="1" value="0" class="form-control">
+                                                de 10
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Complexidade</label>
+                                                <select class="form-control">
+                                                    <option>Simples</option>
+                                                    <option>Intermediário</option>
+                                                    <option>Complexo</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                                <hr>
+                                <div style="text-align:right;">
+                                    <button type="button" class="btn btn-default pull-left" data-toggle="modal" data-target="#editFotografia" title="Editar atividade">
+                                        Editar atividade
+                                    </button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-success">Salvar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="col-md-3">
             <div class="box box-ldi">
@@ -971,12 +1189,9 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Quantidade</label>
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <input name="name" type="text" value="" class="form-control" placeholder="Realizada"/>
-                                                    </div>
-                                                    de 10
-                                                </div>
+                                                <br clear="all">
+                                                <input type="number" min="1" max="10" step="1" value="0" class="form-control">
+                                                de 10
                                             </div>
                                         </div>
                                     </div>
@@ -1039,15 +1254,9 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Quantidade</label>
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <input name="name" type="text" value="" class="form-control" placeholder="Realizada"/>
-                                                    </div>
-                                                    <div class="col-md-1" style="line-height:35px;">de</div>
-                                                    <div class="col-md-5">
-                                                        <input name="name" type="text" value="" class="form-control" placeholder="Solicitada"/>
-                                                    </div>
-                                                </div>
+                                                <br clear="all">
+                                                <input type="number" min="1" max="10" step="1" value="0" class="form-control">
+                                                de 10
                                             </div>
                                         </div>
                                     </div>
@@ -1068,122 +1277,6 @@
                                 <hr>
                                 <div style="text-align:right;">
                                     <button type="button" class="btn btn-default pull-left" data-toggle="modal" data-target="#editTabela" title="Editar atividade">
-                                        Editar atividade
-                                    </button>
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                                    <button type="button" class="btn btn-success">Salvar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-3">
-            <div class="box box-ldi">
-                <div class="panel-group">
-                    <div class="panel panel-default">
-                        <a data-toggle="collapse" href="#fotografia">
-                            <div class="box-header panel-heading">
-                                <h3 class="box-title"><i class="fa fa-flag"></i>Fotografia</h3>
-                                <div style="float:right;color:gray;">0% <i class="fa fa-square" ></i></div>
-                            </div>
-                        </a>
-                        <div id="fotografia" class="panel-collapse collapse">
-                            <div class="box-body panel-body">
-                                <form>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label>Quantidade</label>
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <input name="name" type="text" value="" class="form-control" placeholder="Realizada"/>
-                                                    </div>
-                                                    <div class="col-md-1" style="line-height:35px;">de</div>
-                                                    <div class="col-md-5">
-                                                        <input name="name" type="text" value="" class="form-control" placeholder="Solicitada"/>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label>Complexidade</label>
-                                                <select class="form-control">
-                                                    <option>Simples</option>
-                                                    <option>Intermediário</option>
-                                                    <option>Complexo</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                                <hr>
-                                <div style="text-align:right;">
-                                    <button type="button" class="btn btn-default pull-left" data-toggle="modal" data-target="#editFotografia" title="Editar atividade">
-                                        Editar atividade
-                                    </button>
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                                    <button type="button" class="btn btn-success">Salvar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-3">
-            <div class="box box-ldi">
-                <div class="panel-group">
-                    <div class="panel panel-default">
-                        <a data-toggle="collapse" href="#formulas">
-                            <div class="box-header panel-heading">
-                                <h3 class="box-title"><i class="fa fa-flag"></i>Fórmula</h3>
-                                <div style="float:right;color:#4a6c82;">5% <i class="fa fa-square" ></i></div>
-                            </div>
-                        </a>
-                        <div id="formulas" class="panel-collapse collapse">
-                            <div class="box-body panel-body">
-                                <form>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label>Quantidade</label>
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <input name="name" type="text" value="" class="form-control" placeholder="Realizada"/>
-                                                    </div>
-                                                    <div class="col-md-1" style="line-height:35px;">de</div>
-                                                    <div class="col-md-5">
-                                                        <input name="name" type="text" value="" class="form-control" placeholder="Solicitada"/>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label>Complexidade</label>
-                                                <select class="form-control">
-                                                    <option>Simples</option>
-                                                    <option>Intermediário</option>
-                                                    <option>Complexo</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                                <hr>
-                                <div style="text-align:right;">
-                                    <button type="button" class="btn btn-default pull-left" data-toggle="modal" data-target="#editFormula" title="Editar atividade">
                                         Editar atividade
                                     </button>
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
@@ -1252,6 +1345,121 @@
                             </div>
                             <div class="checkbox">
                                 <label><input type="checkbox" checked> Upload</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success">Salvar</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div id="editInterativo" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Editar Vídeo</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Roteiro</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Decupagem</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Storyboard</label>
+                            </div>
+                            <div class="checkbox" style="margin-bottom:5px;">
+                                <label><input type="checkbox" checked> Captura de áudio</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom:5px;">
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <input type="checkbox" checked> Gravação
+                                </span>
+                                <input type="text" class="form-control" placeholder="Quantidade solicitada">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top:5px;margin-bottom:5px;">
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <input type="checkbox" checked> Ilustração concluída
+                                </span>
+                                <input type="text" class="form-control" placeholder="Quantidade solicitada">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top:5px;margin-bottom:5px;">
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <input type="checkbox" checked> Animação
+                                </span>
+                                <input type="text" class="form-control" placeholder="Quantidade solicitada">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top:5px;margin-bottom:5px;">
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <input type="checkbox" checked> Edição de vídeo
+                                </span>
+                                <input type="text" class="form-control" placeholder="Quantidade solicitada">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Edição sonora</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Animatic</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Legenda</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Créditos</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Render</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Revisão</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Upload</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> DVD</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Data de disponibilidade</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Início da gravação</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Revisado pelo autor</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked> Conclusão</label>
                             </div>
                         </div>
                     </div>
