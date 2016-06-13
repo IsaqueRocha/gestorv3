@@ -44,9 +44,8 @@ Route::post('/users/{id}/upload', 'CropController@postUpload')->where('id', '[0-
 Route::post('/users/{id}/crop', 'CropController@postCrop')->where('id', '[0-9]+');
 
 /* Rotas que tratam de projetos */
-Route::get('/projects', function(){
-    return view('template.project.gerenciar_projeto');
-});
+Route::get('/projects', 'ProjectController@index');
+
 Route::get('/projects/create', function(){
     return view('template.project.adicionar_projeto');
 });
