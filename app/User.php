@@ -61,4 +61,9 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     public function work_schedule(){
         return $this->hasOne(WorkSchedule::class, 'user_id');
     }
+
+    public function projects()
+    {
+        return $this->hasMany(App\Project::class);
+    }
 }

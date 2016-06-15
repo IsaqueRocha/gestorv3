@@ -69,9 +69,27 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="box-body">
-                    <table class="table table-bordered table-hover">
+                    <table id="projecttable" class="table table-bordered table-responsive table-hover" width="100%">
+                        <thead>
+                            <tr>
+                                <th>Curso</th>
+                                <th>Projeto</th>
+                                <th>Tipo</th>
+                                <th>Apoio</th>
+                                <th>Situação</th>
+                                <th class="icone"></th>
+                                <th class="icone"></th>
+                                <th class="icone"></th>
+                                <th class="icone"></th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+
+                <div class="box-body">
+                    <table class="table table-bordered table-responsive table-hover" width="100%">
                         <thead>
                             <tr>
                                 <th>Curso</th>
@@ -95,7 +113,7 @@
                                 <td>Na fila</td>
                                 <td>
                                     <div class="progress progress-sm">
-                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
                                             <span class="sr-only">100% Complete</span>
                                         </div>
                                     </div>
@@ -143,7 +161,7 @@
                                     </div>
                                 </td>
                             </tr>
-                            
+
                             <tr>
                                 <td class="box-curso" title="Química"></td>
                                 <td>Moodle - Seminário</td>
@@ -183,7 +201,7 @@
                                     Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
                                 </td>
                             </tr>
-                            
+
                             <tr>
                                 <td class="box-curso" title="Biologia"></td>
                                 <td>Moodle - Seminário</td>
@@ -223,7 +241,7 @@
                                     Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
                                 </td>
                             </tr>
-                            
+
                             <tr>
                                 <td class="box-curso" title="Matemática"></td>
                                 <td>Moodle - Seminário</td>
@@ -271,4 +289,7 @@
     </div>
 </section>
 <!-- FIM TABELA - LISTA DE USUÁRIOS -->
+@endsection
+@section('script')
+    <script src="{{ asset('assets/dist/js/ajax-project.js' )}}" charset="utf-8"></script>
 @endsection

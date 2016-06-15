@@ -56,6 +56,8 @@ Route::get('/projects/marcos', function(){
     return view('template.project.gerenciar_marcos');
 });
 
+Route::get('/api/projects', 'ProjectController@listing');
+
 /*Rotas que tratam de Login*/
 Route::get('auth/login', 'Auth\AuthController@getLogin');
 Route::post('auth/login', 'Auth\AuthController@postLogin');

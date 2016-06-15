@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\Project;
+
 class ProjectController extends Controller
 {
     /**
@@ -84,4 +86,12 @@ class ProjectController extends Controller
     {
         //
     }
+
+    public function listing()
+    {
+        $projects = Project::with('course', 'status', 'users', 'types')->get();
+
+        return response()->json(['data' => $projects]);
+    }
+
 }

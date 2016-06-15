@@ -3,6 +3,10 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Course;
+use App\Status;
+use App\Teacher;
+use App\Type;
 
 class Project extends Model
 {
@@ -38,23 +42,23 @@ class Project extends Model
     }
 
     public function users(){
-        return $this->hasMany(App\User::class);
+        return $this->belongsToMany(User::class);
     }
 
     public function course(){
-        return $this->hasOne(App\Course::class);
+        return $this->belongsTo(Course::class);
     }
 
     public function teacher(){
-        return $this->hasOne(App\Teacher::class);
+        return $this->hasOne(Teacher::class);
     }
 
     public function types(){
-        return $this->hasMany(App\Type::class);
+        return $this->belongsToMany(Type::class);
     }
 
     public function status(){
-        return $this->hasOne(App\Status::class);
+        return $this->belongsTo(Status::class);
     }
 
 }
