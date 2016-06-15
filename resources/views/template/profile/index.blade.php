@@ -25,10 +25,10 @@
                     </div>
                     <hr>
                     <div>
-                        <div class="col-md-2">
+                        <div class="col-md-2" style="margin-bottom: 20px;">
                             <img src="{{ ( $user->photo == null ) ? ('/assets/theme/img/avatar.png'):($user->photo) }}" class="img-circle" alt="Foto do Usuário" />
                         </div>
-                        <div class="col-md-10">
+                        <div class="col-md-10" style="margin-bottom: 20px;">
                             <ul style="list-style:none;padding-left:0;float:left;width:100%;">
                                 <div class="col-md-4">
                                     <li><b>Nome:</b> {{ $user->name }}</li>
@@ -112,10 +112,9 @@
                             <tr>
                                 <th>Curso</th>
                                 <th>Projeto</th>
-                                <th>Tipo</th>
+                                <th>Composição</th>
                                 <th>Apoio</th>
                                 <th>Situação</th>
-                                <th>Progresso</th>
                                 <th class="icone"><i class="fa fa-pencil" title="Editar"></i></th>
                                 <th class="icone"><i class="fa fa-flag" title="Expandir"></i></th>
                                 <th class="icone"><i class="fa fa-edit" title="Editar"></i></th>
@@ -129,18 +128,11 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="box-curso" title="Química"></td>
+                                <td class="box-curso art"></td>
                                 <td>Moodle - Seminário</td>
                                 <td><i class="fa fa-globe"></i></td>
-                                <td>Renato Delpupo <i class="fa fa-users" title="Antonio Anselmo, Mariana Machado, Rayan Casagrande"></i></td>
+                                <td>Ana Clara, Pedro e Renato</td>
                                 <td>Parado</td>
-                                <td>
-                                    <div class="progress progress-sm">
-                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 30%">
-                                            <span class="sr-only">30% Complete</span>
-                                        </div>
-                                    </div>
-                                </td>
                                 <td class="icone">
                                     <a>
                                         <i class="fa fa-pencil" title="Editar"></i>
@@ -168,18 +160,11 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="box-curso" title="Matemática"></td>
+                                <td class="box-curso mat"></td>
                                 <td>Moodle - Seminário</td>
                                 <td><i class="fa fa-globe"></i></td>
-                                <td>Renato Delpupo <i class="fa fa-users" title="Antonio Anselmo, Mariana Machado, Rayan Casagrande"></i></td>
-                                <td>Desenvolvendo</td>
-                                <td>
-                                    <div class="progress progress-sm active">
-                                        <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
-                                            <span class="sr-only">50% Complete</span>
-                                        </div>
-                                    </div>
-                                </td>
+                                <td>Antonio, Rayan e Renato</td>
+                                <td>Em andamento</td>
                                 <td class="icone">
                                     <a>
                                         <i class="fa fa-pencil" title="Editar"></i>

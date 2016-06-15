@@ -16,9 +16,9 @@
 
 <!--  -->
 <section class="content">
-    <div class="row artes">
+    <div class="row">
         <div class="col-md-12">
-            <div class="box box-ldi">
+            <div class="box box-curso art">
                 <div class="box-header">
                     <h3 class="box-title">Evento de Artes Visuais</h3>
                 </div>

@@ -3,24 +3,6 @@
  * ----------
  */
 /* IDENTIDADE DO LDI */
-/* CORES DOS CURSOS */
-/* COMPORTAMENTO DE TAGS DOS CURSOS */
-.tagArtes {
-  background-color: #c94259;
-  color: #FFF;
-}
-.tagQuimica {
-  background-color: #55ccdd;
-  color: #000;
-}
-.tagBiologia {
-  background-color: #eecc77;
-  color: #000;
-}
-.tagMatematica {
-  background-color: #009977;
-  color: #FFF;
-}
 body.login-page {
   background-color: #4a6c82;
 }
