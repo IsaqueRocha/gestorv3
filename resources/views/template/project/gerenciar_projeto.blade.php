@@ -1,4 +1,11 @@
 @extends('app')
+@section('head')
+<style media="screen">
+    #projecttable_filter{
+        display: none;
+    }
+</style>
+@endsection
 @section('content')
 <!-- CABEÇALHO -->
 <section class="content-header">
@@ -31,13 +38,14 @@
                                 <div class="rotulo">
                                     Exibir
                                 </div>
-                                <select class="form-control input-sm">
-                                    <option>Todos</option>
-                                    <option>Web</option>
+                                <select id="selecttype" class="form-control input-sm">
+                                    <option value="">Todos</option>
+                                    <option>Livro Digital</option>
+                                    <option>Livro Impresso</option>
+                                    <option>Moodle</option>
                                     <option>Vídeo</option>
-                                    <option>Diagramação</option>
-                                    <option>Interno</option>
-                                    <option>Outro</option>
+                                    <option>Web</option>
+                                    <option>Interativo</option>
                                 </select>
                             </div>
 
@@ -45,15 +53,17 @@
                                 <div class="rotulo">
                                     Situação
                                 </div>
-                                <select class="form-control input-sm">
-                                    <option>Todos</option>
-                                    <option>Entregues</option>
+                                <select id="selectstatus" class="form-control input-sm">
+                                    <option value="">Todos</option>
+                                    <option>Na fila</option>
                                     <option>Em andamento</option>
+                                    <option>Parado</option>
+                                    <option>Finalizado</option>
                                 </select>
                             </div>
 
                             <div class="input-group pesquisar-projeto acoes">
-                                <input type="text" name="table_search" class="form-control input-sm" style="width: 150px;position:initial;" placeholder="Buscar projeto">
+                                <input id="filter_global" type="text" name="table_search" class="form-control input-sm" style="width: 150px;position:initial;" placeholder="Buscar projeto">
                                 <span class="input-group-btn" style="width: auto;position:absolute;right:0;">
                                     <button class="btn btn-sm btn-default" type="button">
                                         <i class="fa fa-search"></i>
@@ -88,7 +98,7 @@
                     </table>
                 </div>
 
-                <div class="box-body">
+                <div style="display: none;" class="box-body">
                     <table class="table table-bordered table-responsive table-hover" width="100%">
                         <thead>
                             <tr>

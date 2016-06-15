@@ -1,11 +1,13 @@
+var style = "box-curso ";
+
 var table = $('#projecttable').DataTable({
     ajax        :   "api/projects",
     responsive  :   true,
     columns     :   [
         {   data: {
-                _:  "course.tinyname",
+                _: "course.tinyname",
             },
-            className   :   "box-curso"
+            className   :  'box-curso',
         },
         {   data: "title" },
         {   data: null,
@@ -34,6 +36,7 @@ var table = $('#projecttable').DataTable({
         {   data: {
                 _:  "status.name",
         },},
+
         {   data: null,
             orderable: false,
             className:   'icone',
@@ -63,6 +66,15 @@ var table = $('#projecttable').DataTable({
                             '</a>',
         }
     ],
+    columnDefs  :   [{
+        targets: 0,
+        createdCell: function(td, cellData, rowData, row, col){
+            var cls = cellData;
+            $(td).text('');
+            $(td).addClass(cls);
+
+        }
+    }],
     paging      :   false,
     language    :   {
         "sProcessing": "Processando...",
@@ -82,3 +94,19 @@ var table = $('#projecttable').DataTable({
         }
     },
 });
+
+$('#filter_global').on( 'keyup click', function () {
+    table.search( this.value ).draw();
+} );
+
+$('#selectstatus').on('change', function () {
+    table.column( 4 )
+        .search( this.value )
+        .draw();
+} );
+
+$('#selecttype').on('change', function () {
+    table.column( 2 )
+        .search( this.value )
+        .draw();
+} );

@@ -14,14 +14,17 @@ class CourseTableSeeder extends Seeder
         DB::table('courses')->insert([
             ['name' => 'Artes Visuais', 'tinyname' => 'art'],
             ['name' => 'Biologia', 'tinyname' => 'bio'],
-            ['name' => 'Ciências Contábeis', 'tinyname' => 'cco'],
-            ['name' => 'Dimensões da Humanização', 'tinyname' => 'ddh'],
+            ['name' => 'Dimensões da Humanização', 'tinyname' => 'hum'],
             ['name' => 'Educação Física', 'tinyname' => 'edf'],
             ['name' => 'Filosofia', 'tinyname' => 'fil'],
             ['name' => 'Física', 'tinyname' => 'fis'],
             ['name' => 'História', 'tinyname' => 'his'],
             ['name' => 'Pedagogia', 'tinyname' => 'ped'],
             ['name' => 'Química', 'tinyname' => 'qui'],
+            ['name' => 'Educação do Campo', 'tinyname' => 'edc'],
+            ['name' => 'Educação em Direitos Humanos', 'tinyname' => 'edh'],
+            ['name' => 'Matemática', 'tinyname' => 'mat'],
+            ['name' => 'Epidemiologia', 'tinyname' => 'epi'],
         ]);
     }
 }
