@@ -16,9 +16,9 @@
 
 <!--  -->
 <section class="content">
-    <div class="row artes">
+    <div class="row">
         <div class="col-md-12">
-            <div class="box box-ldi">
+            <div class="box box-curso art">
                 <div class="box-header">
                     <h3 class="box-title">Evento de Artes Visuais</h3>
                 </div>
@@ -36,20 +36,11 @@
                                 <li><b>Apoio:</b> Antonio, Mariana, Rayan</li>
                             </div>
                             <div class="col-md-4">
-                                <li><b>Tipo do Projeto:</b> Vídeo, Impresso</li>
-                                <li><b>Complementares:</b> Ilustração</li>
+                                <li><b>Composição:</b> Vídeo, Impresso</li>
                             </div>
                         </ul>
                     </div>
                     <div class="row" style="margin-top:10px;">
-                        <div class="col-md-4">
-                            <b>Progresso:</b>
-                            <div class="progress progress-sm" style="margin-top:5px;margin-bottom:0;">
-                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-                                    <span class="sr-only">100% Complete</span>
-                                </div>
-                            </div>
-                        </div>
                         <div class="col-md-4">
                             <div><b>Situação:</b></div>
                             <div>Entregue</div>

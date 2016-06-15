@@ -1,4 +1,5 @@
 @import "../mixins.less";
+@import "../cursos.less";
 
 /*
 
@@ -75,7 +76,7 @@
         tr.panel-collapse {
             background-color: #efefef !important;
         }
-        
+
         tr.shown {
             background-color: #efefef;
         }
@@ -153,8 +154,43 @@
 
 /* 1.3) FORMULARIOS */
 
-form {
-    
+.composicaoProjeto {
+
+    hr {
+        margin: 10px 0px 20px 0px;
+    }
+}
+
+.modal .modal-dialog .modal-body form .row {
+
+    .checkbox, .input-group {
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    hr {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
+
+textarea {
+    max-width: 100%;
+}
+
+.modal-body, .modal-footer {
+    float: left;
+    width: 100%;
+    background: white;
+}
+
+#livroImpresso div form div.row {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+form {   
+
     input[type="number"]{
         float:left;
         width:auto;
@@ -163,7 +199,7 @@ form {
         padding-left:5px;
         margin-right:5px;
     }
-    
+
     .checkbox {
         float: left;
         width: 100%;
@@ -210,19 +246,6 @@ button[form="desativarUsuario"] {
 
 /* 3) GERENCIAR PROJETOS */
 
-section .row {
-
-    &.artes {
-        .box-ldi {
-            border-top-color: @corArtes;
-            .box-header {
-                .tagArtes;
-                padding: 10px 20px;
-            }
-        }
-    }
-}
-
 .box-header {
     .acoes {
         position: relative;
@@ -252,106 +275,6 @@ section .row {
 
     a:active, a:focus {
         color: #3c8dbc;
-    }
-}
-
-.listaProjetos {
-
-    td[title="Artes"] {
-        .tagArtes;
-
-        &:before {
-            content: "Art";
-        }
-    }
-
-    td[title="Química"] {
-        .tagQuimica;
-
-        &:before {
-            content: "Qui";
-        }
-    }
-
-    td[title="Biologia"] {
-        .tagBiologia;
-
-        &:before {
-            content: "Bio";
-        }
-    }
-
-    td[title="Matemática"] {
-        .tagMatematica;
-
-        &:before {
-            content: "Mat";
-        }
-    }
-
-    .box-curso {
-        width: 60px;
-        text-align: center;
-
-        &.edfisica {
-            background-color: #d4d0b3;
-            color:#000;
-        }
-
-        &.contabeis {
-            background-color: #ff9966;
-            color:#000;
-        }
-
-        &.fisica {
-            background-color: #116554;
-            color:#fff;
-        }
-
-        &.edcampo {
-            background-color: #060;
-            color:#FFF;
-        }
-
-        &.dirhumanos {
-            background-color: #663;
-            color:#FFF;
-        }
-
-        &.pedagogia {
-            background-color: #505e93;
-            color:#fff;
-        }
-
-        &.historia {
-            background-color: #016075;
-            color:#fff;
-        }
-
-        &.filosofia {
-            background-color: #9fd18b;
-            color:#000;
-        }
-
-        &.dimensoes {
-            background-color: #fabfb7;
-            color:#000;
-        }
-
-        &.mais-educacao {
-            background-color: #147fad;
-            color:#FFF;
-        }
-
-        &.outro {
-            background-color: #aaa;
-            color:#000;
-        }
-
-        &.interno {
-            background-color: #555;
-            color:#FFF;
-        }
     }
 }
 

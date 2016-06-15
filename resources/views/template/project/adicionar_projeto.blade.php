@@ -9,7 +9,7 @@
     <ol class="breadcrumb">
         <li><a href="{!! url('/') !!}"><i class="fa fa-dashboard"></i> Início</a></li>
         <li><a href="{!! url('/projects') !!}"><i class="fa fa-tasks"></i> Gerenciar Projetos</a></li>
-        <li class="active"><i class="fa fa-plus-circle"></i> Adicionar Projeto</li>
+        <li class="active"><i class="fa fa-plus-circle"></i> Adicionar</li>
     </ol>
 </section>
 <!-- FIM CABEÇALHO -->
@@ -118,25 +118,18 @@
                                 </div>
                             </div>
 
-                            <!-- COMPLEMENTARES -->
                             <div class="form-group col-md-6">
-                                <label>Complementares</label>
-                                <div class="checkbox">
-                                    <label><input type="checkbox" name="composicao" value="formula"> Fórmula</label>
-                                    <label><input type="checkbox" name="composicao" value="tabela"> Tabela</label>
-                                    <label><input type="checkbox" name="composicao" value="fotografia"> Fotografia</label>
-                                    <label><input type="checkbox" name="composicao" value="ilustracao"> Ilustração</label>
-                                </div>
+                                <label>Situação</label>
+                                <select class="form-control">
+                                    <option>(Selecionar)</option>
+                                    <option>Na fila</option>
+                                    <option>Em andamento</option>
+                                    <option>Parado</option>
+                                    <option>Finalizado</option>
+                                </select>
                             </div>
-                        </div>
 
-                        <!-- ADICIONAR NO CASO DE EDITAR PROJETO -->
-                        <div class="callout callout-info" style="border-width:1px 1px 1px 5px;border-style:solid;border-color:#4a6c82;color:#333 !important;background-color:white !important;">
-                            <div class="checkbox" style="border:none;padding:0;margin-bottom:0;float:none;">
-                                    <label style="float:none;"><input type="checkbox" name="" value=""> Este projeto ainda não foi concluído. Clique aqui para sinalizá-lo como Parado.</label>
-                            </div>
                         </div>
-                        
                     </form>
 
                     <div class="row">

@@ -94,7 +94,7 @@
                             <tr>
                                 <th>Curso</th>
                                 <th>Projeto</th>
-                                <th>Tipo</th>
+                                <th>Composição</th>
                                 <th>Apoio</th>
                                 <th>Situação</th>
                                 <th>Progresso</th>
