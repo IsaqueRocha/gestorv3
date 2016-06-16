@@ -120,8 +120,8 @@ var table = $('#usertable').DataTable({
             "orderable":      false,
             "data":           null,
             "render":   function(data){
-                    
-                return '<a href="#" >' +
+
+                return '<a>' +
                             '<i id="pm' + data.id + '" class="fa fa-plus-circle" title="Mais" onclick="trocaPlusMinus(' + data.id + ')"></i>' +
                         '</a>';
             }
@@ -160,7 +160,7 @@ function format ( d ) {
                     '<label>E-mail: </label> <span>'+ d.email +'</span><br/>' +
                     '<label>Telefone: </label> <span>' + d.phone +'</span> <br/>' +
                 '</div>'+
-                '<div class="col-md-3">' +   
+                '<div class="col-md-3">' +
                     '<label>Entrada: </label> <span>'+ date +'</span> <br/>' +
                     '<label>Função: </label> <span>' + d.role +'</span> <br/>' +
                     '<label>Área de atuação: </label> <span>' + d.area + '</span> <br/>' +

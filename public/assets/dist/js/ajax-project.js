@@ -56,9 +56,11 @@ var table = $('#projecttable').DataTable({
         {   data: null,
             orderable: false,
             className:   'icone',
-            defaultContent: '<a>' +
+            render: function(data){
+                    return  '<a href="/projects/'+ data.id + '/edit">' +
                                 '<i class="fa fa-edit" title="Editar config. do projeto"></i>' +
-                            '</a>',
+                            '</a>';
+                    }
         },
         {   data: null,
             orderable: false,

@@ -8,6 +8,10 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\Project;
+use App\Teacher;
+use App\Course;
+use App\Type;
+use App\User;
 
 class ProjectController extends Controller
 {
@@ -61,7 +65,19 @@ class ProjectController extends Controller
      */
     public function edit($id)
     {
-        //
+        $project = Project::find($id);
+        $teachers = Teacher::all();
+        $courses = Course::all();
+        $types = Type::all();
+        $users = User::where('role', "Estagiário")->get();
+        return view('template.project.editar_projeto',
+                    compact('project',
+                            'teachers',
+                            'courses',
+                            'types',
+                            'users'
+                    )
+                );
     }
 
     /**
