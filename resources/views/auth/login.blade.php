@@ -48,7 +48,7 @@ e não mostrar o topo das demais páginas
                         </div>
                     </div>
                     <div class="col-md-12" style="margin-top: 15px;">
-                        <button type="submit" class="btn btn-success btn-block btn-flat">Entrar</button>
+                        <button type="submit" class="btn btn-success btn-block">Entrar</button>
                     </div>
                 </div>
             </form>
