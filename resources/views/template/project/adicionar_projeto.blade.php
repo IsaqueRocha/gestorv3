@@ -121,9 +121,8 @@
                             <div class="form-group col-md-6">
                                 <label>Situação</label>
                                 <select class="form-control">
-                                    <option>(Selecionar)</option>
-                                    <option>Na fila</option>
                                     <option>Em andamento</option>
+                                    <option>Na fila</option>
                                     <option>Parado</option>
                                     <option>Finalizado</option>
                                 </select>

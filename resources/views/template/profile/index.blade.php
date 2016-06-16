@@ -58,7 +58,7 @@
                 <div class="box-header">
                     <div>
                         <h3 class="box-title">
-                            <i class="fa fa-clipboard"></i> Lista de projetos vinculados
+                            <i class="fa fa-clipboard"></i> Lista de projetos vinculados (tabela desatualizada)
                         </h3>
                     </div>
                     <hr>
@@ -112,7 +112,7 @@
                             <tr>
                                 <th>Curso</th>
                                 <th>Projeto</th>
-                                <th>Composição</th>
+                                <th class='icone-composicao' title='Composição do projeto'>Tipo</th>
                                 <th>Apoio</th>
                                 <th>Situação</th>
                                 <th class="icone"><i class="fa fa-pencil" title="Editar"></i></th>
@@ -130,7 +130,7 @@
                             <tr>
                                 <td class="box-curso art"></td>
                                 <td>Moodle - Seminário</td>
-                                <td><i class="fa fa-globe"></i></td>
+                                <td class='icone-composicao'><i class="fa fa-globe"></i></td>
                                 <td>Ana Clara, Pedro e Renato</td>
                                 <td>Parado</td>
                                 <td class="icone">

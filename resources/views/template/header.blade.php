@@ -1,4 +1,4 @@
-<!--CONTAINER (CONTÉM TUDO) -->
+<!-- WRAPPER -->
 <div class="wrapper">
   <!-- HEADER -->
   <header class="main-header">
@@ -52,7 +52,7 @@
                 </li>
               </ul><!-- FIM DROPDOWN -->
             </li><!-- FIM TRABALHOS EM ANDAMENTO -->
-            <!-- MENU DO URSUÁRIO -->
+            <!-- MENU DO USUÁRIO -->
             <li class="dropdown user user-menu">
               <!-- BOTÃO -->
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">

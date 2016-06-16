@@ -223,8 +223,8 @@ a:focus {
 @media (max-width: 991px) {
   .main-header .navbar-custom-menu a,
   .main-header .navbar-right a {
-    color: inherit;
-    background: transparent;
+    /*        color: inherit;
+        background: transparent;*/
   }
 }
 @media (max-width: 767px) {
@@ -738,8 +738,7 @@ a:focus {
   width: 90px;
   border: 3px solid;
   border-color: transparent;
-  /*border-color: rgba(255, 255, 255, 0.2);*/
-  border-color: white;
+  border-color: rgba(255, 255, 255, 0.2);
 }
 .navbar-nav > .user-menu > .dropdown-menu > li.user-header > p {
   z-index: 5;
@@ -1163,12 +1162,12 @@ a:focus {
   margin-bottom: 20px;
   width: 100%;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  /*  &.box-ldi {
+    border-top-color: @cor-ldi;
+  }*/
 }
 .box.box-primary {
   border-top-color: #3c8dbc;
-}
-.box.box-ldi {
-  border-top-color: #4a6c82;
 }
 .box.box-info {
   border-top-color: #00c0ef;
@@ -1208,6 +1207,9 @@ a:focus {
 }
 .box.box-solid {
   border-top: 0px;
+  /*    &.box-primary {
+      .box-solid-variant(@cor-ldi);
+    }*/
 }
 .box.box-solid > .box-header .btn.btn-default {
   background: transparent;
@@ -1235,18 +1237,6 @@ a:focus {
   color: #fff;
   background: #3c8dbc;
   background-color: #3c8dbc;
-}
-.box.box-solid.box-primary > .box-header a,
-.box.box-solid.box-primary > .box-header .btn {
-  color: #fff;
-}
-.box.box-solid.box-primary {
-  border: 1px solid #4a6c82;
-}
-.box.box-solid.box-primary > .box-header {
-  color: #fff;
-  background: #4a6c82;
-  background-color: #4a6c82;
 }
 .box.box-solid.box-primary > .box-header a,
 .box.box-solid.box-primary > .box-header .btn {
@@ -1832,15 +1822,13 @@ a:focus {
 .btn-primary.hover {
   background-color: #367fa9;
 }
-.btn-ldi {
-  background-color: #4a6c82;
-  border-color: #415f72;
-}
-.btn-ldi:hover,
-.btn-ldi:active,
-.btn-ldi.hover {
-  background-color: #415f72;
-}
+/*.btn-ldi {
+  background-color: @cor-ldi;
+  border-color: darken(@cor-ldi, 5%);
+  &:hover, &:active, &.hover {
+    background-color: darken(@cor-ldi, 5%);
+  }
+}*/
 .btn-success {
   background-color: #00a65a;
   border-color: #008d4c;
@@ -3856,9 +3844,9 @@ fieldset[disabled] .btn-vk.focus {
 .modal-danger .modal-footer {
   color: #fff !important;
 }
-.bg-ldi {
-  background-color: #4a6c82 !important;
-}
+/*.bg-ldi {
+  background-color: @cor-ldi !important;
+}*/
 .bg-gray {
   color: #000;
   background-color: #d2d6de !important;
