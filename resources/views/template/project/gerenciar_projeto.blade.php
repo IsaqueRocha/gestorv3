@@ -40,8 +40,8 @@
                                 </div>
                                 <select id="selecttype" class="form-control input-sm">
                                     <option value="">Todos</option>
-                                    <option>Livro Digital</option>
-                                    <option>Livro Impresso</option>
+                                    <option value="Digital">Livro Digital</option>
+                                    <option value="Impresso">Livro Impresso</option>
                                     <option>Moodle</option>
                                     <option>Vídeo</option>
                                     <option>Web</option>

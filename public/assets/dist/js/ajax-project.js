@@ -14,11 +14,13 @@ var table = $('#projecttable').DataTable({
             render: function(data){
                 var type = data.types;
                 var str = type[0].name;
+                var icons =  findIcon(type[0].name);
                 for (var i = 1; i < type.length; i++) {
                     str += ', ' + type[i].name;
+                    icons += ' ' + findIcon(type[i].name);
                 }
                 str += '.';
-                return str;
+                return '<span style="display: none;">' + str + '</span>' + icons;
             }
         },
         {
@@ -93,6 +95,7 @@ var table = $('#projecttable').DataTable({
             "sLast": "Último"
         }
     },
+    order: [[1, 'asc']],
 });
 
 $('#filter_global').on( 'keyup click', function () {
@@ -110,3 +113,28 @@ $('#selecttype').on('change', function () {
         .search( this.value )
         .draw();
 } );
+
+function findIcon(str){
+    var icons;
+    switch (str) {
+        case "Moodle":
+            icons = '<i class="fa fa-graduation-cap" title="Moodle"></i>';
+            break;
+        case "Vídeo":
+            icons = '<i class="fa fa-video-camera" title="Vídeo"></i>';
+            break;
+        case "Web":
+            icons = '<i class="fa fa-globe" title="Web"></i>';
+            break;
+        case "Interativo":
+            icons = '<i class="fa fa-gamepad" title="Interativo"></i>';
+            break;
+        case "Livro Digital":
+            icons = '<i class="fa fa-tablet" title="Livro Digital"></i>';
+            break;
+        case "Livro Impresso":
+            icons = '<i class="fa fa-book" title="Livro Impresso"></i>';
+            break;
+    }
+    return icons;
+}
