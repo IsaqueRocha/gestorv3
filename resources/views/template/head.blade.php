@@ -21,6 +21,9 @@
 <!-- DATA TABLES -->
 <link href="{{ asset('assets/plugins/datatables/dataTables.bootstrap.css') }}" rel="stylesheet" type="text/css" />
 
+{{-- SELECT2 --}}
+<link href="{{ asset('/assets/plugins/select2/select2.min.css')}}" rel="stylesheet" type="text/css">
+
 <!--[if lt IE 9]>
   <script src="dist/js/html5shiv.js"></script>
   <script src="dist/js/respond.min.js"></script>

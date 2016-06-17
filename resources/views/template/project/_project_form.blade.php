@@ -9,10 +9,10 @@
         <!-- PROFESSOR -->
         <div class="form-group col-md-5">
             <label>Professor</label>
-            <select class="form-control">
+            <select class="form-control js-example-basic-single">
                 <option>(Selecionar)</option>
                 @foreach($teachers as $teacher)
-                <option>{{ $teacher->name }}</option>
+                <option value="{{ $teacher->id }}" {{($project->teacher->id == $teacher->id)?('selected'):('')}} >{{ $teacher->name }}</option>
                 @endforeach
             </select>
         </div>
@@ -26,10 +26,10 @@
         <!-- CURSO -->
         <div class="form-group col-md-4">
             <label>Curso</label>
-            <select class="form-control" required>
+            <select class="form-control js-example-basic-single" required>
                 <option>(Selecionar)</option>
                 @foreach($courses as $course)
-                <option>{{ $course->name }} </option>
+                <option value="{{$course->id}}" {{($project->course->id == $course->id)?('selected'):('')}}>{{ $course->name }} </option>
                 @endforeach
             </select>
         </div>
@@ -51,33 +51,26 @@
             <input name="deadline" type="text" value="{{ $project->deadline->format('d/m/Y') }}" class="form-control" placeholder="dd/mm/aaaa" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask required/>
         </div>
 
-        <!-- APOIO -->
-        <div class="form-group col-md-12">
+        {{-- <!-- APOIO -->
+        <div class="form-group col-md-6">
             <label>Apoio</label>
             <div class="checkbox">
-                <div class="col-md-3">
+                <div class="col-md-6">
                     @foreach($users as $user)
                         <label><input type="checkbox" name="apoio[]" value="{{ $user->id }}">{{ $user->name }}</label>
                     @endforeach
                 </div>
-                <div class="col-md-3">
-                    <label><input type="checkbox" name="apoio" value=""> GK</label>
-                    <label><input type="checkbox" name="apoio" value=""> Hugo</label>
-                    <label><input type="checkbox" name="apoio" value=""> Mariana</label>
-                    <label><input type="checkbox" name="apoio" value=""> Thaís</label>
-                </div>
-                <div class="col-md-3">
-                    <label><input type="checkbox" name="apoio" value=""> Nina</label>
-                    <label><input type="checkbox" name="apoio" value=""> Paulo</label>
-                    <label><input type="checkbox" name="apoio" value=""> Pedro</label>
-                    <label><input type="checkbox" name="apoio" value=""> Gabriel</label>
-                </div>
-                <div class="col-md-3">
-                    <label><input type="checkbox" name="apoio" value=""> Rayan</label>
-                    <label><input type="checkbox" name="apoio" value=""> Renato</label>
-                    <label><input type="checkbox" name="apoio" value=""> Vinicius</label>
-                </div>
             </div>
+        </div> --}}
+
+        <!-- APOIO -->
+        <div class="form-group col-md-6">
+            <label>Apoio</label>
+            <select class="js-example-basic-multiple form-control" multiple="multiple" name="apoio[]">
+                @foreach($users as $user)
+                    <option value="{{ $user->id }}" {{($project->hasUser($user->id)?('selected'):(''))}}>{{ $user->name }} </option>
+                @endforeach
+            </select>
         </div>
 
         <!-- COMPOSIÇÃO DO PROJETO -->
@@ -85,24 +78,25 @@
             <label>Tipo do Projeto</label>
             <div class="checkbox">
                 @foreach($types as $type)
-                <label><input type="checkbox" name="composicao[]" value="{{$type->id}}"> {{ $type->name }}</label>
+                <label><input type="checkbox" name="composicao[]" value="{{ $type->id }}" {{($project->hasType($type->id)?('checked'):(''))}}> {{ $type->name }}</label>
                 @endforeach
-                {{-- <label><input type="checkbox" name="composicao" value="moodle"> Moodle</label>
-                <label><input type="checkbox" name="composicao" value="web"> Web</label>
-                <label><input type="checkbox" name="composicao" value="video"> Vídeo</label>
-                <label><input type="checkbox" name="composicao" value="impresso"> Impresso</label> --}}
-            </div>
         </div>
 
         <div class="form-group col-md-6">
             <label>Situação</label>
             <select class="form-control">
-                <option>Em andamento</option>
-                <option>Na fila</option>
-                <option>Parado</option>
-                <option>Finalizado</option>
+                @foreach($status as $stat)
+                    <option value="{{ $stat->id}}" {{ ($project->status->id == $stat->id)?('selected'):('')}}>{{ $stat->name }}</option>
+                @endforeach
             </select>
         </div>
 
     </div>
 </form>
+@section('script')
+    <script type="text/javascript">
+        $(".js-example-basic-multiple").select2();
+        $(".js-example-basic-single").select2();
+    </script>
+    </script>
+@endsection

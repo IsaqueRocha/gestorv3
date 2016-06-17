@@ -12,6 +12,7 @@ use App\Teacher;
 use App\Course;
 use App\Type;
 use App\User;
+use App\Status;
 
 class ProjectController extends Controller
 {
@@ -66,16 +67,20 @@ class ProjectController extends Controller
     public function edit($id)
     {
         $project = Project::find($id);
+        $prousers = $project->users()->get();
         $teachers = Teacher::all();
         $courses = Course::all();
         $types = Type::all();
-        $users = User::where('role', "Estagiário")->get();
+        $users = User::all();
+        $status = Status::all();
         return view('template.project.editar_projeto',
                     compact('project',
+                            'prousers',
                             'teachers',
                             'courses',
                             'types',
-                            'users'
+                            'users',
+                            'status'
                     )
                 );
     }

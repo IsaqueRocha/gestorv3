@@ -39,3 +39,6 @@
 
 <!-- Multiple Select -->
 <!--<script src="{{ asset('assets/plugins/multipleselect/multiple-select.js') }}" type="text/javascript"></script>-->
+
+{{-- SELECT2 --}}
+<script src="{{ asset('assets/plugins/select2/select2.min.js') }}" type="text/javascript" charset="utf-8"></script>

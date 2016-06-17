@@ -45,16 +45,36 @@ class Project extends Model
         return $this->belongsToMany(User::class);
     }
 
+    public function hasUser($id){
+        $users = $this->users()->get();
+        foreach ($users as $user) {
+            if ($user->id == $id) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public function course(){
         return $this->belongsTo(Course::class);
     }
 
     public function teacher(){
-        return $this->hasOne(Teacher::class);
+        return $this->belongsTo(Teacher::class);
     }
 
     public function types(){
         return $this->belongsToMany(Type::class);
+    }
+
+    public function hasType($id){
+        $types = $this->types()->get();
+        foreach ($types as $type) {
+            if ($type->id == $id) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public function status(){
