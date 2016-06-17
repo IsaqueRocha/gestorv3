@@ -106,8 +106,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="box-body">
-                    <table id="example1" class="table table-striped table-bordered table-hover">
+                <div class="box-body table-responsive">
+                    <table id="example1" class="table table-bordered table-hover">
                         <thead>
                             <tr>
                                 <th>Curso</th>
