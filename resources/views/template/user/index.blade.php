@@ -89,8 +89,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="box-body">
-                    <table id="usertable" class="table table-bordered table-responsive table-hover" width="100%">
+                <div class="box-body table-responsive">
+                    <table id="usertable" class="table table-bordered table-hover" width="100%">
                         <thead>
                             <tr>
                                 <th>Nome</th>
