@@ -26,6 +26,6 @@ class CreateProjectTypeTable extends Migration
      */
     public function down()
     {
-        Schema::drop('project_user');
+        Schema::drop('project_type');
     }
 }
