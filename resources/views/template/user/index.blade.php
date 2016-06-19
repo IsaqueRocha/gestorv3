@@ -5,7 +5,7 @@
         display: none;
     }
 
-    td.details-control {
+    .details-control {
         cursor: pointer;
     }
     tr.shown td.details-control {
