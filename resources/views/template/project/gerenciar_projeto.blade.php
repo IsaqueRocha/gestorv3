@@ -4,6 +4,11 @@
     #projecttable_filter{
         display: none;
     }
+    .details-control {
+        cursor: pointer;
+    }
+    tr.shown td.details-control {
+    }
 </style>
 @endsection
 @section('content')
@@ -98,7 +103,7 @@
                     </table>
                 </div>
 
-                <div class="box-body">
+                <div style="display: none;" class="box-body">
                     <table class="table table-bordered table-responsive table-hover" width="100%">
                         <thead>
                             <tr>

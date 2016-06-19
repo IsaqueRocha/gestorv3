@@ -3,7 +3,7 @@
         <!-- NOME DO PROJETO-->
         <div class="form-group col-md-6">
             <label>Projeto</label>
-            <input name="name" type="text" value="{{ $project->title }}" class="form-control" placeholder="Nome do projeto" required />
+            <input name="name" type="text" value="{{ $project->title or old('name')}}" class="form-control" placeholder="Nome do projeto" required />
         </div>
 
         <!-- PROFESSOR -->
@@ -12,7 +12,13 @@
             <select class="form-control js-example-basic-single">
                 <option>(Selecionar)</option>
                 @foreach($teachers as $teacher)
-                <option value="{{ $teacher->id }}" {{($project->teacher->id == $teacher->id)?('selected'):('')}} >{{ $teacher->name }}</option>
+                <option value="{{ $teacher->id }}"
+                    @if(isset($project->teacher))
+                        {{($project->teacher->id == $teacher->id)?('selected'):('')}}
+                    @endif
+                >
+                    {{ $teacher->name }}
+                </option>
                 @endforeach
             </select>
         </div>
@@ -29,7 +35,12 @@
             <select class="form-control js-example-basic-single" required>
                 <option>(Selecionar)</option>
                 @foreach($courses as $course)
-                <option value="{{$course->id}}" {{($project->course->id == $course->id)?('selected'):('')}}>{{ $course->name }} </option>
+                <option value="{{$course->id}}"
+                    @if(isset($project->course))
+                        {{($project->course->id == $course->id)?('selected'):('')}}
+                    @endif
+                    >{{ $course->name }}
+                </option>
                 @endforeach
             </select>
         </div>
@@ -42,26 +53,14 @@
         <!-- INÍCIO -->
         <div class="form-group col-md-3">
             <label>Início do Projeto</label>
-            <input name="start" type="text" value="{{ $project->start->format('d/m/Y') }}" class="form-control" placeholder="dd/mm/aaaa" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask required/>
+            <input name="start" type="text" value="{{ ($project->start)?($project->start->format('d/m/Y')):('') }}" class="form-control" placeholder="dd/mm/aaaa" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask required/>
         </div>
 
         <!-- PRAZO -->
         <div class="form-group col-md-3">
             <label>Prazo do Projeto</label>
-            <input name="deadline" type="text" value="{{ $project->deadline->format('d/m/Y') }}" class="form-control" placeholder="dd/mm/aaaa" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask required/>
+            <input name="deadline" type="text" value="{{ ($project->deadline)?($project->deadline->format('d/m/Y')):('') }}" class="form-control" placeholder="dd/mm/aaaa" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask required/>
         </div>
-
-        {{-- <!-- APOIO -->
-        <div class="form-group col-md-6">
-            <label>Apoio</label>
-            <div class="checkbox">
-                <div class="col-md-6">
-                    @foreach($users as $user)
-                        <label><input type="checkbox" name="apoio[]" value="{{ $user->id }}">{{ $user->name }}</label>
-                    @endforeach
-                </div>
-            </div>
-        </div> --}}
 
         <!-- APOIO -->
         <div class="form-group col-md-6">

@@ -33,7 +33,23 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        //
+        $project = new Project();
+        $prousers = $project->users()->get();
+        $teachers = Teacher::all();
+        $courses = Course::all();
+        $types = Type::all();
+        $users = User::all();
+        $status = Status::all();
+        return view('template.project.adicionar_projeto',
+                    compact('project',
+                            'prousers',
+                            'teachers',
+                            'courses',
+                            'types',
+                            'users',
+                            'status'
+                    )
+                );
     }
 
     /**
@@ -110,7 +126,7 @@ class ProjectController extends Controller
 
     public function listing()
     {
-        $projects = Project::with('course', 'status', 'users', 'types')->get();
+        $projects = Project::with('course', 'status', 'teacher', 'users', 'types')->get();
 
         return response()->json(['data' => $projects]);
     }

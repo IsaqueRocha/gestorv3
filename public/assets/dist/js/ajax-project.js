@@ -65,8 +65,8 @@ var table = $('#projecttable').DataTable({
         {   data: null,
             orderable: false,
             className:   'icone',
-            defaultContent: '<a data-toggle="collapse" data-parent="#accordion" href="#um">' +
-                                '<i class="fa fa-plus-circle" title="Expandir"></i>' +
+            defaultContent: '<a>' +
+                                '<i class="fa fa-plus-circle details-control" title="Expandir"></i>' +
                             '</a>',
         }
     ],
@@ -140,3 +140,75 @@ function findIcon(str){
     }
     return icons;
 }
+
+function formatDate(date){
+    var str = date;
+    str = str.split(" ");
+    var newDate = str[0].split("-");
+    newDate = newDate[2] + '/' + newDate[1] + '/' + newDate[0];
+
+    return newDate;
+}
+
+function formatName(data){
+    var usr = data.users;
+    var str = usr[0].name;
+    for (var i = 1; i < usr.length; i++) {
+        str += ', ' + usr[i].name;
+    }
+    str += '.';
+    return str;
+}
+
+function formatType(data){
+    var type = data.types;
+    var str = type[0].name;
+    var icons =  findIcon(type[0].name);
+    for (var i = 1; i < type.length; i++) {
+        str += ', ' + type[i].name;
+        icons += ' ' + findIcon(type[i].name);
+    }
+    str += '.';
+    return str;
+}
+function format ( d ) {
+    // var str = d.entrance_date;
+    // str = str.split(" ");
+    // var date = str[0].split("-");
+    // date = date[2]+'/'+date[1]+'/'+date[0];
+
+    return  '<div class="row">' +
+                '<ul style="list-style:none;padding:0;">' +
+                    '<div class="col-md-4">' +
+                        '<li><b>Nome do projeto:</b> '+ d.title +'</li>' +
+                        '<li><b>Professor:</b> '+ d.teacher.name +'</li>' +
+                        '<li><b>Curso:</b> '+ d.course.name +'</li>' +
+                    '</div>' +
+                    '<div class="col-md-4">' +
+                        '<li><b>Início</b> '+ formatDate(d.start) +'</li>' +
+                        '<li><b>Prazo:</b> '+ formatDate(d.deadline) +'</li>' +
+                        '<li><b>Apoio:</b> '+ formatName(d) +'</li>' +
+                    '</div>' +
+                    '<div class="col-md-4">' +
+                        '<li><b>Tipo do Projeto:</b> '+ formatType(d) +'</li>' +
+                        // '<li><b>Complementares:</b> Ilustração</li>' +
+                    '</div>' +
+                '</ul>' +
+            '</div>';
+}
+
+$('#projecttable tbody').on('click', '.details-control', function () {
+    var tr = $(this).closest('tr');
+    var row = table.row( tr );
+
+    if ( row.child.isShown() ) {
+        // This row is already open - close it
+        row.child.hide();
+        tr.removeClass('shown');
+    }
+    else {
+        // Open this row
+        row.child( format(row.data()) ).show();
+        tr.addClass('shown');
+    }
+} );

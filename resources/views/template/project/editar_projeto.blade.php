@@ -20,7 +20,9 @@
         <section class="col-md-12">
             <div class="box box-ldi">
                 <div class="box-body">
-                    @include('template.project._project_form')
+                    <form class="" action="index.html" method="post">
+                        @include('template.project._project_form')
+                    </form>                    
                     <div class="row">
                         <div class="col-md-12" style="margin-top:15px;text-align:right;">
                             <!--BOTÕES-->
