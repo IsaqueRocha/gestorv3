@@ -83,7 +83,7 @@
 
         <div class="form-group col-md-6">
             <label>Situação</label>
-            <select name="status" class="form-control">
+            <select name="status" class="form-control select">
                 @foreach($status as $stat)
                     <option value="{{ $stat->id}}"
                         @if(isset($project->status))
@@ -101,6 +101,5 @@
     <script type="text/javascript">
         $(".js-example-basic-multiple").select2();
         $(".js-example-basic-single").select2();
-    </script>
     </script>
 @endsection
