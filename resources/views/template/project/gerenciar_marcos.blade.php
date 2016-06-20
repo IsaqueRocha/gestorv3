@@ -19,10 +19,10 @@
     <div class="row">
         <div class="col-md-12">
             <div class="box box-curso {{ $project->course->tinyname }}">
-                <div class="box-header">
+                <div class="box-header" data-toggle="collapse" data-target="#cabecalho" style="cursor:pointer;">
                     <h3 class="box-title">{{ $project->title }}</h3>
                 </div>
-                <div class="box-body">
+                <div id="cabecalho" class="box-body collapse in">
                     <div class="row">
                         <ul style="list-style:none;padding:0;">
                             <div class="col-md-4">

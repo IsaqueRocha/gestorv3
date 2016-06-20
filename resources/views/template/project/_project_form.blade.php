@@ -93,16 +93,6 @@
             </select>
         </div>
     </div>
-
-    <!-- COMPOSIÇÃO DO PROJETO -->
-    <div class="form-group col-md-6">
-        <label>Tipo do Projeto</label>
-        <div class="checkbox">
-            @foreach($types as $type)
-            <label><input type="checkbox" name="types[]" value="{{ $type->id }}" {{($project->hasType($type->id)?('checked'):(''))}}> {{ $type->name }}</label>
-            @endforeach
-        </div>
-    </div>
 </div>
 
 <!-- COMPOSIÇÃO DO PROJETO -->
