@@ -40,14 +40,14 @@ e não mostrar o topo das demais páginas
                     <!--</div>-->
                 </div>
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12" style="float:left;width:100%;">
                         <div class="checkbox">
                             <label>
                                 <input type="checkbox" name="remember" class="minimal-red" style="padding-left:30px;"> Continuar conectado
                             </label>
                         </div>
                     </div>
-                    <div class="col-md-12" style="margin-top: 15px;">
+                    <div class="col-md-12" style="float:left;width:100%;margin-top: 15px;">
                         <button type="submit" class="btn btn-success btn-block">Entrar</button>
                     </div>
                 </div>

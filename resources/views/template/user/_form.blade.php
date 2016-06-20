@@ -66,7 +66,7 @@
     <!-- FUNÇÃO -->
     <div class="form-group col-md-6">
         <label>Função</label>
-        <select name="role" class="form-control">
+        <select name="role" class="form-control select">
             <option>(Selecionar)</option>
             @is('Admin')
             <option value="{{ Defender::findRole('Admin')->id }}"
@@ -247,6 +247,13 @@ var croppedOptions = {
     outputUrlId: 'croppedImgUrl'
 };
 var cropperBox = new Croppic('cropContainerEyecandy', croppedOptions);
+</script>
+<script type="text/javascript">
+    $(".js-example-basic-multiple").select2();
+    $(".js-example-basic-single").select2();
+    $(".select").select2({
+           minimumResultsForSearch: Infinity
+       });
 </script>
 <script src="{{ asset('assets/dist/js/ajax-user.js') }}"></script>
 

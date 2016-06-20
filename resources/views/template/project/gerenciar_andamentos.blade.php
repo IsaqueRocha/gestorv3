@@ -49,36 +49,34 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div style="float:left;">
-                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#adcAnd" title="Adicionar andamento">
-                            <i class="fa fa-bookmark" style="margin-right:2px;"></i> Adicionar andamento
+            <div class="row nav-filter">
+                <div class="col-md-6 col-sm-12 left">
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#adcAnd" title="Adicionar andamento">
+                        <i class="fa fa-bookmark" style="margin-right:2px;"></i> Adicionar andamento
+                    </button>
+                    <a href="{{ url('/projects/marcos') }}" target="_blank">
+                        <button type="button" class="btn btn-primary" title="Ver/editar marcos em nova aba">
+                            <i class="fa fa-flag" style="margin-right:2px;"></i> Ver/editar marcos
                         </button>
-                        <a href="{{ url('/projects/marcos') }}" target="_blank">
-                            <button type="button" class="btn btn-primary" title="Ver/editar marcos em nova aba">
-                                <i class="fa fa-flag" style="margin-right:2px;"></i> Ver/editar marcos
-                            </button>
-                        </a>
-                    </div>
-                    <div style="float:right;margin-left:10px;margin-right:10px;">
-                        <div class="form-inline">
-                            <div class="form-group" style="margin-left:10px;">
-                                <label>Usuário</label>
-                                <select class="form-control">
-                                    <option>Todos</option>
-                                    <option>Antonio</option>
-                                    <option>Rayan</option>
-                                </select>
-                            </div>
-                            <div class="form-group" style="margin-left:10px;">
-                                <label>Tipo</label>
-                                <select class="form-control">
-                                    <option>Tudo</option>
-                                    <option>Andamentos</option>
-                                    <option>Marcos</option>
-                                </select>
-                            </div>
+                    </a>
+                </div>
+                <div class="col-md-6 col-sm-12 right">
+                    <div class="form-inline">
+                        <div class="form-group" style="margin-left:10px;">
+                            <label>Usuário</label>
+                            <select class="form-control">
+                                <option>Todos</option>
+                                <option>Antonio</option>
+                                <option>Rayan</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="margin-left:10px;">
+                            <label>Tipo</label>
+                            <select class="form-control">
+                                <option>Tudo</option>
+                                <option>Andamentos</option>
+                                <option>Marcos</option>
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -87,7 +85,7 @@
     </div>
 
     <!-- row -->
-    <div class="row" style="margin-top:20px;">
+    <div class="row">
         <div class="col-md-12">
             <div style="border-top:1px solid #ccc;margin-bottom:20px;"></div>
         </div>

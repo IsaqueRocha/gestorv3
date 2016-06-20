@@ -85,8 +85,8 @@
                     </div>
                 </div>
 
-                <div class="box-body">
-                    <table id="projecttable" class="table table-bordered table-responsive table-hover" width="100%">
+                <div class="box-body table-responsive">
+                    <table id="projecttable" class="table table-bordered table-hover table-striped" width="100%">
                         <thead>
                             <tr>
                                 <th>Curso</th>
