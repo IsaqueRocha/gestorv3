@@ -47,6 +47,8 @@ Route::post('/users/{id}/crop', 'CropController@postCrop')->where('id', '[0-9]+'
 Route::get('/projects', 'ProjectController@index');
 Route::get('/projects/{id}/edit', 'ProjectController@edit')->where('id', '[0-9]+');;
 Route::get('/projects/create', 'ProjectController@create');
+Route::post('/projects/create', 'ProjectController@store');
+Route::put('/projects/{id}', 'ProjectController@update');
 Route::get('/projects/andamentos', function(){
     return view('template.project.gerenciar_andamentos');
 });

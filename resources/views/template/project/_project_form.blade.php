@@ -9,7 +9,7 @@
         <!-- PROFESSOR -->
         <div class="form-group col-md-5">
             <label>Professor</label>
-            <select class="form-control js-example-basic-single">
+            <select name="teacher" class="form-control js-example-basic-single">
                 <option>(Selecionar)</option>
                 @foreach($teachers as $teacher)
                 <option value="{{ $teacher->id }}"
@@ -32,7 +32,7 @@
         <!-- CURSO -->
         <div class="form-group col-md-4">
             <label>Curso</label>
-            <select class="form-control js-example-basic-single" required>
+            <select name="course" class="form-control js-example-basic-single" required>
                 <option>(Selecionar)</option>
                 @foreach($courses as $course)
                 <option value="{{$course->id}}"
@@ -47,25 +47,25 @@
 
         <div class="form-group col-md-2">
             <label>Início da Disciplina</label>
-            <input name="entrance_date" type="text" value="" class="form-control" placeholder="dd/mm/aaaa" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
+            <input name="discipline_date" type="text" value="{{ \Carbon\Carbon::now()->format('d/m/Y') }}" class="form-control" placeholder="dd/mm/aaaa" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
         </div>
 
         <!-- INÍCIO -->
         <div class="form-group col-md-3">
             <label>Início do Projeto</label>
-            <input name="start" type="text" value="{{ ($project->start)?($project->start->format('d/m/Y')):('') }}" class="form-control" placeholder="dd/mm/aaaa" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask required/>
+            <input name="start" type="text" value="{{ ($project->start)?($project->start->format('d/m/Y')):(\Carbon\Carbon::now()->format('d/m/Y')) }}" class="form-control" placeholder="dd/mm/aaaa" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask required/>
         </div>
 
         <!-- PRAZO -->
         <div class="form-group col-md-3">
             <label>Prazo do Projeto</label>
-            <input name="deadline" type="text" value="{{ ($project->deadline)?($project->deadline->format('d/m/Y')):('') }}" class="form-control" placeholder="dd/mm/aaaa" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask required/>
+            <input name="deadline" type="text" value="{{ ($project->deadline)?($project->deadline->format('d/m/Y')):(\Carbon\Carbon::now()->format('d/m/Y')) }}" class="form-control" placeholder="dd/mm/aaaa" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask required/>
         </div>
 
         <!-- APOIO -->
         <div class="form-group col-md-6">
             <label>Apoio</label>
-            <select class="js-example-basic-multiple form-control" multiple="multiple" name="apoio[]">
+            <select name="users[]" class="js-example-basic-multiple form-control" multiple="multiple">
                 @foreach($users as $user)
                     <option value="{{ $user->id }}" {{($project->hasUser($user->id)?('selected'):(''))}}>{{ $user->name }} </option>
                 @endforeach
@@ -77,15 +77,20 @@
             <label>Tipo do Projeto</label>
             <div class="checkbox">
                 @foreach($types as $type)
-                <label><input type="checkbox" name="composicao[]" value="{{ $type->id }}" {{($project->hasType($type->id)?('checked'):(''))}}> {{ $type->name }}</label>
+                <label><input type="checkbox" name="types[]" value="{{ $type->id }}" {{($project->hasType($type->id)?('checked'):(''))}}> {{ $type->name }}</label>
                 @endforeach
         </div>
 
         <div class="form-group col-md-6">
             <label>Situação</label>
-            <select class="form-control">
+            <select name="status" class="form-control">
                 @foreach($status as $stat)
-                    <option value="{{ $stat->id}}" {{ ($project->status->id == $stat->id)?('selected'):('')}}>{{ $stat->name }}</option>
+                    <option value="{{ $stat->id}}"
+                        @if(isset($project->status))
+                            {{ ($project->status->id == $stat->id)?('selected'):('')}}
+                        @endif
+                    >{{ $stat->name }}
+                    </option>
                 @endforeach
             </select>
         </div>

@@ -20,13 +20,15 @@
         <section class="col-md-12">
             <div class="box box-ldi">
                 <div class="box-body">
-                    <form class="" action="index.html" method="post">
+                    @include('errors._errors')
+                    <form role="form" id="adicionarProjeto" action="{{ url('/projects/create') }}" method="POST">
+                        {!! csrf_field() !!}
                         @include('template.project._project_form')
                     </form>
                     <div class="row">
                         <div class="col-md-12" style="margin-top:15px;text-align:right;">
                             <!--BOTÕES-->
-                            <button class="btn btn-success" type="submit" form="adicionarUsuario" value="Enviar">Enviar</button>
+                            <button class="btn btn-success" type="submit" form="adicionarProjeto" value="Enviar">Enviar</button>
                             <a href="{{ url('/projects') }}">
                                 <button class="btn btn-default" value="Cancelar" >Cancelar</button>
                             </a>

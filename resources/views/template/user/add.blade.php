@@ -20,7 +20,7 @@
         <section class="col-md-12">
             <div class="box box-ldi">
                 <div class="box-body">
-                    @include('template.user._errors')
+                    @include('errors._errors')
 
                     <!-- FORMULÁRIO -->
                     <form role="form" action="{{ url('/users') }}" method="POST" id="adicionarUsuario">
