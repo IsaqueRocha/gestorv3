@@ -49,9 +49,11 @@ var table = $('#projecttable').DataTable({
         {   data: null,
             orderable: false,
             className:   'icone',
-            defaultContent: '<a href="/projects/marcos">' +
-                                '<i class="fa fa-flag" title="Marcos"></i>' +
-                            '</a>',
+            render: function(data){
+                return  '<a href="/projects/marks/'+ data.id +'">' +
+                            '<i class="fa fa-flag" title="Marcos"></i>' +
+                        '</a>';
+            }
         },
         {   data: null,
             orderable: false,

@@ -77,6 +77,7 @@
                 </select>
             </div>
         </div>
+
         <div class="row" style="margin-bottom: 15px;">
             <div class="col-md-12">
                 <label>Situação</label>
@@ -92,6 +93,16 @@
             </select>
         </div>
     </div>
+
+    <!-- COMPOSIÇÃO DO PROJETO -->
+    <div class="form-group col-md-6">
+        <label>Tipo do Projeto</label>
+        <div class="checkbox">
+            @foreach($types as $type)
+            <label><input type="checkbox" name="types[]" value="{{ $type->id }}" {{($project->hasType($type->id)?('checked'):(''))}}> {{ $type->name }}</label>
+            @endforeach
+        </div>
+    </div>
 </div>
 
 <!-- COMPOSIÇÃO DO PROJETO -->
@@ -105,12 +116,12 @@
 </div>
 </div>
 @section('script')
+
 <script type="text/javascript">
     $(".js-example-basic-multiple").select2();
     $(".js-example-basic-single").select2();
     $(".select").select2({
-           minimumResultsForSearch: Infinity
-       });
-</script>
+        minimumResultsForSearch: Infinity
+    });
 </script>
 @endsection

@@ -16,34 +16,42 @@
 
 <!--  -->
 <section class="content">
-    <div class="row artes">
+    <div class="row">
         <div class="col-md-12">
-            <div class="box box-ldi">
+            <div class="box box-curso {{ $project->course->tinyname }}">
                 <div class="box-header">
-                    <h3 class="box-title">Evento de Artes Visuais</h3>
+                    <h3 class="box-title">{{ $project->title }}</h3>
                 </div>
                 <div class="box-body">
                     <div class="row">
                         <ul style="list-style:none;padding:0;">
                             <div class="col-md-4">
-                                <li><b>Nome do projeto:</b> Evento de Artes Visuais</li>
-                                <li><b>Professor:</b> Fabiana Carvalho</li>
-                                <li><b>Curso:</b> Artes Visuais</li>
+                                <li><b>Nome do projeto:</b> {{ $project->title }}</li>
+                                <li><b>Professor:</b> {{ $project->teacher->name }}</li>
+                                <li><b>Curso:</b> {{ $project->course->name }}</li>
                             </div>
                             <div class="col-md-4">
-                                <li><b>Início</b> 12/05/2016</li>
-                                <li><b>Prazo:</b> 22/06/2016</li>
-                                <li><b>Apoio:</b> Antonio, Mariana, Rayan</li>
+                                <li><b>Início</b> {{ $project->start->format('d/m/Y') }}</li>
+                                <li><b>Prazo:</b> {{ $project->deadline->format('d/m/Y') }}</li>
+                                <li><b>Apoio:</b>
+                                    @foreach($project->users as $user)
+                                        {{ $user->name }} /
+                                    @endforeach
+                                </li>
                             </div>
                             <div class="col-md-4">
-                                <li><b>Composição:</b> Vídeo, Impresso</li>
+                                <li><b>Composição:</b>
+                                    @foreach($project->types as $type )
+                                        {{ $type->name }} /
+                                    @endforeach
+                                </li>
                             </div>
                         </ul>
                     </div>
                     <div class="row" style="margin-top:10px;">
                         <div class="col-md-4">
                             <div><b>Situação:</b></div>
-                            <div>Entregue</div>
+                            <div>{{$project->status->name }}</div>
                         </div>
                         <div class="col-md-4"></div>
                     </div>
@@ -61,6 +69,7 @@
     <div class="row composicaoProjeto">
         <div class="col-md-12" style="margin-bottom:15px;"><h4>Composição do projeto</h4></div>
 
+    @if($project->hasType(1)){{-- Livro Digital --}}
         <div class="col-md-3">
             <div class="box box-ldi">
                 <div class="panel-group">
@@ -301,7 +310,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
@@ -341,7 +350,9 @@
                 </div>
             </div>
         </div>
+    @endif
 
+    @if($project->hasType(2)) {{-- Livro Impresso --}}
         <div class="col-md-3">
             <div class="box box-ldi">
                 <div class="panel-group">
@@ -680,7 +691,9 @@
                 </div>
             </div>
         </div>
+    @endif
 
+    @if($project->hasType(3)) {{-- Moodle --}}
         <div class="col-md-3">
             <div class="box box-ldi">
                 <div class="panel-group">
@@ -878,7 +891,9 @@
                 </div>
             </div>
         </div>
+    @endif
 
+    @if($project->hasType(4))
         <div class="col-md-3">
             <div class="box box-ldi">
                 <div class="panel-group">
@@ -1192,7 +1207,9 @@
                 </div>
             </div>
         </div>
+    @endif
 
+    @if($project->hasType(5))
         <div class="col-md-3">
             <div class="box box-ldi">
                 <div class="panel-group">
@@ -1399,7 +1416,9 @@
                 </div>
             </div>
         </div>
+    @endif
 
+    @if($project->hasType(6))
         <div class="col-md-3">
             <div class="box box-ldi">
                 <div class="panel-group">
@@ -1590,6 +1609,7 @@
                 </div>
             </div>
         </div>
+    @endif
     </div>
 </section>
 
