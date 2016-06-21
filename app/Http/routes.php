@@ -23,10 +23,10 @@ Route::get('/home', 'HomeController@index');
 Route::get('/users', 'UserController@index');
 Route::get('/users/create', 'UserController@create');
 Route::post('/users', 'UserController@store');
-Route::get('/users/{id}/edit', 'UserController@edit')->where('id', '[0-9]+');
-Route::put('/users/{id}', 'UserController@update')->where('id', '[0-9]+');
-Route::delete('/users/{id}', 'UserController@destroy')->where('id', '[0-9]+');
-Route::put('/users/{id}/disable', 'UserController@disable')->where('id', '[0-9]+');
+Route::get('/users/{id}/edit', 'UserController@edit');
+Route::put('/users/{id}', 'UserController@update');
+Route::delete('/users/{id}', 'UserController@destroy');
+Route::put('/users/{id}/disable', 'UserController@disable');
 Route::get('/users/area/{param}/role/{value}', 'UserController@filter')->where(['param' => '[A-Za-z]+', 'value' => '[A-Za-z]+']);
 Route::get('/api/users', function(){
     $users = User::all();
@@ -40,19 +40,19 @@ Route::get('/api/users', function(){
 /* Rotas que tratam dos uploads de imagem */
 Route::post('/users/upload', 'CropController@postUpload');
 Route::post('/users/crop', 'CropController@postCrop');
-Route::post('/users/{id}/upload', 'CropController@postUpload')->where('id', '[0-9]+');
-Route::post('/users/{id}/crop', 'CropController@postCrop')->where('id', '[0-9]+');
+Route::post('/users/{id}/upload', 'CropController@postUpload');
+Route::post('/users/{id}/crop', 'CropController@postCrop');
 
 /* Rotas que tratam de projetos */
 Route::get('/projects', 'ProjectController@index');
-Route::get('/projects/{id}/edit', 'ProjectController@edit')->where('id', '[0-9]+');
+Route::get('/projects/{id}/edit', 'ProjectController@edit');
 Route::get('/projects/create', 'ProjectController@create');
 Route::post('/projects/create', 'ProjectController@store');
 Route::put('/projects/{id}', 'ProjectController@update');
 Route::get('/projects/andamentos', function(){
     return view('template.project.gerenciar_andamentos');
 });
-Route::get('/projects/marks/{id}', 'MarkController@show')->where('id', '[0-9]+');
+Route::get('/projects/marks/{id}', 'MarkController@show');
 
 Route::get('/api/projects', 'ProjectController@listing');
 
@@ -61,6 +61,7 @@ Route::get('auth/login', 'Auth\AuthController@getLogin');
 Route::post('auth/login', 'Auth\AuthController@postLogin');
 Route::get('auth/logout', 'Auth\AuthController@getLogout');
 
+/* Rotas que tratam o perfil do usuário */
 Route::get('/profile','ProfileController@index');
-Route::get('/profile/{id}','ProfileController@show')->where('id', '[0-9]+');;
+Route::get('/profile/{id}','ProfileController@show');
 Route::get('/profile/edit','ProfileController@edit');
