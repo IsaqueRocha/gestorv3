@@ -7,6 +7,7 @@ use App\Course;
 use App\Status;
 use App\Teacher;
 use App\Type;
+use Carbon\Carbon;
 
 class Project extends Model
 {
@@ -26,7 +27,11 @@ class Project extends Model
      */
     protected $fillable = [
         'title',
-
+        'start',
+        'deadline',
+        'course_id',
+        'teacher_id',
+        'status_id',
     ];
 
     public function setStartAttribute($date){

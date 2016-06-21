@@ -4,6 +4,11 @@
     #projecttable_filter{
         display: none;
     }
+    .details-control {
+        cursor: pointer;
+    }
+    tr.shown td.details-control {
+    }
 </style>
 @endsection
 @section('content')
@@ -80,8 +85,8 @@
                     </div>
                 </div>
 
-                <div class="box-body">
-                    <table id="projecttable" class="table table-bordered table-responsive table-hover" width="100%">
+                <div class="box-body table-responsive">
+                    <table id="projecttable" class="table table-bordered table-hover table-striped" width="100%">
                         <thead>
                             <tr>
                                 <th>Curso</th>
@@ -98,7 +103,7 @@
                     </table>
                 </div>
 
-                <div class="box-body">
+                <div style="display: none;" class="box-body">
                     <table class="table table-bordered table-responsive table-hover" width="100%">
                         <thead>
                             <tr>

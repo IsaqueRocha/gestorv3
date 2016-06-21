@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProjectTypeTable extends Migration
+class CreateImpressMarksTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,9 +12,8 @@ class CreateProjectTypeTable extends Migration
      */
     public function up()
     {
-        Schema::create('project_type', function (Blueprint $table) {
-            $table->integer('project_id');
-            $table->integer('type_id');
+        Schema::create('impress_marks', function (Blueprint $table) {
+            $table->increments('id');
             $table->timestamps();
         });
     }
@@ -26,6 +25,6 @@ class CreateProjectTypeTable extends Migration
      */
     public function down()
     {
-        Schema::drop('project_type');
+        Schema::drop('impress_marks');
     }
 }

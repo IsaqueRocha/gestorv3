@@ -116,13 +116,13 @@ var table = $('#usertable').DataTable({
             }
         },
         {
-            "className":      'details-control icone',
+            "className":      'icone',
             "orderable":      false,
             "data":           null,
             "render":   function(data){
 
                 return '<a>' +
-                            '<i id="pm' + data.id + '" class="fa fa-plus-circle" title="Mais" onclick="trocaPlusMinus(' + data.id + ')"></i>' +
+                            '<i id="pm' + data.id + '" class="fa fa-plus-circle details-control" title="Mais"></i>' +
                         '</a>';
             }
         }
@@ -172,7 +172,7 @@ function format ( d ) {
             '</div>';
 }
 
-$('#usertable tbody').on('click', 'td.details-control', function () {
+$('#usertable tbody').on('click', '.details-control', function () {
     var tr = $(this).closest('tr');
     var row = table.row( tr );
 

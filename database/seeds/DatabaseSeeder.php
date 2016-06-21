@@ -20,6 +20,9 @@ class DatabaseSeeder extends Seeder
         $this->call('TeacherTableSeeder');
         $this->call('StatusTableSeeder');
         $this->call('TypesTableSeeder');
+        $this->call('ProjectTableSeeder');
+        $this->call('ProjectTypeTableSeeder');
+        $this->call('ProjectUserTableSeeder');
 
         Model::reguard();
     }

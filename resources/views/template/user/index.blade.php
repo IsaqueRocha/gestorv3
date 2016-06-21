@@ -5,7 +5,7 @@
         display: none;
     }
 
-    td.details-control {
+    .details-control {
         cursor: pointer;
     }
     tr.shown td.details-control {
@@ -90,7 +90,7 @@
                     </div>
                 </div>
                 <div class="box-body table-responsive">
-                    <table id="usertable" class="table table-bordered table-hover" width="100%">
+                    <table id="usertable" class="table table-bordered table-hover table-striped" width="100%">
                         <thead>
                             <tr>
                                 <th>Nome</th>

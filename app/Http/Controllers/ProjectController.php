@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
+use App\Http\Requests\ProjectRequest;
 use App\Http\Controllers\Controller;
+
+use Laracasts\Flash\Flash;
 
 use App\Project;
 use App\Teacher;
@@ -33,7 +35,23 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        //
+        $project = new Project();
+        $prousers = $project->users()->get();
+        $teachers = Teacher::all();
+        $courses = Course::all();
+        $types = Type::all();
+        $users = User::all();
+        $status = Status::all();
+        return view('template.project.adicionar_projeto',
+                    compact('project',
+                            'prousers',
+                            'teachers',
+                            'courses',
+                            'types',
+                            'users',
+                            'status'
+                    )
+                );
     }
 
     /**
@@ -42,9 +60,28 @@ class ProjectController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ProjectRequest $request)
     {
-        //
+        // dd($request);
+        $input['title']         = $request->input('name');
+        $input['start']         = $request->input('start');
+        $input['deadline']      = $request->input('deadline');
+        $input['course_id']     = $request->input('course');
+        $input['teacher_id']    = $request->input('teacher');
+        $input['status_id']     = $request->input('status');
+
+        // dd($input);
+
+        $project = Project::create($input);
+
+        $project->users()->sync($request->input('users'));
+        $project->types()->sync($request->input('types'));
+
+        Flash::success('Projeto criado com sucesso');
+
+        return redirect('/projects');
+
+
     }
 
     /**
@@ -92,9 +129,25 @@ class ProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ProjectRequest $request, $id)
     {
-        //
+        $project = Project::FindOrFail($id);
+
+        $project->title         = $request->input('name');
+        $project->start         = $request->input('start');
+        $project->deadline      = $request->input('deadline');
+        $project->course_id     = $request->input('course');
+        $project->teacher_id    = $request->input('teacher');
+        $project->status_id     = $request->input('status');
+
+        $project->save();
+
+        $project->users()->sync($request->input('users'));
+        $project->types()->sync($request->input('types'));
+
+        Flash::success('Projeto atualizado com sucesso');
+
+        return redirect('/projects');
     }
 
     /**
@@ -110,7 +163,7 @@ class ProjectController extends Controller
 
     public function listing()
     {
-        $projects = Project::with('course', 'status', 'users', 'types')->get();
+        $projects = Project::with('course', 'status', 'teacher', 'users', 'types')->get();
 
         return response()->json(['data' => $projects]);
     }
