@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('phone')->unique();
             $table->string('address', 150);
             $table->enum('role', array('Admin', 'Coordenador', 'Técnico', 'Estagiário'))->default('Estagiário');/* 0 - Admin; 1 - Coordenador; 2 - Técnico; 3 - Estagiário; */
-            $table->enum('area', array('Master', 'Gerência', 'Diagramação', 'Ilustração', 'Vídeo', 'Web'));/* 0 - Master; 1 - Digramação, 2 - Gerencia; 3 - Ilustração; 4 - Vídeo; 5 - Web; */
+            $table->string('area');
             $table->date('entrance_date');
             $table->string('photo');
             $table->string('password', 60);

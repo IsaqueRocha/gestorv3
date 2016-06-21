@@ -10,6 +10,7 @@ use Intervention\Image;
 use Illuminate\Http\Request;
 use Laracasts\Flash\Flash;
 use Defender;
+use App\Repositories\UserRepository;
 
 
 class UserController extends Controller {
@@ -140,7 +141,7 @@ class UserController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id, UserRequest $request)
+	public function update($id, UserRequest $request, UserRepository $userRepo)
 	{
         $user = User::FindOrFail($id);
 
@@ -170,7 +171,12 @@ class UserController extends Controller {
 
 		$user->syncRoles($request->input('area'));
 
-		// dd($request->input('role'));
+		// $area = Defender::findRoleById($request->input('area')[0])->name;
+		// for ($i=1; $i < sizeof($request->input('area')); $i++) {
+		// 	$area .= ' / ' . Defender::findRoleById($request->input('area')[$i])->name;
+		// }
+
+		$user->area = $userRepo->writeAreas($request->input('area'));
 
 		$role = Defender::findRoleById($request->input('role'));
 
