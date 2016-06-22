@@ -122,7 +122,7 @@ var table = $('#usertable').DataTable({
             "render":   function(data){
 
                 return '<a>' +
-                            '<i id="pm' + data.id + '" class="fa fa-plus-circle details-control" title="Mais"></i>' +
+                            '<i id="pm' + data.id + '" class="fa fa-chevron-down details-control" title="Mais"></i>' +
                         '</a>';
             }
         }
@@ -180,13 +180,16 @@ $('#usertable tbody').on('click', '.details-control', function () {
         // This row is already open - close it
         row.child.hide();
         tr.removeClass('shown');
+        $(this).removeClass('fa-chevron-up').addClass('fa-chevron-down');
     }
     else {
         // Open this row
         row.child( format(row.data()) ).show();
         tr.addClass('shown');
+        $(this).removeClass('fa-chevron-down').addClass('fa-chevron-up');
     }
-} );
+
+});
 
 $('#filter_global').on( 'keyup click', function () {
     table.search( this.value ).draw();

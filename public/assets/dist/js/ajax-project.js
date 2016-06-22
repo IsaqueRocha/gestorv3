@@ -43,7 +43,7 @@ var table = $('#projecttable').DataTable({
             orderable: false,
             className:   'icone',
             defaultContent: '<a href="/projects/andamentos">' +
-                                '<i class="fa fa-eye" title="Visualizar projeto"></i>' +
+                                '<i class="fa fa-plus-circle" title="Visualizar projeto"></i>' +
                             '</a>',
         },
         {   data: null,
@@ -68,7 +68,7 @@ var table = $('#projecttable').DataTable({
             orderable: false,
             className:   'icone',
             defaultContent: '<a>' +
-                                '<i class="fa fa-plus-circle details-control" title="Expandir"></i>' +
+                                '<i class="fa fa-chevron-down details-control" title="Expandir"></i>' +
                             '</a>',
         }
     ],
@@ -207,10 +207,12 @@ $('#projecttable tbody').on('click', '.details-control', function () {
         // This row is already open - close it
         row.child.hide();
         tr.removeClass('shown');
+        $(this).removeClass('fa-chevron-up').addClass('fa-chevron-down');
     }
     else {
         // Open this row
         row.child( format(row.data()) ).show();
         tr.addClass('shown');
+        $(this).removeClass('fa-chevron-down').addClass('fa-chevron-up');
     }
 } );
