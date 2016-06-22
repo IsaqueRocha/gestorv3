@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateImpressMarksTable extends Migration
+class CreateFormatsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,7 +12,7 @@ class CreateImpressMarksTable extends Migration
      */
     public function up()
     {
-        Schema::create('impress_marks', function (Blueprint $table) {
+        Schema::create('formats', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
         });
@@ -25,6 +25,6 @@ class CreateImpressMarksTable extends Migration
      */
     public function down()
     {
-        Schema::drop('impress_marks');
+        Schema::drop('formats');
     }
 }

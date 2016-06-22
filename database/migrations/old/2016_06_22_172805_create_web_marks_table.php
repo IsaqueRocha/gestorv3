@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDigitalMarksTable extends Migration
+class CreateWebMarksTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,15 +12,18 @@ class CreateDigitalMarksTable extends Migration
      */
     public function up()
     {
-        Schema::create('digital_marks', function (Blueprint $table) {
+        Schema::create('web_marks', function (Blueprint $table) {
             $table->increments('id');
             $table->boolean('metting')->default(false);
             $table->string('briefing');
-            $table->integer('format_id');
-            $table->boolean('cover')->default(false);
-            $table->integer('chapters');
-            $table->integer('opening_chapters');
-            $table->boolean('authorcv');
+            $table->boolean('interact_flux');
+            $table->integer('layouts');
+            $table->integer('layouts_done');
+            $table->boolean('test');
+            $table->boolean('teacher_approval');
+            $table->boolean('upload');
+
+            $table->integer('complements_id');
             $table->timestamps();
         });
     }
@@ -32,6 +35,6 @@ class CreateDigitalMarksTable extends Migration
      */
     public function down()
     {
-        Schema::drop('digital_marks');
+        Schema::drop('web_marks');
     }
 }
