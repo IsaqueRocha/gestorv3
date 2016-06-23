@@ -12,4 +12,8 @@ class Type extends Model
     {
         return $this->hasMany(App\Project::class);
     }
+
+    public static function returnTypeById($id){
+        return Type::find($id);
+    }
 }

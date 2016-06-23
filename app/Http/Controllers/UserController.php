@@ -171,11 +171,6 @@ class UserController extends Controller {
 
 		$user->syncRoles($request->input('area'));
 
-		// $area = Defender::findRoleById($request->input('area')[0])->name;
-		// for ($i=1; $i < sizeof($request->input('area')); $i++) {
-		// 	$area .= ' / ' . Defender::findRoleById($request->input('area')[$i])->name;
-		// }
-
 		$user->area = $userRepo->writeAreas($request->input('area'));
 
 		$role = Defender::findRoleById($request->input('role'));

@@ -8,6 +8,7 @@ use App\Status;
 use App\Teacher;
 use App\Type;
 use Carbon\Carbon;
+use App\DigitalMark;
 
 class Project extends Model
 {
@@ -84,6 +85,11 @@ class Project extends Model
 
     public function status(){
         return $this->belongsTo(Status::class);
+    }
+
+    public function digitalMark()
+    {
+        return $this->hasOne(DigitalMark::class);
     }
 
 }

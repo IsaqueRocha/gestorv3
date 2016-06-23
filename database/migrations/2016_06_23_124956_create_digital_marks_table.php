@@ -45,7 +45,7 @@ class CreateDigitalMarksTable extends Migration
             $table->integer('project_id')->unsigned()->dafault(0);
             $table->foreign('project_id')->references('id')->on('projects')->onDelete('cascade');
             $table->integer('complement_id')->unsigned()->default(0);
-            $table->foreign('complement_id')->references('id')->on('complements')->onDelete('cascade');
+            $table->foreign('complement_id')->references('id')->on('digital_complements')->onDelete('cascade');
             $table->timestamps();
         });
     }

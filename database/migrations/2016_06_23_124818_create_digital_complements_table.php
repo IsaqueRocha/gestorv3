@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateComplementsTable extends Migration
+class CreateDigitalComplementsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,7 +12,7 @@ class CreateComplementsTable extends Migration
      */
     public function up()
     {
-        Schema::create('complements', function (Blueprint $table) {
+        Schema::create('digital_complements', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('chapters');
             $table->integer('charpters_done');
@@ -42,6 +42,8 @@ class CreateComplementsTable extends Migration
             $table->integer('tables');
             $table->integer('tables_done');
             $table->boolean('tables_exists');
+            $table->integer('digitalmark_id')->unsigned();
+            $table->foreign('digitalmark_id')->references('id')->on('digital_marks')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -53,6 +55,6 @@ class CreateComplementsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('complements');
+        Schema::drop('digital_complements');
     }
 }

@@ -16,6 +16,8 @@ use App\Type;
 use App\User;
 use App\Status;
 
+use App\Repositories\ProjectRepository;
+
 class ProjectController extends Controller
 {
     /**
@@ -60,7 +62,7 @@ class ProjectController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(ProjectRequest $request)
+    public function store(ProjectRequest $request, ProjectRepository $repo)
     {
         // dd($request);
         $input['title']         = $request->input('name');
@@ -76,6 +78,8 @@ class ProjectController extends Controller
 
         $project->users()->sync($request->input('users'));
         $project->types()->sync($request->input('types'));
+
+        $project = $repo->createMarks($project, $request->input('types'));
 
         Flash::success('Projeto criado com sucesso');
 

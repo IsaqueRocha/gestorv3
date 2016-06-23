@@ -1,0 +1,26 @@
+<<?php
+
+namespace App\Repositories;
+
+use App\Project;
+
+/**
+ * Repository for Project
+ */
+class ProjectRepository
+{
+    public function createMarks(Project $project, $arrayTypes)
+    {
+        foreach ($arrayTypes as $type) {
+            switch ($type) {
+                case '1': //Livro Digital
+                    $project->digitalMark()->create();
+                    break;
+
+                default:
+                    break;
+            }
+        }
+        return $project;
+    }
+}
