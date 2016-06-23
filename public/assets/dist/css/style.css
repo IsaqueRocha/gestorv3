@@ -540,12 +540,12 @@ form h5 {
 }
 form span.select2-container {
   width: 100% !important;
-  height: 34px;
+  height: auto;
 }
 form span.select2-container .select2-selection {
   border-radius: 0;
   border-color: #d2d6de;
-  height: 34px;
+  min-height: 34px;
 }
 form span.select2-container .select2-selection:focus {
   border-color: #3c8dbc !important;
