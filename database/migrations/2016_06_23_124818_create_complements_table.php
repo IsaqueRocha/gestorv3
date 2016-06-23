@@ -24,7 +24,7 @@ class CreateComplementsTable extends Migration
             $table->boolean('animation2d_exists');
             $table->integer('animation3d');
             $table->integer('animation3d_done');
-            $table->boolen('animation3d_exists');
+            $table->boolean('animation3d_exists');
             $table->integer('formulas');
             $table->integer('formulas_done');
             $table->boolean('formulas_exists');

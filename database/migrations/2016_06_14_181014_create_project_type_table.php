@@ -13,9 +13,11 @@ class CreateProjectTypeTable extends Migration
     public function up()
     {
         Schema::create('project_type', function (Blueprint $table) {
-            $table->integer('project_id');
-            $table->integer('type_id');
+            $table->integer('project_id')->unsigned()->index();
+            $table->integer('type_id')->unsigned()->index();
             $table->timestamps();
+            $table->foreign('type_id')->references('id')->on('types')->onDelete('cascade');
+            $table->foreign('project_id')->references('id')->on('projects')->onDelete('cascade');
         });
     }
 

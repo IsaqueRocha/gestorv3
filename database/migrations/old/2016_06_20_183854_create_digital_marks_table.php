@@ -28,7 +28,10 @@ class CreateDigitalMarksTable extends Migration
             $table->string('isbn');
             $table->integer('coord_revision');
             $table->boolean('upload')->default(false);
-            $table->integer('complements_id');
+            $table->integer('complements_id')->unsigned()->default(0);
+            $table->foreign('complements_id')->references('id')
+                                             ->on('complements')
+                                             ->onDelete('cascade');
             $table->timestamps();
         });
     }

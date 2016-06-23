@@ -17,9 +17,12 @@ class CreateProjectsTable extends Migration
             $table->string('title');
             $table->date('start');
             $table->date('deadline');
-            $table->integer('course_id');
-            $table->integer('teacher_id');
-            $table->integer('status_id');
+            $table->integer('course_id')->unsigned();
+            $table->integer('teacher_id')->unsigned();
+            $table->integer('status_id')->unsigned();
+            $table->foreign('course_id')->references('id')->on('courses');
+            $table->foreign('teacher_id')->references('id')->on('teachers');
+            $table->foreign('status_id')->references('id')->on('status');
             $table->timestamps();
         });
     }
