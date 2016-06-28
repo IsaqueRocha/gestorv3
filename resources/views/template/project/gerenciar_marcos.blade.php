@@ -35,14 +35,14 @@
                                 <li><b>Prazo:</b> {{ $project->deadline->format('d/m/Y') }}</li>
                                 <li><b>Apoio:</b>
                                     @foreach($project->users as $user)
-                                        {{ $user->name }} /
+                                    {{ $user->name }} /
                                     @endforeach
                                 </li>
                             </div>
                             <div class="col-md-4">
                                 <li><b>Composição:</b>
                                     @foreach($project->types as $type )
-                                        {{ $type->name }} /
+                                    {{ $type->name }} /
                                     @endforeach
                                 </li>
                             </div>
@@ -69,7 +69,7 @@
     <div class="row composicaoProjeto">
         <div class="col-md-12" style="margin-bottom:15px;"><h4>Composição do projeto</h4></div>
 
-    @if($project->hasType(1)){{-- Livro Digital --}}
+        @if($project->hasType(1)){{-- Livro Digital --}}
         <div class="col-md-3">
             <div class="box box-ldi">
                 <div class="panel-group">
@@ -323,7 +323,15 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="checkbox">
-                                                <label><input type="checkbox"> Revisão do Coordenador LDI</label>
+                                                <label><input type="checkbox"> Revisão pelo Coordenador LDI</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="checkbox">
+                                                <label><input type="checkbox"> Organização da pasta do projeto</label>
                                             </div>
                                         </div>
                                     </div>
@@ -332,6 +340,14 @@
                                         <div class="col-md-12">
                                             <div class="checkbox">
                                                 <label><input type="checkbox"> Upload</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="checkbox">
+                                                <label><input type="checkbox"> Transferência dos arquivos para Projetos Finalizados</label>
                                             </div>
                                         </div>
                                     </div>
@@ -350,9 +366,9 @@
                 </div>
             </div>
         </div>
-    @endif
+        @endif
 
-    @if($project->hasType(2)) {{-- Livro Impresso --}}
+        @if($project->hasType(2)) {{-- Livro Impresso --}}
         <div class="col-md-3">
             <div class="box box-ldi">
                 <div class="panel-group">
@@ -443,68 +459,6 @@
                                                 <br clear="all">
                                                 <input type="number" min="1" max="15" step="1" value="0" class="form-control">
                                                 de 15
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label>Número de páginas</label>
-                                                <input name="name" type="text" value="" class="form-control" placeholder="Número de páginas" />
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="checkbox">
-                                                <label><input type="checkbox"> Finalização da capa</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label><input type="checkbox"> Aprovação do layout</label>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label>Boneca</label>
-                                                <select class="form-control">
-                                                    <option>---</option>
-                                                    <option>Impressa</option>
-                                                    <option>Com o professor</option>
-                                                    <option>Devolvida com alterações</option>
-                                                    <option>Aprovada</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label>Ficha catalográfica</label>
-                                                <select class="form-control">
-                                                    <option>---</option>
-                                                    <option>Aguardando</option>
-                                                    <option>Inserida</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label>Aprovação de folha de créditos</label>
-                                                <select class="form-control">
-                                                    <option>---</option>
-                                                    <option>Enviado para o coordenador</option>
-                                                    <option>Devolvido com alterações</option>
-                                                    <option>Aprovado</option>
-                                                </select>
                                             </div>
                                         </div>
                                     </div>
@@ -614,11 +568,33 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label>Solicitação do ISBN</label>
+                                                <label>Número de páginas</label>
+                                                <input name="name" type="text" value="" class="form-control" placeholder="Número de páginas" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="checkbox">
+                                                <label><input type="checkbox"> Finalização da capa</label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label><input type="checkbox"> Aprovação do layout</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Boneca</label>
                                                 <select class="form-control">
                                                     <option>---</option>
-                                                    <option>Solicitado a Biblioteca Nacional</option>
-                                                    <option>Inserido</option>
+                                                    <option>Impressa</option>
+                                                    <option>Com o professor</option>
+                                                    <option>Devolvida com alterações</option>
+                                                    <option>Aprovada</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -627,8 +603,36 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label>ISBN</label>
-                                                <input name="name" type="text" value="" class="form-control" placeholder="ISBN" />
+                                                <label>Memorando de pedido de impressão</label>
+                                                <input name="name" type="text" value="" class="form-control" placeholder="Memorando" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Ficha catalográfica</label>
+                                                <select class="form-control">
+                                                    <option>---</option>
+                                                    <option>Não possui</option>
+                                                    <option>Aguardando</option>
+                                                    <option>Inserida</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Aprovação de folha de créditos</label>
+                                                <select class="form-control">
+                                                    <option>---</option>
+                                                    <option>Enviado para o coordenador</option>
+                                                    <option>Devolvido com alterações</option>
+                                                    <option>Aprovado</option>
+                                                </select>
                                             </div>
                                         </div>
                                     </div>
@@ -647,8 +651,8 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label>Memorando</label>
-                                                <input name="name" type="text" value="" class="form-control" placeholder="Memorando" />
+                                                <label>Definição da gráfica</label>
+                                                <input name="name" type="text" value="" class="form-control" placeholder="Nome da gráfica" />
                                             </div>
                                         </div>
                                     </div>
@@ -670,9 +674,71 @@
 
                                     <div class="row">
                                         <div class="col-md-12">
+                                            <div class="checkbox">
+                                                <label><input type="checkbox"> Relatório da prova de impressão</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
                                             <div class="form-group">
-                                                <label>Gráfica</label>
-                                                <input name="name" type="text" value="" class="form-control" placeholder="Gráfica" />
+                                                <label>ISBN</label>
+                                                <select class="form-control">
+                                                    <option>---</option>
+                                                    <option>Não possui</option>
+                                                    <option>Solicitado</option>
+                                                    <option>Inserido</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Número do ISBN</label>
+                                                <input name="name" type="text" value="" class="form-control" placeholder="ISBN" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="checkbox">
+                                                <label><input type="checkbox"> Organização da pasta do projeto</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Impressão do livro</label>
+                                                <select class="form-control">
+                                                    <option>---</option>
+                                                    <option>Enviado para impressão</option>
+                                                    <option>Recebida</option>
+                                                    <option>Aprovada com restrições</option>
+                                                    <option>Aprovada</option>
+                                                    <option>Reprovada</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="checkbox">
+                                                <label><input type="checkbox"> Relatório da impressão do livro</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="checkbox">
+                                                <label><input type="checkbox"> Transferência dos arquivos para Projetos Finalizados</label>
                                             </div>
                                         </div>
                                     </div>
@@ -691,9 +757,9 @@
                 </div>
             </div>
         </div>
-    @endif
+        @endif
 
-    @if($project->hasType(3)) {{-- Moodle --}}
+        @if($project->hasType(3)) {{-- Moodle --}}
         <div class="col-md-3">
             <div class="box box-ldi">
                 <div class="panel-group">
@@ -866,13 +932,16 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="checkbox">
+                                                <label><input type="checkbox"> Organização da pasta do projeto</label>
+                                            </div>
+                                            <div class="checkbox">
                                                 <label><input type="checkbox"> Envio para o Suporte</label>
                                             </div>
                                             <div class="checkbox">
                                                 <label><input type="checkbox"> Checagem online</label>
                                             </div>
                                             <div class="checkbox">
-                                                <label><input type="checkbox"> Organização da pasta</label>
+                                                <label><input type="checkbox"> Transferência dos arquivos para Projetos Finalizados</label>
                                             </div>
                                         </div>
                                     </div>
@@ -891,9 +960,9 @@
                 </div>
             </div>
         </div>
-    @endif
+        @endif
 
-    @if($project->hasType(4))
+        @if($project->hasType(4))
         <div class="col-md-3">
             <div class="box box-ldi">
                 <div class="panel-group">
@@ -1163,6 +1232,10 @@
                                         </div>
                                     </div>
 
+                                    <div class="checkbox">
+                                        <label><input type="checkbox"> Organização da pasta do projeto</label>
+                                    </div>
+
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="checkbox">
@@ -1192,6 +1265,10 @@
                                             </div>
                                         </div>
                                     </div>
+
+                                    <div class="checkbox">
+                                        <label><input type="checkbox"> Transferência dos arquivos para Projetos Finalizados</label>
+                                    </div>
                                 </form>
                                 <hr>
                                 <div style="text-align:right;">
@@ -1207,9 +1284,9 @@
                 </div>
             </div>
         </div>
-    @endif
+        @endif
 
-    @if($project->hasType(5))
+        @if($project->hasType(5))
         <div class="col-md-3">
             <div class="box box-ldi">
                 <div class="panel-group">
@@ -1394,12 +1471,20 @@
                                         </div>
                                     </div>
 
+                                    <div class="checkbox">
+                                        <label><input type="checkbox"> Organização da pasta do projeto</label>
+                                    </div>
+
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="checkbox">
                                                 <label><input type="checkbox"> Upload</label>
                                             </div>
                                         </div>
+                                    </div>
+
+                                    <div class="checkbox">
+                                        <label><input type="checkbox"> Transferência dos arquivos para Projetos Finalizados</label>
                                     </div>
                                 </form>
                                 <hr>
@@ -1416,9 +1501,9 @@
                 </div>
             </div>
         </div>
-    @endif
+        @endif
 
-    @if($project->hasType(6))
+        @if($project->hasType(6))
         <div class="col-md-3">
             <div class="box box-ldi">
                 <div class="panel-group">
@@ -1587,12 +1672,20 @@
                                         </div>
                                     </div>
 
+                                    <div class="checkbox">
+                                        <label><input type="checkbox"> Organização da pasta do projeto</label>
+                                    </div>
+
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="checkbox">
                                                 <label><input type="checkbox"> Upload</label>
                                             </div>
                                         </div>
+                                    </div>
+
+                                    <div class="checkbox">
+                                        <label><input type="checkbox"> Transferência dos arquivos para Projetos Finalizados</label>
                                     </div>
                                 </form>
                                 <hr>
@@ -1609,7 +1702,7 @@
                 </div>
             </div>
         </div>
-    @endif
+        @endif
     </div>
 </section>
 
@@ -2047,22 +2140,10 @@
                                 <label><input type="checkbox" checked> Boneca</label>
                             </div>
                             <div class="checkbox">
-                                <label><input type="checkbox" checked> Ficha catalográfica</label>
-                            </div>
-                            <div class="checkbox">
-                                <label><input type="checkbox" checked> Solicitação de ISBN</label>
-                            </div>
-                            <div class="checkbox">
-                                <label><input type="checkbox" checked> ISBN</label>
-                            </div>
-                            <div class="checkbox">
-                                <label><input type="checkbox" checked> Memorando</label>
-                            </div>
-                            <div class="checkbox">
                                 <label><input type="checkbox" checked> Prova de impressão</label>
                             </div>
                             <div class="checkbox">
-                                <label><input type="checkbox" checked> Gráfica</label>
+                                <label><input type="checkbox" checked> Número do ISBN</label>
                             </div>
                         </div>
                     </div>
