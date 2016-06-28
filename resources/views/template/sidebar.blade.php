@@ -7,7 +7,7 @@
 
       <li><a href="{!! url('/') !!}"><i class="fa fa-dashboard"></i> Área de Trabalho</a></li>
       <li><a href="#"><i class="fa fa-clipboard"></i> Meus Projetos</a></li>
-      <li><a href="{!! url('/users') !!}"><i class="fa fa-users"></i>Gerenciar Usuários</a></li>
+      <li><a id="go-to-foobar" href="{!! url('/users') !!}"><i class="fa fa-users"></i>Gerenciar Usuários</a></li>
       <li><a href="{!! url('/projects') !!}"><i class="fa fa-tasks"></i>Gerenciar Projetos</a></li>
       @is('Admin')
       <li><a href="{!! url('/admin') !!}"><i class="fa fa-shield"></i>Administrativo</a></li>

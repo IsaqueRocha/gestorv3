@@ -12,12 +12,11 @@ var table = $('#projecttable').DataTable({
         {   data: "title" },
         {   data: null,
             render: function(data){
-                var type = data.types;
-                var str = type[0].name;
-                var icons =  findIcon(type[0].name);
-                for (var i = 1; i < type.length; i++) {
-                    str += ', ' + type[i].name;
-                    icons += ' ' + findIcon(type[i].name);
+                var str = data.types[0].name;
+                var icons =  findIcon(data.types[0].name);
+                for (var i = 1; i < data.types.length; i++) {
+                    str += ', ' + data.types[i].name;
+                    icons += ' ' + findIcon(data.types[i].name);
                 }
                 str += '.';
                 return '<span style="display: none;">' + str + '</span>' + icons;

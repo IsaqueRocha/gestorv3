@@ -14,8 +14,6 @@ class CreateDigitalComplementsTable extends Migration
     {
         Schema::create('digital_complements', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('chapters');
-            $table->integer('charpters_done');
             $table->integer('opening_chapters');
             $table->integer('opening_chapters_done');
             $table->boolean('opening_chapters_exists');

@@ -95,7 +95,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Briefing</label>
-                                                <textarea class="form-control" rows="3"></textarea>
+                                                <textarea class="form-control" rows="3">{{ $project->digitalMark->briefing }}</textarea>
                                             </div>
                                         </div>
                                     </div>

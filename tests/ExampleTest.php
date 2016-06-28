@@ -13,7 +13,14 @@ class ExampleTest extends TestCase
      */
     public function testBasicExample()
     {
-        $this->visit('/')
-             ->see('Laravel 5');
+        $user = App\User::find(1);
+
+        $this->actingAs($user)
+             ->withSession(['foo' => 'bar'])
+             ->visit('/admin')
+             ->see('Painel Administrativo')
+             ->click('Gerenciar Usuários')
+             ->seePageIs('/users');
+
     }
 }

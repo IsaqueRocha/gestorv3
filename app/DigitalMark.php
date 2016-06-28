@@ -8,7 +8,7 @@ class DigitalMark extends Model
 {
     public function complement()
     {
-        return $this->hasOne(App\DigitalComplement::class);
+        return $this->hasOne(\App\DigitalComplement::class, 'digitalmark_id');
     }
 
     public function project()

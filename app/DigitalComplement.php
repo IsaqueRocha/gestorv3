@@ -4,7 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Complement extends Model
+class DigitalComplement extends Model
 {
-    //
+    public function digitalMark()
+    {
+        return $this->belongsTo(DigitalMark::class);
+    }
 }

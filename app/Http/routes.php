@@ -27,7 +27,6 @@ Route::get('/users/{id}/edit', 'UserController@edit');
 Route::put('/users/{id}', 'UserController@update');
 Route::delete('/users/{id}', 'UserController@destroy');
 Route::put('/users/{id}/disable', 'UserController@disable');
-Route::get('/users/area/{param}/role/{value}', 'UserController@filter')->where(['param' => '[A-Za-z]+', 'value' => '[A-Za-z]+']);
 Route::get('/api/users', function(){
     $users = User::all();
 
