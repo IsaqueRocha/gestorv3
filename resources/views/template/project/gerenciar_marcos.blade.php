@@ -323,7 +323,15 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="checkbox">
-                                                <label><input type="checkbox"> Revisão do Coordenador LDI</label>
+                                                <label><input type="checkbox"> Revisão pelo Coordenador LDI</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="checkbox">
+                                                <label><input type="checkbox"> Organização da pasta do projeto</label>
                                             </div>
                                         </div>
                                     </div>
@@ -332,6 +340,14 @@
                                         <div class="col-md-12">
                                             <div class="checkbox">
                                                 <label><input type="checkbox"> Upload</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="checkbox">
+                                                <label><input type="checkbox"> Transferência dos arquivos para Projetos Finalizados</label>
                                             </div>
                                         </div>
                                     </div>
@@ -446,7 +462,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                     <hr>
 
                                     <div class="row">
@@ -663,7 +679,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
@@ -686,7 +702,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="checkbox">
@@ -694,7 +710,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
@@ -710,7 +726,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="checkbox">
@@ -718,7 +734,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="checkbox">
@@ -916,13 +932,16 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="checkbox">
+                                                <label><input type="checkbox"> Organização da pasta do projeto</label>
+                                            </div>
+                                            <div class="checkbox">
                                                 <label><input type="checkbox"> Envio para o Suporte</label>
                                             </div>
                                             <div class="checkbox">
                                                 <label><input type="checkbox"> Checagem online</label>
                                             </div>
                                             <div class="checkbox">
-                                                <label><input type="checkbox"> Organização da pasta</label>
+                                                <label><input type="checkbox"> Transferência dos arquivos para Projetos Finalizados</label>
                                             </div>
                                         </div>
                                     </div>
@@ -1213,6 +1232,10 @@
                                         </div>
                                     </div>
 
+                                    <div class="checkbox">
+                                        <label><input type="checkbox"> Organização da pasta do projeto</label>
+                                    </div>
+
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="checkbox">
@@ -1241,6 +1264,10 @@
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
+
+                                    <div class="checkbox">
+                                        <label><input type="checkbox"> Transferência dos arquivos para Projetos Finalizados</label>
                                     </div>
                                 </form>
                                 <hr>
@@ -1444,12 +1471,20 @@
                                         </div>
                                     </div>
 
+                                    <div class="checkbox">
+                                        <label><input type="checkbox"> Organização da pasta do projeto</label>
+                                    </div>
+
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="checkbox">
                                                 <label><input type="checkbox"> Upload</label>
                                             </div>
                                         </div>
+                                    </div>
+
+                                    <div class="checkbox">
+                                        <label><input type="checkbox"> Transferência dos arquivos para Projetos Finalizados</label>
                                     </div>
                                 </form>
                                 <hr>
@@ -1637,12 +1672,20 @@
                                         </div>
                                     </div>
 
+                                    <div class="checkbox">
+                                        <label><input type="checkbox"> Organização da pasta do projeto</label>
+                                    </div>
+
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="checkbox">
                                                 <label><input type="checkbox"> Upload</label>
                                             </div>
                                         </div>
+                                    </div>
+
+                                    <div class="checkbox">
+                                        <label><input type="checkbox"> Transferência dos arquivos para Projetos Finalizados</label>
                                     </div>
                                 </form>
                                 <hr>

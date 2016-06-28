@@ -43,7 +43,7 @@ Optional extensions on the jquery.inputmask base
     $.extend($.inputmask.defaults.aliases, {
         'dd/mm/yyyy': {
             mask: "1/2/y",
-            placeholder: "dd/mm/yyyy",
+            placeholder: "dd/mm/aaaa",
             regex: {
                 val1pre: new RegExp("[0-3]"), //daypre
                 val1: new RegExp("0[1-9]|[12][0-9]|3[01]"), //day
@@ -240,7 +240,7 @@ Optional extensions on the jquery.inputmask base
             autoUnmask: false
         },
         'mm/dd/yyyy': {
-            placeholder: "mm/dd/yyyy",
+            placeholder: "mm/dd/aaaa",
             alias: "dd/mm/yyyy", //reuse functionality of dd/mm/yyyy alias
             regex: {
                 val2pre: function (separator) { var escapedSeparator = $.inputmask.escapeRegex.call(this, separator); return new RegExp("((0[13-9]|1[012])" + escapedSeparator + "[0-3])|(02" + escapedSeparator + "[0-2])"); }, //daypre
@@ -259,7 +259,7 @@ Optional extensions on the jquery.inputmask base
         },
         'yyyy/mm/dd': {
             mask: "y/1/2",
-            placeholder: "yyyy/mm/dd",
+            placeholder: "aaaa/mm/dd",
             alias: "mm/dd/yyyy",
             leapday: "/02/29",
             onKeyUp: function (e, buffer, opts) {
@@ -326,49 +326,49 @@ Optional extensions on the jquery.inputmask base
         },
         'dd.mm.yyyy': {
             mask: "1.2.y",
-            placeholder: "dd.mm.yyyy",
+            placeholder: "dd.mm.aaaa",
             leapday: "29.02.",
             separator: '.',
             alias: "dd/mm/yyyy"
         },
         'dd-mm-yyyy': {
             mask: "1-2-y",
-            placeholder: "dd-mm-yyyy",
+            placeholder: "dd-mm-aaaa",
             leapday: "29-02-",
             separator: '-',
             alias: "dd/mm/yyyy"
         },
         'mm.dd.yyyy': {
             mask: "1.2.y",
-            placeholder: "mm.dd.yyyy",
+            placeholder: "mm.dd.aaaa",
             leapday: "02.29.",
             separator: '.',
             alias: "mm/dd/yyyy"
         },
         'mm-dd-yyyy': {
             mask: "1-2-y",
-            placeholder: "mm-dd-yyyy",
+            placeholder: "mm-dd-aaaa",
             leapday: "02-29-",
             separator: '-',
             alias: "mm/dd/yyyy"
         },
         'yyyy.mm.dd': {
             mask: "y.1.2",
-            placeholder: "yyyy.mm.dd",
+            placeholder: "aaaa.mm.dd",
             leapday: ".02.29",
             separator: '.',
             alias: "yyyy/mm/dd"
         },
         'yyyy-mm-dd': {
             mask: "y-1-2",
-            placeholder: "yyyy-mm-dd",
+            placeholder: "aaaa-mm-dd",
             leapday: "-02-29",
             separator: '-',
             alias: "yyyy/mm/dd"
         },
         'datetime': {
             mask: "1/2/y h:s",
-            placeholder: "dd/mm/yyyy hh:mm",
+            placeholder: "dd/mm/aaaa hh:mm",
             alias: "dd/mm/yyyy",
             regex: {
                 hrspre: new RegExp("[012]"), //hours pre
@@ -450,7 +450,7 @@ Optional extensions on the jquery.inputmask base
         },
         'datetime12': {
             mask: "1/2/y h:s t\\m",
-            placeholder: "dd/mm/yyyy hh:mm xm",
+            placeholder: "dd/mm/aaaa hh:mm xm",
             alias: "datetime",
             hourFormat: "12"
         },
@@ -479,7 +479,7 @@ Optional extensions on the jquery.inputmask base
         },
         'mm/yyyy': {
             mask: "1/y",
-            placeholder: "mm/yyyy",
+            placeholder: "mm/aaaa",
             leapday: "donotuse",
             separator: '/',
             alias: "mm/dd/yyyy"
