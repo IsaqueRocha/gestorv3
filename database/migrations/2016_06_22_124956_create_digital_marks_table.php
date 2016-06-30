@@ -23,8 +23,6 @@ class CreateDigitalMarksTable extends Migration
             $table->boolean('authorcv')->default(false);
             $table->integer('cataloguing_id');
             $table->integer('creditsapproval_id');
-            $table->integer('photografs');
-            $table->integer('photografs_done');
             $table->integer('revision_id');
             $table->integer('isbnrequest_id');
             $table->string('isbn');

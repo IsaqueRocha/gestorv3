@@ -17,7 +17,7 @@ class ExampleTest extends TestCase
 
         $this->actingAs($user)
              ->withSession(['foo' => 'bar'])
-             ->visit('/admin')
+             ->visit('/projects')
              ->see('Painel Administrativo')
              ->click('Gerenciar Usuários')
              ->seePageIs('/users');
