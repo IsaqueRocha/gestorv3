@@ -76,7 +76,16 @@ class MarkController extends Controller
     {
         $input['briefing'] = $request->input('briefing');
 
-        return response()->json($input);
+        $project = Project::findOrFail($id);
+        if ($value == 'digital') {
+            $project->digitalMark->briefing = $input['briefing'];
+
+            $project->digitalMark->save();
+        }
+
+        $project->save();
+
+        return response()->json($project->digitalMark);
     }
 
     /**

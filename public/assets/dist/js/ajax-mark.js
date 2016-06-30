@@ -23,12 +23,9 @@ $('#digitalButton').on('click', function(event){
         type    :   'PUT',
         url     :   url,
         data    :   formData,
-        dataType:   JSON,
-        success :   function(data){
-            console.log('Success:', data);
-        },
-        error   :   function (data) {
-            console.log('Error:', data);
-        }
+    }).done(function(data){
+        console.log('Sucsses:', data);
+    }).fail(function(data){
+        console.log('Errooooouuu!', data);
     });
 });

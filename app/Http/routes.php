@@ -52,7 +52,7 @@ Route::get('/projects/andamentos', function(){
     return view('template.project.gerenciar_andamentos');
 });
 Route::get('/projects/marks/{id}', 'MarkController@show');
-Route::put('/projects/{id}/marks/{value}', 'MarkController@update');
+Route::post('/projects/{id}/marks/{value}', 'MarkController@update');
 
 Route::get('/api/projects', 'ProjectController@listing');
 
