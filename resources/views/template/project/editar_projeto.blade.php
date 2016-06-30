@@ -20,7 +20,7 @@
         <section class="col-md-12">
             <div class="box box-ldi">
                 <div class="box-body">
-                    <form id="editarProjeto" class="" action="{{ url('/projects/'.$project->id)}}" method="POST">
+                    <form id="editarProjeto" class="" action="{{ url('/projects/'.$project->id)}}" method="post">
                         {!! csrf_field() !!}
                         {{ method_field('PUT') }}
                         @include('template.project._project_form')

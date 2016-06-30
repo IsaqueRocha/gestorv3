@@ -40,7 +40,7 @@ class CreateDigitalComplementsTable extends Migration
             $table->integer('tables');
             $table->integer('tables_done');
             $table->boolean('tables_exists');
-            $table->integer('digitalmark_id')->unsigned();
+            $table->integer('digitalmark_id')->unsigned()->default(0);
             $table->foreign('digitalmark_id')->references('id')->on('digital_marks')->onDelete('cascade');
             $table->timestamps();
         });

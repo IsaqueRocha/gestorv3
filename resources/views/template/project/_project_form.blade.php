@@ -12,13 +12,13 @@
             <option>(Selecionar)</option>
             @foreach($teachers as $teacher)
             <option value="{{ $teacher->id }}"
-                    @if(isset($project->teacher))
-                    {{($project->teacher->id == $teacher->id)?('selected'):('')}}
-                    @endif
-                    >
-                    {{ $teacher->name }}
-        </option>
-        @endforeach
+                @if(isset($project->teacher->id))
+                    {!! ($project->teacher->id == $teacher->id)?('selected'):('') !!}
+                @endif
+                >
+                {{ $teacher->name }}
+            </option>
+            @endforeach
     </select>
 </div>
 <div class="form-group col-md-1">
@@ -37,7 +37,7 @@
             <option>(Selecionar)</option>
             @foreach($courses as $course)
             <option value="{{$course->id}}"
-                    @if(isset($project->course))
+                    @if(isset($project->course->id))
                     {{($project->course->id == $course->id)?('selected'):('')}}
                     @endif
                     >{{ $course->name }}
