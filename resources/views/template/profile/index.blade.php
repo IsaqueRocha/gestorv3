@@ -26,7 +26,7 @@
                     <hr>
                     <div>
                         <div class="col-md-2" style="margin-bottom: 20px;">
-                            <img src="{{ ( $user->photo == null ) ? ('/assets/theme/img/avatar.png'):($user->photo) }}" class="img-circle" alt="Foto do Usuário" />
+                            <img src="{{ ( $user->photo == null ) ? ('/assets/theme/img/avatar.png'):($user->photo) }}" class="img-circle" style="max-width:100%;" />
                         </div>
                         <div class="col-md-10" style="margin-bottom: 20px;">
                             <ul style="list-style:none;padding-left:0;float:left;width:100%;">

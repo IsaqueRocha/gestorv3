@@ -1,4 +1,4 @@
-<div class="col-md-3">
+<div class="col-md-4">
     <div class="box box-ldi">
         <div class="panel-group">
             <div class="panel panel-default">
@@ -178,17 +178,20 @@
                                 </div>
                             </div>
 
-                            <div class="checkbox">
-                                <label><input type="checkbox"> Transferência dos arquivos para Projetos Finalizados</label>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="checkbox">
+                                        <label><input type="checkbox"> Transferência dos arquivos para Projetos Finalizados</label>
+                                    </div>
+                                </div>
                             </div>
                         </form>
-                        <hr>
+                        <hr class="row">
                         <div style="text-align:right;">
                             <button type="button" class="btn btn-default pull-left" data-toggle="modal" data-target="#editInterativo" title="Editar atividade">
-                                Editar atividade
+                                Editar
                             </button>
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                            <button type="button" class="btn btn-success">Salvar</button>
+                            <button type="button" class="btn btn-success" title="Salvar">Salvar</button>
                         </div>
                     </div>
                 </div>

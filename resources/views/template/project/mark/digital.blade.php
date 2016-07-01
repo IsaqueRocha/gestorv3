@@ -1,4 +1,4 @@
-<div class="col-md-3">
+<div class="col-md-4">
     <div class="box box-ldi">
         <div class="panel-group">
             <div class="panel panel-default">
@@ -279,13 +279,12 @@
                                 </div>
                             </div>
                         </form>
-                        <hr>
+                        <hr class="row">
                         <div style="text-align:right;">
                             <button type="button" class="btn btn-default pull-left" data-toggle="modal" data-target="#editLivroDigital" title="Editar atividade">
-                                Editar atividade
+                                Editar
                             </button>
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                            <button type="button" class="btn btn-success" form="digitalform" id="digitalButton">Salvar</button>
+                            <button type="button" class="btn btn-success" form="digitalform" id="digitalButton" title="Salvar">Salvar</button>
                         </div>
                     </div>
                 </div>
