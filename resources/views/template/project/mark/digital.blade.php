@@ -10,6 +10,7 @@
                 <div id="livroDigital" class="panel-collapse collapse">
                     <div class="box-body panel-body">
                         <form name="digitalform" role="form"  method="post" id="digitalform">
+                            {{ method_field('PUT') }}
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="checkbox">
