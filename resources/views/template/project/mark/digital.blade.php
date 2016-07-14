@@ -14,7 +14,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="checkbox">
-                                        <label><input name="metting" type="checkbox"> Reunião com professor</label>
+                                        <label><input name="metting" type="checkbox" value="{{ $project->digitalMark->metting }}" {{ ($project->digitalMark->metting == 1)?('checked'):('')}}> Reunião com professor</label>
                                     </div>
                                 </div>
                             </div>
@@ -48,7 +48,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="checkbox">
-                                        <label><input name="cover" type="checkbox"> Capa finalizada</label>
+                                        <label><input name="cover" type="checkbox" value="{{ $project->digitalMark->cover }}" {{ ($project->digitalMark->cover == 1)?('checked'):('')}}> Capa finalizada</label>
                                     </div>
                                 </div>
                             </div>
@@ -78,7 +78,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="checkbox">
-                                        <label><input name="authorcv" type="checkbox"> Currículo do autor</label>
+                                        <label><input name="authorcv" type="checkbox" value="{{ $project->DigitalMark->authorcv }}"{{ ($project->digitalMark->authorcv == 1)?('checked'):('')}}> Currículo do autor</label>
                                     </div>
                                 </div>
                             </div>
@@ -251,7 +251,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="checkbox">
-                                        <label><input name="coord_revision" type="checkbox"> Revisão pelo Coordenador LDI</label>
+                                        <label><input name="coord_revision" type="checkbox" value="{{ $project->digitalMark->coord_revision}}" {{ ($project->digitalMark->coord_revision == 1)?('checked'):('')}}> Revisão pelo Coordenador LDI</label>
                                     </div>
                                 </div>
                             </div>
@@ -259,7 +259,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="checkbox">
-                                        <label><input name="folder_organization" type="checkbox"> Organização da pasta do projeto</label>
+                                        <label><input name="folder_organization" type="checkbox"value="{{ $project->digitalMark->organization }}" {{ ($project->digitalMark->organization == 1)?('checked'):('')}}> Organização da pasta do projeto</label>
                                     </div>
                                 </div>
                             </div>
@@ -267,7 +267,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="checkbox">
-                                        <label><input name="upload" type="checkbox"> Upload</label>
+                                        <label><input name="upload" type="checkbox" value="{{ $project->digitalMark->upload }}" {{ ($project->digitalMark->upload == 1)?('checked'):('')}}> Upload</label>
                                     </div>
                                 </div>
                             </div>
@@ -275,7 +275,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="checkbox">
-                                        <label><input name="file_transfered" type="checkbox"> Transferência dos arquivos para Projetos Finalizados</label>
+                                        <label><input name="file_transfered" type="checkbox" value="{{ $project->digitalMark->transfer }}" {{ ($project->digitalMark->transfer == 1)?('checked'):('')}}> Transferência dos arquivos para Projetos Finalizados</label>
                                     </div>
                                 </div>
                             </div>

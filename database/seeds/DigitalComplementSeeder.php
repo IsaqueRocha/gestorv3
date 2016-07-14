@@ -15,9 +15,11 @@ class DigitalComplementSeeder extends Seeder
 
         DB::table('digital_complements')->insert([
             [
-                'opening_chapters'       => 4,
-                'opening_chapters_done'      => 5,
-                'digitalmark_id'    => 1,
+                'opening_chapters'              => 4,
+                'opening_chapters_done'         => 5,
+                'opening_chapters_exists'       => 1,
+                'digitalmark_id'                => 1,
+                'format_id'                     => 1,
             ],
          ]);
 

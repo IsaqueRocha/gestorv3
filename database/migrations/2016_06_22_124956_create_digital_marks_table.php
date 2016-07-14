@@ -26,8 +26,10 @@ class CreateDigitalMarksTable extends Migration
             $table->integer('revision_id');
             $table->integer('isbnrequest_id');
             $table->string('isbn');
-            $table->integer('coord_revision');
+            $table->boolean('coord_revision')->default(false);
+            $table->boolean('organization')->default(false);
             $table->boolean('upload')->default(false);
+            $table->boolean('transfer')->default(false);
             $table->integer('project_id')->unsigned()->dafault(0);
             $table->foreign('project_id')->references('id')->on('projects')->onDelete('cascade');
             $table->timestamps();
