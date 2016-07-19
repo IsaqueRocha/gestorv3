@@ -16,7 +16,6 @@ class CreateDigitalMarksTable extends Migration
             $table->increments('id');
             $table->boolean('metting')->default(false);
             $table->string('briefing');
-            $table->integer('format_id');
             $table->integer('chapters');
             $table->integer('charpters_done');
             $table->boolean('cover')->default(false);

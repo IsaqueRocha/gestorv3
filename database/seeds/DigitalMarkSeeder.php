@@ -18,6 +18,7 @@ class DigitalMarkSeeder extends Seeder
                 'metting'       => 1,
                 'briefing'      => 'Some random strings.',
                 'project_id'    => 1,
+                'format_id'     => 1,
             ],
          ]);
 

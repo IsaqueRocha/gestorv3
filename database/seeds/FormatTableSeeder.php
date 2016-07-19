@@ -16,6 +16,34 @@ class FormatTableSeeder extends Seeder
                 'name'  => 'epub',
                 'type'  => 'digital',
             ],
+            [
+                'name'  => 'pdf',
+                'type'  => 'digital',
+            ],
+            [
+                'name'  => 'mobi',
+                'type'  => 'digital',
+            ],
+            [
+                'name'  => 'app',
+                'type'  => 'digital',
+            ],
+            [
+                'name'  => 'carta',
+                'type'  => 'impress',
+            ],
+            [
+                'name'  => 'quadrado',
+                'type'  => 'impress',
+            ],
+            [
+                'name'  => 'cartinha',
+                'type'  => 'impress',
+            ],
+            [
+                'name'  => 'outro',
+                'type'  => 'impress',
+            ],
          ]);
     }
 }

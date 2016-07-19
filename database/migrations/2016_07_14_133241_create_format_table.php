@@ -19,10 +19,6 @@ class CreateFormatTable extends Migration
             $table->timestamps();
         });
 
-        Schema::table('digital_complements', function (Blueprint $table){
-            $table->integer('format_id')->unsigned();
-            $table->foreign('format_id')->references('id')->on('format');
-        });
     }
 
     /**
@@ -32,9 +28,7 @@ class CreateFormatTable extends Migration
      */
     public function down()
     {
-        Schema::table('digital_complements', function (Blueprint $table){
-            $table->dropForeign('digital_complements_format_id_foreign');
-        });
+        
         Schema::drop('format');
     }
 }

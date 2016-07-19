@@ -53,9 +53,6 @@ class CreateDigitalComplementsTable extends Migration
      */
     public function down()
     {
-        Schema::table('digital_complements', function (Blueprint $table){
-            $table->dropForeign('digital_complements_format_id_foreign');
-        });
         Schema::drop('digital_complements');
     }
 }

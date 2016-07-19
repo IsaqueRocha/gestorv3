@@ -19,7 +19,6 @@ class DigitalComplementSeeder extends Seeder
                 'opening_chapters_done'         => 5,
                 'opening_chapters_exists'       => 1,
                 'digitalmark_id'                => 1,
-                'format_id'                     => 1,
             ],
          ]);
 
