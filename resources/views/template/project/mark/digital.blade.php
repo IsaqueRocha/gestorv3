@@ -36,10 +36,12 @@
                                         <label>Formato</label>
                                         <select name="format" class="form-control">
                                             <option>---</option>
-                                            <option>epub</option>
-                                            <option>pdf</option>
-                                            <option>mobi</option>
-                                            <option>aplicativo</option>
+                                            @foreach($digitalformats as $format)
+                                                <option value="{{$format->id}}"
+                                                    {{ ($project->digitalMark->format->id == $format->id)?('selected'):('')}}>
+                                                    {{$format->name}}
+                                                </option>
+                                            @endforeach
                                         </select>
                                     </div>
                                 </div>
@@ -58,7 +60,7 @@
                                     <div class="form-group">
                                         <label>Número de capítulos</label>
                                         <br clear="all">
-                                        <input name="chapters" type="number" min="0" max="30" step="1" value="0" class="form-control">
+                                        <input name="chapters_done" type="number" min="0" max="30" step="1" value="0" class="form-control">
                                         de 30
                                     </div>
                                 </div>

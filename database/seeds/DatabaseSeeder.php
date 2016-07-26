@@ -25,7 +25,6 @@ class DatabaseSeeder extends Seeder
         $this->call('ProjectUserTableSeeder');
         $this->call('FormatTableSeeder');
         $this->call('DigitalMarkSeeder');
-        $this->call('DigitalComplementSeeder');
 
         Model::reguard();
     }

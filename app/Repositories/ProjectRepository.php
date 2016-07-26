@@ -1,4 +1,4 @@
-<<?php
+<?php
 
 namespace App\Repositories;
 
@@ -14,7 +14,7 @@ class ProjectRepository
         foreach ($arrayTypes as $type) {
             switch ($type) {
                 case '1': //Livro Digital
-                    $project->digitalMark()->create();
+                    $project->digitalMark()->create(['format_id' => '1']);
                     break;
 
                 default:
@@ -22,5 +22,9 @@ class ProjectRepository
             }
         }
         return $project;
+    }
+
+    public function updateMarks(Project $project, $arrayTypes){
+
     }
 }

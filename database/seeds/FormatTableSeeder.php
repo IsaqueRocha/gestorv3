@@ -11,7 +11,7 @@ class FormatTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('format')->insert([
+        DB::table('formats')->insert([
             [
                 'name'  => 'epub',
                 'type'  => 'digital',

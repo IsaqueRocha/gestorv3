@@ -14,8 +14,11 @@ class CreateFormatsTable extends Migration
     {
         Schema::create('formats', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
+            $table->enum('type', ['digital', 'impress']);
             $table->timestamps();
         });
+
     }
 
     /**
@@ -25,6 +28,7 @@ class CreateFormatsTable extends Migration
      */
     public function down()
     {
+
         Schema::drop('formats');
     }
 }
