@@ -12,6 +12,9 @@ var table = $('#projecttable').DataTable({
         {   data: "title" },
         {   data: null,
             render: function(data){
+                if (data.types.length == 0) {
+                    return '<span >' + 'Sem tipos' + '</span>';
+                }
                 var str = data.types[0].name;
                 var icons =  findIcon(data.types[0].name);
                 for (var i = 1; i < data.types.length; i++) {
@@ -25,6 +28,9 @@ var table = $('#projecttable').DataTable({
         {
             data: null,
             render: function(data){
+                if (data.users.length == 0) {
+                    return 'Sem usuários associados';
+                }
                 var usr = data.users;
                 var str = usr[0].name;
                 for (var i = 1; i < usr.length; i++) {
