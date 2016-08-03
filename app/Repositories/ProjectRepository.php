@@ -5,7 +5,7 @@ namespace App\Repositories;
 use App\Project;
 
 /**
- * Repository for Project
+ * Repository for Project.
  */
 class ProjectRepository
 {
@@ -21,10 +21,11 @@ class ProjectRepository
                     break;
             }
         }
+
         return $project;
     }
 
-    public function updateMarks(Project $project, $arrayTypes){
-
+    public function updateMarks(Project $project, $arrayTypes)
+    {
     }
 }
