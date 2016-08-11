@@ -133,7 +133,7 @@ class ProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(ProjectRequest $request, $id)
+    public function update(ProjectRequest $request, $id, ProjectRepository $repo)
     {
         $project = Project::FindOrFail($id);
 
@@ -148,6 +148,8 @@ class ProjectController extends Controller
 
         $project->users()->sync($request->input('users'));
         $project->types()->sync($request->input('types'));
+
+        $project = $repo->updateMarks($project, $request->input('types'));
 
         Flash::success('Projeto atualizado com sucesso');
 

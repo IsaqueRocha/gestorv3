@@ -27,5 +27,17 @@ class ProjectRepository
 
     public function updateMarks(Project $project, $arrayTypes)
     {
+        foreach ($arrayTypes as $type) {
+            switch ($type) {
+                case '1': //Livro Digital
+                    if ($project->digitalMark == null) {
+                        $project->digitalMark()->create(['format_id' => '1']);
+                    }
+                    break;
+
+                default:
+                    break;
+            }
+        }
     }
 }

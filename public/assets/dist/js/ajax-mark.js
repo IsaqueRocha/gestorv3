@@ -12,6 +12,7 @@ $('#digitalButton').on('click', function(event){
 
     var formData = $('#digitalform').serialize();
 
+    alert(formData);
 
     $.ajaxSetup({
         headers: {
@@ -20,7 +21,7 @@ $('#digitalButton').on('click', function(event){
     });
 
     $.ajax({
-        type    :   'PUT',
+        type    :   'PATCH',
         url     :   url,
         data    :   formData,
     }).done(function(data){
