@@ -21,21 +21,33 @@ class DigitalRepository
         */
         if (isset($input['cover'])) {
             $project->digitalMark->cover = $input['cover'];
+        } else {
+            $project->digitalMark->cover = 0;
         }
         if (isset($input['authorcv'])) {
             $project->digitalMark->authorcv = $input['authorcv'];
+        } else {
+            $project->digitalMark->authorcv = 0;
         }
         if (isset($input['coord_revision'])) {
             $project->digitalMark->coord_revision = $input['coord_revision'];
+        } else {
+            $project->digitalMark->coord_revision = 0;
         }
         if (isset($input['organization'])) {
             $project->digitalMark->organization = $input['organization'];
+        } else {
+            $project->digitalMark->organization = 0;
         }
         if (isset($input['upload'])) {
             $project->digitalMark->upload = $input['upload'];
+        } else {
+            $project->digitalMark->upload = 0;
         }
         if (isset($input['transfer'])) {
             $project->digitalMark->transfer = $input['transfer'];
+        } else {
+            $project->digitalMark->transfer = 0;
         }
 
         // $project->digitalMark->opening_chapters = $input['opening_chapters'];

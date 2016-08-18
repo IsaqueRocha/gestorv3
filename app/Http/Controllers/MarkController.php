@@ -104,7 +104,7 @@ class MarkController extends Controller
             $project = $this->digitalRepo->digitalUpdate($project, $input);
         }
         $project->digitalMark->save();
-        $project->save();
+        //$project->save();
 
         return response()->json($project->digitalMark);
     }

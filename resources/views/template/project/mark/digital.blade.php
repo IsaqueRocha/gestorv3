@@ -50,7 +50,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="checkbox">
-                                        <label><input name="cover" type="checkbox"  {{ ($project->digitalMark->cover == 1)?('checked'):('')}}> Capa finalizada</label>
+                                        <label><input name="cover" type="checkbox" value="1" {{ ($project->digitalMark->cover == 1)?('checked'):('')}}> Capa finalizada</label>
                                     </div>
                                 </div>
                             </div>
@@ -261,7 +261,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="checkbox">
-                                        <label><input name="folder_organization" type="checkbox" value="1" {{ ($project->digitalMark->organization == 1)?('checked'):('')}}> Organização da pasta do projeto</label>
+                                        <label><input name="organization" type="checkbox" value="1" {{ ($project->digitalMark->organization == 1)?('checked'):('')}}> Organização da pasta do projeto</label>
                                     </div>
                                 </div>
                             </div>
@@ -277,7 +277,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="checkbox">
-                                        <label><input name="file_transfered" type="checkbox" value="1" {{ ($project->digitalMark->transfer == 1)?('checked'):('')}}> Transferência dos arquivos para Projetos Finalizados</label>
+                                        <label><input name="transfer" type="checkbox" value="1" {{ ($project->digitalMark->transfer == 1)?('checked'):('')}}> Transferência dos arquivos para Projetos Finalizados</label>
                                     </div>
                                 </div>
                             </div>

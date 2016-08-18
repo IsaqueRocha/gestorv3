@@ -1,18 +1,10 @@
 $('#digitalButton').on('click', function(event){
     event.preventDefault();
-    // var formData = {
-    //     metting :   $('#digitalform')
-    // };
+
     var id = $('#project_id').val();
     var url = '/projects/'+ id + '/marks/digital';
 
-    // var dataForm = {
-    //     briefing : $('#digitalform textarea[name="briefing"]').val(),
-    // }
-
     var formData = $('#digitalform').serialize();
-
-    alert(formData);
 
     $.ajaxSetup({
         headers: {
@@ -25,7 +17,7 @@ $('#digitalButton').on('click', function(event){
         url     :   url,
         data    :   formData,
     }).done(function(data){
-        console.log('Sucsses:', data);
+        console.log('Success:', data);
     }).fail(function(data){
         console.log('Errooooouuu!', data);
     });
