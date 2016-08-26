@@ -48,9 +48,18 @@ Route::get('/projects/{id}/edit', 'ProjectController@edit');
 Route::get('/projects/create', 'ProjectController@create');
 Route::post('/projects/create', 'ProjectController@store');
 Route::put('/projects/{id}', 'ProjectController@update');
-Route::get('/projects/andamentos', function(){
-    return view('template.project.gerenciar_andamentos');
+
+Route::get('/projects/{id}/andamentos', function($id){
+    $project = App\Project::findOrFail($id);
+
+    return view('template.project.gerenciar_andamentos')->with(compact('project'));
 });
+
+Route::post('/projects/{id}/andamentos', function(Request $request, $id){
+    $project = App\Project::findOrFail($id);
+
+});
+
 Route::get('/projects/marks/{id}', 'MarkController@show');
 Route::patch('/projects/{id}/marks/{value}', 'MarkController@update');
 

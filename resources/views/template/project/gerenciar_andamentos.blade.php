@@ -18,32 +18,40 @@
 <section class="content">
     <div class="row">
         <div class="col-md-12">
-            <div class="box box-curso art">
+            <div class="box box-curso {{ $project->course->tinyname }}">
                 <div class="box-header" data-toggle="collapse" data-target="#cabecalho" style="cursor:pointer;">
-                    <h3 class="box-title">Evento de Artes Visuais</h3>
+                    <h3 class="box-title">{{ $project->title }}</h3>
                 </div>
                 <div id="cabecalho" class="box-body collapse in">
                     <div class="row">
                         <ul style="list-style:none;padding:0;">
                             <div class="col-md-4">
-                                <li><b>Nome do projeto:</b> Evento de Artes Visuais</li>
-                                <li><b>Professor:</b> Fabiana Carvalho</li>
-                                <li><b>Curso:</b> Artes Visuais</li>
+                                <li><b>Nome do projeto:</b> {{ $project->title }}</li>
+                                <li><b>Professor:</b> {{ $project->teacher->name }}</li>
+                                <li><b>Curso:</b> {{ $project->course->name }}</li>
                             </div>
                             <div class="col-md-4">
-                                <li><b>Início</b> 12/05/2016</li>
-                                <li><b>Prazo:</b> 22/06/2016</li>
-                                <li><b>Apoio:</b> Antonio, Mariana, Rayan</li>
+                                <li><b>Início</b> {{ $project->start->format('d/m/Y') }}</li>
+                                <li><b>Prazo:</b> {{ $project->deadline->format('d/m/Y') }}</li>
+                                <li><b>Apoio:</b>
+                                    @foreach($project->users as $user)
+                                    {{ $user->name }} /
+                                    @endforeach
+                                </li>
                             </div>
                             <div class="col-md-4">
-                                <li><b>Composição:</b> Vídeo, Impresso</li>
+                                <li><b>Composição:</b>
+                                    @foreach($project->types as $type )
+                                    {{ $type->name }} /
+                                    @endforeach
+                                </li>
                             </div>
                         </ul>
                     </div>
                     <div class="row" style="margin-top:10px;">
                         <div class="col-md-4">
                             <div><b>Situação:</b></div>
-                            <div>Entregue</div>
+                            <div>{{$project->status->name }}</div>
                         </div>
                         <div class="col-md-4"></div>
                     </div>
@@ -166,44 +174,51 @@
                 <h4 class="modal-title">Adicionar andamento</h4>
             </div>
             <div class="modal-body">
-                <form>
+                <form name="andamento" id="andamento" role="form">
                     <div class="form-group">
                         <label>Atividade</label>
-                        <input name="name" type="text" value="" class="form-control" placeholder="Atividade" required />
+                        <input name="title" type="text" value="" class="form-control" placeholder="Atividade" required />
                     </div>
 
                     <div class="form-group">
                         <label>Data</label>
-                        <input name="entrance_date" type="text" value="" class="form-control" placeholder="dd/mm/aaaa" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
+                        <input name="date" type="text" value="" class="form-control" placeholder="dd/mm/aaaa" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
                     </div>
 
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Comecei às</label>
-                                <input name="" type="text" value="" class="form-control" placeholder="hh:mm" data-inputmask="'alias': 'hh:mm'" data-mask/>
+                                <input name="start" type="text" value="" class="form-control" placeholder="hh:mm" data-inputmask="'alias': 'hh:mm'" data-mask/>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Terminei às</label>
-                                <input name="" type="text" value="" class="form-control" placeholder="hh:mm" data-inputmask="'alias': 'hh:mm'" data-mask/>
+                                <input name="finish" type="text" value="" class="form-control" placeholder="hh:mm" data-inputmask="'alias': 'hh:mm'" data-mask/>
                             </div>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label>Detalhes</label> <br>
-                        <textarea style="width:100%;min-height:80px;"></textarea>
+                        <textarea name="details" style="width:100%;min-height:80px;"></textarea>
                     </div>
+                    <input type="hidden" name="project_id" value="{{ $project->id }}" id="project_id">
+                    <input type="hidden" name="user_id" value="{{ Auth::User()->id }}" id="user_id">
                 </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-success">Salvar</button>
+                <button type="submit" id="salvar" form="andamento" class="btn btn-success">Salvar</button>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
+@endsection
+
+@section('script')
+    <meta name="_token" content="{{ csrf_token() }}" />
+    <script src="{{ asset('assets/dist/js/ajax-progress.js') }}"></script>
 @endsection
