@@ -58,6 +58,18 @@ Route::get('/projects/{id}/andamentos', function($id){
 Route::post('/projects/{id}/andamentos', function(Request $request, $id){
     $project = App\Project::findOrFail($id);
 
+    $progress = new App\Progress;
+    $progress['title'] = $request->title;
+    $progress['date'] = $request->date;
+    $progress['start'] = $request->start;
+    $progress['finish'] = $request->finish;
+    $progress['details'] = $request->details;
+    $progress['project_id'] = $request->project_id;
+    $progress['user_id'] = $request->user_id;
+
+    $progress->save();
+
+    return Response::json($progress);
 });
 
 Route::get('/projects/marks/{id}', 'MarkController@show');

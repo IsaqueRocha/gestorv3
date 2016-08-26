@@ -1,14 +1,14 @@
 $('#salvar').on('click', function(e){
+    e.preventDefault();
 
     var id = $('#user_id').val();
     var url = '/projects/' + id + '/andamentos'
 
     var formData = $('#andamento').serialize();
-    alert(formData);
 
     $.ajaxSetup({
         headers:{
-            'X-CSRF-TOKEN':$('meta[name="_token"]').attr('content')
+            'X-CSRF-TOKEN':$('meta[name="_token"]').attr('content'),
         }
     });
 

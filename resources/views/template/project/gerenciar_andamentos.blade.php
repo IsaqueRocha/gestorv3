@@ -174,7 +174,10 @@
                 <h4 class="modal-title">Adicionar andamento</h4>
             </div>
             <div class="modal-body">
-                <form name="andamento" id="andamento" role="form">
+                <form name"andamento" id="andamento" role="form" action="" method="POST">
+                    <input type="hidden" name="user_id" value="{{ Auth::User()->id }}">
+                    <input type="hidden" name="project_id" value="{{ $project->id }}">
+
                     <div class="form-group">
                         <label>Atividade</label>
                         <input name="title" type="text" value="" class="form-control" placeholder="Atividade" required />

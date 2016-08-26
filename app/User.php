@@ -14,6 +14,7 @@ use Carbon\Carbon;
 use App\WorkSchedule;
 use Artesaos\Defender\Traits\HasDefender;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use App\Progress;
 
 class User extends Model implements AuthenticatableContract, CanResetPasswordContract, AuthorizableContract
 {
@@ -65,5 +66,10 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     public function projects()
     {
         return $this->hasMany(App\Project::class);
+    }
+
+    public function progress()
+    {
+        return $this->hasMany(Progress::class);
     }
 }

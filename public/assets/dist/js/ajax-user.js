@@ -148,6 +148,7 @@ var table = $('#usertable').DataTable({
     "order": [[0, 'asc']],
 });
 
+/* Função que mostra os detalhes do usuário */
 function format ( d ) {
     var str = d.entrance_date;
     str = str.split(" ");
@@ -172,6 +173,7 @@ function format ( d ) {
             '</div>';
 }
 
+/* Script para escutar os clicks de details-control */
 $('#usertable tbody').on('click', '.details-control', function () {
     var tr = $(this).closest('tr');
     var row = table.row( tr );

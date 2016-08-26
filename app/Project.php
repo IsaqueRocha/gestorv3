@@ -9,6 +9,7 @@ use App\Teacher;
 use App\Type;
 use Carbon\Carbon;
 use App\DigitalMark;
+use App\Progress;
 
 class Project extends Model
 {
@@ -90,6 +91,10 @@ class Project extends Model
     public function digitalMark()
     {
         return $this->hasOne(DigitalMark::class);
+    }
+
+    public function progress(){
+        return $this->hasMany(Progress::class);
     }
 
 }

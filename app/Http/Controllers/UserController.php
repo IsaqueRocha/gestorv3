@@ -32,7 +32,7 @@ class UserController extends Controller {
 	 */
 	public function index()
 	{
-		$users = User::all();
+		$users = User::all(); // does not distingish among users yet
 
 		return view('template.user.index', compact('users'));
 	}
