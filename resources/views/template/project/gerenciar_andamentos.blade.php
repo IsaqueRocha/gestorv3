@@ -166,44 +166,50 @@
                 <h4 class="modal-title">Adicionar andamento</h4>
             </div>
             <div class="modal-body">
-                <form>
+                <form name"andamento" id="andamento" role="form" action="" method="POST">
+                    <input type="hidden" name="user_id" value="{{ Auth::User() }}">
+                    <input type="hidden" name="project_id" value="{{ }}">
                     <div class="form-group">
                         <label>Atividade</label>
-                        <input name="name" type="text" value="" class="form-control" placeholder="Atividade" required />
+                        <input name="title" type="text" value="" class="form-control" placeholder="Atividade" required />
                     </div>
 
                     <div class="form-group">
                         <label>Data</label>
-                        <input name="entrance_date" type="text" value="" class="form-control" placeholder="dd/mm/aaaa" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
+                        <input name="date" type="text" value="" class="form-control" placeholder="dd/mm/aaaa" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
                     </div>
 
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Comecei às</label>
-                                <input name="" type="text" value="" class="form-control" placeholder="hh:mm" data-inputmask="'alias': 'hh:mm'" data-mask/>
+                                <input name="start" type="text" value="" class="form-control" placeholder="hh:mm" data-inputmask="'alias': 'hh:mm'" data-mask/>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Terminei às</label>
-                                <input name="" type="text" value="" class="form-control" placeholder="hh:mm" data-inputmask="'alias': 'hh:mm'" data-mask/>
+                                <input name="finish" type="text" value="" class="form-control" placeholder="hh:mm" data-inputmask="'alias': 'hh:mm'" data-mask/>
                             </div>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label>Detalhes</label> <br>
-                        <textarea style="width:100%;min-height:80px;"></textarea>
+                        <textarea name="details" style="width:100%;min-height:80px;"></textarea>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-success">Salvar</button>
+                <button id="salvar" type="submit" form="andamento" class="btn btn-success">Salvar</button>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
+@endsection
+
+@section('script')
+    <script src="{{ asset('assets/dist/js/ajax-progress.js') }}" charset="utf-8"></script>
 @endsection

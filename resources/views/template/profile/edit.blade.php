@@ -22,7 +22,7 @@
             <div class="box box-ldi">
                 <div class="box-body">
                     <!-- <div class="row"> -->
-                    @include('template.user._errors')
+                    @include('errors._errors')
 
                     <!-- FORMULÁRIO DE INSERÇÃO-->
                     <form name="adicionarUsuario" role="form" action="{{ url('/users/'.$user->id )}}" method="post" id="adicionarUsuario">
