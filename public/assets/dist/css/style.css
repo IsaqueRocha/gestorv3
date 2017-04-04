@@ -424,6 +424,18 @@
 .composicaoProjeto hr {
   margin: 10px 0px 20px 0px;
 }
+.composicaoProjeto .checkbox {
+  margin-top: 0 !important;
+  margin-bottom: 15px;
+}
+.composicaoProjeto .checkbox label {
+  font-weight: bold;
+  padding-left: 0;
+}
+.composicaoProjeto .checkbox input {
+  float: right;
+  position: relative;
+}
 .modal .modal-dialog .modal-body form .row .checkbox,
 .modal .modal-dialog .modal-body form .row .input-group {
   margin: 0;
